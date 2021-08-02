@@ -31,8 +31,8 @@ namespace sistema_reparto
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPuestos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnDepartamento = new System.Windows.Forms.Panel();
             this.lblDepartamento = new System.Windows.Forms.Label();
@@ -129,7 +129,7 @@ namespace sistema_reparto
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(59, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
+            this.lblDepartamento.Size = new System.Drawing.Size(86, 15);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             this.lblDepartamento.MouseLeave += new System.EventHandler(this.lblDepartamento_MouseLeave);
@@ -153,7 +153,7 @@ namespace sistema_reparto
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.Location = new System.Drawing.Point(15, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 1;
             // 
             // btnPuesto
@@ -189,7 +189,7 @@ namespace sistema_reparto
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(15, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 1;
             // 
             // lblPuesto
@@ -198,9 +198,10 @@ namespace sistema_reparto
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(75, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
+            this.lblPuesto.Size = new System.Drawing.Size(45, 15);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
+            this.lblPuesto.Click += new System.EventHandler(this.lblPuesto_Click);
             this.lblPuesto.MouseLeave += new System.EventHandler(this.lblPuesto_MouseLeave);
             this.lblPuesto.MouseHover += new System.EventHandler(this.lblPuesto_MouseHover);
             // 
@@ -227,6 +228,7 @@ namespace sistema_reparto
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(180, 34);
             this.btnCliente.TabIndex = 1;
+            this.btnCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.btnCliente_Paint);
             this.btnCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCliente_MouseClick);
             this.btnCliente.MouseLeave += new System.EventHandler(this.btnCliente_MouseLeave);
             this.btnCliente.MouseHover += new System.EventHandler(this.btnCliente_MouseHover);
@@ -249,7 +251,7 @@ namespace sistema_reparto
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 1;
             // 
             // lblCliente
@@ -258,20 +260,21 @@ namespace sistema_reparto
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(73, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.Size = new System.Drawing.Size(45, 15);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
+            this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
             this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
             // 
             // lblTituloPuesto
             // 
             this.lblTituloPuesto.AutoSize = true;
-            this.lblTituloPuesto.Font = new System.Drawing.Font("Open Sans", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloPuesto.Location = new System.Drawing.Point(197, 9);
             this.lblTituloPuesto.Name = "lblTituloPuesto";
-            this.lblTituloPuesto.Size = new System.Drawing.Size(122, 42);
+            this.lblTituloPuesto.Size = new System.Drawing.Size(131, 39);
             this.lblTituloPuesto.TabIndex = 2;
             this.lblTituloPuesto.Text = "Puesto";
             // 
@@ -296,11 +299,11 @@ namespace sistema_reparto
             // 
             this.lblAbcPuesto.AutoSize = true;
             this.lblAbcPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAbcPuesto.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbcPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAbcPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcPuesto.Location = new System.Drawing.Point(200, 70);
             this.lblAbcPuesto.Name = "lblAbcPuesto";
-            this.lblAbcPuesto.Size = new System.Drawing.Size(177, 22);
+            this.lblAbcPuesto.Size = new System.Drawing.Size(196, 22);
             this.lblAbcPuesto.TabIndex = 4;
             this.lblAbcPuesto.Text = "Mantenimientos Puesto";
             this.lblAbcPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcPuesto_MouseClick);
@@ -309,11 +312,11 @@ namespace sistema_reparto
             // 
             this.lblRegistrarPuesto.AutoSize = true;
             this.lblRegistrarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRegistrarPuesto.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrarPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarPuesto.Location = new System.Drawing.Point(203, 118);
             this.lblRegistrarPuesto.Name = "lblRegistrarPuesto";
-            this.lblRegistrarPuesto.Size = new System.Drawing.Size(106, 18);
+            this.lblRegistrarPuesto.Size = new System.Drawing.Size(119, 18);
             this.lblRegistrarPuesto.TabIndex = 10;
             this.lblRegistrarPuesto.Text = "Registrar Puesto";
             this.lblRegistrarPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarPuesto_MouseClick);
@@ -330,11 +333,11 @@ namespace sistema_reparto
             // 
             this.lblDarBajaP.AutoSize = true;
             this.lblDarBajaP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblDarBajaP.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDarBajaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarBajaP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblDarBajaP.Location = new System.Drawing.Point(827, 118);
             this.lblDarBajaP.Name = "lblDarBajaP";
-            this.lblDarBajaP.Size = new System.Drawing.Size(75, 18);
+            this.lblDarBajaP.Size = new System.Drawing.Size(85, 18);
             this.lblDarBajaP.TabIndex = 12;
             this.lblDarBajaP.Text = "Dar de Baja";
             this.lblDarBajaP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDarBajaP_MouseClick);
@@ -359,11 +362,11 @@ namespace sistema_reparto
             // 
             this.lblModificarPuesto.AutoSize = true;
             this.lblModificarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblModificarPuesto.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificarPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarPuesto.Location = new System.Drawing.Point(512, 118);
             this.lblModificarPuesto.Name = "lblModificarPuesto";
-            this.lblModificarPuesto.Size = new System.Drawing.Size(110, 18);
+            this.lblModificarPuesto.Size = new System.Drawing.Size(120, 18);
             this.lblModificarPuesto.TabIndex = 11;
             this.lblModificarPuesto.Text = "Modificar Puesto";
             this.lblModificarPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblModificarPuesto_MouseClick);
@@ -389,10 +392,10 @@ namespace sistema_reparto
             // lbnIdPuesto
             // 
             this.lbnIdPuesto.AutoSize = true;
-            this.lbnIdPuesto.Font = new System.Drawing.Font("Open Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnIdPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnIdPuesto.Location = new System.Drawing.Point(3, 9);
             this.lbnIdPuesto.Name = "lbnIdPuesto";
-            this.lbnIdPuesto.Size = new System.Drawing.Size(57, 15);
+            this.lbnIdPuesto.Size = new System.Drawing.Size(75, 16);
             this.lbnIdPuesto.TabIndex = 10;
             this.lbnIdPuesto.Text = "ID Puesto";
             // 
@@ -417,10 +420,10 @@ namespace sistema_reparto
             // lblNombrePuesto
             // 
             this.lblNombrePuesto.AutoSize = true;
-            this.lblNombrePuesto.Font = new System.Drawing.Font("Open Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePuesto.Location = new System.Drawing.Point(3, 9);
             this.lblNombrePuesto.Name = "lblNombrePuesto";
-            this.lblNombrePuesto.Size = new System.Drawing.Size(91, 15);
+            this.lblNombrePuesto.Size = new System.Drawing.Size(115, 16);
             this.lblNombrePuesto.TabIndex = 10;
             this.lblNombrePuesto.Text = "Nombre Puesto";
             // 
@@ -445,10 +448,10 @@ namespace sistema_reparto
             // lblEstatusPuesto
             // 
             this.lblEstatusPuesto.AutoSize = true;
-            this.lblEstatusPuesto.Font = new System.Drawing.Font("Open Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatusPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatusPuesto.Location = new System.Drawing.Point(3, 9);
             this.lblEstatusPuesto.Name = "lblEstatusPuesto";
-            this.lblEstatusPuesto.Size = new System.Drawing.Size(83, 15);
+            this.lblEstatusPuesto.Size = new System.Drawing.Size(111, 16);
             this.lblEstatusPuesto.TabIndex = 10;
             this.lblEstatusPuesto.Text = "Estatus Puesto";
             // 
@@ -486,16 +489,17 @@ namespace sistema_reparto
             this.dgvPuesto.Location = new System.Drawing.Point(615, 238);
             this.dgvPuesto.Name = "dgvPuesto";
             this.dgvPuesto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvPuesto.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPuesto.RowHeadersWidth = 45;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvPuesto.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPuesto.Size = new System.Drawing.Size(307, 150);
             this.dgvPuesto.TabIndex = 19;
             // 
@@ -526,7 +530,7 @@ namespace sistema_reparto
             this.pnlLlenarCamposPDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposPDB.BackgroundImage")));
             this.pnlLlenarCamposPDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposPDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(713, 408);
+            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(576, 408);
             this.pnlLlenarCamposPDB.Name = "pnlLlenarCamposPDB";
             this.pnlLlenarCamposPDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposPDB.TabIndex = 25;
@@ -569,19 +573,25 @@ namespace sistema_reparto
             // 
             this.idPuestoDataGridViewTextBoxColumn.DataPropertyName = "IdPuesto";
             this.idPuestoDataGridViewTextBoxColumn.HeaderText = "ID Puesto";
+            this.idPuestoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idPuestoDataGridViewTextBoxColumn.Name = "idPuestoDataGridViewTextBoxColumn";
+            this.idPuestoDataGridViewTextBoxColumn.Width = 110;
             // 
             // nombrePuesto1DataGridViewTextBoxColumn
             // 
             this.nombrePuesto1DataGridViewTextBoxColumn.DataPropertyName = "NombrePuesto1";
             this.nombrePuesto1DataGridViewTextBoxColumn.HeaderText = "Nombre Puesto";
+            this.nombrePuesto1DataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombrePuesto1DataGridViewTextBoxColumn.Name = "nombrePuesto1DataGridViewTextBoxColumn";
+            this.nombrePuesto1DataGridViewTextBoxColumn.Width = 110;
             // 
             // estatusPuestoDataGridViewTextBoxColumn
             // 
             this.estatusPuestoDataGridViewTextBoxColumn.DataPropertyName = "EstatusPuesto";
             this.estatusPuestoDataGridViewTextBoxColumn.HeaderText = "Estatus Puesto";
+            this.estatusPuestoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.estatusPuestoDataGridViewTextBoxColumn.Name = "estatusPuestoDataGridViewTextBoxColumn";
+            this.estatusPuestoDataGridViewTextBoxColumn.Width = 110;
             // 
             // puestoBindingSource
             // 

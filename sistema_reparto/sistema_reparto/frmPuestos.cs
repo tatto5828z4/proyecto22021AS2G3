@@ -434,6 +434,21 @@ namespace sistema_reparto
 
             puesto.funBuscarSetearTxt(txtIdPuesto, txtNombrePuesto, txtEstatusPuesto, pIdPuesto);
         }
+
+        private void lblPuesto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }

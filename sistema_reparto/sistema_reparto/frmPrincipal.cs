@@ -599,6 +599,22 @@ namespace sistema_reparto
         {
             btnDepartamento.BackColor = colorHoverCliente;
         }
+
+        private void lblDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void btnDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
         /* Final funcion para cargar mi tabla de clientes */
     }
 }
