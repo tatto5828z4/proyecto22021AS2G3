@@ -40,6 +40,9 @@ namespace sistema_reparto
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             pnlBordeCliente.Visible = false;
 
+            lblAbcCliente.Visible = true;
+            pnlMantenimientoC.Visible= true;
+
             /* Inicio Haciendo no visibles a mis botones de registro,modificar y dar de baja*/
             lblRegistrarCliente.Visible = false;
             lblModificarCliente.Visible = false;
@@ -139,6 +142,7 @@ namespace sistema_reparto
         private void panel3_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = true;
+         
         }
 
         private void btnCliente_MouseHover(object sender, EventArgs e)
@@ -471,12 +475,12 @@ namespace sistema_reparto
             String pidCliente = txtIdCliente.Text;
             String pestatusCliente = cliente.funBuscarEstatus(pidCliente);
 
-            if(pestatusCliente == "A")
+            if (pestatusCliente == "A")
             {
                 pnlActivarC.Visible = false;
                 pnlDarBajaC.Visible = true;
             }
-            else if(pestatusCliente == "I")
+            else if (pestatusCliente == "I")
             {
                 pnlDarBajaC.Visible = false;
                 pnlActivarC.Visible = true;
@@ -543,6 +547,12 @@ namespace sistema_reparto
         private void picIconoPuesto_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
         }
 
         private void btnPuesto_MouseHover(object sender, EventArgs e)
@@ -602,7 +612,13 @@ namespace sistema_reparto
 
         private void lblDepartamento_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
         }
 
         private void btnDepartamento_MouseClick(object sender, MouseEventArgs e)
@@ -615,6 +631,121 @@ namespace sistema_reparto
 
             Visible = false;
         }
-        /* Final funcion para cargar mi tabla de clientes */
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void btnUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void lblUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void lblUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+            /* Final funcion para cargar mi tabla de clientes */
+        }
+
+        private void picIconoUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void lblDepartamento_MouseLeave(object sender, EventArgs e)
+        {
+            btnDepartamento.BackColor = colorNormalCliente;
+        }
+
+        private void picDepartamento_MouseLeave(object sender, EventArgs e)
+        {
+            btnDepartamento.BackColor = colorNormalCliente;
+        }
+
+        private void picPuesto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPuesto.BackColor = colorNormalCliente;
+        }
+
+        private void lblPuesto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPuesto.BackColor = colorNormalCliente;
+        }
+
+        private void picPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = true;
+        }
     }
 }

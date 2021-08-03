@@ -51,6 +51,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
+    <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="frmDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,12 @@
     <Compile Include="frmPuestos.Designer.cs">
       <DependentUpon>frmPuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUbicacion.Designer.cs">
+      <DependentUpon>frmUbicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDepartamento.resx">
@@ -79,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuestos.resx">
       <DependentUpon>frmPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUbicacion.resx">
+      <DependentUpon>frmUbicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +107,7 @@
     <None Include="Properties\DataSources\frmPuestos.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">

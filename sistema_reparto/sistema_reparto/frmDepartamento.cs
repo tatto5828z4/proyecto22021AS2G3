@@ -439,6 +439,98 @@ namespace sistema_reparto
 
             departamento.funBuscarSetearTxt(txtIdDepartamento, txtNombreDepartamento, txtEstatusDepartamento, pIdDepartamento);
         }
+
+        private void btnUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            //lblAbcDepartamento.Visible = true;
+            frmPrincipal obj = new frmPrincipal();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPrincipal obj = new frmPrincipal();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverDepartamento;
+
+        }
+
+        private void btnUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalDepartamento;
+        }
+
+        private void lblUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverDepartamento;
+        }
+
+        private void lblUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalDepartamento;
+        }
+
+        private void picIconoUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverDepartamento;
+        }
+
+        private void picIconoUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalDepartamento;
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }

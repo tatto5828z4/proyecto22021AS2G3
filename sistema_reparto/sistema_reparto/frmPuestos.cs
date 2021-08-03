@@ -449,6 +449,102 @@ namespace sistema_reparto
         {
 
         }
+
+        private void btnUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPrincipal obj = new frmPrincipal();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPrincipal obj = new frmPrincipal();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmDepartamento obj = new frmDepartamento();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmDepartamento obj = new frmDepartamento();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmDepartamento obj = new frmDepartamento();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void btnUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void lblUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void lblUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void picIconoUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void picIconoUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalPuesto;
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }
