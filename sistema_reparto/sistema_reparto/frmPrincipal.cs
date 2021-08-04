@@ -747,5 +747,68 @@ namespace sistema_reparto
         {
             pnlMantenimientoC.Visible = true;
         }
+
+        private void pnlTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
     }
 }
