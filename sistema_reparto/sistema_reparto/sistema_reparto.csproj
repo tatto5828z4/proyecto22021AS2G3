@@ -51,6 +51,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
+    <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Clases\TipoEmpleado.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="frmDepartamento.cs">
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="frmPuestos.Designer.cs">
       <DependentUpon>frmPuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRuta.Designer.cs">
+      <DependentUpon>frmRuta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmtipoEmpleado.cs">
       <SubType>Form</SubType>
@@ -93,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuestos.resx">
       <DependentUpon>frmPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRuta.resx">
+      <DependentUpon>frmRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipoEmpleado.resx">
       <DependentUpon>frmtipoEmpleado.cs</DependentUpon>

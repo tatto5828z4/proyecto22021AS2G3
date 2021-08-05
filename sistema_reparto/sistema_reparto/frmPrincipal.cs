@@ -810,5 +810,16 @@ namespace sistema_reparto
         {
             btnTipoEmpleado.BackColor = colorNormalCliente;
         }
+
+        private void panel3_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmRuta obj = new frmRuta();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
     }
 }
