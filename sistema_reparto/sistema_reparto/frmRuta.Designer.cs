@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRuta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.pnlRuta = new System.Windows.Forms.Panel();
-            this.lblRuta = new System.Windows.Forms.Label();
-            this.picIconoRuta = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pnlSubUbicacion = new System.Windows.Forms.Panel();
+            this.picSubUbicacion = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSubUbicacion = new System.Windows.Forms.Label();
             this.btnUbicacion = new System.Windows.Forms.Panel();
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.picIconoUbicacion = new System.Windows.Forms.PictureBox();
@@ -54,6 +54,10 @@
             this.picIconoCliente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.pnlRuta = new System.Windows.Forms.Panel();
+            this.lblRuta = new System.Windows.Forms.Label();
+            this.picIconoRuta = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlBordeRuta = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAbcRuta = new System.Windows.Forms.Label();
@@ -67,6 +71,11 @@
             this.pnlBotonBuscarR = new System.Windows.Forms.Panel();
             this.txtBuscarRuta = new System.Windows.Forms.TextBox();
             this.dgvRuta = new System.Windows.Forms.DataGridView();
+            this.idRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlFinalR = new System.Windows.Forms.Panel();
             this.txtFinalRuta = new System.Windows.Forms.TextBox();
             this.lblFinalRuta = new System.Windows.Forms.Label();
@@ -85,18 +94,13 @@
             this.pnlEstatusR = new System.Windows.Forms.Panel();
             this.txtEstatusR = new System.Windows.Forms.TextBox();
             this.lblEstatusR = new System.Windows.Forms.Label();
-            this.idRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnTipoEmpleado = new System.Windows.Forms.Panel();
             this.picTipoEmpleado = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTipoEmpleado = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
-            this.pnlRuta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconoRuta)).BeginInit();
+            this.pnlSubUbicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).BeginInit();
             this.btnUbicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUbicacion)).BeginInit();
             this.btnDepartamento.SuspendLayout();
@@ -106,13 +110,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.btnCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
+            this.pnlRuta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoRuta)).BeginInit();
             this.pnlBordeRuta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRuta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).BeginInit();
             this.pnlFinalR.SuspendLayout();
             this.pnlCampoInicioR.SuspendLayout();
             this.pnlCampoIdR.SuspendLayout();
             this.pnlEstatusR.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).BeginInit();
             this.btnTipoEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTipoEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -121,6 +127,7 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
+            this.pnlSidebar.Controls.Add(this.pnlSubUbicacion);
             this.pnlSidebar.Controls.Add(this.btnUbicacion);
             this.pnlSidebar.Controls.Add(this.btnDepartamento);
             this.pnlSidebar.Controls.Add(this.btnPuesto);
@@ -131,53 +138,56 @@
             this.pnlSidebar.Size = new System.Drawing.Size(179, 474);
             this.pnlSidebar.TabIndex = 1;
             // 
-            // pnlRuta
+            // pnlSubUbicacion
             // 
-            this.pnlRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlRuta.Controls.Add(this.lblRuta);
-            this.pnlRuta.Controls.Add(this.picIconoRuta);
-            this.pnlRuta.Controls.Add(this.label6);
-            this.pnlRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlRuta.Location = new System.Drawing.Point(0, 356);
-            this.pnlRuta.Name = "pnlRuta";
-            this.pnlRuta.Size = new System.Drawing.Size(180, 34);
-            this.pnlRuta.TabIndex = 5;
-            this.pnlRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
-            this.pnlRuta.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
-            this.pnlRuta.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
+            this.pnlSubUbicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlSubUbicacion.Controls.Add(this.picSubUbicacion);
+            this.pnlSubUbicacion.Controls.Add(this.label3);
+            this.pnlSubUbicacion.Controls.Add(this.lblSubUbicacion);
+            this.pnlSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlSubUbicacion.Location = new System.Drawing.Point(-2, 388);
+            this.pnlSubUbicacion.Name = "pnlSubUbicacion";
+            this.pnlSubUbicacion.Size = new System.Drawing.Size(180, 34);
+            this.pnlSubUbicacion.TabIndex = 48;
+            this.pnlSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSubUbicacion_MouseClick);
+            this.pnlSubUbicacion.MouseLeave += new System.EventHandler(this.pnlSubUbicacion_MouseLeave);
+            this.pnlSubUbicacion.MouseHover += new System.EventHandler(this.pnlSubUbicacion_MouseHover);
             // 
-            // lblRuta
+            // picSubUbicacion
             // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblRuta.Location = new System.Drawing.Point(64, 10);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(30, 13);
-            this.lblRuta.TabIndex = 2;
-            this.lblRuta.Text = "Ruta";
-            this.lblRuta.MouseLeave += new System.EventHandler(this.lblRuta_MouseLeave);
-            this.lblRuta.MouseHover += new System.EventHandler(this.lblRuta_MouseHover);
+            this.picSubUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubUbicacion.BackgroundImage")));
+            this.picSubUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picSubUbicacion.Image = ((System.Drawing.Image)(resources.GetObject("picSubUbicacion.Image")));
+            this.picSubUbicacion.Location = new System.Drawing.Point(21, 8);
+            this.picSubUbicacion.Name = "picSubUbicacion";
+            this.picSubUbicacion.Size = new System.Drawing.Size(20, 21);
+            this.picSubUbicacion.TabIndex = 1;
+            this.picSubUbicacion.TabStop = false;
+            this.picSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSubUbicacion_MouseClick);
+            this.picSubUbicacion.MouseLeave += new System.EventHandler(this.picSubUbicacion_MouseLeave);
+            this.picSubUbicacion.MouseHover += new System.EventHandler(this.picSubUbicacion_MouseHover);
             // 
-            // picIconoRuta
+            // label3
             // 
-            this.picIconoRuta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoRuta.BackgroundImage")));
-            this.picIconoRuta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoRuta.Location = new System.Drawing.Point(20, 8);
-            this.picIconoRuta.Name = "picIconoRuta";
-            this.picIconoRuta.Size = new System.Drawing.Size(20, 21);
-            this.picIconoRuta.TabIndex = 1;
-            this.picIconoRuta.TabStop = false;
-            this.picIconoRuta.MouseLeave += new System.EventHandler(this.picIconoRuta_MouseLeave);
-            this.picIconoRuta.MouseHover += new System.EventHandler(this.picIconoRuta_MouseHover);
+            this.label3.AutoSize = true;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(15, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 1;
             // 
-            // label6
+            // lblSubUbicacion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.Location = new System.Drawing.Point(15, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 1;
+            this.lblSubUbicacion.AutoSize = true;
+            this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblSubUbicacion.Location = new System.Drawing.Point(61, 10);
+            this.lblSubUbicacion.Name = "lblSubUbicacion";
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
+            this.lblSubUbicacion.TabIndex = 0;
+            this.lblSubUbicacion.Text = "SubUbicacion";
+            this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
+            this.lblSubUbicacion.MouseLeave += new System.EventHandler(this.lblSubUbicacion_MouseLeave);
+            this.lblSubUbicacion.MouseHover += new System.EventHandler(this.lblSubUbicacion_MouseHover);
             // 
             // btnUbicacion
             // 
@@ -379,6 +389,54 @@
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
             this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
             // 
+            // pnlRuta
+            // 
+            this.pnlRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlRuta.Controls.Add(this.lblRuta);
+            this.pnlRuta.Controls.Add(this.picIconoRuta);
+            this.pnlRuta.Controls.Add(this.label6);
+            this.pnlRuta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlRuta.Location = new System.Drawing.Point(0, 356);
+            this.pnlRuta.Name = "pnlRuta";
+            this.pnlRuta.Size = new System.Drawing.Size(180, 34);
+            this.pnlRuta.TabIndex = 5;
+            this.pnlRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
+            this.pnlRuta.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
+            this.pnlRuta.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
+            // 
+            // lblRuta
+            // 
+            this.lblRuta.AutoSize = true;
+            this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblRuta.Location = new System.Drawing.Point(64, 10);
+            this.lblRuta.Name = "lblRuta";
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
+            this.lblRuta.TabIndex = 2;
+            this.lblRuta.Text = "Ruta";
+            this.lblRuta.MouseLeave += new System.EventHandler(this.lblRuta_MouseLeave);
+            this.lblRuta.MouseHover += new System.EventHandler(this.lblRuta_MouseHover);
+            // 
+            // picIconoRuta
+            // 
+            this.picIconoRuta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoRuta.BackgroundImage")));
+            this.picIconoRuta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoRuta.Location = new System.Drawing.Point(20, 8);
+            this.picIconoRuta.Name = "picIconoRuta";
+            this.picIconoRuta.Size = new System.Drawing.Size(20, 21);
+            this.picIconoRuta.TabIndex = 1;
+            this.picIconoRuta.TabStop = false;
+            this.picIconoRuta.MouseLeave += new System.EventHandler(this.picIconoRuta_MouseLeave);
+            this.picIconoRuta.MouseHover += new System.EventHandler(this.picIconoRuta_MouseHover);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(15, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 1;
+            // 
             // pnlBordeRuta
             // 
             this.pnlBordeRuta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRuta.BackgroundImage")));
@@ -522,19 +580,47 @@
             this.dgvRuta.Location = new System.Drawing.Point(592, 240);
             this.dgvRuta.Name = "dgvRuta";
             this.dgvRuta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRuta.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRuta.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRuta.RowHeadersWidth = 45;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvRuta.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvRuta.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRuta.Size = new System.Drawing.Size(307, 150);
             this.dgvRuta.TabIndex = 39;
+            // 
+            // idRutaDataGridViewTextBoxColumn
+            // 
+            this.idRutaDataGridViewTextBoxColumn.DataPropertyName = "IdRuta";
+            this.idRutaDataGridViewTextBoxColumn.HeaderText = "Id Ruta";
+            this.idRutaDataGridViewTextBoxColumn.Name = "idRutaDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "InicioRuta";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Inicio Ruta";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // finalRutaDataGridViewTextBoxColumn
+            // 
+            this.finalRutaDataGridViewTextBoxColumn.DataPropertyName = "FinalRuta";
+            this.finalRutaDataGridViewTextBoxColumn.HeaderText = "Final Ruta";
+            this.finalRutaDataGridViewTextBoxColumn.Name = "finalRutaDataGridViewTextBoxColumn";
+            // 
+            // estatusRutaDataGridViewTextBoxColumn
+            // 
+            this.estatusRutaDataGridViewTextBoxColumn.DataPropertyName = "EstatusRuta";
+            this.estatusRutaDataGridViewTextBoxColumn.HeaderText = "Estatus Ruta";
+            this.estatusRutaDataGridViewTextBoxColumn.Name = "estatusRutaDataGridViewTextBoxColumn";
+            // 
+            // rutaBindingSource
+            // 
+            this.rutaBindingSource.DataSource = typeof(sistema_reparto.Clases.Ruta);
             // 
             // pnlFinalR
             // 
@@ -712,34 +798,6 @@
             this.lblEstatusR.TabIndex = 10;
             this.lblEstatusR.Text = "Estatus Ruta";
             // 
-            // idRutaDataGridViewTextBoxColumn
-            // 
-            this.idRutaDataGridViewTextBoxColumn.DataPropertyName = "IdRuta";
-            this.idRutaDataGridViewTextBoxColumn.HeaderText = "Id Ruta";
-            this.idRutaDataGridViewTextBoxColumn.Name = "idRutaDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "InicioRuta";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Inicio Ruta";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // finalRutaDataGridViewTextBoxColumn
-            // 
-            this.finalRutaDataGridViewTextBoxColumn.DataPropertyName = "FinalRuta";
-            this.finalRutaDataGridViewTextBoxColumn.HeaderText = "Final Ruta";
-            this.finalRutaDataGridViewTextBoxColumn.Name = "finalRutaDataGridViewTextBoxColumn";
-            // 
-            // estatusRutaDataGridViewTextBoxColumn
-            // 
-            this.estatusRutaDataGridViewTextBoxColumn.DataPropertyName = "EstatusRuta";
-            this.estatusRutaDataGridViewTextBoxColumn.HeaderText = "Estatus Ruta";
-            this.estatusRutaDataGridViewTextBoxColumn.Name = "estatusRutaDataGridViewTextBoxColumn";
-            // 
-            // rutaBindingSource
-            // 
-            this.rutaBindingSource.DataSource = typeof(sistema_reparto.Clases.Ruta);
-            // 
             // btnTipoEmpleado
             // 
             this.btnTipoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
@@ -826,9 +884,9 @@
             this.Load += new System.EventHandler(this.frmRuta_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmRuta_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
-            this.pnlRuta.ResumeLayout(false);
-            this.pnlRuta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconoRuta)).EndInit();
+            this.pnlSubUbicacion.ResumeLayout(false);
+            this.pnlSubUbicacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).EndInit();
             this.btnUbicacion.ResumeLayout(false);
             this.btnUbicacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUbicacion)).EndInit();
@@ -842,8 +900,12 @@
             this.btnCliente.ResumeLayout(false);
             this.btnCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
+            this.pnlRuta.ResumeLayout(false);
+            this.pnlRuta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoRuta)).EndInit();
             this.pnlBordeRuta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRuta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).EndInit();
             this.pnlFinalR.ResumeLayout(false);
             this.pnlFinalR.PerformLayout();
             this.pnlCampoInicioR.ResumeLayout(false);
@@ -852,7 +914,6 @@
             this.pnlCampoIdR.PerformLayout();
             this.pnlEstatusR.ResumeLayout(false);
             this.pnlEstatusR.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).EndInit();
             this.btnTipoEmpleado.ResumeLayout(false);
             this.btnTipoEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTipoEmpleado)).EndInit();
@@ -926,5 +987,9 @@
         private System.Windows.Forms.PictureBox picTipoEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTipoEmpleado;
+        private System.Windows.Forms.Panel pnlSubUbicacion;
+        private System.Windows.Forms.PictureBox picSubUbicacion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSubUbicacion;
     }
 }

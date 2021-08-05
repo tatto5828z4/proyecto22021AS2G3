@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlSubUbicacion = new System.Windows.Forms.Panel();
+            this.picSubUbicacion = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSubUbicacion = new System.Windows.Forms.Label();
             this.btnTipoEmpleado = new System.Windows.Forms.Panel();
             this.picTipoEmpleado = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,18 +80,20 @@
             this.pnlBotonBuscarU = new System.Windows.Forms.Panel();
             this.txtBuscarUbicacion = new System.Windows.Forms.TextBox();
             this.dgvUbicacion = new System.Windows.Forms.DataGridView();
+            this.idUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ubicacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlActivarU = new System.Windows.Forms.Panel();
             this.pnlDarBajaU = new System.Windows.Forms.Panel();
             this.pnlLlenarCamposUDB = new System.Windows.Forms.Panel();
             this.pnlLLenarCamposU = new System.Windows.Forms.Panel();
             this.pnlModificarU = new System.Windows.Forms.Panel();
             this.pnlBotonGuardarU = new System.Windows.Forms.Panel();
-            this.idUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusUbicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ubicacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ubicacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
+            this.pnlSubUbicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).BeginInit();
             this.btnTipoEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTipoEmpleado)).BeginInit();
             this.btnUbicacion.SuspendLayout();
@@ -112,6 +118,7 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
+            this.pnlSidebar.Controls.Add(this.pnlSubUbicacion);
             this.pnlSidebar.Controls.Add(this.btnTipoEmpleado);
             this.pnlSidebar.Controls.Add(this.btnUbicacion);
             this.pnlSidebar.Controls.Add(this.btnDepartamento);
@@ -122,6 +129,57 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(179, 474);
             this.pnlSidebar.TabIndex = 1;
+            // 
+            // pnlSubUbicacion
+            // 
+            this.pnlSubUbicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlSubUbicacion.Controls.Add(this.picSubUbicacion);
+            this.pnlSubUbicacion.Controls.Add(this.label3);
+            this.pnlSubUbicacion.Controls.Add(this.lblSubUbicacion);
+            this.pnlSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlSubUbicacion.Location = new System.Drawing.Point(-2, 350);
+            this.pnlSubUbicacion.Name = "pnlSubUbicacion";
+            this.pnlSubUbicacion.Size = new System.Drawing.Size(180, 34);
+            this.pnlSubUbicacion.TabIndex = 31;
+            this.pnlSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSubUbicacion_MouseClick);
+            this.pnlSubUbicacion.MouseLeave += new System.EventHandler(this.pnlSubUbicacion_MouseLeave);
+            this.pnlSubUbicacion.MouseHover += new System.EventHandler(this.pnlSubUbicacion_MouseHover);
+            // 
+            // picSubUbicacion
+            // 
+            this.picSubUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSubUbicacion.BackgroundImage")));
+            this.picSubUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picSubUbicacion.Image = ((System.Drawing.Image)(resources.GetObject("picSubUbicacion.Image")));
+            this.picSubUbicacion.Location = new System.Drawing.Point(21, 8);
+            this.picSubUbicacion.Name = "picSubUbicacion";
+            this.picSubUbicacion.Size = new System.Drawing.Size(20, 21);
+            this.picSubUbicacion.TabIndex = 1;
+            this.picSubUbicacion.TabStop = false;
+            this.picSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSubUbicacion_MouseClick);
+            this.picSubUbicacion.MouseLeave += new System.EventHandler(this.picSubUbicacion_MouseLeave);
+            this.picSubUbicacion.MouseHover += new System.EventHandler(this.picSubUbicacion_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(15, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 1;
+            // 
+            // lblSubUbicacion
+            // 
+            this.lblSubUbicacion.AutoSize = true;
+            this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblSubUbicacion.Location = new System.Drawing.Point(61, 10);
+            this.lblSubUbicacion.Name = "lblSubUbicacion";
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
+            this.lblSubUbicacion.TabIndex = 0;
+            this.lblSubUbicacion.Text = "SubUbicacion";
+            this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
+            this.lblSubUbicacion.MouseLeave += new System.EventHandler(this.lblSubUbicacion_MouseLeave);
+            this.lblSubUbicacion.MouseHover += new System.EventHandler(this.lblSubUbicacion_MouseHover);
             // 
             // btnTipoEmpleado
             // 
@@ -628,6 +686,34 @@
             this.dgvUbicacion.Size = new System.Drawing.Size(307, 150);
             this.dgvUbicacion.TabIndex = 19;
             // 
+            // idUbicacionDataGridViewTextBoxColumn
+            // 
+            this.idUbicacionDataGridViewTextBoxColumn.DataPropertyName = "IdUbicacion";
+            this.idUbicacionDataGridViewTextBoxColumn.HeaderText = "Id Ubicacion";
+            this.idUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idUbicacionDataGridViewTextBoxColumn.Name = "idUbicacionDataGridViewTextBoxColumn";
+            this.idUbicacionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // nombreUbicacionDataGridViewTextBoxColumn
+            // 
+            this.nombreUbicacionDataGridViewTextBoxColumn.DataPropertyName = "NombreUbicacion";
+            this.nombreUbicacionDataGridViewTextBoxColumn.HeaderText = "Nombre Ubicacion";
+            this.nombreUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreUbicacionDataGridViewTextBoxColumn.Name = "nombreUbicacionDataGridViewTextBoxColumn";
+            this.nombreUbicacionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusUbicacionDataGridViewTextBoxColumn
+            // 
+            this.estatusUbicacionDataGridViewTextBoxColumn.DataPropertyName = "EstatusUbicacion";
+            this.estatusUbicacionDataGridViewTextBoxColumn.HeaderText = "Estatus Ubicacion";
+            this.estatusUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusUbicacionDataGridViewTextBoxColumn.Name = "estatusUbicacionDataGridViewTextBoxColumn";
+            this.estatusUbicacionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // ubicacionBindingSource1
+            // 
+            this.ubicacionBindingSource1.DataSource = typeof(sistema_reparto.Clases.Ubicacion);
+            // 
             // pnlActivarU
             // 
             this.pnlActivarU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarU.BackgroundImage")));
@@ -694,34 +780,6 @@
             this.pnlBotonGuardarU.TabIndex = 30;
             this.pnlBotonGuardarU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonGuardarU_MouseClick);
             // 
-            // idUbicacionDataGridViewTextBoxColumn
-            // 
-            this.idUbicacionDataGridViewTextBoxColumn.DataPropertyName = "IdUbicacion";
-            this.idUbicacionDataGridViewTextBoxColumn.HeaderText = "Id Ubicacion";
-            this.idUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idUbicacionDataGridViewTextBoxColumn.Name = "idUbicacionDataGridViewTextBoxColumn";
-            this.idUbicacionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // nombreUbicacionDataGridViewTextBoxColumn
-            // 
-            this.nombreUbicacionDataGridViewTextBoxColumn.DataPropertyName = "NombreUbicacion";
-            this.nombreUbicacionDataGridViewTextBoxColumn.HeaderText = "Nombre Ubicacion";
-            this.nombreUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreUbicacionDataGridViewTextBoxColumn.Name = "nombreUbicacionDataGridViewTextBoxColumn";
-            this.nombreUbicacionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusUbicacionDataGridViewTextBoxColumn
-            // 
-            this.estatusUbicacionDataGridViewTextBoxColumn.DataPropertyName = "EstatusUbicacion";
-            this.estatusUbicacionDataGridViewTextBoxColumn.HeaderText = "Estatus Ubicacion";
-            this.estatusUbicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusUbicacionDataGridViewTextBoxColumn.Name = "estatusUbicacionDataGridViewTextBoxColumn";
-            this.estatusUbicacionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // ubicacionBindingSource1
-            // 
-            this.ubicacionBindingSource1.DataSource = typeof(sistema_reparto.Clases.Ubicacion);
-            // 
             // ubicacionBindingSource
             // 
             this.ubicacionBindingSource.DataSource = typeof(sistema_reparto.Clases.Ubicacion);
@@ -762,6 +820,9 @@
             this.Load += new System.EventHandler(this.frmUbicacion_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmUbicacion_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlSubUbicacion.ResumeLayout(false);
+            this.pnlSubUbicacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).EndInit();
             this.btnTipoEmpleado.ResumeLayout(false);
             this.btnTipoEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTipoEmpleado)).EndInit();
@@ -850,5 +911,9 @@
         private System.Windows.Forms.PictureBox picTipoEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTipoEmpleado;
+        private System.Windows.Forms.Panel pnlSubUbicacion;
+        private System.Windows.Forms.PictureBox picSubUbicacion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSubUbicacion;
     }
 }
