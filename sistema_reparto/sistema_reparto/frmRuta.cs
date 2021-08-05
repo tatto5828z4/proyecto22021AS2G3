@@ -527,5 +527,59 @@ namespace sistema_reparto
         {
             btnTipoEmpleado.BackColor = colorNormalRuta;
         }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverRuta;
+        }
+
+        private void pnlSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalRuta;
+        }
+
+        private void lblSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverRuta;
+        }
+
+        private void lblSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalRuta;
+        }
+
+        private void picSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverRuta;
+        }
+
+        private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalRuta;
+        }
     }
 }

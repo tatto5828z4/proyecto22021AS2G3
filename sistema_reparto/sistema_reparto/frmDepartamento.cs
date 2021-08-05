@@ -588,6 +588,35 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlLlenarCamposDDB_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }

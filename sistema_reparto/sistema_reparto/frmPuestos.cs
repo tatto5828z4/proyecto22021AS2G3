@@ -627,6 +627,60 @@ namespace sistema_reparto
         {
 
         }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void pnlSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void lblSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void lblSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void picSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }
