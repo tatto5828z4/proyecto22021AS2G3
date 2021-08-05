@@ -545,6 +545,142 @@ namespace sistema_reparto
         {
             btnUbicacion.BackColor = colorNormalPuesto;
         }
+
+        private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverPuesto;
+        }
+
+        private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverPuesto;
+        }
+
+        private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverPuesto;
+        }
+
+        private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalPuesto;
+        }
+
+        private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalPuesto;
+        }
+
+        private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalPuesto;
+        }
+
+        private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void dgvPuesto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnlLLenarCamposP_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlBotonBuscarP_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtBuscarPuesto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlLlenarCamposPDB_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void pnlSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void lblSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void lblSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
+
+        private void picSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverPuesto;
+        }
+
+        private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalPuesto;
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }

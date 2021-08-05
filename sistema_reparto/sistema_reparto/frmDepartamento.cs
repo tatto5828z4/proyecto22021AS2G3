@@ -531,6 +531,92 @@ namespace sistema_reparto
         {
             btnUbicacion.BackColor = colorNormalDepartamento;
         }
+
+        private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+        }
+
+        private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+        }
+
+        private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+        }
+
+        private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+        }
+
+        private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+        }
+
+        private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+        }
+
+        private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlLlenarCamposDDB_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }
