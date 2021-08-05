@@ -9,7 +9,7 @@ namespace sistema_reparto.Clases
 {
     public class Ruta
     {
-        // Atributos
+        // Atributos ruta
         String idRuta;
         String inicioRuta;
         String finalRuta;
