@@ -431,13 +431,22 @@ namespace sistema_reparto
         private void pnlBotonGuardarU_MouseClick(object sender, MouseEventArgs e)
         {
             /* Funcion insertar una Ubicacion */
-            String estatusUbicacion = "A";
-            Ubicacion ubicacion = funObtenerTxt(estatusUbicacion);
-            ubicacion.funInsertar();
-            /* Final de ejecucion de funcion insertar un cliente */
 
-            funCargarTabla(null);
-            funVaciarCampos();
+            if(txtIdUbicacion.Text=="" && txtNombreUbicacion.Text == "")
+            {
+                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                String estatusUbicacion = "A";
+                Ubicacion ubicacion = funObtenerTxt(estatusUbicacion);
+                ubicacion.funInsertar();
+                /* Final de ejecucion de funcion insertar un cliente */
+
+                funCargarTabla(null);
+                funVaciarCampos();
+            }
+            
         }
 
         /*Inicio de funcion para vaciar los campos de ubicacion*/
@@ -703,6 +712,117 @@ namespace sistema_reparto
         private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
         {
             pnlSubUbicacion.BackColor = colorNormalUbicacion;
+        }
+
+        private void btnRuta_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmRuta ruta = new frmRuta();
+            ruta.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void label10_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmRuta ruta = new frmRuta();
+            ruta.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmRuta ruta = new frmRuta();
+            ruta.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void lblTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnRuta_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverUbicacion;
+        }
+
+        private void label10_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverUbicacion;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverUbicacion;
+        }
+
+        private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverUbicacion;
+        }
+
+        private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverUbicacion;
+        }
+
+        private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverUbicacion;
+        }
+
+        private void btnRuta_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalUbicacion;
+        }
+
+        private void label10_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalUbicacion;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalUbicacion;
+        }
+
+        private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalUbicacion;
+        }
+
+        private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalUbicacion;
+        }
+
+        private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalUbicacion;
         }
     }
 }
