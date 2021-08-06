@@ -226,3 +226,6 @@ D:\Proyectos_Git_Analisis\SistemaRepartoV2\sistema_reparto\sistema_reparto\obj\D
 D:\Proyectos_Git_Analisis\SistemaRepartoV2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 D:\Proyectos_Git_Analisis\SistemaRepartoV2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 D:\Proyectos_Git_Analisis\SistemaRepartoV2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
