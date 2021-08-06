@@ -395,13 +395,23 @@ namespace sistema_reparto
         private void pnlBotonGuardarR_MouseClick(object sender, MouseEventArgs e)
         {
             /* Inicio de ejecucion de funcion insertar un Ruta */
-            String EstatusRuta = "A";
-            Ruta ruta = funObtenerTxt(EstatusRuta);
-            ruta.funInsertar();
-            /* Final de ejecucion de funcion insertar un Ruta */
 
-            funCargarTabla(null);
-            funVaciarCampos();
+            if (txtIdRuta.Text=="" && txtEstatusR.Text == "")
+            {
+                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+                String EstatusRuta = "A";
+                Ruta ruta = funObtenerTxt(EstatusRuta);
+                ruta.funInsertar();
+                /* Final de ejecucion de funcion insertar un Ruta */
+
+                funCargarTabla(null);
+                funVaciarCampos();
+            }
+            
         }
 
         private void pnlBotonBuscarR_MouseClick(object sender, MouseEventArgs e)
@@ -580,6 +590,65 @@ namespace sistema_reparto
         private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
         {
             pnlSubUbicacion.BackColor = colorNormalRuta;
+        }
+
+        private void btnTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento tipoM = new frmTipoMovimiento();
+            tipoM.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverRuta;
+        }
+
+        private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverRuta;
+        }
+
+        private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverRuta;
+        }
+
+        private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalRuta;
+        }
+
+        private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalRuta;
+        }
+
+        private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalRuta;
+        }
+
+        private void pnlBotonGuardarR_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

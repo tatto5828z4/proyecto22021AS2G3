@@ -54,6 +54,7 @@
     <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Clases\SubUbicacion.cs" />
     <Compile Include="Clases\TipoEmpleado.cs" />
+    <Compile Include="Clases\TipoMovimiento.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="frmDepartamento.cs">
       <SubType>Form</SubType>
@@ -91,6 +92,12 @@
     <Compile Include="frmtipoEmpleado.Designer.cs">
       <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoMovimiento.designer.cs">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUbicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipoEmpleado.resx">
       <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoMovimiento.resx">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUbicacion.resx">
       <DependentUpon>frmUbicacion.cs</DependentUpon>
