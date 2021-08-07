@@ -50,6 +50,19 @@
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Puesto.cs" />
+    <Compile Include="Clases\Departamento.cs" />
+    <Compile Include="Clases\Ruta.cs" />
+    <Compile Include="Clases\SubUbicacion.cs" />
+    <Compile Include="Clases\TipoEmpleado.cs" />
+    <Compile Include="Clases\TipoMovimiento.cs" />
+    <Compile Include="Clases\TipoTransporte.cs" />
+    <Compile Include="Clases\Ubicacion.cs" />
+    <Compile Include="frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,13 +75,70 @@
     <Compile Include="frmPuestos.Designer.cs">
       <DependentUpon>frmPuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRuta.Designer.cs">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubUbicacion.Designer.cs">
+      <DependentUpon>frmSubUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmtipoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtipoEmpleado.Designer.cs">
+      <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoMovimiento.designer.cs">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoTransporte.designer.cs">
+      <DependentUpon>frmTipoTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUbicacion.Designer.cs">
+      <DependentUpon>frmUbicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuestos.resx">
       <DependentUpon>frmPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRuta.resx">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubUbicacion.resx">
+      <DependentUpon>frmSubUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtipoEmpleado.resx">
+      <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoMovimiento.resx">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoTransporte.resx">
+      <DependentUpon>frmTipoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUbicacion.resx">
+      <DependentUpon>frmUbicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,7 +150,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\Cliente.datasource" />
+    <None Include="Properties\DataSources\Conexion.datasource" />
+    <None Include="Properties\DataSources\Departamento.datasource" />
+    <None Include="Properties\DataSources\frmDepartamento.datasource" />
+    <None Include="Properties\DataSources\frmPrincipal.datasource" />
+    <None Include="Properties\DataSources\frmPuestos.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

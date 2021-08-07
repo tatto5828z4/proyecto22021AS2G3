@@ -40,6 +40,9 @@ namespace sistema_reparto
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             pnlBordeCliente.Visible = false;
 
+            lblAbcCliente.Visible = true;
+            pnlMantenimientoC.Visible= true;
+
             /* Inicio Haciendo no visibles a mis botones de registro,modificar y dar de baja*/
             lblRegistrarCliente.Visible = false;
             lblModificarCliente.Visible = false;
@@ -51,6 +54,7 @@ namespace sistema_reparto
             /* Final Haciendo no visibles a mis botones de registro,modificar y dar de baja*/
 
             /* Inicio para esconder los contenidos de mi panel de mantenimiento Clientes */
+            lblAbcCliente.Visible = true;
             pnlCampoIDC.Visible = false;
             pnlCampoNombreC.Visible = false;
             pnlCampoApellidoC.Visible = false;
@@ -139,6 +143,7 @@ namespace sistema_reparto
         private void panel3_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = true;
+         
         }
 
         private void btnCliente_MouseHover(object sender, EventArgs e)
@@ -357,13 +362,22 @@ namespace sistema_reparto
         private void pnlBotonGuardarC_MouseClick(object sender, MouseEventArgs e)
         {
             /* Inicio de ejecucion de funcion insertar un cliente */
-            String estatusCliente = "A";
-            Cliente cliente = funObtenerTxt(estatusCliente);
-            cliente.funInsertar();
-            /* Final de ejecucion de funcion insertar un cliente */
 
-            funCargarTabla(null);
-            funVaciarCampos();
+            if(txtIdCliente.Text=="" && txtNombreCliente.Text == "" && txtCampoApellidoC.Text =="" && txtTelefonoC.Text =="" && txtCorreoC.Text == "" && richCliente.Text == "")
+            {
+                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                String estatusCliente = "A";
+                Cliente cliente = funObtenerTxt(estatusCliente);
+                cliente.funInsertar();
+                /* Final de ejecucion de funcion insertar un cliente */
+
+                funCargarTabla(null);
+                funVaciarCampos();
+            }
+            
         }
 
         private void pnlBotonBuscarC_MouseClick(object sender, MouseEventArgs e)
@@ -471,12 +485,12 @@ namespace sistema_reparto
             String pidCliente = txtIdCliente.Text;
             String pestatusCliente = cliente.funBuscarEstatus(pidCliente);
 
-            if(pestatusCliente == "A")
+            if (pestatusCliente == "A")
             {
                 pnlActivarC.Visible = false;
                 pnlDarBajaC.Visible = true;
             }
-            else if(pestatusCliente == "I")
+            else if (pestatusCliente == "I")
             {
                 pnlDarBajaC.Visible = false;
                 pnlActivarC.Visible = true;
@@ -543,6 +557,12 @@ namespace sistema_reparto
         private void picIconoPuesto_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
         }
 
         private void btnPuesto_MouseHover(object sender, EventArgs e)
@@ -599,6 +619,451 @@ namespace sistema_reparto
         {
             btnDepartamento.BackColor = colorHoverCliente;
         }
-        /* Final funcion para cargar mi tabla de clientes */
+
+        private void lblDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmDepartamento obj = new frmDepartamento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void btnUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void lblUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void lblUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorHoverCliente;
+            /* Final funcion para cargar mi tabla de clientes */
+        }
+
+        private void picIconoUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void lblDepartamento_MouseLeave(object sender, EventArgs e)
+        {
+            btnDepartamento.BackColor = colorNormalCliente;
+        }
+
+        private void picDepartamento_MouseLeave(object sender, EventArgs e)
+        {
+            btnDepartamento.BackColor = colorNormalCliente;
+        }
+
+        private void picPuesto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPuesto.BackColor = colorNormalCliente;
+        }
+
+        private void lblPuesto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPuesto.BackColor = colorNormalCliente;
+        }
+
+        private void picPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmPuestos obj = new frmPuestos();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = true;
+        }
+
+        private void pnlTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmtipoEmpleado obj = new frmtipoEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void panel3_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmRuta obj = new frmRuta();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void lblSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void picSubUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion objSubUbicacion = new frmSubUbicacion();
+
+            objSubUbicacion.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlSidebar_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void pnlSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void lblSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void lblSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void picSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorHoverCliente;
+        }
+
+        private void picSubUbicacion_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSubUbicacion.BackColor = colorNormalCliente;
+        }
+
+        private void btnTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmTipoMovimiento obj = new frmTipoMovimiento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmTipoMovimiento obj = new frmTipoMovimiento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picTipoMovimiento_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmTipoMovimiento obj = new frmTipoMovimiento();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverCliente;
+        }
+
+        private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverCliente;
+        }
+
+        private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorHoverCliente;
+        }
+
+        private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalCliente;
+        }
+
+        private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalCliente;
+        }
+
+        private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoMovimiento.BackColor = colorNormalCliente;
+        }
+
+        private void panel3_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverCliente;
+        }
+
+        private void label9_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverCliente;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorHoverCliente;
+        }
+
+        private void btnRuta_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalCliente;
+        }
+
+        private void label9_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalCliente;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            btnRuta.BackColor = colorNormalCliente;
+        }
+
+        private void label9_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmRuta obj = new frmRuta();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmRuta obj = new frmRuta();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte objTipoT = new frmTipoTransporte();
+
+            objTipoT.Visible = true;
+            Visible = false;
+
+        }
+
+        private void lblTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte objTipoT = new frmTipoTransporte();
+
+            objTipoT.Visible = true;
+            Visible = false;
+        }
+
+        private void picIconoTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte objTipoT = new frmTipoTransporte();
+
+            objTipoT.Visible = true;
+            Visible = false;
+        }
+
+        private void btnTipoTransporte_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverCliente;
+        }
+
+        private void btnTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalCliente;
+        }
+
+        private void lblTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverCliente;
+        }
+
+        private void lblTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverCliente;
+        }
+
+        private void picIconoTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalCliente;
+        }
     }
 }
