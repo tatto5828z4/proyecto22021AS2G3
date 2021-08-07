@@ -46,6 +46,14 @@ namespace sistema_reparto
             this.pnlBotonBuscarC = new System.Windows.Forms.Panel();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotonGuardarC = new System.Windows.Forms.Panel();
             this.pnlCampoDireccion = new System.Windows.Forms.Panel();
             this.richCliente = new System.Windows.Forms.RichTextBox();
@@ -113,18 +121,15 @@ namespace sistema_reparto
             this.picIconoCliente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnTipoTransporte = new System.Windows.Forms.Panel();
+            this.lblTipoTransporte = new System.Windows.Forms.Label();
+            this.picIconoTipoTransporte = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlBg.SuspendLayout();
             this.pnlMantenimientoC.SuspendLayout();
             this.pnlEstatusCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.pnlCampoDireccion.SuspendLayout();
             this.pnlCampoCorreoC.SuspendLayout();
             this.pnlCampoTelefonoC.SuspendLayout();
@@ -152,7 +157,8 @@ namespace sistema_reparto
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            this.btnTipoTransporte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoTipoTransporte)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBg
@@ -163,9 +169,9 @@ namespace sistema_reparto
             this.pnlBg.Controls.Add(this.lblTituloCliente);
             this.pnlBg.Controls.Add(this.pnlSidebar);
             this.pnlBg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlBg.Location = new System.Drawing.Point(-7, -1);
+            this.pnlBg.Location = new System.Drawing.Point(1, 1);
             this.pnlBg.Name = "pnlBg";
-            this.pnlBg.Size = new System.Drawing.Size(950, 474);
+            this.pnlBg.Size = new System.Drawing.Size(1000, 582);
             this.pnlBg.TabIndex = 0;
             this.pnlBg.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.pnlBg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -201,7 +207,7 @@ namespace sistema_reparto
             this.pnlMantenimientoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMantenimientoC.Location = new System.Drawing.Point(181, 52);
             this.pnlMantenimientoC.Name = "pnlMantenimientoC";
-            this.pnlMantenimientoC.Size = new System.Drawing.Size(769, 422);
+            this.pnlMantenimientoC.Size = new System.Drawing.Size(819, 527);
             this.pnlMantenimientoC.TabIndex = 10;
             this.pnlMantenimientoC.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMantenimientoC_Paint);
             this.pnlMantenimientoC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMantenimientoC_MouseDown);
@@ -254,7 +260,7 @@ namespace sistema_reparto
             this.txtEstatusC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEstatusC.Location = new System.Drawing.Point(3, 27);
             this.txtEstatusC.Name = "txtEstatusC";
-            this.txtEstatusC.Size = new System.Drawing.Size(124, 15);
+            this.txtEstatusC.Size = new System.Drawing.Size(124, 14);
             this.txtEstatusC.TabIndex = 11;
             this.txtEstatusC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -306,7 +312,7 @@ namespace sistema_reparto
             this.txtBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscarCliente.Location = new System.Drawing.Point(483, 164);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(221, 15);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(221, 14);
             this.txtBuscarCliente.TabIndex = 17;
             // 
             // dgvClientes
@@ -341,6 +347,66 @@ namespace sistema_reparto
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.Size = new System.Drawing.Size(307, 150);
             this.dgvClientes.TabIndex = 16;
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
+            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // nombreClienteDataGridViewTextBoxColumn
+            // 
+            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente";
+            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre Cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
+            this.nombreClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // apellidoClienteDataGridViewTextBoxColumn
+            // 
+            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "ApellidoCliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
+            this.apellidoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // telefonoClienteDataGridViewTextBoxColumn
+            // 
+            this.telefonoClienteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoCliente";
+            this.telefonoClienteDataGridViewTextBoxColumn.HeaderText = "Telefono Cliente";
+            this.telefonoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoClienteDataGridViewTextBoxColumn.Name = "telefonoClienteDataGridViewTextBoxColumn";
+            this.telefonoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // correoClienteDataGridViewTextBoxColumn
+            // 
+            this.correoClienteDataGridViewTextBoxColumn.DataPropertyName = "CorreoCliente";
+            this.correoClienteDataGridViewTextBoxColumn.HeaderText = "Correo Cliente";
+            this.correoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.correoClienteDataGridViewTextBoxColumn.Name = "correoClienteDataGridViewTextBoxColumn";
+            this.correoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // direccionClienteDataGridViewTextBoxColumn
+            // 
+            this.direccionClienteDataGridViewTextBoxColumn.DataPropertyName = "DireccionCliente";
+            this.direccionClienteDataGridViewTextBoxColumn.HeaderText = "Direccion Cliente";
+            this.direccionClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionClienteDataGridViewTextBoxColumn.Name = "direccionClienteDataGridViewTextBoxColumn";
+            this.direccionClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // estatusClienteDataGridViewTextBoxColumn
+            // 
+            this.estatusClienteDataGridViewTextBoxColumn.DataPropertyName = "EstatusCliente";
+            this.estatusClienteDataGridViewTextBoxColumn.HeaderText = "Estatus Cliente";
+            this.estatusClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusClienteDataGridViewTextBoxColumn.Name = "estatusClienteDataGridViewTextBoxColumn";
+            this.estatusClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(sistema_reparto.Cliente);
             // 
             // pnlBotonGuardarC
             // 
@@ -396,7 +462,7 @@ namespace sistema_reparto
             this.txtCorreoC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreoC.Location = new System.Drawing.Point(3, 27);
             this.txtCorreoC.Name = "txtCorreoC";
-            this.txtCorreoC.Size = new System.Drawing.Size(124, 15);
+            this.txtCorreoC.Size = new System.Drawing.Size(124, 14);
             this.txtCorreoC.TabIndex = 11;
             this.txtCorreoC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -424,7 +490,7 @@ namespace sistema_reparto
             this.txtTelefonoC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoC.Location = new System.Drawing.Point(3, 27);
             this.txtTelefonoC.Name = "txtTelefonoC";
-            this.txtTelefonoC.Size = new System.Drawing.Size(124, 15);
+            this.txtTelefonoC.Size = new System.Drawing.Size(124, 14);
             this.txtTelefonoC.TabIndex = 11;
             this.txtTelefonoC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -452,7 +518,7 @@ namespace sistema_reparto
             this.txtCampoApellidoC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCampoApellidoC.Location = new System.Drawing.Point(3, 27);
             this.txtCampoApellidoC.Name = "txtCampoApellidoC";
-            this.txtCampoApellidoC.Size = new System.Drawing.Size(124, 15);
+            this.txtCampoApellidoC.Size = new System.Drawing.Size(124, 14);
             this.txtCampoApellidoC.TabIndex = 11;
             this.txtCampoApellidoC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -480,7 +546,7 @@ namespace sistema_reparto
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Location = new System.Drawing.Point(3, 27);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(124, 15);
+            this.txtNombreCliente.Size = new System.Drawing.Size(124, 14);
             this.txtNombreCliente.TabIndex = 11;
             this.txtNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -509,7 +575,7 @@ namespace sistema_reparto
             this.txtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdCliente.Location = new System.Drawing.Point(3, 27);
             this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(124, 15);
+            this.txtIdCliente.Size = new System.Drawing.Size(124, 14);
             this.txtIdCliente.TabIndex = 11;
             this.txtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -569,7 +635,7 @@ namespace sistema_reparto
             this.lblAbcCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcCliente.Location = new System.Drawing.Point(29, 27);
             this.lblAbcCliente.Name = "lblAbcCliente";
-            this.lblAbcCliente.Size = new System.Drawing.Size(206, 24);
+            this.lblAbcCliente.Size = new System.Drawing.Size(196, 22);
             this.lblAbcCliente.TabIndex = 2;
             this.lblAbcCliente.Text = "Mantenimientos Cliente";
             this.lblAbcCliente.Click += new System.EventHandler(this.lbnAbcCliente_Click);
@@ -627,7 +693,7 @@ namespace sistema_reparto
             this.lblTituloCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloCliente.Location = new System.Drawing.Point(207, 9);
             this.lblTituloCliente.Name = "lblTituloCliente";
-            this.lblTituloCliente.Size = new System.Drawing.Size(136, 40);
+            this.lblTituloCliente.Size = new System.Drawing.Size(132, 39);
             this.lblTituloCliente.TabIndex = 1;
             this.lblTituloCliente.Text = "Cliente";
             // 
@@ -635,6 +701,7 @@ namespace sistema_reparto
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
+            this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlSidebar.Controls.Add(this.btnTipoMovimiento);
             this.pnlSidebar.Controls.Add(this.pnlSubUbicacion);
             this.pnlSidebar.Controls.Add(this.btnRuta);
@@ -644,9 +711,9 @@ namespace sistema_reparto
             this.pnlSidebar.Controls.Add(this.btnPuesto);
             this.pnlSidebar.Controls.Add(this.picLogo);
             this.pnlSidebar.Controls.Add(this.btnCliente);
-            this.pnlSidebar.Location = new System.Drawing.Point(1, 0);
+            this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 474);
+            this.pnlSidebar.Size = new System.Drawing.Size(175, 579);
             this.pnlSidebar.TabIndex = 0;
             this.pnlSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.pnlSidebar.MouseHover += new System.EventHandler(this.pnlSidebar_MouseHover);
@@ -1108,71 +1175,64 @@ namespace sistema_reparto
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
             this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
             // 
-            // idClienteDataGridViewTextBoxColumn
+            // btnTipoTransporte
             // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
-            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.Width = 110;
+            this.btnTipoTransporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnTipoTransporte.Controls.Add(this.lblTipoTransporte);
+            this.btnTipoTransporte.Controls.Add(this.picIconoTipoTransporte);
+            this.btnTipoTransporte.Controls.Add(this.label9);
+            this.btnTipoTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTipoTransporte.Location = new System.Drawing.Point(1, 451);
+            this.btnTipoTransporte.Name = "btnTipoTransporte";
+            this.btnTipoTransporte.Size = new System.Drawing.Size(175, 34);
+            this.btnTipoTransporte.TabIndex = 10;
+            this.btnTipoTransporte.Paint += new System.Windows.Forms.PaintEventHandler(this.btnTipoTransporte_Paint);
+            this.btnTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTipoTransporte_MouseClick);
+            this.btnTipoTransporte.MouseLeave += new System.EventHandler(this.btnTipoTransporte_MouseLeave);
+            this.btnTipoTransporte.MouseHover += new System.EventHandler(this.btnTipoTransporte_MouseHover);
             // 
-            // nombreClienteDataGridViewTextBoxColumn
+            // lblTipoTransporte
             // 
-            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente";
-            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre Cliente";
-            this.nombreClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
-            this.nombreClienteDataGridViewTextBoxColumn.Width = 110;
+            this.lblTipoTransporte.AutoSize = true;
+            this.lblTipoTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblTipoTransporte.Location = new System.Drawing.Point(51, 10);
+            this.lblTipoTransporte.Name = "lblTipoTransporte";
+            this.lblTipoTransporte.Size = new System.Drawing.Size(110, 17);
+            this.lblTipoTransporte.TabIndex = 2;
+            this.lblTipoTransporte.Text = "Tipo Transporte";
+            this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
+            this.lblTipoTransporte.MouseLeave += new System.EventHandler(this.lblTipoTransporte_MouseLeave);
+            this.lblTipoTransporte.MouseHover += new System.EventHandler(this.lblTipoTransporte_MouseHover);
             // 
-            // apellidoClienteDataGridViewTextBoxColumn
+            // picIconoTipoTransporte
             // 
-            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "ApellidoCliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
-            this.apellidoClienteDataGridViewTextBoxColumn.Width = 110;
+            this.picIconoTipoTransporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoTipoTransporte.BackgroundImage")));
+            this.picIconoTipoTransporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoTipoTransporte.Location = new System.Drawing.Point(20, 8);
+            this.picIconoTipoTransporte.Name = "picIconoTipoTransporte";
+            this.picIconoTipoTransporte.Size = new System.Drawing.Size(20, 21);
+            this.picIconoTipoTransporte.TabIndex = 1;
+            this.picIconoTipoTransporte.TabStop = false;
+            this.picIconoTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoTipoTransporte_MouseClick);
+            this.picIconoTipoTransporte.MouseLeave += new System.EventHandler(this.picIconoTipoTransporte_MouseLeave);
+            this.picIconoTipoTransporte.MouseHover += new System.EventHandler(this.picIconoTipoTransporte_MouseHover);
             // 
-            // telefonoClienteDataGridViewTextBoxColumn
+            // label9
             // 
-            this.telefonoClienteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoCliente";
-            this.telefonoClienteDataGridViewTextBoxColumn.HeaderText = "Telefono Cliente";
-            this.telefonoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoClienteDataGridViewTextBoxColumn.Name = "telefonoClienteDataGridViewTextBoxColumn";
-            this.telefonoClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // correoClienteDataGridViewTextBoxColumn
-            // 
-            this.correoClienteDataGridViewTextBoxColumn.DataPropertyName = "CorreoCliente";
-            this.correoClienteDataGridViewTextBoxColumn.HeaderText = "Correo Cliente";
-            this.correoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.correoClienteDataGridViewTextBoxColumn.Name = "correoClienteDataGridViewTextBoxColumn";
-            this.correoClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // direccionClienteDataGridViewTextBoxColumn
-            // 
-            this.direccionClienteDataGridViewTextBoxColumn.DataPropertyName = "DireccionCliente";
-            this.direccionClienteDataGridViewTextBoxColumn.HeaderText = "Direccion Cliente";
-            this.direccionClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionClienteDataGridViewTextBoxColumn.Name = "direccionClienteDataGridViewTextBoxColumn";
-            this.direccionClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // estatusClienteDataGridViewTextBoxColumn
-            // 
-            this.estatusClienteDataGridViewTextBoxColumn.DataPropertyName = "EstatusCliente";
-            this.estatusClienteDataGridViewTextBoxColumn.HeaderText = "Estatus Cliente";
-            this.estatusClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusClienteDataGridViewTextBoxColumn.Name = "estatusClienteDataGridViewTextBoxColumn";
-            this.estatusClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(sistema_reparto.Cliente);
+            this.label9.AutoSize = true;
+            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
+            this.label9.Location = new System.Drawing.Point(15, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 15);
+            this.label9.TabIndex = 1;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 472);
+            this.ClientSize = new System.Drawing.Size(1002, 610);
+            this.Controls.Add(this.btnTipoTransporte);
             this.Controls.Add(this.pnlBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
@@ -1186,6 +1246,7 @@ namespace sistema_reparto
             this.pnlEstatusCliente.ResumeLayout(false);
             this.pnlEstatusCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.pnlCampoDireccion.ResumeLayout(false);
             this.pnlCampoDireccion.PerformLayout();
             this.pnlCampoCorreoC.ResumeLayout(false);
@@ -1228,7 +1289,9 @@ namespace sistema_reparto
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            this.btnTipoTransporte.ResumeLayout(false);
+            this.btnTipoTransporte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoTipoTransporte)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1323,6 +1386,10 @@ namespace sistema_reparto
         private System.Windows.Forms.PictureBox picTipoMovimiento;
         private System.Windows.Forms.Label lblTipoMovimiento;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel btnTipoTransporte;
+        private System.Windows.Forms.Label lblTipoTransporte;
+        private System.Windows.Forms.PictureBox picIconoTipoTransporte;
+        private System.Windows.Forms.Label label9;
     }
 }
 

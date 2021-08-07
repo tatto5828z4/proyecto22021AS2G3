@@ -797,6 +797,67 @@ namespace sistema_reparto
         {
             btnTipoMovimiento.BackColor = colorNormalSubUbicacion;
         }
+
+        private void btnTipoTransporte_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte objTipoT = new frmTipoTransporte();
+
+            objTipoT.Visible = true;
+            Visible = false;
+        }
+
+        private void btnTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void btnTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void lblTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void lblTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void picIconoTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void picIconoTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void lblTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte obj = new frmTipoTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte obj = new frmTipoTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }
