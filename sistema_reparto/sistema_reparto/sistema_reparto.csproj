@@ -58,6 +58,12 @@
     <Compile Include="Clases\TipoTransporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="frmPaqueteEncabezado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaqueteEncabezado.Designer.cs">
+      <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaqueteEncabezado.resx">
+      <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
