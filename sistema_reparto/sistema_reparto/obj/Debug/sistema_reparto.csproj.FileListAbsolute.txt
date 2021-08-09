@@ -303,3 +303,10 @@ C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_r
 C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources

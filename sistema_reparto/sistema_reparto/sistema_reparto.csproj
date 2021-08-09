@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\PaqueteEncabezado.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
     <Compile Include="Clases\Ruta.cs" />
@@ -175,6 +176,7 @@
     <None Include="Properties\DataSources\frmPrincipal.datasource" />
     <None Include="Properties\DataSources\frmPuestos.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.PaqueteEncabezado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.TipoEmpleado.datasource" />
