@@ -1065,5 +1065,29 @@ namespace sistema_reparto
         {
             btnTipoTransporte.BackColor = colorNormalCliente;
         }
+
+        private void lblUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
     }
 }
