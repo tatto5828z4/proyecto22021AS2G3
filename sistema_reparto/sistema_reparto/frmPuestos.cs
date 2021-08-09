@@ -933,6 +933,15 @@ namespace sistema_reparto
         {
             btnPaqueteEncabezado.BackColor = colorHoverPuesto;
         }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }

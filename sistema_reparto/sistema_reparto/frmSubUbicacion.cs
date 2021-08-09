@@ -941,6 +941,15 @@ namespace sistema_reparto
         {
             btnPaqueteEncabezado.BackColor = colorNormalSubUbicacion;
         }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }

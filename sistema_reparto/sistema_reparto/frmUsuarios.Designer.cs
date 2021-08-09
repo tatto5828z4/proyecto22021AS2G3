@@ -183,6 +183,10 @@ namespace sistema_reparto
             this.txtCodigoP = new System.Windows.Forms.TextBox();
             this.lblCodigoP = new System.Windows.Forms.Label();
             this.chkConsultarBTTras = new System.Windows.Forms.CheckBox();
+            this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.btnPaqueteEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
@@ -209,6 +213,8 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
             this.pnlBordeUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+            this.pnlEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -216,6 +222,7 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlEmpleado);
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnTipoMovimiento);
@@ -1843,6 +1850,49 @@ namespace sistema_reparto
             this.chkConsultarBTTras.Text = "Consultar Bitacora Trans";
             this.chkConsultarBTTras.UseVisualStyleBackColor = true;
             // 
+            // pnlEmpleado
+            // 
+            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEmpleado.Controls.Add(this.pictureBox3);
+            this.pnlEmpleado.Controls.Add(this.label3);
+            this.pnlEmpleado.Controls.Add(this.label10);
+            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEmpleado.Location = new System.Drawing.Point(-1, 553);
+            this.pnlEmpleado.Name = "pnlEmpleado";
+            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
+            this.pnlEmpleado.TabIndex = 47;
+            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(15, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label10.Location = new System.Drawing.Point(61, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Empleado";
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1996,6 +2046,9 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
             this.pnlBordeUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+            this.pnlEmpleado.ResumeLayout(false);
+            this.pnlEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2154,5 +2207,9 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblPaqueteEncabezado;
         private System.Windows.Forms.PictureBox picIconoPaqueteE;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnlEmpleado;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label10;
     }
 }
