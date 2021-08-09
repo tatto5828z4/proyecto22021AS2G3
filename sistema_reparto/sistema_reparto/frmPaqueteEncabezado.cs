@@ -39,6 +39,11 @@ namespace sistema_reparto
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            /*Llamando Combobox*/
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.cargarCombobox(cbxCliente, "cliente", "idCliente", "nombreCliente");
+            paqueteEncabezado.cargarCombobox(cbxEmpleado, "empleado", "idEmpleado", "nombreEmpleado");
+
             lblTituloPaqueteEncabezado.Visible = true;
             lblAbcPaqueteEncabezado.Visible = true;
             pnlBordePE.Visible = false;
@@ -615,6 +620,9 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = false;
             pnlBordeDarBaja.Visible = false;
 
+            funCargarTabla(null);
+            funVaciarCampos();
+
             /*Habilitando componentes*/
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
@@ -664,6 +672,9 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = false;
             pnlBordeDarBaja.Visible = true;
 
+            funCargarTabla(null);
+            funVaciarCampos();
+
             /*Habilitando componentes*/
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
@@ -673,7 +684,7 @@ namespace sistema_reparto
             pnlCampoDireccionRemitente.Visible = true;
             pnlCampoTelRem.Visible = true;
             pnlCampoIdEmpleado.Visible = true;
-            pnlEstatusPE.Visible = false;
+            pnlEstatusPE.Visible = true;
             txtBuscarPE.Visible = true;
             pnlBotonBuscarPE.Visible = true;
             dgvPaqueteEncabezado.Visible = true;
@@ -724,6 +735,9 @@ namespace sistema_reparto
             pnlBordeRegistrar.Visible = false;
             pnlBordeModificar.Visible = true;
             pnlBordeDarBaja.Visible = false;
+
+            funCargarTabla(null);
+            funVaciarCampos();
 
             /*Habilitando componentes*/
             pnlCampoIDPE.Visible = true;
@@ -831,6 +845,196 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlBotonGuardarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            /* Inicio de ejecucion de funcion insertar un cliente */
+
+            if (txtIdPE.Text == "" && txtNombreRemPE.Text == "" && txtDireccionRemitente.Text == "" && txtTelefonoRemitente.Text == "" && txtEstatusPE.Text == "")
+            {
+                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                String estatusPaqEncabezado = "A";
+                PaqueteEncabezado paqueteEnc = funObtenerTxt(estatusPaqEncabezado);
+                paqueteEnc.funInsertar();
+                /* Final de ejecucion de funcion insertar un cliente */
+
+                funCargarTabla(null);
+                funVaciarCampos();
+            }
+
+        }
+
+        public PaqueteEncabezado funObtenerTxt(String estatus)
+        {
+            /*Inicio obteniedo variables a usar con mi ABC cliente */
+            String codigoPE = txtIdPE.Text;
+            String clientePE = cbxCliente.SelectedValue.ToString();
+            String fechaRecep = txtFechaRecPE.Value.ToString("yyyy-MM-dd");
+            String fechaCliente = txtFechaClienteEntPE.Value.ToString("yyyy-MM-dd");
+            String nombreRem = txtNombreRemPE.Text;
+            String direccionRem = txtDireccionRemitente.Text;
+            String telefonoRem = txtTelefonoRemitente.Text;
+            String idEmpleado = cbxEmpleado.SelectedValue.ToString();
+
+            String estatusPE = estatus;
+
+            /*Final obteniedo variables a usar con mi ABC */
+
+            /* Inicio creamos un objeto de tipo paqueteEncabezado para poder utilizar el metodo de insertar */
+            PaqueteEncabezado paqueteEmpleado = new PaqueteEncabezado(codigoPE, clientePE, fechaRecep, fechaCliente, nombreRem, direccionRem, telefonoRem, idEmpleado, estatusPE);
+            /* Final creamos un objeto de tipo cliente para poder utilizar el metodo de insertar cliente */
+
+            return paqueteEmpleado;
+        }
+
+        private void funCargarTabla(string dato)
+        {
+            List<PaqueteEncabezado> lista = new List<PaqueteEncabezado>();
+            PaqueteEncabezado paqueteEnc = new PaqueteEncabezado();
+
+            dgvPaqueteEncabezado.DataSource = paqueteEnc.consulta(dato);
+        }
+
+        public void funVaciarCampos()
+        {
+            txtIdPE.Text = "";
+            txtNombreRemPE.Text = "";
+            txtDireccionRemitente.Text = "";
+            txtTelefonoRemitente.Text = "";
+            txtEstatusPE.Text = "";
+            txtBuscarPE.Text = "";
+        }
+
+        private void pnlModificarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatusPaqueteEncabezado = "A";
+            String idPaqueteEncabezado = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatusPaqueteEncabezado);
+
+            paqueteEnc.funModificar(idPaqueteEncabezado);
+            funCargarTabla(null);
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, idPaqueteEncabezado);
+
+        }
+
+        private void pnlBotonBuscarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            /* Inicio buscando el dato ingresado por el usuario y llenando mi tabla */
+            String buscarPE = txtBuscarPE.Text;
+            funCargarTabla(buscarPE);
+            /* Final buscando el dato ingresado por el usuario y llenando mi tabla */
+
+            /* Inicio Vaciando los campos */
+            funVaciarCampos();
+            pnlActivarPE.Visible = false;
+            pnlDarBajaPE.Visible = false;
+            /* Final Vaciando los campos */
+        }
+
+        private void pnlLLenarCamposPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtIdPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[0].Value.ToString();
+
+            String idCliente = dgvPaqueteEncabezado.CurrentRow.Cells[1].Value.ToString();
+
+            PaqueteEncabezado paqueteEn = new PaqueteEncabezado();
+            paqueteEn.obtenerNombre(idCliente);
+            //en la funcion idCliente se le asigna el nombre que existe en la BD y se le coloca al combobox
+            cbxCliente.SelectedValue = idCliente;
+
+            // De string a dateTime
+            txtFechaRecPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[2].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[3].Value.ToString());
+
+            txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
+            txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
+            txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
+            cbxEmpleado.SelectedValue = idEmpleado;
+
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+
+        }
+
+        private void pnlDarBajaPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatus = "A";
+            String pIdPE = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatus);
+
+            paqueteEnc.funDarBajaCliente();
+            funCargarTabla(null);
+
+            pnlActivarPE.Visible = true;
+            pnlDarBajaPE.Visible = false;
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, pIdPE);
+
+        }
+
+        private void pnlLlenarCamposPEDB_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtIdPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[0].Value.ToString();
+
+            String idCliente = dgvPaqueteEncabezado.CurrentRow.Cells[1].Value.ToString();
+
+            PaqueteEncabezado paqueteEn = new PaqueteEncabezado();
+            paqueteEn.obtenerNombre(idCliente);
+            cbxCliente.SelectedValue = idCliente;
+
+            // De string a dateTime
+            txtFechaRecPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[2].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[3].Value.ToString());
+
+            txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
+            txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
+            txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
+            cbxEmpleado.SelectedValue = idEmpleado;
+
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+
+
+            PaqueteEncabezado paqueteEnc = new PaqueteEncabezado();
+            String pidPE = txtIdPE.Text;
+            String pEstatusPE = paqueteEnc.funBuscarEstatus(pidPE);
+
+            if (pEstatusPE == "A")
+            {
+                pnlActivarPE.Visible = false;
+                pnlDarBajaPE.Visible = true;
+            }
+            else if (pEstatusPE == "I")
+            {
+                pnlDarBajaPE.Visible = false;
+                pnlActivarPE.Visible = true;
+            }
+        }
+
+        private void pnlActivarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatus = "I";
+            String pIdPE = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatus);
+
+            paqueteEnc.funActivarCliente();
+            funCargarTabla(null);
+
+            pnlDarBajaPE.Visible = true;
+            pnlActivarPE.Visible = false;
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, pIdPE);
+        }
     }
-    
+
 }
