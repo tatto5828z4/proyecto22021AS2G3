@@ -858,6 +858,30 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void btnUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }

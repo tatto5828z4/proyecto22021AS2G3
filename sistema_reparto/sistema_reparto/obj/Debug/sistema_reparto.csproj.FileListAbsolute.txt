@@ -261,3 +261,11 @@ C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BACKUP_TipoTransporte\sistema
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BACKUP_TipoTransporte\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BACKUP_TipoTransporte\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BACKUP_TipoTransporte\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources

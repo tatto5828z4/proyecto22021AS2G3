@@ -588,7 +588,6 @@ namespace sistema_reparto
 
             tipoTransporte.funBuscarSetearTxt(txtIdTipoTransporte, txtNombreTipoTransporte, txtEstatusTipoTransporte, pIdTipoTransporte);
 
-            funVaciarCampos();
         }
 
         private void pnlDarBajaTT_MouseClick(object sender, MouseEventArgs e)
@@ -606,7 +605,6 @@ namespace sistema_reparto
 
             tipoTransporte.funBuscarSetearTxt(txtIdTipoTransporte, txtNombreTipoTransporte, txtEstatusTipoTransporte, pIdTipoTransporte);
 
-            funVaciarCampos();
         }
 
         private void pnlBotonBuscarTR_MouseClick(object sender, MouseEventArgs e)
@@ -858,6 +856,30 @@ namespace sistema_reparto
             frmTipoMovimiento obj = new frmTipoMovimiento();
 
             obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
 
             Visible = false;
         }
