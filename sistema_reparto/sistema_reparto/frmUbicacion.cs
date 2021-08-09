@@ -824,5 +824,87 @@ namespace sistema_reparto
         {
             btnTipoMovimiento.BackColor = colorNormalUbicacion;
         }
+
+        private void btnTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte obj = new frmTipoTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void btnTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverUbicacion;
+        }
+
+        private void btnTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalUbicacion;
+        }
+
+        private void lblTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverUbicacion;
+        }
+
+        private void lblTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalUbicacion;
+        }
+
+        private void picIconoTipoTransporte_MouseHover(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorHoverUbicacion;
+        }
+
+        private void picIconoTipoTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            btnTipoTransporte.BackColor = colorNormalUbicacion;
+        }
+
+        private void picIconoTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblTipoTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
     }
 }

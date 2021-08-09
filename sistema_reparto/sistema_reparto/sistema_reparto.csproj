@@ -55,7 +55,15 @@
     <Compile Include="Clases\SubUbicacion.cs" />
     <Compile Include="Clases\TipoEmpleado.cs" />
     <Compile Include="Clases\TipoMovimiento.cs" />
+    <Compile Include="Clases\TipoTransporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +106,12 @@
     <Compile Include="frmTipoMovimiento.designer.cs">
       <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoTransporte.designer.cs">
+      <DependentUpon>frmTipoTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUbicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +141,14 @@
     <EmbeddedResource Include="frmTipoMovimiento.resx">
       <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoTransporte.resx">
+      <DependentUpon>frmTipoTransporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUbicacion.resx">
       <DependentUpon>frmUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,6 +168,7 @@
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.TipoEmpleado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Settings.datasource" />
