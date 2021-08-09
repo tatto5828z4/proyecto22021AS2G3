@@ -77,7 +77,7 @@ namespace sistema_reparto
 
         private void btnPuesto_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -878,6 +878,60 @@ namespace sistema_reparto
             usuario.Visible = true;
 
             Visible = false;
+        }
+
+        private void btnPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoPaqueteE_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverPuesto;
+        }
+
+        private void lblPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverPuesto;
+        }
+
+        private void picIconoPaqueteE_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverPuesto;
+        }
+
+        private void btnPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalPuesto;
+        }
+
+        private void lblPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverPuesto;
+        }
+
+        private void picIconoPaqueteE_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverPuesto;
         }
         /* Final Llenando campos de mi busqueda en la tabla */
 

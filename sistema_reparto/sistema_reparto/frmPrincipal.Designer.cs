@@ -30,9 +30,9 @@ namespace sistema_reparto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBg = new System.Windows.Forms.Panel();
             this.pnlMantenimientoC = new System.Windows.Forms.Panel();
             this.pnlActivarC = new System.Windows.Forms.Panel();
@@ -84,6 +84,10 @@ namespace sistema_reparto
             this.lblModificarCliente = new System.Windows.Forms.Label();
             this.lblTituloCliente = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
+            this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
+            this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnUsuarios = new System.Windows.Forms.Panel();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.picIconoUsuarios = new System.Windows.Forms.PictureBox();
@@ -142,6 +146,8 @@ namespace sistema_reparto
             this.pnlCampoIDC.SuspendLayout();
             this.pnlBordeCliente.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
+            this.btnPaqueteEncabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
             this.btnUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).BeginInit();
             this.btnTipoTransporte.SuspendLayout();
@@ -340,17 +346,17 @@ namespace sistema_reparto
             this.dgvClientes.Location = new System.Drawing.Point(447, 195);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.RowHeadersWidth = 45;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClientes.Size = new System.Drawing.Size(307, 150);
             this.dgvClientes.TabIndex = 16;
             // 
@@ -708,6 +714,7 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnTipoTransporte);
             this.pnlSidebar.Controls.Add(this.btnTipoMovimiento);
@@ -725,6 +732,58 @@ namespace sistema_reparto
             this.pnlSidebar.TabIndex = 0;
             this.pnlSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.pnlSidebar.MouseHover += new System.EventHandler(this.pnlSidebar_MouseHover);
+            // 
+            // btnPaqueteEncabezado
+            // 
+            this.btnPaqueteEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnPaqueteEncabezado.Controls.Add(this.lblPaqueteEncabezado);
+            this.btnPaqueteEncabezado.Controls.Add(this.picIconoPaqueteE);
+            this.btnPaqueteEncabezado.Controls.Add(this.label13);
+            this.btnPaqueteEncabezado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-5, 516);
+            this.btnPaqueteEncabezado.Name = "btnPaqueteEncabezado";
+            this.btnPaqueteEncabezado.Size = new System.Drawing.Size(189, 34);
+            this.btnPaqueteEncabezado.TabIndex = 33;
+            this.btnPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPaqueteEncabezado_MouseClick);
+            this.btnPaqueteEncabezado.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.btnPaqueteEncabezado_MouseDoubleClick);
+            this.btnPaqueteEncabezado.MouseLeave += new System.EventHandler(this.btnPaqueteEncabezado_MouseLeave);
+            this.btnPaqueteEncabezado.MouseHover += new System.EventHandler(this.btnPaqueteEncabezado_MouseHover);
+            // 
+            // lblPaqueteEncabezado
+            // 
+            this.lblPaqueteEncabezado.AutoSize = true;
+            this.lblPaqueteEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPaqueteEncabezado.Location = new System.Drawing.Point(49, 10);
+            this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(125, 15);
+            this.lblPaqueteEncabezado.TabIndex = 2;
+            this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
+            this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
+            this.lblPaqueteEncabezado.MouseLeave += new System.EventHandler(this.lblPaqueteEncabezado_MouseLeave);
+            this.lblPaqueteEncabezado.MouseHover += new System.EventHandler(this.lblPaqueteEncabezado_MouseHover);
+            // 
+            // picIconoPaqueteE
+            // 
+            this.picIconoPaqueteE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoPaqueteE.BackgroundImage")));
+            this.picIconoPaqueteE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoPaqueteE.Location = new System.Drawing.Point(24, 8);
+            this.picIconoPaqueteE.Name = "picIconoPaqueteE";
+            this.picIconoPaqueteE.Size = new System.Drawing.Size(20, 21);
+            this.picIconoPaqueteE.TabIndex = 1;
+            this.picIconoPaqueteE.TabStop = false;
+            this.picIconoPaqueteE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoPaqueteE_MouseClick);
+            this.picIconoPaqueteE.MouseLeave += new System.EventHandler(this.picIconoPaqueteE_MouseLeave);
+            this.picIconoPaqueteE.MouseHover += new System.EventHandler(this.picIconoPaqueteE_MouseHover);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
+            this.label13.Location = new System.Drawing.Point(15, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.TabIndex = 1;
             // 
             // btnUsuarios
             // 
@@ -1313,6 +1372,9 @@ namespace sistema_reparto
             this.pnlCampoIDC.PerformLayout();
             this.pnlBordeCliente.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
+            this.btnPaqueteEncabezado.ResumeLayout(false);
+            this.btnPaqueteEncabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).EndInit();
             this.btnUsuarios.ResumeLayout(false);
             this.btnUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).EndInit();
@@ -1449,6 +1511,10 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblUsuarios;
         private System.Windows.Forms.PictureBox picIconoUsuarios;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel btnPaqueteEncabezado;
+        private System.Windows.Forms.Label lblPaqueteEncabezado;
+        private System.Windows.Forms.PictureBox picIconoPaqueteE;
+        private System.Windows.Forms.Label label13;
     }
 }
 
