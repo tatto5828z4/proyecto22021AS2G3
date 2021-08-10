@@ -848,6 +848,67 @@ namespace sistema_reparto
             return estadoBolean;
         }
 
+        private void btnPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
 
+            Visible = false;
+        }
+
+        private void lblPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoPaqueteE_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverUsuarios;
+        }
+
+        private void lblPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverUsuarios;
+        }
+
+        private void picIconoPaqueteE_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverUsuarios;
+        }
+
+        private void btnPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalUsuarios;
+        }
+
+        private void lblPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalUsuarios;
+        }
+
+        private void picIconoPaqueteE_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalUsuarios;
+        }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
     }
 }

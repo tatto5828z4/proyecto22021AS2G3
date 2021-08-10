@@ -882,6 +882,74 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void btnPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPaqueteEncabezado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoPaqueteE_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void frmSubUbicacion_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void lblPaqueteEncabezado_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void picIconoPaqueteE_MouseHover(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void btnPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void lblPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void picIconoPaqueteE_MouseLeave(object sender, EventArgs e)
+        {
+            btnPaqueteEncabezado.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
 }
