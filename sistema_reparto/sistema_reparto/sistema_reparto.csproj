@@ -191,6 +191,7 @@
     <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.TipoEmpleado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Usuarios.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">

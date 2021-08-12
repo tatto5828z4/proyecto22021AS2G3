@@ -345,3 +345,5 @@ C:\Users\jorgi\Desktop\proyectoanalisis2\sistema_reparto\sistema_reparto\obj\Deb
 C:\Users\jorgi\Desktop\proyectoanalisis2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 C:\Users\jorgi\Desktop\proyectoanalisis2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\jorgi\Desktop\proyectoanalisis2\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
