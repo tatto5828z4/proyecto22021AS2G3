@@ -29,10 +29,15 @@ namespace sistema_reparto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.picEmple = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmpleado = new System.Windows.Forms.Label();
             this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
@@ -183,7 +188,23 @@ namespace sistema_reparto
             this.txtCodigoP = new System.Windows.Forms.TextBox();
             this.lblCodigoP = new System.Windows.Forms.Label();
             this.chkConsultarBTTras = new System.Windows.Forms.CheckBox();
+            this.pnlContenidoTP = new System.Windows.Forms.Panel();
+            this.pnlCodigoP = new System.Windows.Forms.Panel();
+            this.pnlCodigoU = new System.Windows.Forms.Panel();
+            this.pnlPass = new System.Windows.Forms.Panel();
+            this.pnlNombreU = new System.Windows.Forms.Panel();
+            this.pnlVeriPass = new System.Windows.Forms.Panel();
+            this.pnlEstatusU = new System.Windows.Forms.Panel();
+            this.pnlChecks = new System.Windows.Forms.Panel();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPermisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
+            this.pnlEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmple)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
             this.btnUsuarios.SuspendLayout();
@@ -209,6 +230,15 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
             this.pnlBordeUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+            this.pnlContenidoTP.SuspendLayout();
+            this.pnlCodigoP.SuspendLayout();
+            this.pnlCodigoU.SuspendLayout();
+            this.pnlPass.SuspendLayout();
+            this.pnlNombreU.SuspendLayout();
+            this.pnlVeriPass.SuspendLayout();
+            this.pnlEstatusU.SuspendLayout();
+            this.pnlChecks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -216,6 +246,7 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlEmpleado);
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnTipoMovimiento);
@@ -232,6 +263,56 @@ namespace sistema_reparto
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(179, 721);
             this.pnlSidebar.TabIndex = 2;
+            // 
+            // pnlEmpleado
+            // 
+            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEmpleado.Controls.Add(this.picEmple);
+            this.pnlEmpleado.Controls.Add(this.label3);
+            this.pnlEmpleado.Controls.Add(this.lblEmpleado);
+            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEmpleado.Location = new System.Drawing.Point(-1, 553);
+            this.pnlEmpleado.Name = "pnlEmpleado";
+            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
+            this.pnlEmpleado.TabIndex = 47;
+            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
+            this.pnlEmpleado.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
+            this.pnlEmpleado.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
+            // 
+            // picEmple
+            // 
+            this.picEmple.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEmple.Image = ((System.Drawing.Image)(resources.GetObject("picEmple.Image")));
+            this.picEmple.Location = new System.Drawing.Point(18, 8);
+            this.picEmple.Name = "picEmple";
+            this.picEmple.Size = new System.Drawing.Size(20, 21);
+            this.picEmple.TabIndex = 1;
+            this.picEmple.TabStop = false;
+            this.picEmple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEmple_MouseClick);
+            this.picEmple.MouseLeave += new System.EventHandler(this.picEmple_MouseLeave);
+            this.picEmple.MouseHover += new System.EventHandler(this.picEmple_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(15, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 1;
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEmpleado.Location = new System.Drawing.Point(67, 10);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(54, 13);
+            this.lblEmpleado.TabIndex = 0;
+            this.lblEmpleado.Text = "Empleado";
+            this.lblEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmpleado_MouseClick);
+            this.lblEmpleado.MouseLeave += new System.EventHandler(this.lblEmpleado_MouseLeave);
+            this.lblEmpleado.MouseHover += new System.EventHandler(this.lblEmpleado_MouseHover);
             // 
             // btnPaqueteEncabezado
             // 
@@ -251,11 +332,11 @@ namespace sistema_reparto
             // lblPaqueteEncabezado
             // 
             this.lblPaqueteEncabezado.AutoSize = true;
-            this.lblPaqueteEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaqueteEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblPaqueteEncabezado.Location = new System.Drawing.Point(50, 10);
+            this.lblPaqueteEncabezado.Location = new System.Drawing.Point(52, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(125, 15);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -266,7 +347,7 @@ namespace sistema_reparto
             // 
             this.picIconoPaqueteE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoPaqueteE.BackgroundImage")));
             this.picIconoPaqueteE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoPaqueteE.Location = new System.Drawing.Point(27, 8);
+            this.picIconoPaqueteE.Location = new System.Drawing.Point(24, 8);
             this.picIconoPaqueteE.Name = "picIconoPaqueteE";
             this.picIconoPaqueteE.Size = new System.Drawing.Size(20, 21);
             this.picIconoPaqueteE.TabIndex = 1;
@@ -296,28 +377,34 @@ namespace sistema_reparto
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 6;
             this.btnUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnUsuarios_MouseClick);
+            this.btnUsuarios.MouseLeave += new System.EventHandler(this.btnUsuarios_MouseLeave);
+            this.btnUsuarios.MouseHover += new System.EventHandler(this.btnUsuarios_MouseHover);
             // 
             // lblUsuarios
             // 
             this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblUsuarios.Location = new System.Drawing.Point(68, 10);
+            this.lblUsuarios.Location = new System.Drawing.Point(71, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
+            this.lblUsuarios.Size = new System.Drawing.Size(48, 13);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
+            this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
+            this.lblUsuarios.MouseHover += new System.EventHandler(this.lblUsuarios_MouseHover);
             // 
             // picIconoUsuarios
             // 
             this.picIconoUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoUsuarios.BackgroundImage")));
             this.picIconoUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoUsuarios.Location = new System.Drawing.Point(20, 8);
+            this.picIconoUsuarios.Location = new System.Drawing.Point(18, 8);
             this.picIconoUsuarios.Name = "picIconoUsuarios";
             this.picIconoUsuarios.Size = new System.Drawing.Size(20, 21);
             this.picIconoUsuarios.TabIndex = 1;
             this.picIconoUsuarios.TabStop = false;
             this.picIconoUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoUsuarios_MouseClick);
+            this.picIconoUsuarios.MouseLeave += new System.EventHandler(this.picIconoUsuarios_MouseLeave);
+            this.picIconoUsuarios.MouseHover += new System.EventHandler(this.picIconoUsuarios_MouseHover);
             // 
             // label9
             // 
@@ -339,6 +426,9 @@ namespace sistema_reparto
             this.btnTipoMovimiento.Name = "btnTipoMovimiento";
             this.btnTipoMovimiento.Size = new System.Drawing.Size(182, 34);
             this.btnTipoMovimiento.TabIndex = 45;
+            this.btnTipoMovimiento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTipoMovimiento_MouseClick);
+            this.btnTipoMovimiento.MouseLeave += new System.EventHandler(this.btnTipoMovimiento_MouseLeave);
+            this.btnTipoMovimiento.MouseHover += new System.EventHandler(this.btnTipoMovimiento_MouseHover);
             // 
             // picTipoMovimiento
             // 
@@ -348,17 +438,23 @@ namespace sistema_reparto
             this.picTipoMovimiento.Size = new System.Drawing.Size(21, 18);
             this.picTipoMovimiento.TabIndex = 3;
             this.picTipoMovimiento.TabStop = false;
+            this.picTipoMovimiento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picTipoMovimiento_MouseClick);
+            this.picTipoMovimiento.MouseLeave += new System.EventHandler(this.picTipoMovimiento_MouseLeave);
+            this.picTipoMovimiento.MouseHover += new System.EventHandler(this.picTipoMovimiento_MouseHover);
             // 
             // lblTipoMovimiento
             // 
             this.lblTipoMovimiento.AutoSize = true;
-            this.lblTipoMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblTipoMovimiento.Location = new System.Drawing.Point(53, 10);
+            this.lblTipoMovimiento.Location = new System.Drawing.Point(55, 10);
             this.lblTipoMovimiento.Name = "lblTipoMovimiento";
-            this.lblTipoMovimiento.Size = new System.Drawing.Size(98, 15);
+            this.lblTipoMovimiento.Size = new System.Drawing.Size(85, 13);
             this.lblTipoMovimiento.TabIndex = 2;
             this.lblTipoMovimiento.Text = "Tipo Movimiento";
+            this.lblTipoMovimiento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoMovimiento_MouseClick);
+            this.lblTipoMovimiento.MouseLeave += new System.EventHandler(this.lblTipoMovimiento_MouseLeave);
+            this.lblTipoMovimiento.MouseHover += new System.EventHandler(this.lblTipoMovimiento_MouseHover);
             // 
             // label11
             // 
@@ -380,6 +476,9 @@ namespace sistema_reparto
             this.pnlSubUbicacion.Name = "pnlSubUbicacion";
             this.pnlSubUbicacion.Size = new System.Drawing.Size(180, 34);
             this.pnlSubUbicacion.TabIndex = 43;
+            this.pnlSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSubUbicacion_MouseClick);
+            this.pnlSubUbicacion.MouseLeave += new System.EventHandler(this.pnlSubUbicacion_MouseLeave);
+            this.pnlSubUbicacion.MouseHover += new System.EventHandler(this.pnlSubUbicacion_MouseHover);
             // 
             // picSubUbicacion
             // 
@@ -391,6 +490,9 @@ namespace sistema_reparto
             this.picSubUbicacion.Size = new System.Drawing.Size(20, 21);
             this.picSubUbicacion.TabIndex = 1;
             this.picSubUbicacion.TabStop = false;
+            this.picSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSubUbicacion_MouseClick);
+            this.picSubUbicacion.MouseLeave += new System.EventHandler(this.picSubUbicacion_MouseLeave);
+            this.picSubUbicacion.MouseHover += new System.EventHandler(this.picSubUbicacion_MouseHover);
             // 
             // label8
             // 
@@ -404,13 +506,16 @@ namespace sistema_reparto
             // lblSubUbicacion
             // 
             this.lblSubUbicacion.AutoSize = true;
-            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblSubUbicacion.Location = new System.Drawing.Point(61, 10);
+            this.lblSubUbicacion.Location = new System.Drawing.Point(59, 11);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(84, 15);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
+            this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
+            this.lblSubUbicacion.MouseLeave += new System.EventHandler(this.lblSubUbicacion_MouseLeave);
+            this.lblSubUbicacion.MouseHover += new System.EventHandler(this.lblSubUbicacion_MouseHover);
             // 
             // btnTipoEmpleado
             // 
@@ -423,16 +528,20 @@ namespace sistema_reparto
             this.btnTipoEmpleado.Name = "btnTipoEmpleado";
             this.btnTipoEmpleado.Size = new System.Drawing.Size(182, 34);
             this.btnTipoEmpleado.TabIndex = 42;
+            this.btnTipoEmpleado.MouseLeave += new System.EventHandler(this.btnTipoEmpleado_MouseLeave);
+            this.btnTipoEmpleado.MouseHover += new System.EventHandler(this.btnTipoEmpleado_MouseHover);
             // 
             // picTipoEmpleado
             // 
             this.picTipoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picTipoEmpleado.BackgroundImage")));
             this.picTipoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picTipoEmpleado.Location = new System.Drawing.Point(20, 8);
+            this.picTipoEmpleado.Location = new System.Drawing.Point(17, 8);
             this.picTipoEmpleado.Name = "picTipoEmpleado";
             this.picTipoEmpleado.Size = new System.Drawing.Size(20, 21);
             this.picTipoEmpleado.TabIndex = 1;
             this.picTipoEmpleado.TabStop = false;
+            this.picTipoEmpleado.MouseLeave += new System.EventHandler(this.picTipoEmpleado_MouseLeave);
+            this.picTipoEmpleado.MouseHover += new System.EventHandler(this.picTipoEmpleado_MouseHover);
             // 
             // label7
             // 
@@ -446,13 +555,15 @@ namespace sistema_reparto
             // lblTipoEmpleado
             // 
             this.lblTipoEmpleado.AutoSize = true;
-            this.lblTipoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblTipoEmpleado.Location = new System.Drawing.Point(61, 10);
+            this.lblTipoEmpleado.Location = new System.Drawing.Point(56, 10);
             this.lblTipoEmpleado.Name = "lblTipoEmpleado";
-            this.lblTipoEmpleado.Size = new System.Drawing.Size(91, 15);
+            this.lblTipoEmpleado.Size = new System.Drawing.Size(78, 13);
             this.lblTipoEmpleado.TabIndex = 0;
             this.lblTipoEmpleado.Text = "Tipo Empleado";
+            this.lblTipoEmpleado.MouseLeave += new System.EventHandler(this.lblTipoEmpleado_MouseLeave);
+            this.lblTipoEmpleado.MouseHover += new System.EventHandler(this.lblTipoEmpleado_MouseHover);
             // 
             // btnRuta
             // 
@@ -465,6 +576,9 @@ namespace sistema_reparto
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(180, 34);
             this.btnRuta.TabIndex = 44;
+            this.btnRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnRuta_MouseClick);
+            this.btnRuta.MouseLeave += new System.EventHandler(this.btnRuta_MouseLeave);
+            this.btnRuta.MouseHover += new System.EventHandler(this.btnRuta_MouseHover);
             // 
             // picRuta
             // 
@@ -475,6 +589,9 @@ namespace sistema_reparto
             this.picRuta.Size = new System.Drawing.Size(20, 21);
             this.picRuta.TabIndex = 1;
             this.picRuta.TabStop = false;
+            this.picRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picRuta_MouseClick);
+            this.picRuta.MouseLeave += new System.EventHandler(this.picRuta_MouseLeave);
+            this.picRuta.MouseHover += new System.EventHandler(this.picRuta_MouseHover);
             // 
             // label12
             // 
@@ -488,13 +605,16 @@ namespace sistema_reparto
             // lblRuta
             // 
             this.lblRuta.AutoSize = true;
-            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblRuta.Location = new System.Drawing.Point(73, 10);
+            this.lblRuta.Location = new System.Drawing.Point(74, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(33, 15);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
+            this.lblRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRuta_MouseClick);
+            this.lblRuta.MouseLeave += new System.EventHandler(this.lblRuta_MouseLeave);
+            this.lblRuta.MouseHover += new System.EventHandler(this.lblRuta_MouseHover);
             // 
             // btnTipoTransporte
             // 
@@ -507,27 +627,36 @@ namespace sistema_reparto
             this.btnTipoTransporte.Name = "btnTipoTransporte";
             this.btnTipoTransporte.Size = new System.Drawing.Size(180, 34);
             this.btnTipoTransporte.TabIndex = 5;
+            this.btnTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTipoTransporte_MouseClick);
+            this.btnTipoTransporte.MouseLeave += new System.EventHandler(this.btnTipoTransporte_MouseLeave);
+            this.btnTipoTransporte.MouseHover += new System.EventHandler(this.btnTipoTransporte_MouseHover);
             // 
             // lblTipoTransporte
             // 
             this.lblTipoTransporte.AutoSize = true;
-            this.lblTipoTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblTipoTransporte.Location = new System.Drawing.Point(59, 10);
+            this.lblTipoTransporte.Location = new System.Drawing.Point(57, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(93, 15);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(82, 13);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
+            this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
+            this.lblTipoTransporte.MouseLeave += new System.EventHandler(this.lblTipoTransporte_MouseLeave);
+            this.lblTipoTransporte.MouseHover += new System.EventHandler(this.lblTipoTransporte_MouseHover);
             // 
             // picIconoTipoTransporte
             // 
             this.picIconoTipoTransporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoTipoTransporte.BackgroundImage")));
             this.picIconoTipoTransporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoTipoTransporte.Location = new System.Drawing.Point(20, 8);
+            this.picIconoTipoTransporte.Location = new System.Drawing.Point(17, 8);
             this.picIconoTipoTransporte.Name = "picIconoTipoTransporte";
             this.picIconoTipoTransporte.Size = new System.Drawing.Size(20, 21);
             this.picIconoTipoTransporte.TabIndex = 1;
             this.picIconoTipoTransporte.TabStop = false;
+            this.picIconoTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoTipoTransporte_MouseClick);
+            this.picIconoTipoTransporte.MouseLeave += new System.EventHandler(this.picIconoTipoTransporte_MouseLeave);
+            this.picIconoTipoTransporte.MouseHover += new System.EventHandler(this.picIconoTipoTransporte_MouseHover);
             // 
             // label6
             // 
@@ -549,16 +678,22 @@ namespace sistema_reparto
             this.btnUbicacion.Name = "btnUbicacion";
             this.btnUbicacion.Size = new System.Drawing.Size(180, 34);
             this.btnUbicacion.TabIndex = 4;
+            this.btnUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnUbicacion_MouseClick);
+            this.btnUbicacion.MouseLeave += new System.EventHandler(this.btnUbicacion_MouseLeave);
+            this.btnUbicacion.MouseHover += new System.EventHandler(this.btnUbicacion_MouseHover);
             // 
             // lblUbicacion
             // 
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblUbicacion.Location = new System.Drawing.Point(64, 10);
+            this.lblUbicacion.Location = new System.Drawing.Point(69, 10);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
+            this.lblUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUbicacion_MouseClick);
+            this.lblUbicacion.MouseLeave += new System.EventHandler(this.lblUbicacion_MouseLeave);
+            this.lblUbicacion.MouseHover += new System.EventHandler(this.lblUbicacion_MouseHover);
             // 
             // picIconoUbicacion
             // 
@@ -569,6 +704,9 @@ namespace sistema_reparto
             this.picIconoUbicacion.Size = new System.Drawing.Size(20, 21);
             this.picIconoUbicacion.TabIndex = 1;
             this.picIconoUbicacion.TabStop = false;
+            this.picIconoUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoUbicacion_MouseClick);
+            this.picIconoUbicacion.MouseLeave += new System.EventHandler(this.picIconoUbicacion_MouseLeave);
+            this.picIconoUbicacion.MouseHover += new System.EventHandler(this.picIconoUbicacion_MouseHover);
             // 
             // label5
             // 
@@ -590,16 +728,22 @@ namespace sistema_reparto
             this.btnDepartamento.Name = "btnDepartamento";
             this.btnDepartamento.Size = new System.Drawing.Size(180, 34);
             this.btnDepartamento.TabIndex = 3;
+            this.btnDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnDepartamento_MouseClick);
+            this.btnDepartamento.MouseLeave += new System.EventHandler(this.btnDepartamento_MouseLeave);
+            this.btnDepartamento.MouseHover += new System.EventHandler(this.btnDepartamento_MouseHover);
             // 
             // lblDepartamento
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblDepartamento.Location = new System.Drawing.Point(59, 10);
+            this.lblDepartamento.Location = new System.Drawing.Point(61, 10);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
+            this.lblDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDepartamento_MouseClick);
+            this.lblDepartamento.MouseLeave += new System.EventHandler(this.lblDepartamento_MouseLeave);
+            this.lblDepartamento.MouseHover += new System.EventHandler(this.lblDepartamento_MouseHover);
             // 
             // picDepartamento
             // 
@@ -610,6 +754,9 @@ namespace sistema_reparto
             this.picDepartamento.Size = new System.Drawing.Size(20, 21);
             this.picDepartamento.TabIndex = 1;
             this.picDepartamento.TabStop = false;
+            this.picDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picDepartamento_MouseClick);
+            this.picDepartamento.MouseLeave += new System.EventHandler(this.picDepartamento_MouseLeave);
+            this.picDepartamento.MouseHover += new System.EventHandler(this.picDepartamento_MouseHover);
             // 
             // label4
             // 
@@ -632,6 +779,8 @@ namespace sistema_reparto
             this.btnPuesto.Size = new System.Drawing.Size(180, 34);
             this.btnPuesto.TabIndex = 2;
             this.btnPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPuesto_MouseClick);
+            this.btnPuesto.MouseLeave += new System.EventHandler(this.btnPuesto_MouseLeave);
+            this.btnPuesto.MouseHover += new System.EventHandler(this.btnPuesto_MouseHover);
             // 
             // picPuesto
             // 
@@ -643,6 +792,8 @@ namespace sistema_reparto
             this.picPuesto.TabIndex = 1;
             this.picPuesto.TabStop = false;
             this.picPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picPuesto_MouseClick);
+            this.picPuesto.MouseLeave += new System.EventHandler(this.picPuesto_MouseLeave);
+            this.picPuesto.MouseHover += new System.EventHandler(this.picPuesto_MouseHover);
             // 
             // label2
             // 
@@ -663,6 +814,8 @@ namespace sistema_reparto
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             this.lblPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPuesto_MouseClick);
+            this.lblPuesto.MouseLeave += new System.EventHandler(this.lblPuesto_MouseLeave);
+            this.lblPuesto.MouseHover += new System.EventHandler(this.lblPuesto_MouseHover);
             // 
             // picLogo
             // 
@@ -688,6 +841,8 @@ namespace sistema_reparto
             this.btnCliente.Size = new System.Drawing.Size(180, 34);
             this.btnCliente.TabIndex = 1;
             this.btnCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCliente_MouseClick);
+            this.btnCliente.MouseLeave += new System.EventHandler(this.btnCliente_MouseLeave);
+            this.btnCliente.MouseHover += new System.EventHandler(this.btnCliente_MouseHover);
             // 
             // picIconoCliente
             // 
@@ -699,6 +854,8 @@ namespace sistema_reparto
             this.picIconoCliente.TabIndex = 1;
             this.picIconoCliente.TabStop = false;
             this.picIconoCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoCliente_MouseClick);
+            this.picIconoCliente.MouseLeave += new System.EventHandler(this.picIconoCliente_MouseLeave);
+            this.picIconoCliente.MouseHover += new System.EventHandler(this.picIconoCliente_MouseHover);
             // 
             // label1
             // 
@@ -713,19 +870,21 @@ namespace sistema_reparto
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblCliente.Location = new System.Drawing.Point(73, 10);
+            this.lblCliente.Location = new System.Drawing.Point(77, 10);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             this.lblCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCliente_MouseClick);
+            this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
+            this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
             // 
             // lblTituloUsuario
             // 
             this.lblTituloUsuario.AutoSize = true;
             this.lblTituloUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
-            this.lblTituloUsuario.Location = new System.Drawing.Point(207, 9);
+            this.lblTituloUsuario.Location = new System.Drawing.Point(207, 12);
             this.lblTituloUsuario.Name = "lblTituloUsuario";
             this.lblTituloUsuario.Size = new System.Drawing.Size(145, 35);
             this.lblTituloUsuario.TabIndex = 3;
@@ -735,7 +894,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarU.AutoSize = true;
             this.chkIngresarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarU.Location = new System.Drawing.Point(208, 425);
+            this.chkIngresarU.Location = new System.Drawing.Point(3, 14);
             this.chkIngresarU.Name = "chkIngresarU";
             this.chkIngresarU.Size = new System.Drawing.Size(92, 16);
             this.chkIngresarU.TabIndex = 4;
@@ -770,6 +929,7 @@ namespace sistema_reparto
             this.lblAbcUsuarios.Size = new System.Drawing.Size(189, 20);
             this.lblAbcUsuarios.TabIndex = 11;
             this.lblAbcUsuarios.Text = "Mantenimientos Usuarios";
+            this.lblAbcUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcUsuarios_MouseClick);
             // 
             // lblRegistrarUsuario
             // 
@@ -782,6 +942,7 @@ namespace sistema_reparto
             this.lblRegistrarUsuario.Size = new System.Drawing.Size(113, 16);
             this.lblRegistrarUsuario.TabIndex = 16;
             this.lblRegistrarUsuario.Text = "Registrar Usuario";
+            this.lblRegistrarUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarUsuario_MouseClick);
             // 
             // pnlBordeDarBajaU
             // 
@@ -802,6 +963,8 @@ namespace sistema_reparto
             this.lblDarBajaUsu.Size = new System.Drawing.Size(80, 16);
             this.lblDarBajaUsu.TabIndex = 18;
             this.lblDarBajaUsu.Text = "Dar de Baja";
+            this.lblDarBajaUsu.Click += new System.EventHandler(this.lblDarBajaUsu_Click);
+            this.lblDarBajaUsu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDarBajaUsu_MouseClick);
             // 
             // pnlBordeRegistrarUsu
             // 
@@ -830,12 +993,14 @@ namespace sistema_reparto
             this.lblModificarUsuario.Size = new System.Drawing.Size(113, 16);
             this.lblModificarUsuario.TabIndex = 17;
             this.lblModificarUsuario.Text = "Modificar Usuario";
+            this.lblModificarUsuario.Click += new System.EventHandler(this.lblModificarUsuario_Click);
+            this.lblModificarUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblModificarUsuario_MouseClick);
             // 
             // chkModificarU
             // 
             this.chkModificarU.AutoSize = true;
             this.chkModificarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarU.Location = new System.Drawing.Point(316, 425);
+            this.chkModificarU.Location = new System.Drawing.Point(111, 14);
             this.chkModificarU.Name = "chkModificarU";
             this.chkModificarU.Size = new System.Drawing.Size(97, 16);
             this.chkModificarU.TabIndex = 36;
@@ -846,7 +1011,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaU.AutoSize = true;
             this.chkDarBajaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaU.Location = new System.Drawing.Point(427, 425);
+            this.chkDarBajaU.Location = new System.Drawing.Point(222, 14);
             this.chkDarBajaU.Name = "chkDarBajaU";
             this.chkDarBajaU.Size = new System.Drawing.Size(93, 16);
             this.chkDarBajaU.TabIndex = 56;
@@ -857,7 +1022,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaU.AutoSize = true;
             this.chkConsultaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaU.Location = new System.Drawing.Point(534, 425);
+            this.chkConsultaU.Location = new System.Drawing.Point(329, 14);
             this.chkConsultaU.Name = "chkConsultaU";
             this.chkConsultaU.Size = new System.Drawing.Size(95, 16);
             this.chkConsultaU.TabIndex = 76;
@@ -868,7 +1033,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarC.AutoSize = true;
             this.chkIngresarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarC.Location = new System.Drawing.Point(642, 425);
+            this.chkIngresarC.Location = new System.Drawing.Point(437, 14);
             this.chkIngresarC.Name = "chkIngresarC";
             this.chkIngresarC.Size = new System.Drawing.Size(89, 16);
             this.chkIngresarC.TabIndex = 96;
@@ -879,7 +1044,7 @@ namespace sistema_reparto
             // 
             this.chkModificarC.AutoSize = true;
             this.chkModificarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarC.Location = new System.Drawing.Point(760, 424);
+            this.chkModificarC.Location = new System.Drawing.Point(555, 13);
             this.chkModificarC.Name = "chkModificarC";
             this.chkModificarC.Size = new System.Drawing.Size(94, 16);
             this.chkModificarC.TabIndex = 116;
@@ -890,7 +1055,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaC.AutoSize = true;
             this.chkDarBajaC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaC.Location = new System.Drawing.Point(883, 424);
+            this.chkDarBajaC.Location = new System.Drawing.Point(678, 13);
             this.chkDarBajaC.Name = "chkDarBajaC";
             this.chkDarBajaC.Size = new System.Drawing.Size(90, 16);
             this.chkDarBajaC.TabIndex = 136;
@@ -901,7 +1066,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarC.AutoSize = true;
             this.chkConsultarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarC.Location = new System.Drawing.Point(1012, 424);
+            this.chkConsultarC.Location = new System.Drawing.Point(807, 13);
             this.chkConsultarC.Name = "chkConsultarC";
             this.chkConsultarC.Size = new System.Drawing.Size(92, 16);
             this.chkConsultarC.TabIndex = 156;
@@ -912,7 +1077,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarD.AutoSize = true;
             this.chkIngresarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarD.Location = new System.Drawing.Point(1115, 422);
+            this.chkIngresarD.Location = new System.Drawing.Point(910, 11);
             this.chkIngresarD.Name = "chkIngresarD";
             this.chkIngresarD.Size = new System.Drawing.Size(85, 16);
             this.chkIngresarD.TabIndex = 176;
@@ -923,7 +1088,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarBo.AutoSize = true;
             this.chkIngresarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarBo.Location = new System.Drawing.Point(651, 570);
+            this.chkIngresarBo.Location = new System.Drawing.Point(446, 159);
             this.chkIngresarBo.Name = "chkIngresarBo";
             this.chkIngresarBo.Size = new System.Drawing.Size(91, 16);
             this.chkIngresarBo.TabIndex = 194;
@@ -934,7 +1099,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarPi.AutoSize = true;
             this.chkIngresarPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarPi.Location = new System.Drawing.Point(1012, 459);
+            this.chkIngresarPi.Location = new System.Drawing.Point(807, 48);
             this.chkIngresarPi.Name = "chkIngresarPi";
             this.chkIngresarPi.Size = new System.Drawing.Size(83, 16);
             this.chkIngresarPi.TabIndex = 192;
@@ -945,7 +1110,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaPu.AutoSize = true;
             this.chkConsultaPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaPu.Location = new System.Drawing.Point(883, 459);
+            this.chkConsultaPu.Location = new System.Drawing.Point(678, 48);
             this.chkConsultaPu.Name = "chkConsultaPu";
             this.chkConsultaPu.Size = new System.Drawing.Size(92, 16);
             this.chkConsultaPu.TabIndex = 190;
@@ -956,7 +1121,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaPu.AutoSize = true;
             this.chkDarBajaPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaPu.Location = new System.Drawing.Point(760, 459);
+            this.chkDarBajaPu.Location = new System.Drawing.Point(555, 48);
             this.chkDarBajaPu.Name = "chkDarBajaPu";
             this.chkDarBajaPu.Size = new System.Drawing.Size(90, 16);
             this.chkDarBajaPu.TabIndex = 188;
@@ -967,7 +1132,7 @@ namespace sistema_reparto
             // 
             this.chkModificarPu.AutoSize = true;
             this.chkModificarPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarPu.Location = new System.Drawing.Point(642, 460);
+            this.chkModificarPu.Location = new System.Drawing.Point(437, 49);
             this.chkModificarPu.Name = "chkModificarPu";
             this.chkModificarPu.Size = new System.Drawing.Size(94, 16);
             this.chkModificarPu.TabIndex = 186;
@@ -978,7 +1143,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarPu.AutoSize = true;
             this.chkIngresarPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarPu.Location = new System.Drawing.Point(534, 460);
+            this.chkIngresarPu.Location = new System.Drawing.Point(329, 49);
             this.chkIngresarPu.Name = "chkIngresarPu";
             this.chkIngresarPu.Size = new System.Drawing.Size(89, 16);
             this.chkIngresarPu.TabIndex = 184;
@@ -989,7 +1154,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarD.AutoSize = true;
             this.chkConsultarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarD.Location = new System.Drawing.Point(427, 460);
+            this.chkConsultarD.Location = new System.Drawing.Point(222, 49);
             this.chkConsultarD.Name = "chkConsultarD";
             this.chkConsultarD.Size = new System.Drawing.Size(91, 16);
             this.chkConsultarD.TabIndex = 182;
@@ -1000,7 +1165,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaD.AutoSize = true;
             this.chkDarBajaD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaD.Location = new System.Drawing.Point(316, 460);
+            this.chkDarBajaD.Location = new System.Drawing.Point(111, 49);
             this.chkDarBajaD.Name = "chkDarBajaD";
             this.chkDarBajaD.Size = new System.Drawing.Size(86, 16);
             this.chkDarBajaD.TabIndex = 180;
@@ -1011,7 +1176,7 @@ namespace sistema_reparto
             // 
             this.chkModificarD.AutoSize = true;
             this.chkModificarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarD.Location = new System.Drawing.Point(208, 460);
+            this.chkModificarD.Location = new System.Drawing.Point(3, 49);
             this.chkModificarD.Name = "chkModificarD";
             this.chkModificarD.Size = new System.Drawing.Size(90, 16);
             this.chkModificarD.TabIndex = 178;
@@ -1022,7 +1187,7 @@ namespace sistema_reparto
             // 
             this.chkModificarEnc.AutoSize = true;
             this.chkModificarEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarEnc.Location = new System.Drawing.Point(1007, 491);
+            this.chkModificarEnc.Location = new System.Drawing.Point(802, 80);
             this.chkModificarEnc.Name = "chkModificarEnc";
             this.chkModificarEnc.Size = new System.Drawing.Size(117, 16);
             this.chkModificarEnc.TabIndex = 212;
@@ -1033,7 +1198,7 @@ namespace sistema_reparto
             // 
             this.chkPaqueteEnc.AutoSize = true;
             this.chkPaqueteEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPaqueteEnc.Location = new System.Drawing.Point(904, 493);
+            this.chkPaqueteEnc.Location = new System.Drawing.Point(699, 82);
             this.chkPaqueteEnc.Name = "chkPaqueteEnc";
             this.chkPaqueteEnc.Size = new System.Drawing.Size(96, 14);
             this.chkPaqueteEnc.TabIndex = 210;
@@ -1044,7 +1209,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaE.AutoSize = true;
             this.chkConsultaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaE.Location = new System.Drawing.Point(775, 493);
+            this.chkConsultaE.Location = new System.Drawing.Point(570, 82);
             this.chkConsultaE.Name = "chkConsultaE";
             this.chkConsultaE.Size = new System.Drawing.Size(104, 16);
             this.chkConsultaE.TabIndex = 208;
@@ -1055,7 +1220,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaE.AutoSize = true;
             this.chkDarBajaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaE.Location = new System.Drawing.Point(652, 493);
+            this.chkDarBajaE.Location = new System.Drawing.Point(447, 82);
             this.chkDarBajaE.Name = "chkDarBajaE";
             this.chkDarBajaE.Size = new System.Drawing.Size(102, 16);
             this.chkDarBajaE.TabIndex = 206;
@@ -1066,7 +1231,7 @@ namespace sistema_reparto
             // 
             this.chkModificarE.AutoSize = true;
             this.chkModificarE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarE.Location = new System.Drawing.Point(534, 494);
+            this.chkModificarE.Location = new System.Drawing.Point(329, 83);
             this.chkModificarE.Name = "chkModificarE";
             this.chkModificarE.Size = new System.Drawing.Size(106, 16);
             this.chkModificarE.TabIndex = 204;
@@ -1077,7 +1242,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarEm.AutoSize = true;
             this.chkIngresarEm.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarEm.Location = new System.Drawing.Point(426, 494);
+            this.chkIngresarEm.Location = new System.Drawing.Point(221, 83);
             this.chkIngresarEm.Name = "chkIngresarEm";
             this.chkIngresarEm.Size = new System.Drawing.Size(101, 16);
             this.chkIngresarEm.TabIndex = 202;
@@ -1088,7 +1253,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaPi.AutoSize = true;
             this.chkConsultaPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaPi.Location = new System.Drawing.Point(319, 494);
+            this.chkConsultaPi.Location = new System.Drawing.Point(114, 83);
             this.chkConsultaPi.Name = "chkConsultaPi";
             this.chkConsultaPi.Size = new System.Drawing.Size(86, 16);
             this.chkConsultaPi.TabIndex = 200;
@@ -1099,7 +1264,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaPi.AutoSize = true;
             this.chkDarBajaPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaPi.Location = new System.Drawing.Point(208, 494);
+            this.chkDarBajaPi.Location = new System.Drawing.Point(3, 83);
             this.chkDarBajaPi.Name = "chkDarBajaPi";
             this.chkDarBajaPi.Size = new System.Drawing.Size(84, 16);
             this.chkDarBajaPi.TabIndex = 198;
@@ -1110,7 +1275,7 @@ namespace sistema_reparto
             // 
             this.chkModificarPi.AutoSize = true;
             this.chkModificarPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarPi.Location = new System.Drawing.Point(1115, 457);
+            this.chkModificarPi.Location = new System.Drawing.Point(910, 46);
             this.chkModificarPi.Name = "chkModificarPi";
             this.chkModificarPi.Size = new System.Drawing.Size(88, 16);
             this.chkModificarPi.TabIndex = 196;
@@ -1121,7 +1286,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaUb.AutoSize = true;
             this.chkDarBajaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaUb.Location = new System.Drawing.Point(1007, 529);
+            this.chkDarBajaUb.Location = new System.Drawing.Point(802, 118);
             this.chkDarBajaUb.Name = "chkDarBajaUb";
             this.chkDarBajaUb.Size = new System.Drawing.Size(102, 16);
             this.chkDarBajaUb.TabIndex = 230;
@@ -1132,7 +1297,7 @@ namespace sistema_reparto
             // 
             this.chkModificarUb.AutoSize = true;
             this.chkModificarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarUb.Location = new System.Drawing.Point(904, 531);
+            this.chkModificarUb.Location = new System.Drawing.Point(699, 120);
             this.chkModificarUb.Name = "chkModificarUb";
             this.chkModificarUb.Size = new System.Drawing.Size(92, 14);
             this.chkModificarUb.TabIndex = 228;
@@ -1143,7 +1308,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarUb.AutoSize = true;
             this.chkIngresarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarUb.Location = new System.Drawing.Point(775, 531);
+            this.chkIngresarUb.Location = new System.Drawing.Point(570, 120);
             this.chkIngresarUb.Name = "chkIngresarUb";
             this.chkIngresarUb.Size = new System.Drawing.Size(101, 16);
             this.chkIngresarUb.TabIndex = 226;
@@ -1154,7 +1319,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaDet.AutoSize = true;
             this.chkConsultaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaDet.Location = new System.Drawing.Point(652, 531);
+            this.chkConsultaDet.Location = new System.Drawing.Point(447, 120);
             this.chkConsultaDet.Name = "chkConsultaDet";
             this.chkConsultaDet.Size = new System.Drawing.Size(97, 14);
             this.chkConsultaDet.TabIndex = 224;
@@ -1165,7 +1330,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaPaDet.AutoSize = true;
             this.chkDarBajaPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaPaDet.Location = new System.Drawing.Point(534, 532);
+            this.chkDarBajaPaDet.Location = new System.Drawing.Point(329, 121);
             this.chkDarBajaPaDet.Name = "chkDarBajaPaDet";
             this.chkDarBajaPaDet.Size = new System.Drawing.Size(107, 14);
             this.chkDarBajaPaDet.TabIndex = 222;
@@ -1176,7 +1341,7 @@ namespace sistema_reparto
             // 
             this.chkModificarPaDet.AutoSize = true;
             this.chkModificarPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarPaDet.Location = new System.Drawing.Point(426, 532);
+            this.chkModificarPaDet.Location = new System.Drawing.Point(221, 121);
             this.chkModificarPaDet.Name = "chkModificarPaDet";
             this.chkModificarPaDet.Size = new System.Drawing.Size(99, 14);
             this.chkModificarPaDet.TabIndex = 220;
@@ -1187,7 +1352,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarPaDe.AutoSize = true;
             this.chkIngresarPaDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarPaDe.Location = new System.Drawing.Point(319, 532);
+            this.chkIngresarPaDe.Location = new System.Drawing.Point(114, 121);
             this.chkIngresarPaDe.Name = "chkIngresarPaDe";
             this.chkIngresarPaDe.Size = new System.Drawing.Size(95, 14);
             this.chkIngresarPaDe.TabIndex = 218;
@@ -1198,7 +1363,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaPaEc.AutoSize = true;
             this.chkConsultaPaEc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaPaEc.Location = new System.Drawing.Point(208, 532);
+            this.chkConsultaPaEc.Location = new System.Drawing.Point(3, 121);
             this.chkConsultaPaEc.Name = "chkConsultaPaEc";
             this.chkConsultaPaEc.Size = new System.Drawing.Size(98, 14);
             this.chkConsultaPaEc.TabIndex = 216;
@@ -1209,7 +1374,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaPaEnc.AutoSize = true;
             this.chkDarBajaPaEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaPaEnc.Location = new System.Drawing.Point(1131, 491);
+            this.chkDarBajaPaEnc.Location = new System.Drawing.Point(926, 80);
             this.chkDarBajaPaEnc.Name = "chkDarBajaPaEnc";
             this.chkDarBajaPaEnc.Size = new System.Drawing.Size(98, 14);
             this.chkDarBajaPaEnc.TabIndex = 214;
@@ -1220,7 +1385,7 @@ namespace sistema_reparto
             // 
             this.chkInventario.AutoSize = true;
             this.chkInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkInventario.Location = new System.Drawing.Point(1115, 569);
+            this.chkInventario.Location = new System.Drawing.Point(910, 158);
             this.chkInventario.Name = "chkInventario";
             this.chkInventario.Size = new System.Drawing.Size(102, 16);
             this.chkInventario.TabIndex = 248;
@@ -1231,7 +1396,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarBo.AutoSize = true;
             this.chkConsultarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarBo.Location = new System.Drawing.Point(1012, 571);
+            this.chkConsultarBo.Location = new System.Drawing.Point(807, 160);
             this.chkConsultarBo.Name = "chkConsultarBo";
             this.chkConsultarBo.Size = new System.Drawing.Size(97, 16);
             this.chkConsultarBo.TabIndex = 246;
@@ -1242,7 +1407,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaBo.AutoSize = true;
             this.chkDarBajaBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaBo.Location = new System.Drawing.Point(883, 571);
+            this.chkDarBajaBo.Location = new System.Drawing.Point(678, 160);
             this.chkDarBajaBo.Name = "chkDarBajaBo";
             this.chkDarBajaBo.Size = new System.Drawing.Size(92, 16);
             this.chkDarBajaBo.TabIndex = 244;
@@ -1253,7 +1418,7 @@ namespace sistema_reparto
             // 
             this.chkModificarBo.AutoSize = true;
             this.chkModificarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarBo.Location = new System.Drawing.Point(760, 571);
+            this.chkModificarBo.Location = new System.Drawing.Point(555, 160);
             this.chkModificarBo.Name = "chkModificarBo";
             this.chkModificarBo.Size = new System.Drawing.Size(96, 16);
             this.chkModificarBo.TabIndex = 242;
@@ -1264,7 +1429,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaSub.AutoSize = true;
             this.chkConsultaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaSub.Location = new System.Drawing.Point(534, 572);
+            this.chkConsultaSub.Location = new System.Drawing.Point(329, 161);
             this.chkConsultaSub.Name = "chkConsultaSub";
             this.chkConsultaSub.Size = new System.Drawing.Size(101, 14);
             this.chkConsultaSub.TabIndex = 240;
@@ -1275,7 +1440,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaSub.AutoSize = true;
             this.chkDarBajaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaSub.Location = new System.Drawing.Point(426, 572);
+            this.chkDarBajaSub.Location = new System.Drawing.Point(221, 161);
             this.chkDarBajaSub.Name = "chkDarBajaSub";
             this.chkDarBajaSub.Size = new System.Drawing.Size(101, 14);
             this.chkDarBajaSub.TabIndex = 238;
@@ -1286,7 +1451,7 @@ namespace sistema_reparto
             // 
             this.chkModificarSub.AutoSize = true;
             this.chkModificarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarSub.Location = new System.Drawing.Point(319, 572);
+            this.chkModificarSub.Location = new System.Drawing.Point(114, 161);
             this.chkModificarSub.Name = "chkModificarSub";
             this.chkModificarSub.Size = new System.Drawing.Size(103, 14);
             this.chkModificarSub.TabIndex = 236;
@@ -1297,7 +1462,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarSub.AutoSize = true;
             this.chkIngresarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarSub.Location = new System.Drawing.Point(208, 572);
+            this.chkIngresarSub.Location = new System.Drawing.Point(3, 161);
             this.chkIngresarSub.Name = "chkIngresarSub";
             this.chkIngresarSub.Size = new System.Drawing.Size(99, 14);
             this.chkIngresarSub.TabIndex = 234;
@@ -1308,7 +1473,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaUb.AutoSize = true;
             this.chkConsultaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaUb.Location = new System.Drawing.Point(1121, 527);
+            this.chkConsultaUb.Location = new System.Drawing.Point(916, 116);
             this.chkConsultaUb.Name = "chkConsultaUb";
             this.chkConsultaUb.Size = new System.Drawing.Size(104, 16);
             this.chkConsultaUb.TabIndex = 232;
@@ -1319,7 +1484,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarTra.AutoSize = true;
             this.chkIngresarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarTra.Location = new System.Drawing.Point(1017, 608);
+            this.chkIngresarTra.Location = new System.Drawing.Point(812, 197);
             this.chkIngresarTra.Name = "chkIngresarTra";
             this.chkIngresarTra.Size = new System.Drawing.Size(104, 16);
             this.chkIngresarTra.TabIndex = 266;
@@ -1330,7 +1495,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarTip.AutoSize = true;
             this.chkConsultarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarTip.Location = new System.Drawing.Point(905, 610);
+            this.chkConsultarTip.Location = new System.Drawing.Point(700, 199);
             this.chkConsultarTip.Name = "chkConsultarTip";
             this.chkConsultarTip.Size = new System.Drawing.Size(113, 14);
             this.chkConsultarTip.TabIndex = 264;
@@ -1341,7 +1506,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaTip.AutoSize = true;
             this.chkDarBajaTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaTip.Location = new System.Drawing.Point(776, 610);
+            this.chkDarBajaTip.Location = new System.Drawing.Point(571, 199);
             this.chkDarBajaTip.Name = "chkDarBajaTip";
             this.chkDarBajaTip.Size = new System.Drawing.Size(110, 14);
             this.chkDarBajaTip.TabIndex = 262;
@@ -1352,7 +1517,7 @@ namespace sistema_reparto
             // 
             this.chkModificarTiT.AutoSize = true;
             this.chkModificarTiT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarTiT.Location = new System.Drawing.Point(653, 610);
+            this.chkModificarTiT.Location = new System.Drawing.Point(448, 199);
             this.chkModificarTiT.Name = "chkModificarTiT";
             this.chkModificarTiT.Size = new System.Drawing.Size(112, 14);
             this.chkModificarTiT.TabIndex = 260;
@@ -1363,7 +1528,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarTipoT.AutoSize = true;
             this.chkIngresarTipoT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarTipoT.Location = new System.Drawing.Point(535, 611);
+            this.chkIngresarTipoT.Location = new System.Drawing.Point(330, 200);
             this.chkIngresarTipoT.Name = "chkIngresarTipoT";
             this.chkIngresarTipoT.Size = new System.Drawing.Size(108, 14);
             this.chkIngresarTipoT.TabIndex = 258;
@@ -1374,7 +1539,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarMovBo.AutoSize = true;
             this.chkConsultarMovBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarMovBo.Location = new System.Drawing.Point(427, 611);
+            this.chkConsultarMovBo.Location = new System.Drawing.Point(222, 200);
             this.chkConsultarMovBo.Name = "chkConsultarMovBo";
             this.chkConsultarMovBo.Size = new System.Drawing.Size(101, 14);
             this.chkConsultarMovBo.TabIndex = 256;
@@ -1385,7 +1550,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaIn.AutoSize = true;
             this.chkConsultaIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaIn.Location = new System.Drawing.Point(320, 611);
+            this.chkConsultaIn.Location = new System.Drawing.Point(115, 200);
             this.chkConsultaIn.Name = "chkConsultaIn";
             this.chkConsultaIn.Size = new System.Drawing.Size(108, 16);
             this.chkConsultaIn.TabIndex = 254;
@@ -1396,7 +1561,7 @@ namespace sistema_reparto
             // 
             this.chkModificarIn.AutoSize = true;
             this.chkModificarIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarIn.Location = new System.Drawing.Point(209, 611);
+            this.chkModificarIn.Location = new System.Drawing.Point(4, 200);
             this.chkModificarIn.Name = "chkModificarIn";
             this.chkModificarIn.Size = new System.Drawing.Size(107, 16);
             this.chkModificarIn.TabIndex = 250;
@@ -1407,7 +1572,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarEnvio.AutoSize = true;
             this.chkIngresarEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarEnvio.Location = new System.Drawing.Point(902, 645);
+            this.chkIngresarEnvio.Location = new System.Drawing.Point(697, 234);
             this.chkIngresarEnvio.Name = "chkIngresarEnvio";
             this.chkIngresarEnvio.Size = new System.Drawing.Size(84, 16);
             this.chkIngresarEnvio.TabIndex = 284;
@@ -1418,7 +1583,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarRu.AutoSize = true;
             this.chkConsultarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarRu.Location = new System.Drawing.Point(777, 646);
+            this.chkConsultarRu.Location = new System.Drawing.Point(572, 235);
             this.chkConsultarRu.Name = "chkConsultarRu";
             this.chkConsultarRu.Size = new System.Drawing.Size(86, 16);
             this.chkConsultarRu.TabIndex = 280;
@@ -1429,7 +1594,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaRu.AutoSize = true;
             this.chkDarBajaRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaRu.Location = new System.Drawing.Point(654, 646);
+            this.chkDarBajaRu.Location = new System.Drawing.Point(449, 235);
             this.chkDarBajaRu.Name = "chkDarBajaRu";
             this.chkDarBajaRu.Size = new System.Drawing.Size(81, 16);
             this.chkDarBajaRu.TabIndex = 278;
@@ -1440,7 +1605,7 @@ namespace sistema_reparto
             // 
             this.chkModificarRu.AutoSize = true;
             this.chkModificarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarRu.Location = new System.Drawing.Point(536, 647);
+            this.chkModificarRu.Location = new System.Drawing.Point(331, 236);
             this.chkModificarRu.Name = "chkModificarRu";
             this.chkModificarRu.Size = new System.Drawing.Size(85, 16);
             this.chkModificarRu.TabIndex = 276;
@@ -1451,7 +1616,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarRuta.AutoSize = true;
             this.chkIngresarRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarRuta.Location = new System.Drawing.Point(428, 647);
+            this.chkIngresarRuta.Location = new System.Drawing.Point(223, 236);
             this.chkIngresarRuta.Name = "chkIngresarRuta";
             this.chkIngresarRuta.Size = new System.Drawing.Size(80, 16);
             this.chkIngresarRuta.TabIndex = 274;
@@ -1462,7 +1627,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarTra.AutoSize = true;
             this.chkConsultarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarTra.Location = new System.Drawing.Point(321, 647);
+            this.chkConsultarTra.Location = new System.Drawing.Point(116, 236);
             this.chkConsultarTra.Name = "chkConsultarTra";
             this.chkConsultarTra.Size = new System.Drawing.Size(110, 16);
             this.chkConsultarTra.TabIndex = 272;
@@ -1473,7 +1638,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaTra.AutoSize = true;
             this.chkDarBajaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaTra.Location = new System.Drawing.Point(210, 647);
+            this.chkDarBajaTra.Location = new System.Drawing.Point(5, 236);
             this.chkDarBajaTra.Name = "chkDarBajaTra";
             this.chkDarBajaTra.Size = new System.Drawing.Size(105, 16);
             this.chkDarBajaTra.TabIndex = 270;
@@ -1484,7 +1649,7 @@ namespace sistema_reparto
             // 
             this.chkModificarTra.AutoSize = true;
             this.chkModificarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarTra.Location = new System.Drawing.Point(1124, 607);
+            this.chkModificarTra.Location = new System.Drawing.Point(919, 196);
             this.chkModificarTra.Name = "chkModificarTra";
             this.chkModificarTra.Size = new System.Drawing.Size(109, 16);
             this.chkModificarTra.TabIndex = 268;
@@ -1501,7 +1666,7 @@ namespace sistema_reparto
             "Hola",
             "si",
             "no"});
-            this.CboTipoUsuario.Location = new System.Drawing.Point(214, 210);
+            this.CboTipoUsuario.Location = new System.Drawing.Point(6, 33);
             this.CboTipoUsuario.Name = "CboTipoUsuario";
             this.CboTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.CboTipoUsuario.TabIndex = 306;
@@ -1510,7 +1675,7 @@ namespace sistema_reparto
             // lblTipoPermiso
             // 
             this.lblTipoPermiso.AutoSize = true;
-            this.lblTipoPermiso.Location = new System.Drawing.Point(216, 191);
+            this.lblTipoPermiso.Location = new System.Drawing.Point(8, 14);
             this.lblTipoPermiso.Name = "lblTipoPermiso";
             this.lblTipoPermiso.Size = new System.Drawing.Size(68, 13);
             this.lblTipoPermiso.TabIndex = 307;
@@ -1519,7 +1684,7 @@ namespace sistema_reparto
             // lblCodigoUsuario
             // 
             this.lblCodigoUsuario.AutoSize = true;
-            this.lblCodigoUsuario.Location = new System.Drawing.Point(423, 192);
+            this.lblCodigoUsuario.Location = new System.Drawing.Point(10, 12);
             this.lblCodigoUsuario.Name = "lblCodigoUsuario";
             this.lblCodigoUsuario.Size = new System.Drawing.Size(79, 13);
             this.lblCodigoUsuario.TabIndex = 308;
@@ -1527,7 +1692,7 @@ namespace sistema_reparto
             // 
             // txtCodigoUsuario
             // 
-            this.txtCodigoUsuario.Location = new System.Drawing.Point(426, 208);
+            this.txtCodigoUsuario.Location = new System.Drawing.Point(13, 28);
             this.txtCodigoUsuario.Multiline = true;
             this.txtCodigoUsuario.Name = "txtCodigoUsuario";
             this.txtCodigoUsuario.Size = new System.Drawing.Size(120, 20);
@@ -1535,7 +1700,7 @@ namespace sistema_reparto
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(427, 260);
+            this.txtUsuario.Location = new System.Drawing.Point(13, 24);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(120, 20);
@@ -1544,7 +1709,7 @@ namespace sistema_reparto
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(424, 244);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(10, 8);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(83, 13);
             this.lblNombreUsuario.TabIndex = 310;
@@ -1552,7 +1717,7 @@ namespace sistema_reparto
             // 
             // txtContraseñaU
             // 
-            this.txtContraseñaU.Location = new System.Drawing.Point(560, 208);
+            this.txtContraseñaU.Location = new System.Drawing.Point(6, 26);
             this.txtContraseñaU.Multiline = true;
             this.txtContraseñaU.Name = "txtContraseñaU";
             this.txtContraseñaU.PasswordChar = '*';
@@ -1562,7 +1727,7 @@ namespace sistema_reparto
             // lblContraseñaU
             // 
             this.lblContraseñaU.AutoSize = true;
-            this.lblContraseñaU.Location = new System.Drawing.Point(557, 192);
+            this.lblContraseñaU.Location = new System.Drawing.Point(3, 10);
             this.lblContraseñaU.Name = "lblContraseñaU";
             this.lblContraseñaU.Size = new System.Drawing.Size(100, 13);
             this.lblContraseñaU.TabIndex = 312;
@@ -1570,7 +1735,7 @@ namespace sistema_reparto
             // 
             // txtConfirmarC
             // 
-            this.txtConfirmarC.Location = new System.Drawing.Point(560, 260);
+            this.txtConfirmarC.Location = new System.Drawing.Point(6, 25);
             this.txtConfirmarC.Multiline = true;
             this.txtConfirmarC.Name = "txtConfirmarC";
             this.txtConfirmarC.PasswordChar = '*';
@@ -1580,7 +1745,7 @@ namespace sistema_reparto
             // lblConfirmarC
             // 
             this.lblConfirmarC.AutoSize = true;
-            this.lblConfirmarC.Location = new System.Drawing.Point(557, 244);
+            this.lblConfirmarC.Location = new System.Drawing.Point(3, 9);
             this.lblConfirmarC.Name = "lblConfirmarC";
             this.lblConfirmarC.Size = new System.Drawing.Size(108, 13);
             this.lblConfirmarC.TabIndex = 314;
@@ -1588,7 +1753,7 @@ namespace sistema_reparto
             // 
             // txtEstatusU
             // 
-            this.txtEstatusU.Location = new System.Drawing.Point(495, 310);
+            this.txtEstatusU.Location = new System.Drawing.Point(4, 27);
             this.txtEstatusU.Multiline = true;
             this.txtEstatusU.Name = "txtEstatusU";
             this.txtEstatusU.Size = new System.Drawing.Size(120, 20);
@@ -1597,7 +1762,7 @@ namespace sistema_reparto
             // lblEstatusU
             // 
             this.lblEstatusU.AutoSize = true;
-            this.lblEstatusU.Location = new System.Drawing.Point(511, 294);
+            this.lblEstatusU.Location = new System.Drawing.Point(21, 11);
             this.lblEstatusU.Name = "lblEstatusU";
             this.lblEstatusU.Size = new System.Drawing.Size(81, 13);
             this.lblEstatusU.TabIndex = 316;
@@ -1608,10 +1773,11 @@ namespace sistema_reparto
             this.pnlLlenarCamposUSDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposUSDB.BackgroundImage")));
             this.pnlLlenarCamposUSDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposUSDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposUSDB.Location = new System.Drawing.Point(785, 366);
+            this.pnlLlenarCamposUSDB.Location = new System.Drawing.Point(925, 366);
             this.pnlLlenarCamposUSDB.Name = "pnlLlenarCamposUSDB";
             this.pnlLlenarCamposUSDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposUSDB.TabIndex = 322;
+            this.pnlLlenarCamposUSDB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlLlenarCamposUSDB_MouseClick);
             // 
             // pnlLLenarCamposUS
             // 
@@ -1622,33 +1788,45 @@ namespace sistema_reparto
             this.pnlLLenarCamposUS.Name = "pnlLLenarCamposUS";
             this.pnlLLenarCamposUS.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposUS.TabIndex = 321;
+            this.pnlLLenarCamposUS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlLLenarCamposUS_MouseClick);
             // 
             // pnlBotonBuscarUsuario
             // 
             this.pnlBotonBuscarUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarUsuario.BackgroundImage")));
             this.pnlBotonBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarUsuario.Location = new System.Drawing.Point(1029, 176);
+            this.pnlBotonBuscarUsuario.Location = new System.Drawing.Point(1130, 171);
             this.pnlBotonBuscarUsuario.Name = "pnlBotonBuscarUsuario";
             this.pnlBotonBuscarUsuario.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarUsuario.TabIndex = 320;
+            this.pnlBotonBuscarUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonBuscarUsuario_MouseClick);
             // 
             // txtBuscarUsuario
             // 
             this.txtBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(802, 179);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(881, 175);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(221, 13);
             this.txtBuscarUsuario.TabIndex = 319;
             // 
             // dgvUsuario
             // 
+            this.dgvUsuario.AllowUserToDeleteRows = false;
+            this.dgvUsuario.AutoGenerateColumns = false;
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.dgvUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUsuarioDataGridViewTextBoxColumn,
+            this.idPermisoDataGridViewTextBoxColumn,
+            this.nombreUsuarioDataGridViewTextBoxColumn,
+            this.passUsuarioDataGridViewTextBoxColumn,
+            this.estatusDataGridViewTextBoxColumn});
+            this.dgvUsuario.DataSource = this.usuariosBindingSource;
             this.dgvUsuario.Location = new System.Drawing.Point(766, 210);
             this.dgvUsuario.Name = "dgvUsuario";
+            this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -1661,14 +1839,14 @@ namespace sistema_reparto
             this.dgvUsuario.RowHeadersWidth = 45;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
             this.dgvUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuario.Size = new System.Drawing.Size(307, 150);
+            this.dgvUsuario.Size = new System.Drawing.Size(443, 150);
             this.dgvUsuario.TabIndex = 318;
             // 
             // chkModificarEn
             // 
             this.chkModificarEn.AutoSize = true;
             this.chkModificarEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarEn.Location = new System.Drawing.Point(1017, 645);
+            this.chkModificarEn.Location = new System.Drawing.Point(812, 234);
             this.chkModificarEn.Name = "chkModificarEn";
             this.chkModificarEn.Size = new System.Drawing.Size(89, 16);
             this.chkModificarEn.TabIndex = 323;
@@ -1679,7 +1857,7 @@ namespace sistema_reparto
             // 
             this.chkDarBajaEn.AutoSize = true;
             this.chkDarBajaEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarBajaEn.Location = new System.Drawing.Point(1124, 645);
+            this.chkDarBajaEn.Location = new System.Drawing.Point(919, 234);
             this.chkDarBajaEn.Name = "chkDarBajaEn";
             this.chkDarBajaEn.Size = new System.Drawing.Size(85, 16);
             this.chkDarBajaEn.TabIndex = 324;
@@ -1690,7 +1868,7 @@ namespace sistema_reparto
             // 
             this.chkConsultaEn.AutoSize = true;
             this.chkConsultaEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultaEn.Location = new System.Drawing.Point(211, 682);
+            this.chkConsultaEn.Location = new System.Drawing.Point(6, 271);
             this.chkConsultaEn.Name = "chkConsultaEn";
             this.chkConsultaEn.Size = new System.Drawing.Size(87, 16);
             this.chkConsultaEn.TabIndex = 325;
@@ -1701,7 +1879,7 @@ namespace sistema_reparto
             // 
             this.chkInsertarBitaTrans.AutoSize = true;
             this.chkInsertarBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkInsertarBitaTrans.Location = new System.Drawing.Point(321, 682);
+            this.chkInsertarBitaTrans.Location = new System.Drawing.Point(116, 271);
             this.chkInsertarBitaTrans.Name = "chkInsertarBitaTrans";
             this.chkInsertarBitaTrans.Size = new System.Drawing.Size(104, 14);
             this.chkInsertarBitaTrans.TabIndex = 326;
@@ -1712,7 +1890,7 @@ namespace sistema_reparto
             // 
             this.chkBitacoraUsuario.AutoSize = true;
             this.chkBitacoraUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBitacoraUsuario.Location = new System.Drawing.Point(662, 681);
+            this.chkBitacoraUsuario.Location = new System.Drawing.Point(457, 270);
             this.chkBitacoraUsuario.Name = "chkBitacoraUsuario";
             this.chkBitacoraUsuario.Size = new System.Drawing.Size(92, 16);
             this.chkBitacoraUsuario.TabIndex = 327;
@@ -1723,7 +1901,7 @@ namespace sistema_reparto
             // 
             this.chkIngresarCalificacion.AutoSize = true;
             this.chkIngresarCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkIngresarCalificacion.Location = new System.Drawing.Point(763, 680);
+            this.chkIngresarCalificacion.Location = new System.Drawing.Point(558, 269);
             this.chkIngresarCalificacion.Name = "chkIngresarCalificacion";
             this.chkIngresarCalificacion.Size = new System.Drawing.Size(108, 16);
             this.chkIngresarCalificacion.TabIndex = 328;
@@ -1734,7 +1912,7 @@ namespace sistema_reparto
             // 
             this.chkConsultarCa.AutoSize = true;
             this.chkConsultarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarCa.Location = new System.Drawing.Point(1008, 679);
+            this.chkConsultarCa.Location = new System.Drawing.Point(803, 268);
             this.chkConsultarCa.Name = "chkConsultarCa";
             this.chkConsultarCa.Size = new System.Drawing.Size(114, 16);
             this.chkConsultarCa.TabIndex = 329;
@@ -1746,37 +1924,40 @@ namespace sistema_reparto
             this.pnlDarBajaUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaUS.BackgroundImage")));
             this.pnlDarBajaUS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaUS.Location = new System.Drawing.Point(560, 354);
+            this.pnlDarBajaUS.Location = new System.Drawing.Point(518, 355);
             this.pnlDarBajaUS.Name = "pnlDarBajaUS";
             this.pnlDarBajaUS.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaUS.TabIndex = 330;
+            this.pnlDarBajaUS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDarBajaUS_MouseClick);
             // 
             // pnlActivarUS
             // 
             this.pnlActivarUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarUS.BackgroundImage")));
             this.pnlActivarUS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarUS.Location = new System.Drawing.Point(469, 352);
+            this.pnlActivarUS.Location = new System.Drawing.Point(517, 356);
             this.pnlActivarUS.Name = "pnlActivarUS";
             this.pnlActivarUS.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarUS.TabIndex = 331;
+            this.pnlActivarUS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlActivarUS_MouseClick);
             // 
             // pnlModificarUS
             // 
             this.pnlModificarUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarUS.BackgroundImage")));
             this.pnlModificarUS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarUS.Location = new System.Drawing.Point(385, 323);
+            this.pnlModificarUS.Location = new System.Drawing.Point(361, 321);
             this.pnlModificarUS.Name = "pnlModificarUS";
             this.pnlModificarUS.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarUS.TabIndex = 332;
+            this.pnlModificarUS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlModificarUS_MouseClick);
             // 
             // pnlBotonGuardarUS
             // 
             this.pnlBotonGuardarUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonGuardarUS.BackgroundImage")));
             this.pnlBotonGuardarUS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonGuardarUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonGuardarUS.Location = new System.Drawing.Point(336, 322);
+            this.pnlBotonGuardarUS.Location = new System.Drawing.Point(360, 322);
             this.pnlBotonGuardarUS.Name = "pnlBotonGuardarUS";
             this.pnlBotonGuardarUS.Size = new System.Drawing.Size(37, 42);
             this.pnlBotonGuardarUS.TabIndex = 333;
@@ -1786,7 +1967,7 @@ namespace sistema_reparto
             // 
             this.chkModificarBi.AutoSize = true;
             this.chkModificarBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarBi.Location = new System.Drawing.Point(428, 682);
+            this.chkModificarBi.Location = new System.Drawing.Point(223, 271);
             this.chkModificarBi.Name = "chkModificarBi";
             this.chkModificarBi.Size = new System.Drawing.Size(108, 14);
             this.chkModificarBi.TabIndex = 334;
@@ -1797,7 +1978,7 @@ namespace sistema_reparto
             // 
             this.chkModificarCa.AutoSize = true;
             this.chkModificarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkModificarCa.Location = new System.Drawing.Point(881, 680);
+            this.chkModificarCa.Location = new System.Drawing.Point(676, 269);
             this.chkModificarCa.Name = "chkModificarCa";
             this.chkModificarCa.Size = new System.Drawing.Size(113, 16);
             this.chkModificarCa.TabIndex = 335;
@@ -1808,7 +1989,7 @@ namespace sistema_reparto
             // 
             this.chkReportes.AutoSize = true;
             this.chkReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReportes.Location = new System.Drawing.Point(1128, 679);
+            this.chkReportes.Location = new System.Drawing.Point(923, 268);
             this.chkReportes.Name = "chkReportes";
             this.chkReportes.Size = new System.Drawing.Size(62, 16);
             this.chkReportes.TabIndex = 336;
@@ -1817,7 +1998,7 @@ namespace sistema_reparto
             // 
             // txtCodigoP
             // 
-            this.txtCodigoP.Location = new System.Drawing.Point(215, 266);
+            this.txtCodigoP.Location = new System.Drawing.Point(8, 23);
             this.txtCodigoP.Multiline = true;
             this.txtCodigoP.Name = "txtCodigoP";
             this.txtCodigoP.Size = new System.Drawing.Size(120, 20);
@@ -1826,7 +2007,7 @@ namespace sistema_reparto
             // lblCodigoP
             // 
             this.lblCodigoP.AutoSize = true;
-            this.lblCodigoP.Location = new System.Drawing.Point(212, 250);
+            this.lblCodigoP.Location = new System.Drawing.Point(5, 7);
             this.lblCodigoP.Name = "lblCodigoP";
             this.lblCodigoP.Size = new System.Drawing.Size(80, 13);
             this.lblCodigoP.TabIndex = 337;
@@ -1836,112 +2017,218 @@ namespace sistema_reparto
             // 
             this.chkConsultarBTTras.AutoSize = true;
             this.chkConsultarBTTras.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConsultarBTTras.Location = new System.Drawing.Point(546, 681);
+            this.chkConsultarBTTras.Location = new System.Drawing.Point(341, 270);
             this.chkConsultarBTTras.Name = "chkConsultarBTTras";
             this.chkConsultarBTTras.Size = new System.Drawing.Size(109, 14);
             this.chkConsultarBTTras.TabIndex = 339;
             this.chkConsultarBTTras.Text = "Consultar Bitacora Trans";
             this.chkConsultarBTTras.UseVisualStyleBackColor = true;
             // 
+            // pnlContenidoTP
+            // 
+            this.pnlContenidoTP.Controls.Add(this.lblTipoPermiso);
+            this.pnlContenidoTP.Controls.Add(this.CboTipoUsuario);
+            this.pnlContenidoTP.Location = new System.Drawing.Point(212, 179);
+            this.pnlContenidoTP.Name = "pnlContenidoTP";
+            this.pnlContenidoTP.Size = new System.Drawing.Size(137, 61);
+            this.pnlContenidoTP.TabIndex = 340;
+            // 
+            // pnlCodigoP
+            // 
+            this.pnlCodigoP.Controls.Add(this.lblCodigoP);
+            this.pnlCodigoP.Controls.Add(this.txtCodigoP);
+            this.pnlCodigoP.Location = new System.Drawing.Point(210, 247);
+            this.pnlCodigoP.Name = "pnlCodigoP";
+            this.pnlCodigoP.Size = new System.Drawing.Size(142, 55);
+            this.pnlCodigoP.TabIndex = 341;
+            // 
+            // pnlCodigoU
+            // 
+            this.pnlCodigoU.Controls.Add(this.lblCodigoUsuario);
+            this.pnlCodigoU.Controls.Add(this.txtCodigoUsuario);
+            this.pnlCodigoU.Location = new System.Drawing.Point(414, 183);
+            this.pnlCodigoU.Name = "pnlCodigoU";
+            this.pnlCodigoU.Size = new System.Drawing.Size(140, 51);
+            this.pnlCodigoU.TabIndex = 342;
+            // 
+            // pnlPass
+            // 
+            this.pnlPass.Controls.Add(this.lblContraseñaU);
+            this.pnlPass.Controls.Add(this.txtContraseñaU);
+            this.pnlPass.Location = new System.Drawing.Point(559, 186);
+            this.pnlPass.Name = "pnlPass";
+            this.pnlPass.Size = new System.Drawing.Size(137, 55);
+            this.pnlPass.TabIndex = 343;
+            // 
+            // pnlNombreU
+            // 
+            this.pnlNombreU.Controls.Add(this.txtUsuario);
+            this.pnlNombreU.Controls.Add(this.lblNombreUsuario);
+            this.pnlNombreU.Location = new System.Drawing.Point(414, 240);
+            this.pnlNombreU.Name = "pnlNombreU";
+            this.pnlNombreU.Size = new System.Drawing.Size(142, 51);
+            this.pnlNombreU.TabIndex = 344;
+            // 
+            // pnlVeriPass
+            // 
+            this.pnlVeriPass.Controls.Add(this.lblConfirmarC);
+            this.pnlVeriPass.Controls.Add(this.txtConfirmarC);
+            this.pnlVeriPass.Location = new System.Drawing.Point(559, 241);
+            this.pnlVeriPass.Name = "pnlVeriPass";
+            this.pnlVeriPass.Size = new System.Drawing.Size(133, 50);
+            this.pnlVeriPass.TabIndex = 345;
+            // 
+            // pnlEstatusU
+            // 
+            this.pnlEstatusU.Controls.Add(this.lblEstatusU);
+            this.pnlEstatusU.Controls.Add(this.txtEstatusU);
+            this.pnlEstatusU.Location = new System.Drawing.Point(491, 293);
+            this.pnlEstatusU.Name = "pnlEstatusU";
+            this.pnlEstatusU.Size = new System.Drawing.Size(130, 53);
+            this.pnlEstatusU.TabIndex = 346;
+            // 
+            // pnlChecks
+            // 
+            this.pnlChecks.Controls.Add(this.chkIngresarU);
+            this.pnlChecks.Controls.Add(this.chkModificarU);
+            this.pnlChecks.Controls.Add(this.chkDarBajaU);
+            this.pnlChecks.Controls.Add(this.chkConsultaU);
+            this.pnlChecks.Controls.Add(this.chkIngresarC);
+            this.pnlChecks.Controls.Add(this.chkModificarC);
+            this.pnlChecks.Controls.Add(this.chkDarBajaC);
+            this.pnlChecks.Controls.Add(this.chkConsultarC);
+            this.pnlChecks.Controls.Add(this.chkConsultarBTTras);
+            this.pnlChecks.Controls.Add(this.chkIngresarD);
+            this.pnlChecks.Controls.Add(this.chkReportes);
+            this.pnlChecks.Controls.Add(this.chkModificarD);
+            this.pnlChecks.Controls.Add(this.chkModificarCa);
+            this.pnlChecks.Controls.Add(this.chkDarBajaD);
+            this.pnlChecks.Controls.Add(this.chkModificarBi);
+            this.pnlChecks.Controls.Add(this.chkConsultarD);
+            this.pnlChecks.Controls.Add(this.chkIngresarPu);
+            this.pnlChecks.Controls.Add(this.chkModificarPu);
+            this.pnlChecks.Controls.Add(this.chkDarBajaPu);
+            this.pnlChecks.Controls.Add(this.chkConsultaPu);
+            this.pnlChecks.Controls.Add(this.chkConsultarCa);
+            this.pnlChecks.Controls.Add(this.chkIngresarPi);
+            this.pnlChecks.Controls.Add(this.chkIngresarCalificacion);
+            this.pnlChecks.Controls.Add(this.chkIngresarBo);
+            this.pnlChecks.Controls.Add(this.chkBitacoraUsuario);
+            this.pnlChecks.Controls.Add(this.chkModificarPi);
+            this.pnlChecks.Controls.Add(this.chkInsertarBitaTrans);
+            this.pnlChecks.Controls.Add(this.chkDarBajaPi);
+            this.pnlChecks.Controls.Add(this.chkConsultaEn);
+            this.pnlChecks.Controls.Add(this.chkConsultaPi);
+            this.pnlChecks.Controls.Add(this.chkDarBajaEn);
+            this.pnlChecks.Controls.Add(this.chkIngresarEm);
+            this.pnlChecks.Controls.Add(this.chkModificarEn);
+            this.pnlChecks.Controls.Add(this.chkModificarE);
+            this.pnlChecks.Controls.Add(this.chkDarBajaE);
+            this.pnlChecks.Controls.Add(this.chkConsultaE);
+            this.pnlChecks.Controls.Add(this.chkPaqueteEnc);
+            this.pnlChecks.Controls.Add(this.chkModificarEnc);
+            this.pnlChecks.Controls.Add(this.chkDarBajaPaEnc);
+            this.pnlChecks.Controls.Add(this.chkIngresarEnvio);
+            this.pnlChecks.Controls.Add(this.chkConsultaPaEc);
+            this.pnlChecks.Controls.Add(this.chkConsultarRu);
+            this.pnlChecks.Controls.Add(this.chkIngresarPaDe);
+            this.pnlChecks.Controls.Add(this.chkDarBajaRu);
+            this.pnlChecks.Controls.Add(this.chkModificarPaDet);
+            this.pnlChecks.Controls.Add(this.chkModificarRu);
+            this.pnlChecks.Controls.Add(this.chkDarBajaPaDet);
+            this.pnlChecks.Controls.Add(this.chkIngresarRuta);
+            this.pnlChecks.Controls.Add(this.chkConsultaDet);
+            this.pnlChecks.Controls.Add(this.chkConsultarTra);
+            this.pnlChecks.Controls.Add(this.chkIngresarUb);
+            this.pnlChecks.Controls.Add(this.chkDarBajaTra);
+            this.pnlChecks.Controls.Add(this.chkModificarUb);
+            this.pnlChecks.Controls.Add(this.chkModificarTra);
+            this.pnlChecks.Controls.Add(this.chkDarBajaUb);
+            this.pnlChecks.Controls.Add(this.chkIngresarTra);
+            this.pnlChecks.Controls.Add(this.chkConsultaUb);
+            this.pnlChecks.Controls.Add(this.chkConsultarTip);
+            this.pnlChecks.Controls.Add(this.chkIngresarSub);
+            this.pnlChecks.Controls.Add(this.chkDarBajaTip);
+            this.pnlChecks.Controls.Add(this.chkModificarSub);
+            this.pnlChecks.Controls.Add(this.chkModificarTiT);
+            this.pnlChecks.Controls.Add(this.chkDarBajaSub);
+            this.pnlChecks.Controls.Add(this.chkIngresarTipoT);
+            this.pnlChecks.Controls.Add(this.chkConsultaSub);
+            this.pnlChecks.Controls.Add(this.chkConsultarMovBo);
+            this.pnlChecks.Controls.Add(this.chkModificarBo);
+            this.pnlChecks.Controls.Add(this.chkConsultaIn);
+            this.pnlChecks.Controls.Add(this.chkDarBajaBo);
+            this.pnlChecks.Controls.Add(this.chkModificarIn);
+            this.pnlChecks.Controls.Add(this.chkConsultarBo);
+            this.pnlChecks.Controls.Add(this.chkInventario);
+            this.pnlChecks.Location = new System.Drawing.Point(193, 407);
+            this.pnlChecks.Name = "pnlChecks";
+            this.pnlChecks.Size = new System.Drawing.Size(1087, 301);
+            this.pnlChecks.TabIndex = 347;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "ID Usuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idPermisoDataGridViewTextBoxColumn
+            // 
+            this.idPermisoDataGridViewTextBoxColumn.DataPropertyName = "IdPermiso";
+            this.idPermisoDataGridViewTextBoxColumn.HeaderText = "ID Permiso";
+            this.idPermisoDataGridViewTextBoxColumn.Name = "idPermisoDataGridViewTextBoxColumn";
+            this.idPermisoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreUsuarioDataGridViewTextBoxColumn
+            // 
+            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "NombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre Usuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
+            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passUsuarioDataGridViewTextBoxColumn
+            // 
+            this.passUsuarioDataGridViewTextBoxColumn.DataPropertyName = "PassUsuario";
+            this.passUsuarioDataGridViewTextBoxColumn.HeaderText = "Contraseña Usuario";
+            this.passUsuarioDataGridViewTextBoxColumn.Name = "passUsuarioDataGridViewTextBoxColumn";
+            this.passUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passUsuarioDataGridViewTextBoxColumn.ToolTipText = "*";
+            this.passUsuarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // estatusDataGridViewTextBoxColumn
+            // 
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataSource = typeof(sistema_reparto.Clases.Usuarios);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 720);
-            this.Controls.Add(this.chkConsultarBTTras);
-            this.Controls.Add(this.txtCodigoP);
-            this.Controls.Add(this.lblCodigoP);
-            this.Controls.Add(this.chkReportes);
-            this.Controls.Add(this.chkModificarCa);
-            this.Controls.Add(this.chkModificarBi);
+            this.Controls.Add(this.pnlChecks);
+            this.Controls.Add(this.pnlEstatusU);
+            this.Controls.Add(this.pnlVeriPass);
+            this.Controls.Add(this.pnlNombreU);
+            this.Controls.Add(this.pnlPass);
+            this.Controls.Add(this.pnlCodigoU);
+            this.Controls.Add(this.pnlCodigoP);
+            this.Controls.Add(this.pnlContenidoTP);
             this.Controls.Add(this.pnlModificarUS);
             this.Controls.Add(this.pnlBotonGuardarUS);
             this.Controls.Add(this.pnlDarBajaUS);
             this.Controls.Add(this.pnlActivarUS);
-            this.Controls.Add(this.chkConsultarCa);
-            this.Controls.Add(this.chkIngresarCalificacion);
-            this.Controls.Add(this.chkBitacoraUsuario);
-            this.Controls.Add(this.chkInsertarBitaTrans);
-            this.Controls.Add(this.chkConsultaEn);
-            this.Controls.Add(this.chkDarBajaEn);
-            this.Controls.Add(this.chkModificarEn);
             this.Controls.Add(this.pnlLlenarCamposUSDB);
             this.Controls.Add(this.pnlLLenarCamposUS);
             this.Controls.Add(this.pnlBotonBuscarUsuario);
             this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.dgvUsuario);
-            this.Controls.Add(this.txtEstatusU);
-            this.Controls.Add(this.lblEstatusU);
-            this.Controls.Add(this.txtConfirmarC);
-            this.Controls.Add(this.lblConfirmarC);
-            this.Controls.Add(this.txtContraseñaU);
-            this.Controls.Add(this.lblContraseñaU);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblNombreUsuario);
-            this.Controls.Add(this.txtCodigoUsuario);
-            this.Controls.Add(this.lblCodigoUsuario);
-            this.Controls.Add(this.lblTipoPermiso);
-            this.Controls.Add(this.CboTipoUsuario);
-            this.Controls.Add(this.chkIngresarEnvio);
-            this.Controls.Add(this.chkConsultarRu);
-            this.Controls.Add(this.chkDarBajaRu);
-            this.Controls.Add(this.chkModificarRu);
-            this.Controls.Add(this.chkIngresarRuta);
-            this.Controls.Add(this.chkConsultarTra);
-            this.Controls.Add(this.chkDarBajaTra);
-            this.Controls.Add(this.chkModificarTra);
-            this.Controls.Add(this.chkIngresarTra);
-            this.Controls.Add(this.chkConsultarTip);
-            this.Controls.Add(this.chkDarBajaTip);
-            this.Controls.Add(this.chkModificarTiT);
-            this.Controls.Add(this.chkIngresarTipoT);
-            this.Controls.Add(this.chkConsultarMovBo);
-            this.Controls.Add(this.chkConsultaIn);
-            this.Controls.Add(this.chkModificarIn);
-            this.Controls.Add(this.chkInventario);
-            this.Controls.Add(this.chkConsultarBo);
-            this.Controls.Add(this.chkDarBajaBo);
-            this.Controls.Add(this.chkModificarBo);
-            this.Controls.Add(this.chkConsultaSub);
-            this.Controls.Add(this.chkDarBajaSub);
-            this.Controls.Add(this.chkModificarSub);
-            this.Controls.Add(this.chkIngresarSub);
-            this.Controls.Add(this.chkConsultaUb);
-            this.Controls.Add(this.chkDarBajaUb);
-            this.Controls.Add(this.chkModificarUb);
-            this.Controls.Add(this.chkIngresarUb);
-            this.Controls.Add(this.chkConsultaDet);
-            this.Controls.Add(this.chkDarBajaPaDet);
-            this.Controls.Add(this.chkModificarPaDet);
-            this.Controls.Add(this.chkIngresarPaDe);
-            this.Controls.Add(this.chkConsultaPaEc);
-            this.Controls.Add(this.chkDarBajaPaEnc);
-            this.Controls.Add(this.chkModificarEnc);
-            this.Controls.Add(this.chkPaqueteEnc);
-            this.Controls.Add(this.chkConsultaE);
-            this.Controls.Add(this.chkDarBajaE);
-            this.Controls.Add(this.chkModificarE);
-            this.Controls.Add(this.chkIngresarEm);
-            this.Controls.Add(this.chkConsultaPi);
-            this.Controls.Add(this.chkDarBajaPi);
-            this.Controls.Add(this.chkModificarPi);
-            this.Controls.Add(this.chkIngresarBo);
-            this.Controls.Add(this.chkIngresarPi);
-            this.Controls.Add(this.chkConsultaPu);
-            this.Controls.Add(this.chkDarBajaPu);
-            this.Controls.Add(this.chkModificarPu);
-            this.Controls.Add(this.chkIngresarPu);
-            this.Controls.Add(this.chkConsultarD);
-            this.Controls.Add(this.chkDarBajaD);
-            this.Controls.Add(this.chkModificarD);
-            this.Controls.Add(this.chkIngresarD);
-            this.Controls.Add(this.chkConsultarC);
-            this.Controls.Add(this.chkDarBajaC);
-            this.Controls.Add(this.chkModificarC);
-            this.Controls.Add(this.chkIngresarC);
-            this.Controls.Add(this.chkConsultaU);
-            this.Controls.Add(this.chkDarBajaU);
-            this.Controls.Add(this.chkModificarU);
             this.Controls.Add(this.lblRegistrarUsuario);
             this.Controls.Add(this.pnlBordeDarBajaU);
             this.Controls.Add(this.lblDarBajaUsu);
@@ -1950,7 +2237,6 @@ namespace sistema_reparto
             this.Controls.Add(this.lblModificarUsuario);
             this.Controls.Add(this.pnlBordeUsuarios);
             this.Controls.Add(this.lblAbcUsuarios);
-            this.Controls.Add(this.chkIngresarU);
             this.Controls.Add(this.lblTituloUsuario);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1960,6 +2246,9 @@ namespace sistema_reparto
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmUsuarios_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlEmpleado.ResumeLayout(false);
+            this.pnlEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmple)).EndInit();
             this.btnPaqueteEncabezado.ResumeLayout(false);
             this.btnPaqueteEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).EndInit();
@@ -1996,6 +2285,23 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
             this.pnlBordeUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+            this.pnlContenidoTP.ResumeLayout(false);
+            this.pnlContenidoTP.PerformLayout();
+            this.pnlCodigoP.ResumeLayout(false);
+            this.pnlCodigoP.PerformLayout();
+            this.pnlCodigoU.ResumeLayout(false);
+            this.pnlCodigoU.PerformLayout();
+            this.pnlPass.ResumeLayout(false);
+            this.pnlPass.PerformLayout();
+            this.pnlNombreU.ResumeLayout(false);
+            this.pnlNombreU.PerformLayout();
+            this.pnlVeriPass.ResumeLayout(false);
+            this.pnlVeriPass.PerformLayout();
+            this.pnlEstatusU.ResumeLayout(false);
+            this.pnlEstatusU.PerformLayout();
+            this.pnlChecks.ResumeLayout(false);
+            this.pnlChecks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2154,5 +2460,23 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblPaqueteEncabezado;
         private System.Windows.Forms.PictureBox picIconoPaqueteE;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnlEmpleado;
+        private System.Windows.Forms.PictureBox picEmple;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPermisoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel pnlContenidoTP;
+        private System.Windows.Forms.Panel pnlCodigoP;
+        private System.Windows.Forms.Panel pnlCodigoU;
+        private System.Windows.Forms.Panel pnlPass;
+        private System.Windows.Forms.Panel pnlNombreU;
+        private System.Windows.Forms.Panel pnlVeriPass;
+        private System.Windows.Forms.Panel pnlEstatusU;
+        private System.Windows.Forms.Panel pnlChecks;
     }
 }
