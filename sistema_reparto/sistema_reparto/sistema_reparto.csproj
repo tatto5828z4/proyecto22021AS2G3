@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Bodega.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
@@ -60,6 +61,12 @@
     <Compile Include="Clases\TipoTransporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="frmBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBodega.designer.cs">
+      <DependentUpon>frmBodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +141,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBodega.resx">
+      <DependentUpon>frmBodega.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </EmbeddedResource>

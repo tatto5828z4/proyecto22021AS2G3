@@ -363,7 +363,7 @@ namespace sistema_reparto
         {
             /* Inicio de ejecucion de funcion insertar un cliente */
 
-            if(txtIdCliente.Text=="" && txtNombreCliente.Text == "" && txtCampoApellidoC.Text =="" && txtTelefonoC.Text =="" && txtCorreoC.Text == "" && richCliente.Text == "")
+            if(txtIdCliente.Text=="" || txtNombreCliente.Text == "" || txtCampoApellidoC.Text =="" || txtTelefonoC.Text =="" || txtCorreoC.Text == "" || richCliente.Text == "")
             {
                 MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1234,6 +1234,66 @@ namespace sistema_reparto
             obj.Visible = true;
 
             Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
         }
     }
 }
