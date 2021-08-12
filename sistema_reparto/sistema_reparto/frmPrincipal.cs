@@ -1157,5 +1157,83 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverCliente;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverCliente;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverCliente;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalCliente;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalCliente;
+        }
+
+        private void pnlEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void lblEmple_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void picEmple_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverCliente;
+        }
+
+        private void pnlEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void lblEmple_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void picEmple_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalCliente;
+        }
+
+        private void lblEmple_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEmple_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
     }
 }

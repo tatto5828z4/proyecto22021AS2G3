@@ -34,6 +34,10 @@ namespace sistema_reparto
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
@@ -111,11 +115,9 @@ namespace sistema_reparto
             this.pnlLLenarCamposP = new System.Windows.Forms.Panel();
             this.pnlModificarP = new System.Windows.Forms.Panel();
             this.pnlBotonGuardarP = new System.Windows.Forms.Panel();
-            this.pnlEmpleado = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
+            this.pnlEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
             this.btnUsuarios.SuspendLayout();
@@ -145,8 +147,6 @@ namespace sistema_reparto
             this.pnlContenidoEP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
-            this.pnlEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -171,6 +171,49 @@ namespace sistema_reparto
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(179, 611);
             this.pnlSidebar.TabIndex = 1;
+            // 
+            // pnlEmpleado
+            // 
+            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEmpleado.Controls.Add(this.pictureBox3);
+            this.pnlEmpleado.Controls.Add(this.label10);
+            this.pnlEmpleado.Controls.Add(this.label12);
+            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEmpleado.Location = new System.Drawing.Point(-3, 553);
+            this.pnlEmpleado.Name = "pnlEmpleado";
+            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
+            this.pnlEmpleado.TabIndex = 36;
+            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(15, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label12.Location = new System.Drawing.Point(61, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Empleado";
             // 
             // btnPaqueteEncabezado
             // 
@@ -1024,7 +1067,7 @@ namespace sistema_reparto
             this.pnlDarBajaP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaP.BackgroundImage")));
             this.pnlDarBajaP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaP.Location = new System.Drawing.Point(362, 330);
+            this.pnlDarBajaP.Location = new System.Drawing.Point(362, 328);
             this.pnlDarBajaP.Name = "pnlDarBajaP";
             this.pnlDarBajaP.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaP.TabIndex = 22;
@@ -1035,7 +1078,7 @@ namespace sistema_reparto
             this.pnlLlenarCamposPDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposPDB.BackgroundImage")));
             this.pnlLlenarCamposPDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposPDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(712, 408);
+            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(715, 409);
             this.pnlLlenarCamposPDB.Name = "pnlLlenarCamposPDB";
             this.pnlLlenarCamposPDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposPDB.TabIndex = 25;
@@ -1076,49 +1119,6 @@ namespace sistema_reparto
             this.pnlBotonGuardarP.TabIndex = 27;
             this.pnlBotonGuardarP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonGuardarP_MouseClick);
             // 
-            // pnlEmpleado
-            // 
-            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlEmpleado.Controls.Add(this.pictureBox3);
-            this.pnlEmpleado.Controls.Add(this.label10);
-            this.pnlEmpleado.Controls.Add(this.label12);
-            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-3, 553);
-            this.pnlEmpleado.Name = "pnlEmpleado";
-            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
-            this.pnlEmpleado.TabIndex = 36;
-            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
-            this.label10.Location = new System.Drawing.Point(15, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
-            this.label10.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.label12.Location = new System.Drawing.Point(61, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Empleado";
-            // 
             // frmPuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1155,6 +1155,9 @@ namespace sistema_reparto
             this.Load += new System.EventHandler(this.frmPuestos_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPuestos_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlEmpleado.ResumeLayout(false);
+            this.pnlEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.btnPaqueteEncabezado.ResumeLayout(false);
             this.btnPaqueteEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).EndInit();
@@ -1198,9 +1201,6 @@ namespace sistema_reparto
             this.pnlContenidoEP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuesto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
-            this.pnlEmpleado.ResumeLayout(false);
-            this.pnlEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

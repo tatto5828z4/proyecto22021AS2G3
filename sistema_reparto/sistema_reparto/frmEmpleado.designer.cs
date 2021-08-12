@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpleado));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -85,7 +85,11 @@
             this.pnlCampoIdPuestoEmpleado = new System.Windows.Forms.Panel();
             this.cbxIdPuestoEmpleado = new System.Windows.Forms.ComboBox();
             this.lblIdPuestoEmpleado = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlBgSide = new System.Windows.Forms.Panel();
+            this.btnRuta = new System.Windows.Forms.Panel();
+            this.picRuta = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblRuta = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -115,6 +119,10 @@
             this.txtEstatusEmpleado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTituloEmpleado = new System.Windows.Forms.Label();
+            this.btnUsuarios = new System.Windows.Forms.Panel();
+            this.lblUsuarios = new System.Windows.Forms.Label();
+            this.picIconoUsuarios = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dpiEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,10 +135,6 @@
             this.idPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estatusEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnRuta = new System.Windows.Forms.Panel();
-            this.picRuta = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblRuta = new System.Windows.Forms.Label();
             this.pnlEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlDirEmpleado.SuspendLayout();
@@ -145,7 +149,9 @@
             this.pnlSueldoEmpleado.SuspendLayout();
             this.pnlCampoIdDepEmpleado.SuspendLayout();
             this.pnlCampoIdPuestoEmpleado.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlBgSide.SuspendLayout();
+            this.btnRuta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picRuta)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
@@ -160,9 +166,9 @@
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.pnlEstatusEmpleado.SuspendLayout();
+            this.btnUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
-            this.btnRuta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRuta)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEmpleado
@@ -182,7 +188,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(21, 8);
@@ -219,7 +224,7 @@
             this.pnlLlenarCamposEDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposEDB.BackgroundImage")));
             this.pnlLlenarCamposEDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposEDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposEDB.Location = new System.Drawing.Point(589, 446);
+            this.pnlLlenarCamposEDB.Location = new System.Drawing.Point(723, 467);
             this.pnlLlenarCamposEDB.Name = "pnlLlenarCamposEDB";
             this.pnlLlenarCamposEDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposEDB.TabIndex = 43;
@@ -230,7 +235,7 @@
             this.pnlActivarE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarE.BackgroundImage")));
             this.pnlActivarE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarE.Location = new System.Drawing.Point(509, 353);
+            this.pnlActivarE.Location = new System.Drawing.Point(371, 487);
             this.pnlActivarE.Name = "pnlActivarE";
             this.pnlActivarE.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarE.TabIndex = 44;
@@ -241,7 +246,7 @@
             this.pnlDarBajaE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaE.BackgroundImage")));
             this.pnlDarBajaE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaE.Location = new System.Drawing.Point(508, 323);
+            this.pnlDarBajaE.Location = new System.Drawing.Point(371, 488);
             this.pnlDarBajaE.Name = "pnlDarBajaE";
             this.pnlDarBajaE.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaE.TabIndex = 42;
@@ -251,7 +256,7 @@
             // 
             this.pnlDirEmpleado.Controls.Add(this.txtDirEmpleado);
             this.pnlDirEmpleado.Controls.Add(this.lblDirEmpleado);
-            this.pnlDirEmpleado.Location = new System.Drawing.Point(334, 207);
+            this.pnlDirEmpleado.Location = new System.Drawing.Point(341, 265);
             this.pnlDirEmpleado.Name = "pnlDirEmpleado";
             this.pnlDirEmpleado.Size = new System.Drawing.Size(130, 48);
             this.pnlDirEmpleado.TabIndex = 36;
@@ -280,7 +285,7 @@
             this.pnlModificarE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarE.BackgroundImage")));
             this.pnlModificarE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarE.Location = new System.Drawing.Point(520, 221);
+            this.pnlModificarE.Location = new System.Drawing.Point(527, 279);
             this.pnlModificarE.Name = "pnlModificarE";
             this.pnlModificarE.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarE.TabIndex = 16;
@@ -292,7 +297,7 @@
             this.pnlLLenarCamposE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLLenarCamposE.BackgroundImage")));
             this.pnlLLenarCamposE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLLenarCamposE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLLenarCamposE.Location = new System.Drawing.Point(713, 444);
+            this.pnlLLenarCamposE.Location = new System.Drawing.Point(723, 466);
             this.pnlLLenarCamposE.Name = "pnlLLenarCamposE";
             this.pnlLLenarCamposE.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposE.TabIndex = 41;
@@ -303,7 +308,7 @@
             this.pnlBotonBuscarE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarE.BackgroundImage")));
             this.pnlBotonBuscarE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarE.Location = new System.Drawing.Point(884, 186);
+            this.pnlBotonBuscarE.Location = new System.Drawing.Point(891, 244);
             this.pnlBotonBuscarE.Name = "pnlBotonBuscarE";
             this.pnlBotonBuscarE.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarE.TabIndex = 40;
@@ -312,7 +317,7 @@
             // txtBuscarEmpleado
             // 
             this.txtBuscarEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarEmpleado.Location = new System.Drawing.Point(657, 186);
+            this.txtBuscarEmpleado.Location = new System.Drawing.Point(664, 244);
             this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
             this.txtBuscarEmpleado.Size = new System.Drawing.Size(221, 13);
             this.txtBuscarEmpleado.TabIndex = 39;
@@ -337,20 +342,20 @@
             this.idPuestoEmpleadoDataGridViewTextBoxColumn,
             this.estatusEmpleadoDataGridViewTextBoxColumn});
             this.dgvEmpleado.DataSource = this.empleadoBindingSource;
-            this.dgvEmpleado.Location = new System.Drawing.Point(613, 234);
+            this.dgvEmpleado.Location = new System.Drawing.Point(620, 292);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvEmpleado.RowHeadersWidth = 45;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvEmpleado.Size = new System.Drawing.Size(307, 150);
             this.dgvEmpleado.TabIndex = 38;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
@@ -360,7 +365,7 @@
             this.pnlBotonGuardarE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonGuardarE.BackgroundImage")));
             this.pnlBotonGuardarE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonGuardarE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonGuardarE.Location = new System.Drawing.Point(518, 277);
+            this.pnlBotonGuardarE.Location = new System.Drawing.Point(526, 279);
             this.pnlBotonGuardarE.Name = "pnlBotonGuardarE";
             this.pnlBotonGuardarE.Size = new System.Drawing.Size(37, 42);
             this.pnlBotonGuardarE.TabIndex = 37;
@@ -370,7 +375,7 @@
             // 
             this.pnlCampoTelEmpleado.Controls.Add(this.txtTelEmpleado);
             this.pnlCampoTelEmpleado.Controls.Add(this.lblTelEmpleado);
-            this.pnlCampoTelEmpleado.Location = new System.Drawing.Point(333, 152);
+            this.pnlCampoTelEmpleado.Location = new System.Drawing.Point(340, 210);
             this.pnlCampoTelEmpleado.Name = "pnlCampoTelEmpleado";
             this.pnlCampoTelEmpleado.Size = new System.Drawing.Size(129, 48);
             this.pnlCampoTelEmpleado.TabIndex = 33;
@@ -398,7 +403,7 @@
             // 
             this.pnlCampoApellidoEmpleado.Controls.Add(this.txtApellidoEmpleado);
             this.pnlCampoApellidoEmpleado.Controls.Add(this.lblApellidoEmpleado);
-            this.pnlCampoApellidoEmpleado.Location = new System.Drawing.Point(186, 375);
+            this.pnlCampoApellidoEmpleado.Location = new System.Drawing.Point(193, 433);
             this.pnlCampoApellidoEmpleado.Name = "pnlCampoApellidoEmpleado";
             this.pnlCampoApellidoEmpleado.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoApellidoEmpleado.TabIndex = 32;
@@ -426,7 +431,7 @@
             // 
             this.pnlCampoNombreEmpleado.Controls.Add(this.txtNombreEmpleado);
             this.pnlCampoNombreEmpleado.Controls.Add(this.lblNombreEmpleado);
-            this.pnlCampoNombreEmpleado.Location = new System.Drawing.Point(185, 321);
+            this.pnlCampoNombreEmpleado.Location = new System.Drawing.Point(192, 379);
             this.pnlCampoNombreEmpleado.Name = "pnlCampoNombreEmpleado";
             this.pnlCampoNombreEmpleado.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoNombreEmpleado.TabIndex = 35;
@@ -455,7 +460,7 @@
             // 
             this.pnlCampoIdUsuario.Controls.Add(this.txtIdUserEmp);
             this.pnlCampoIdUsuario.Controls.Add(this.lblIdUsuario);
-            this.pnlCampoIdUsuario.Location = new System.Drawing.Point(184, 265);
+            this.pnlCampoIdUsuario.Location = new System.Drawing.Point(191, 323);
             this.pnlCampoIdUsuario.Name = "pnlCampoIdUsuario";
             this.pnlCampoIdUsuario.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoIdUsuario.TabIndex = 34;
@@ -483,7 +488,7 @@
             // 
             this.pnlCampoDpiEmpleado.Controls.Add(this.txtDpiEmpleado);
             this.pnlCampoDpiEmpleado.Controls.Add(this.lblDpiEmpleado);
-            this.pnlCampoDpiEmpleado.Location = new System.Drawing.Point(184, 208);
+            this.pnlCampoDpiEmpleado.Location = new System.Drawing.Point(191, 266);
             this.pnlCampoDpiEmpleado.Name = "pnlCampoDpiEmpleado";
             this.pnlCampoDpiEmpleado.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoDpiEmpleado.TabIndex = 31;
@@ -511,7 +516,7 @@
             // 
             this.pnlCampoIDE.Controls.Add(this.txtIdEmpleado);
             this.pnlCampoIDE.Controls.Add(this.lbnIdEmpleado);
-            this.pnlCampoIDE.Location = new System.Drawing.Point(184, 152);
+            this.pnlCampoIDE.Location = new System.Drawing.Point(191, 210);
             this.pnlCampoIDE.Name = "pnlCampoIDE";
             this.pnlCampoIDE.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoIDE.TabIndex = 30;
@@ -632,7 +637,7 @@
             // 
             this.pnlSueldoEmpleado.Controls.Add(this.txtSueldoEmpleado);
             this.pnlSueldoEmpleado.Controls.Add(this.lblSueldoEmpleado);
-            this.pnlSueldoEmpleado.Location = new System.Drawing.Point(334, 263);
+            this.pnlSueldoEmpleado.Location = new System.Drawing.Point(341, 321);
             this.pnlSueldoEmpleado.Name = "pnlSueldoEmpleado";
             this.pnlSueldoEmpleado.Size = new System.Drawing.Size(130, 48);
             this.pnlSueldoEmpleado.TabIndex = 37;
@@ -660,7 +665,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 473);
+            this.splitter1.Size = new System.Drawing.Size(3, 650);
             this.splitter1.TabIndex = 45;
             this.splitter1.TabStop = false;
             // 
@@ -668,7 +673,7 @@
             // 
             this.pnlCampoIdDepEmpleado.Controls.Add(this.cbxIdDepEmpleado);
             this.pnlCampoIdDepEmpleado.Controls.Add(this.lblIdDepartamentoEmpleado);
-            this.pnlCampoIdDepEmpleado.Location = new System.Drawing.Point(476, 152);
+            this.pnlCampoIdDepEmpleado.Location = new System.Drawing.Point(483, 210);
             this.pnlCampoIdDepEmpleado.Name = "pnlCampoIdDepEmpleado";
             this.pnlCampoIdDepEmpleado.Size = new System.Drawing.Size(171, 48);
             this.pnlCampoIdDepEmpleado.TabIndex = 48;
@@ -696,7 +701,7 @@
             // 
             this.pnlCampoIdPuestoEmpleado.Controls.Add(this.cbxIdPuestoEmpleado);
             this.pnlCampoIdPuestoEmpleado.Controls.Add(this.lblIdPuestoEmpleado);
-            this.pnlCampoIdPuestoEmpleado.Location = new System.Drawing.Point(334, 321);
+            this.pnlCampoIdPuestoEmpleado.Location = new System.Drawing.Point(341, 379);
             this.pnlCampoIdPuestoEmpleado.Name = "pnlCampoIdPuestoEmpleado";
             this.pnlCampoIdPuestoEmpleado.Size = new System.Drawing.Size(131, 48);
             this.pnlCampoIdPuestoEmpleado.TabIndex = 49;
@@ -720,23 +725,69 @@
             this.lblIdPuestoEmpleado.TabIndex = 47;
             this.lblIdPuestoEmpleado.Text = "Id Puesto Empleado";
             // 
-            // panel5
+            // pnlBgSide
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.Controls.Add(this.btnRuta);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.pnlEmpleado);
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel10);
-            this.panel5.Controls.Add(this.pictureBox9);
-            this.panel5.Controls.Add(this.panel11);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(179, 474);
-            this.panel5.TabIndex = 50;
+            this.pnlBgSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
+            this.pnlBgSide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBgSide.BackgroundImage")));
+            this.pnlBgSide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlBgSide.Controls.Add(this.btnUsuarios);
+            this.pnlBgSide.Controls.Add(this.btnRuta);
+            this.pnlBgSide.Controls.Add(this.panel6);
+            this.pnlBgSide.Controls.Add(this.panel7);
+            this.pnlBgSide.Controls.Add(this.panel8);
+            this.pnlBgSide.Controls.Add(this.pnlEmpleado);
+            this.pnlBgSide.Controls.Add(this.panel9);
+            this.pnlBgSide.Controls.Add(this.panel10);
+            this.pnlBgSide.Controls.Add(this.pictureBox9);
+            this.pnlBgSide.Controls.Add(this.panel11);
+            this.pnlBgSide.Location = new System.Drawing.Point(0, 0);
+            this.pnlBgSide.Name = "pnlBgSide";
+            this.pnlBgSide.Size = new System.Drawing.Size(179, 650);
+            this.pnlBgSide.TabIndex = 50;
+            // 
+            // btnRuta
+            // 
+            this.btnRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnRuta.Controls.Add(this.picRuta);
+            this.btnRuta.Controls.Add(this.label8);
+            this.btnRuta.Controls.Add(this.lblRuta);
+            this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRuta.Location = new System.Drawing.Point(0, 343);
+            this.btnRuta.Name = "btnRuta";
+            this.btnRuta.Size = new System.Drawing.Size(180, 34);
+            this.btnRuta.TabIndex = 29;
+            this.btnRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnRuta_MouseClick);
+            this.btnRuta.MouseLeave += new System.EventHandler(this.btnRuta_MouseLeave);
+            this.btnRuta.MouseHover += new System.EventHandler(this.btnRuta_MouseHover);
+            // 
+            // picRuta
+            // 
+            this.picRuta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picRuta.BackgroundImage")));
+            this.picRuta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picRuta.Location = new System.Drawing.Point(20, 8);
+            this.picRuta.Name = "picRuta";
+            this.picRuta.Size = new System.Drawing.Size(20, 21);
+            this.picRuta.TabIndex = 1;
+            this.picRuta.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.Location = new System.Drawing.Point(15, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.TabIndex = 1;
+            // 
+            // lblRuta
+            // 
+            this.lblRuta.AutoSize = true;
+            this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblRuta.Location = new System.Drawing.Point(79, 10);
+            this.lblRuta.Name = "lblRuta";
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
+            this.lblRuta.TabIndex = 0;
+            this.lblRuta.Text = "Ruta";
             // 
             // panel6
             // 
@@ -846,11 +897,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label17.Location = new System.Drawing.Point(64, 10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 16);
+            this.label17.Size = new System.Drawing.Size(55, 13);
             this.label17.TabIndex = 2;
             this.label17.Text = "Ubicación";
             // 
@@ -891,11 +942,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label19.Location = new System.Drawing.Point(59, 10);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(94, 16);
+            this.label19.Size = new System.Drawing.Size(74, 13);
             this.label19.TabIndex = 2;
             this.label19.Text = "Departamento";
             // 
@@ -955,11 +1006,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label22.Location = new System.Drawing.Point(75, 10);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(50, 16);
+            this.label22.Size = new System.Drawing.Size(40, 13);
             this.label22.TabIndex = 0;
             this.label22.Text = "Puesto";
             // 
@@ -1012,11 +1063,11 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label24.Location = new System.Drawing.Point(73, 10);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(49, 16);
+            this.label24.Size = new System.Drawing.Size(39, 13);
             this.label24.TabIndex = 0;
             this.label24.Text = "Cliente";
             this.label24.MouseHover += new System.EventHandler(this.label24_MouseHover);
@@ -1025,7 +1076,7 @@
             // 
             this.pnlEstatusEmpleado.Controls.Add(this.txtEstatusEmpleado);
             this.pnlEstatusEmpleado.Controls.Add(this.label1);
-            this.pnlEstatusEmpleado.Location = new System.Drawing.Point(334, 375);
+            this.pnlEstatusEmpleado.Location = new System.Drawing.Point(341, 433);
             this.pnlEstatusEmpleado.Name = "pnlEstatusEmpleado";
             this.pnlEstatusEmpleado.Size = new System.Drawing.Size(129, 48);
             this.pnlEstatusEmpleado.TabIndex = 34;
@@ -1059,6 +1110,55 @@
             this.lblTituloEmpleado.Size = new System.Drawing.Size(161, 35);
             this.lblTituloEmpleado.TabIndex = 51;
             this.lblTituloEmpleado.Text = "Empleado";
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnUsuarios.Controls.Add(this.lblUsuarios);
+            this.btnUsuarios.Controls.Add(this.picIconoUsuarios);
+            this.btnUsuarios.Controls.Add(this.label10);
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.Location = new System.Drawing.Point(-1, 443);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
+            this.btnUsuarios.TabIndex = 32;
+            this.btnUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnUsuarios_MouseClick);
+            this.btnUsuarios.MouseLeave += new System.EventHandler(this.btnUsuarios_MouseLeave);
+            this.btnUsuarios.MouseHover += new System.EventHandler(this.btnUsuarios_MouseHover);
+            // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.AutoSize = true;
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblUsuarios.Location = new System.Drawing.Point(69, 10);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
+            this.lblUsuarios.TabIndex = 2;
+            this.lblUsuarios.Text = "Usuarios";
+            this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
+            this.lblUsuarios.MouseHover += new System.EventHandler(this.lblUsuarios_MouseHover);
+            // 
+            // picIconoUsuarios
+            // 
+            this.picIconoUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoUsuarios.BackgroundImage")));
+            this.picIconoUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoUsuarios.Location = new System.Drawing.Point(20, 8);
+            this.picIconoUsuarios.Name = "picIconoUsuarios";
+            this.picIconoUsuarios.Size = new System.Drawing.Size(20, 21);
+            this.picIconoUsuarios.TabIndex = 1;
+            this.picIconoUsuarios.TabStop = false;
+            this.picIconoUsuarios.MouseLeave += new System.EventHandler(this.picIconoUsuarios_MouseLeave);
+            this.picIconoUsuarios.MouseHover += new System.EventHandler(this.picIconoUsuarios_MouseHover);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(15, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 1;
             // 
             // idEmpleadoDataGridViewTextBoxColumn
             // 
@@ -1130,59 +1230,15 @@
             // 
             this.empleadoBindingSource.DataSource = typeof(sistema_reparto.Clases.Empleado);
             // 
-            // btnRuta
-            // 
-            this.btnRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.btnRuta.Controls.Add(this.picRuta);
-            this.btnRuta.Controls.Add(this.label8);
-            this.btnRuta.Controls.Add(this.lblRuta);
-            this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRuta.Location = new System.Drawing.Point(0, 343);
-            this.btnRuta.Name = "btnRuta";
-            this.btnRuta.Size = new System.Drawing.Size(180, 34);
-            this.btnRuta.TabIndex = 29;
-            this.btnRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnRuta_MouseClick);
-            this.btnRuta.MouseLeave += new System.EventHandler(this.btnRuta_MouseLeave);
-            this.btnRuta.MouseHover += new System.EventHandler(this.btnRuta_MouseHover);
-            // 
-            // picRuta
-            // 
-            this.picRuta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picRuta.BackgroundImage")));
-            this.picRuta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picRuta.Location = new System.Drawing.Point(20, 8);
-            this.picRuta.Name = "picRuta";
-            this.picRuta.Size = new System.Drawing.Size(20, 21);
-            this.picRuta.TabIndex = 1;
-            this.picRuta.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
-            this.label8.Location = new System.Drawing.Point(15, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
-            this.label8.TabIndex = 1;
-            // 
-            // lblRuta
-            // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblRuta.Location = new System.Drawing.Point(79, 10);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(30, 13);
-            this.lblRuta.TabIndex = 0;
-            this.lblRuta.Text = "Ruta";
-            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(934, 473);
+            this.ClientSize = new System.Drawing.Size(934, 650);
             this.Controls.Add(this.lblTituloEmpleado);
             this.Controls.Add(this.pnlEstatusEmpleado);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnlBgSide);
             this.Controls.Add(this.pnlCampoIdPuestoEmpleado);
             this.Controls.Add(this.pnlCampoIdDepEmpleado);
             this.Controls.Add(this.splitter1);
@@ -1242,7 +1298,10 @@
             this.pnlCampoIdDepEmpleado.PerformLayout();
             this.pnlCampoIdPuestoEmpleado.ResumeLayout(false);
             this.pnlCampoIdPuestoEmpleado.PerformLayout();
-            this.panel5.ResumeLayout(false);
+            this.pnlBgSide.ResumeLayout(false);
+            this.btnRuta.ResumeLayout(false);
+            this.btnRuta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picRuta)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1264,10 +1323,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.pnlEstatusEmpleado.ResumeLayout(false);
             this.pnlEstatusEmpleado.PerformLayout();
+            this.btnUsuarios.ResumeLayout(false);
+            this.btnUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
-            this.btnRuta.ResumeLayout(false);
-            this.btnRuta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRuta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1327,7 +1386,7 @@
         private System.Windows.Forms.Panel pnlCampoIdPuestoEmpleado;
         private System.Windows.Forms.ComboBox cbxIdPuestoEmpleado;
         private System.Windows.Forms.Label lblIdPuestoEmpleado;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlBgSide;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label13;
@@ -1373,5 +1432,9 @@
         private System.Windows.Forms.PictureBox picRuta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblRuta;
+        private System.Windows.Forms.Panel btnUsuarios;
+        private System.Windows.Forms.Label lblUsuarios;
+        private System.Windows.Forms.PictureBox picIconoUsuarios;
+        private System.Windows.Forms.Label label10;
     }
 }

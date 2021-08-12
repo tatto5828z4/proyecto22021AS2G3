@@ -251,6 +251,7 @@ namespace sistema_reparto
             String idPuesto = dgvEmpleado.CurrentRow.Cells[9].Value.ToString();
 
             empleado.obtenerNombreDep(idDep);
+            Console.WriteLine(idDep);
             cbxIdDepEmpleado.SelectedValue = idDep;
 
             empleado.obtenerNombrePuesto(idPuesto);
@@ -622,6 +623,44 @@ namespace sistema_reparto
         private void label24_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverRuta;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverRuta;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverRuta;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalRuta;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalRuta;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalRuta;
         }
     }
 }

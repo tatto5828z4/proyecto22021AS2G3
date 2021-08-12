@@ -46,6 +46,14 @@ namespace sistema_reparto
             this.pnlBotonBuscarC = new System.Windows.Forms.Panel();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotonGuardarC = new System.Windows.Forms.Panel();
             this.pnlCampoDireccion = new System.Windows.Forms.Panel();
             this.richCliente = new System.Windows.Forms.RichTextBox();
@@ -76,6 +84,10 @@ namespace sistema_reparto
             this.lblModificarCliente = new System.Windows.Forms.Label();
             this.lblTituloCliente = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.picEmple = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblEmple = new System.Windows.Forms.Label();
             this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
@@ -125,22 +137,11 @@ namespace sistema_reparto
             this.picIconoCliente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.pnlEmpleado = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBg.SuspendLayout();
             this.pnlMantenimientoC.SuspendLayout();
             this.pnlEstatusCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.pnlCampoDireccion.SuspendLayout();
             this.pnlCampoCorreoC.SuspendLayout();
             this.pnlCampoTelefonoC.SuspendLayout();
@@ -149,6 +150,8 @@ namespace sistema_reparto
             this.pnlCampoIDC.SuspendLayout();
             this.pnlBordeCliente.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
+            this.pnlEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmple)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
             this.btnUsuarios.SuspendLayout();
@@ -174,9 +177,6 @@ namespace sistema_reparto
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
-            this.pnlEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBg
@@ -365,6 +365,66 @@ namespace sistema_reparto
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.Size = new System.Drawing.Size(307, 150);
             this.dgvClientes.TabIndex = 16;
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
+            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // nombreClienteDataGridViewTextBoxColumn
+            // 
+            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente";
+            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre Cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
+            this.nombreClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // apellidoClienteDataGridViewTextBoxColumn
+            // 
+            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "ApellidoCliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
+            this.apellidoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // telefonoClienteDataGridViewTextBoxColumn
+            // 
+            this.telefonoClienteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoCliente";
+            this.telefonoClienteDataGridViewTextBoxColumn.HeaderText = "Telefono Cliente";
+            this.telefonoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoClienteDataGridViewTextBoxColumn.Name = "telefonoClienteDataGridViewTextBoxColumn";
+            this.telefonoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // correoClienteDataGridViewTextBoxColumn
+            // 
+            this.correoClienteDataGridViewTextBoxColumn.DataPropertyName = "CorreoCliente";
+            this.correoClienteDataGridViewTextBoxColumn.HeaderText = "Correo Cliente";
+            this.correoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.correoClienteDataGridViewTextBoxColumn.Name = "correoClienteDataGridViewTextBoxColumn";
+            this.correoClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // direccionClienteDataGridViewTextBoxColumn
+            // 
+            this.direccionClienteDataGridViewTextBoxColumn.DataPropertyName = "DireccionCliente";
+            this.direccionClienteDataGridViewTextBoxColumn.HeaderText = "Direccion Cliente";
+            this.direccionClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionClienteDataGridViewTextBoxColumn.Name = "direccionClienteDataGridViewTextBoxColumn";
+            this.direccionClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // estatusClienteDataGridViewTextBoxColumn
+            // 
+            this.estatusClienteDataGridViewTextBoxColumn.DataPropertyName = "EstatusCliente";
+            this.estatusClienteDataGridViewTextBoxColumn.HeaderText = "Estatus Cliente";
+            this.estatusClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusClienteDataGridViewTextBoxColumn.Name = "estatusClienteDataGridViewTextBoxColumn";
+            this.estatusClienteDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(sistema_reparto.Cliente);
             // 
             // pnlBotonGuardarC
             // 
@@ -649,7 +709,7 @@ namespace sistema_reparto
             this.lblTituloCliente.AutoSize = true;
             this.lblTituloCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
-            this.lblTituloCliente.Location = new System.Drawing.Point(207, 9);
+            this.lblTituloCliente.Location = new System.Drawing.Point(206, 11);
             this.lblTituloCliente.Name = "lblTituloCliente";
             this.lblTituloCliente.Size = new System.Drawing.Size(118, 35);
             this.lblTituloCliente.TabIndex = 1;
@@ -679,6 +739,56 @@ namespace sistema_reparto
             this.pnlSidebar.TabIndex = 0;
             this.pnlSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.pnlSidebar.MouseHover += new System.EventHandler(this.pnlSidebar_MouseHover);
+            // 
+            // pnlEmpleado
+            // 
+            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEmpleado.Controls.Add(this.picEmple);
+            this.pnlEmpleado.Controls.Add(this.label14);
+            this.pnlEmpleado.Controls.Add(this.lblEmple);
+            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 550);
+            this.pnlEmpleado.Name = "pnlEmpleado";
+            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
+            this.pnlEmpleado.TabIndex = 34;
+            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
+            this.pnlEmpleado.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
+            this.pnlEmpleado.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
+            // 
+            // picEmple
+            // 
+            this.picEmple.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEmple.Image = ((System.Drawing.Image)(resources.GetObject("picEmple.Image")));
+            this.picEmple.Location = new System.Drawing.Point(21, 8);
+            this.picEmple.Name = "picEmple";
+            this.picEmple.Size = new System.Drawing.Size(20, 21);
+            this.picEmple.TabIndex = 1;
+            this.picEmple.TabStop = false;
+            this.picEmple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEmple_MouseClick);
+            this.picEmple.MouseLeave += new System.EventHandler(this.picEmple_MouseLeave);
+            this.picEmple.MouseHover += new System.EventHandler(this.picEmple_MouseHover);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
+            this.label14.Location = new System.Drawing.Point(15, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.TabIndex = 1;
+            // 
+            // lblEmple
+            // 
+            this.lblEmple.AutoSize = true;
+            this.lblEmple.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEmple.Location = new System.Drawing.Point(78, 10);
+            this.lblEmple.Name = "lblEmple";
+            this.lblEmple.Size = new System.Drawing.Size(54, 13);
+            this.lblEmple.TabIndex = 0;
+            this.lblEmple.Text = "Empleado";
+            this.lblEmple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmple_MouseClick);
+            this.lblEmple.MouseLeave += new System.EventHandler(this.lblEmple_MouseLeave);
+            this.lblEmple.MouseHover += new System.EventHandler(this.lblEmple_MouseHover);
             // 
             // btnPaqueteEncabezado
             // 
@@ -744,6 +854,8 @@ namespace sistema_reparto
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 32;
             this.btnUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnUsuarios_MouseClick);
+            this.btnUsuarios.MouseLeave += new System.EventHandler(this.btnUsuarios_MouseLeave);
+            this.btnUsuarios.MouseHover += new System.EventHandler(this.btnUsuarios_MouseHover);
             // 
             // lblUsuarios
             // 
@@ -756,6 +868,8 @@ namespace sistema_reparto
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
+            this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
+            this.lblUsuarios.MouseHover += new System.EventHandler(this.lblUsuarios_MouseHover);
             // 
             // picIconoUsuarios
             // 
@@ -767,6 +881,8 @@ namespace sistema_reparto
             this.picIconoUsuarios.TabIndex = 1;
             this.picIconoUsuarios.TabStop = false;
             this.picIconoUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoUsuarios_MouseClick);
+            this.picIconoUsuarios.MouseLeave += new System.EventHandler(this.picIconoUsuarios_MouseLeave);
+            this.picIconoUsuarios.MouseHover += new System.EventHandler(this.picIconoUsuarios_MouseHover);
             // 
             // label12
             // 
@@ -1286,109 +1402,6 @@ namespace sistema_reparto
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
             this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
             // 
-            // pnlEmpleado
-            // 
-            this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlEmpleado.Controls.Add(this.pictureBox3);
-            this.pnlEmpleado.Controls.Add(this.label14);
-            this.pnlEmpleado.Controls.Add(this.label15);
-            this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 550);
-            this.pnlEmpleado.Name = "pnlEmpleado";
-            this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
-            this.pnlEmpleado.TabIndex = 34;
-            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
-            this.label14.Location = new System.Drawing.Point(15, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 13);
-            this.label14.TabIndex = 1;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.label15.Location = new System.Drawing.Point(78, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Empleado";
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
-            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // nombreClienteDataGridViewTextBoxColumn
-            // 
-            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente";
-            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre Cliente";
-            this.nombreClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
-            this.nombreClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // apellidoClienteDataGridViewTextBoxColumn
-            // 
-            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "ApellidoCliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
-            this.apellidoClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // telefonoClienteDataGridViewTextBoxColumn
-            // 
-            this.telefonoClienteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoCliente";
-            this.telefonoClienteDataGridViewTextBoxColumn.HeaderText = "Telefono Cliente";
-            this.telefonoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoClienteDataGridViewTextBoxColumn.Name = "telefonoClienteDataGridViewTextBoxColumn";
-            this.telefonoClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // correoClienteDataGridViewTextBoxColumn
-            // 
-            this.correoClienteDataGridViewTextBoxColumn.DataPropertyName = "CorreoCliente";
-            this.correoClienteDataGridViewTextBoxColumn.HeaderText = "Correo Cliente";
-            this.correoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.correoClienteDataGridViewTextBoxColumn.Name = "correoClienteDataGridViewTextBoxColumn";
-            this.correoClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // direccionClienteDataGridViewTextBoxColumn
-            // 
-            this.direccionClienteDataGridViewTextBoxColumn.DataPropertyName = "DireccionCliente";
-            this.direccionClienteDataGridViewTextBoxColumn.HeaderText = "Direccion Cliente";
-            this.direccionClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionClienteDataGridViewTextBoxColumn.Name = "direccionClienteDataGridViewTextBoxColumn";
-            this.direccionClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // estatusClienteDataGridViewTextBoxColumn
-            // 
-            this.estatusClienteDataGridViewTextBoxColumn.DataPropertyName = "EstatusCliente";
-            this.estatusClienteDataGridViewTextBoxColumn.HeaderText = "Estatus Cliente";
-            this.estatusClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusClienteDataGridViewTextBoxColumn.Name = "estatusClienteDataGridViewTextBoxColumn";
-            this.estatusClienteDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(sistema_reparto.Cliente);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1407,6 +1420,7 @@ namespace sistema_reparto
             this.pnlEstatusCliente.ResumeLayout(false);
             this.pnlEstatusCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.pnlCampoDireccion.ResumeLayout(false);
             this.pnlCampoDireccion.PerformLayout();
             this.pnlCampoCorreoC.ResumeLayout(false);
@@ -1421,6 +1435,9 @@ namespace sistema_reparto
             this.pnlCampoIDC.PerformLayout();
             this.pnlBordeCliente.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlEmpleado.ResumeLayout(false);
+            this.pnlEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmple)).EndInit();
             this.btnPaqueteEncabezado.ResumeLayout(false);
             this.btnPaqueteEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).EndInit();
@@ -1458,10 +1475,6 @@ namespace sistema_reparto
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
-            this.pnlEmpleado.ResumeLayout(false);
-            this.pnlEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1569,9 +1582,9 @@ namespace sistema_reparto
         private System.Windows.Forms.PictureBox picIconoPaqueteE;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel pnlEmpleado;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picEmple;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEmple;
     }
 }
 

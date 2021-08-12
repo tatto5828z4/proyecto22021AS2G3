@@ -924,8 +924,76 @@ namespace sistema_reparto
 
         private void pnlEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            pnlEmpleado.BackColor = colorHoverDepartamento;
+            pnlEmpleado.BackColor = colorNormalDepartamento;
 
+        }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverDepartamento;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverDepartamento;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverDepartamento;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalDepartamento;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalDepartamento;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalDepartamento;
+        }
+
+        private void label14_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalDepartamento;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalDepartamento;
+        }
+
+        private void label14_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverDepartamento;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverDepartamento;
+        }
+
+        private void label14_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
         }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
