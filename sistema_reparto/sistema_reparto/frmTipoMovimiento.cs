@@ -487,7 +487,7 @@ namespace sistema_reparto
         {
             /* Funcion insertar una TipoMovimiento */
             
-            if (txtIdTipoMovimiento.Text =="" && txtTipoMovimiento.Text == "")
+            if (txtIdTipoMovimiento.Text =="" || txtTipoMovimiento.Text == "")
             {
                 MessageBox.Show("No se pueden dejar campos vacios ","ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -939,6 +939,109 @@ namespace sistema_reparto
         }
 
         private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverTM;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverTM;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverTM;
+        }
+
+        private void pnlEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverTM;
+        }
+
+        private void label15_MouseHover_1(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverTM;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverTM;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+
+            btnBodega.BackColor = colorNormalTM;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalTM;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalTM;
+        }
+
+        private void pnlEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalTM;
+        }
+
+        private void label15_MouseLeave_1(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalTM;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalTM;
+        }
+
+        private void label15_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
         {
             frmEmpleado obj = new frmEmpleado();
 
