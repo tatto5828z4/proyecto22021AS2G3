@@ -290,7 +290,7 @@ namespace sistema_reparto.Clases
                 combobox.ValueMember = id;
                 combobox.DisplayMember = nombre;
                 combobox.DataSource = dt;
-                
+
             }
             catch (MySqlException ex)
             {
@@ -338,11 +338,11 @@ namespace sistema_reparto.Clases
                 {
                     idDepartamento = leer.GetString("nombreDepartamentos");
                 }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error al guardar los datos " + ex.Message);
-                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar los datos " + ex.Message);
+            }
         }
 
         public void obtenerNombrePuesto(String idPuesto)
@@ -359,17 +359,14 @@ namespace sistema_reparto.Clases
                 {
                     idPuesto = leer.GetString("nombrePuesto");
                 }
+
+                
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show("Error al guardar los datos " + ex.Message);
             }
         }
-
-
-
-
-
 
 
 
