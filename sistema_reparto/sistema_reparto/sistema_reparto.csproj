@@ -61,6 +61,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Envio.cs" />
+    <Compile Include="Clases\PaqueteDetalle.cs" />
     <Compile Include="Clases\PaqueteEncabezado.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Clases\TipoEmpleado.cs" />
     <Compile Include="Clases\TipoMovimiento.cs" />
     <Compile Include="Clases\TipoTransporte.cs" />
+    <Compile Include="Clases\Transporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="frmBodega.cs">
@@ -88,6 +90,12 @@
     </Compile>
     <Compile Include="frmEnvio.designer.cs">
       <DependentUpon>frmEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaqueteDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaqueteDetalle.designer.cs">
+      <DependentUpon>frmPaqueteDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPaqueteEncabezado.cs">
       <SubType>Form</SubType>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnvio.resx">
       <DependentUpon>frmEnvio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaqueteDetalle.resx">
+      <DependentUpon>frmPaqueteDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPaqueteEncabezado.resx">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
