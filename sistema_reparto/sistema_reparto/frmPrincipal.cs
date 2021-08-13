@@ -1353,5 +1353,32 @@ namespace sistema_reparto
         {
             pnlEnvio.BackColor = colorNormalCliente;
         }
+
+        private void panel3_MouseClick_2(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTransporte_MouseHover(object sender, EventArgs e)
+        {
+            pnlTransporte.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTransporte.BackColor = colorNormalCliente;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalCliente;
+        }
     }
 }
