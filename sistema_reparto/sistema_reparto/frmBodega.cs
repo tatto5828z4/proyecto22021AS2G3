@@ -1102,5 +1102,62 @@ namespace sistema_reparto
         {
 
         }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
+        }
     }
 }

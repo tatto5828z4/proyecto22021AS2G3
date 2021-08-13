@@ -1032,5 +1032,62 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalUbicacion;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverUbicacion;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalUbicacion;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverUbicacion;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalUbicacion;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
     }
 }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpleado));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlLlenarCamposEDB = new System.Windows.Forms.Panel();
             this.pnlActivarE = new System.Windows.Forms.Panel();
             this.pnlDarBajaE = new System.Windows.Forms.Panel();
@@ -151,6 +151,10 @@
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.pnlEnvio = new System.Windows.Forms.Panel();
+            this.picEnvio = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
             this.pnlDirEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
@@ -193,6 +197,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).BeginInit();
+            this.pnlEnvio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLlenarCamposEDB
@@ -321,17 +327,17 @@
             this.dgvEmpleado.Location = new System.Drawing.Point(690, 296);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvEmpleado.RowHeadersWidth = 45;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvEmpleado.Size = new System.Drawing.Size(307, 150);
             this.dgvEmpleado.TabIndex = 38;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
@@ -654,7 +660,7 @@
             this.lblAbcEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcEmpleado.Location = new System.Drawing.Point(203, 49);
             this.lblAbcEmpleado.Name = "lblAbcEmpleado";
-            this.lblAbcEmpleado.Size = new System.Drawing.Size(235, 24);
+            this.lblAbcEmpleado.Size = new System.Drawing.Size(220, 22);
             this.lblAbcEmpleado.TabIndex = 22;
             this.lblAbcEmpleado.Text = "Mantenimientos Empleado";
             this.lblAbcEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcEmpleado_MouseClick);
@@ -733,7 +739,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 618);
+            this.splitter1.Size = new System.Drawing.Size(3, 658);
             this.splitter1.TabIndex = 45;
             this.splitter1.TabStop = false;
             // 
@@ -798,6 +804,7 @@
             this.pnlBgSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlBgSide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBgSide.BackgroundImage")));
             this.pnlBgSide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlBgSide.Controls.Add(this.pnlEnvio);
             this.pnlBgSide.Controls.Add(this.btnTipoTransporte);
             this.pnlBgSide.Controls.Add(this.btnTipoMovimiento);
             this.pnlBgSide.Controls.Add(this.btnUsuarios);
@@ -812,7 +819,7 @@
             this.pnlBgSide.Controls.Add(this.btnCliente);
             this.pnlBgSide.Location = new System.Drawing.Point(0, 0);
             this.pnlBgSide.Name = "pnlBgSide";
-            this.pnlBgSide.Size = new System.Drawing.Size(179, 650);
+            this.pnlBgSide.Size = new System.Drawing.Size(179, 658);
             this.pnlBgSide.TabIndex = 50;
             // 
             // btnTipoTransporte
@@ -857,7 +864,7 @@
             this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
             this.label6.Location = new System.Drawing.Point(15, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 15);
             this.label6.TabIndex = 1;
             // 
             // btnTipoMovimiento
@@ -907,7 +914,7 @@
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
             this.label5.Location = new System.Drawing.Point(15, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.Size = new System.Drawing.Size(0, 15);
             this.label5.TabIndex = 1;
             // 
             // btnUsuarios
@@ -956,7 +963,7 @@
             this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
             this.label10.Location = new System.Drawing.Point(15, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.Size = new System.Drawing.Size(0, 15);
             this.label10.TabIndex = 1;
             // 
             // btnRuta
@@ -990,7 +997,7 @@
             this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
             this.label8.Location = new System.Drawing.Point(15, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 15);
             this.label8.TabIndex = 1;
             // 
             // lblRuta
@@ -1036,7 +1043,7 @@
             this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
             this.label13.Location = new System.Drawing.Point(15, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.Size = new System.Drawing.Size(0, 15);
             this.label13.TabIndex = 1;
             // 
             // label14
@@ -1081,7 +1088,7 @@
             this.label15.Image = ((System.Drawing.Image)(resources.GetObject("label15.Image")));
             this.label15.Location = new System.Drawing.Point(15, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 13);
+            this.label15.Size = new System.Drawing.Size(0, 15);
             this.label15.TabIndex = 1;
             // 
             // label16
@@ -1138,7 +1145,7 @@
             this.label18.Image = ((System.Drawing.Image)(resources.GetObject("label18.Image")));
             this.label18.Location = new System.Drawing.Point(15, 10);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 13);
+            this.label18.Size = new System.Drawing.Size(0, 15);
             this.label18.TabIndex = 1;
             // 
             // pnlEmpleado
@@ -1174,7 +1181,7 @@
             this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
             this.label11.Location = new System.Drawing.Point(15, 10);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.Size = new System.Drawing.Size(0, 15);
             this.label11.TabIndex = 1;
             // 
             // label12
@@ -1232,7 +1239,7 @@
             this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
             this.label20.Location = new System.Drawing.Point(15, 10);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(0, 13);
+            this.label20.Size = new System.Drawing.Size(0, 15);
             this.label20.TabIndex = 1;
             // 
             // panel10
@@ -1266,7 +1273,7 @@
             this.label21.Image = ((System.Drawing.Image)(resources.GetObject("label21.Image")));
             this.label21.Location = new System.Drawing.Point(15, 10);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(0, 13);
+            this.label21.Size = new System.Drawing.Size(0, 15);
             this.label21.TabIndex = 1;
             // 
             // label22
@@ -1325,7 +1332,7 @@
             this.label23.Image = ((System.Drawing.Image)(resources.GetObject("label23.Image")));
             this.label23.Location = new System.Drawing.Point(15, 10);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(0, 13);
+            this.label23.Size = new System.Drawing.Size(0, 15);
             this.label23.TabIndex = 1;
             // 
             // label24
@@ -1376,7 +1383,7 @@
             this.lblTituloEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloEmpleado.Location = new System.Drawing.Point(200, 9);
             this.lblTituloEmpleado.Name = "lblTituloEmpleado";
-            this.lblTituloEmpleado.Size = new System.Drawing.Size(187, 40);
+            this.lblTituloEmpleado.Size = new System.Drawing.Size(181, 39);
             this.lblTituloEmpleado.TabIndex = 51;
             this.lblTituloEmpleado.Text = "Empleado";
             // 
@@ -1414,7 +1421,7 @@
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.Location = new System.Drawing.Point(15, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 1;
             // 
             // lblBodega
@@ -1480,15 +1487,67 @@
             this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
             this.label9.Location = new System.Drawing.Point(15, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.Size = new System.Drawing.Size(0, 15);
             this.label9.TabIndex = 1;
+            // 
+            // pnlEnvio
+            // 
+            this.pnlEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEnvio.Controls.Add(this.picEnvio);
+            this.pnlEnvio.Controls.Add(this.label2);
+            this.pnlEnvio.Controls.Add(this.lblEnvio);
+            this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEnvio.Location = new System.Drawing.Point(-1, 618);
+            this.pnlEnvio.Name = "pnlEnvio";
+            this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
+            this.pnlEnvio.TabIndex = 56;
+            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
+            this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
+            this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
+            // 
+            // picEnvio
+            // 
+            this.picEnvio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEnvio.BackgroundImage")));
+            this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
+            this.picEnvio.Location = new System.Drawing.Point(17, 8);
+            this.picEnvio.Name = "picEnvio";
+            this.picEnvio.Size = new System.Drawing.Size(20, 21);
+            this.picEnvio.TabIndex = 1;
+            this.picEnvio.TabStop = false;
+            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEnvio_MouseClick);
+            this.picEnvio.MouseLeave += new System.EventHandler(this.picEnvio_MouseLeave);
+            this.picEnvio.MouseHover += new System.EventHandler(this.picEnvio_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(15, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 15);
+            this.label2.TabIndex = 1;
+            // 
+            // lblEnvio
+            // 
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEnvio.Location = new System.Drawing.Point(78, 10);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(43, 17);
+            this.lblEnvio.TabIndex = 0;
+            this.lblEnvio.Text = "Envio";
+            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
+            this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
+            this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
             // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 618);
+            this.ClientSize = new System.Drawing.Size(1059, 658);
             this.Controls.Add(this.pnlBotonGuardarE);
             this.Controls.Add(this.btnBodega);
             this.Controls.Add(this.btnPaqueteEncabezado);
@@ -1594,6 +1653,9 @@
             this.btnPaqueteEncabezado.ResumeLayout(false);
             this.btnPaqueteEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoPaqueteE)).EndInit();
+            this.pnlEnvio.ResumeLayout(false);
+            this.pnlEnvio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1719,5 +1781,9 @@
         private System.Windows.Forms.Label lblTipoTransporte;
         private System.Windows.Forms.PictureBox picIconoTipoTransporte;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnlEnvio;
+        private System.Windows.Forms.PictureBox picEnvio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEnvio;
     }
 }

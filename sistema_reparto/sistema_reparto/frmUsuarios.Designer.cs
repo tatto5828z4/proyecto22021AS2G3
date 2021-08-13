@@ -34,9 +34,14 @@ namespace sistema_reparto
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnBodega = new System.Windows.Forms.Panel();
+            this.picBodega = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblBodega = new System.Windows.Forms.Label();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
             this.picEmple = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblEmpleado = new System.Windows.Forms.Label();
             this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
@@ -170,12 +175,6 @@ namespace sistema_reparto
             this.pnlBotonBuscarUsuario = new System.Windows.Forms.Panel();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPermisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chkModificarEn = new System.Windows.Forms.CheckBox();
             this.chkDarBajaEn = new System.Windows.Forms.CheckBox();
             this.chkConsultaEn = new System.Windows.Forms.CheckBox();
@@ -201,12 +200,19 @@ namespace sistema_reparto
             this.pnlVeriPass = new System.Windows.Forms.Panel();
             this.pnlEstatusU = new System.Windows.Forms.Panel();
             this.pnlChecks = new System.Windows.Forms.Panel();
-            this.btnBodega = new System.Windows.Forms.Panel();
-            this.picBodega = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblBodega = new System.Windows.Forms.Label();
-            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.pnlEnvio = new System.Windows.Forms.Panel();
+            this.picEnvio = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPermisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
+            this.btnBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmple)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
@@ -234,7 +240,6 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
             this.pnlBordeUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.pnlContenidoTP.SuspendLayout();
             this.pnlCodigoP.SuspendLayout();
             this.pnlCodigoU.SuspendLayout();
@@ -243,8 +248,9 @@ namespace sistema_reparto
             this.pnlVeriPass.SuspendLayout();
             this.pnlEstatusU.SuspendLayout();
             this.pnlChecks.SuspendLayout();
-            this.btnBodega.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
+            this.pnlEnvio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -252,6 +258,7 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlEnvio);
             this.pnlSidebar.Controls.Add(this.btnBodega);
             this.pnlSidebar.Controls.Add(this.pnlEmpleado);
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
@@ -270,6 +277,58 @@ namespace sistema_reparto
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(179, 721);
             this.pnlSidebar.TabIndex = 2;
+            // 
+            // btnBodega
+            // 
+            this.btnBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBodega.Controls.Add(this.picBodega);
+            this.btnBodega.Controls.Add(this.label16);
+            this.btnBodega.Controls.Add(this.lblBodega);
+            this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBodega.Location = new System.Drawing.Point(-1, 586);
+            this.btnBodega.Name = "btnBodega";
+            this.btnBodega.Size = new System.Drawing.Size(180, 34);
+            this.btnBodega.TabIndex = 57;
+            this.btnBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBodega_MouseClick);
+            this.btnBodega.MouseLeave += new System.EventHandler(this.btnBodega_MouseLeave);
+            this.btnBodega.MouseHover += new System.EventHandler(this.btnBodega_MouseHover);
+            // 
+            // picBodega
+            // 
+            this.picBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBodega.BackgroundImage")));
+            this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
+            this.picBodega.Location = new System.Drawing.Point(19, 10);
+            this.picBodega.Name = "picBodega";
+            this.picBodega.Size = new System.Drawing.Size(20, 21);
+            this.picBodega.TabIndex = 1;
+            this.picBodega.TabStop = false;
+            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBodega_MouseClick);
+            this.picBodega.MouseLeave += new System.EventHandler(this.picBodega_MouseLeave);
+            this.picBodega.MouseHover += new System.EventHandler(this.picBodega_MouseHover);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Image = ((System.Drawing.Image)(resources.GetObject("label16.Image")));
+            this.label16.Location = new System.Drawing.Point(15, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(0, 15);
+            this.label16.TabIndex = 1;
+            // 
+            // lblBodega
+            // 
+            this.lblBodega.AutoSize = true;
+            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBodega.Location = new System.Drawing.Point(68, 10);
+            this.lblBodega.Name = "lblBodega";
+            this.lblBodega.Size = new System.Drawing.Size(57, 17);
+            this.lblBodega.TabIndex = 0;
+            this.lblBodega.Text = "Bodega";
+            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
+            this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
+            this.lblBodega.MouseHover += new System.EventHandler(this.lblBodega_MouseHover);
             // 
             // pnlEmpleado
             // 
@@ -305,8 +364,22 @@ namespace sistema_reparto
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.Location = new System.Drawing.Point(15, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 1;
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEmpleado.Location = new System.Drawing.Point(67, 10);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(71, 17);
+            this.lblEmpleado.TabIndex = 0;
+            this.lblEmpleado.Text = "Empleado";
+            this.lblEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmpleado_MouseClick);
+            this.lblEmpleado.MouseLeave += new System.EventHandler(this.lblEmpleado_MouseLeave);
+            this.lblEmpleado.MouseHover += new System.EventHandler(this.lblEmpleado_MouseHover);
             // 
             // btnPaqueteEncabezado
             // 
@@ -356,7 +429,7 @@ namespace sistema_reparto
             this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
             this.label13.Location = new System.Drawing.Point(15, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.Size = new System.Drawing.Size(0, 15);
             this.label13.TabIndex = 1;
             // 
             // btnUsuarios
@@ -406,7 +479,7 @@ namespace sistema_reparto
             this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
             this.label9.Location = new System.Drawing.Point(15, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.Size = new System.Drawing.Size(0, 15);
             this.label9.TabIndex = 1;
             // 
             // btnTipoMovimiento
@@ -456,7 +529,7 @@ namespace sistema_reparto
             this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
             this.label11.Location = new System.Drawing.Point(15, 10);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.Size = new System.Drawing.Size(0, 15);
             this.label11.TabIndex = 1;
             // 
             // pnlSubUbicacion
@@ -494,7 +567,7 @@ namespace sistema_reparto
             this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
             this.label8.Location = new System.Drawing.Point(15, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 15);
             this.label8.TabIndex = 1;
             // 
             // lblSubUbicacion
@@ -543,7 +616,7 @@ namespace sistema_reparto
             this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
             this.label7.Location = new System.Drawing.Point(15, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.Size = new System.Drawing.Size(0, 15);
             this.label7.TabIndex = 1;
             // 
             // lblTipoEmpleado
@@ -593,7 +666,7 @@ namespace sistema_reparto
             this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
             this.label12.Location = new System.Drawing.Point(15, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 13);
+            this.label12.Size = new System.Drawing.Size(0, 15);
             this.label12.TabIndex = 1;
             // 
             // lblRuta
@@ -658,7 +731,7 @@ namespace sistema_reparto
             this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
             this.label6.Location = new System.Drawing.Point(15, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 15);
             this.label6.TabIndex = 1;
             // 
             // btnUbicacion
@@ -709,7 +782,7 @@ namespace sistema_reparto
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
             this.label5.Location = new System.Drawing.Point(15, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.Size = new System.Drawing.Size(0, 15);
             this.label5.TabIndex = 1;
             // 
             // btnDepartamento
@@ -760,7 +833,7 @@ namespace sistema_reparto
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.Location = new System.Drawing.Point(15, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 1;
             // 
             // btnPuesto
@@ -797,7 +870,7 @@ namespace sistema_reparto
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(15, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 1;
             // 
             // lblPuesto
@@ -860,7 +933,7 @@ namespace sistema_reparto
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 1;
             // 
             // lblCliente
@@ -884,7 +957,7 @@ namespace sistema_reparto
             this.lblTituloUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloUsuario.Location = new System.Drawing.Point(207, 12);
             this.lblTituloUsuario.Name = "lblTituloUsuario";
-            this.lblTituloUsuario.Size = new System.Drawing.Size(167, 40);
+            this.lblTituloUsuario.Size = new System.Drawing.Size(163, 39);
             this.lblTituloUsuario.TabIndex = 3;
             this.lblTituloUsuario.Text = "Usuarios";
             // 
@@ -894,7 +967,7 @@ namespace sistema_reparto
             this.chkIngresarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarU.Location = new System.Drawing.Point(3, 14);
             this.chkIngresarU.Name = "chkIngresarU";
-            this.chkIngresarU.Size = new System.Drawing.Size(103, 17);
+            this.chkIngresarU.Size = new System.Drawing.Size(102, 17);
             this.chkIngresarU.TabIndex = 4;
             this.chkIngresarU.Text = "Ingresar Usuario";
             this.chkIngresarU.UseVisualStyleBackColor = true;
@@ -924,7 +997,7 @@ namespace sistema_reparto
             this.lblAbcUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcUsuarios.Location = new System.Drawing.Point(208, 77);
             this.lblAbcUsuarios.Name = "lblAbcUsuarios";
-            this.lblAbcUsuarios.Size = new System.Drawing.Size(221, 24);
+            this.lblAbcUsuarios.Size = new System.Drawing.Size(211, 22);
             this.lblAbcUsuarios.TabIndex = 11;
             this.lblAbcUsuarios.Text = "Mantenimientos Usuarios";
             this.lblAbcUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcUsuarios_MouseClick);
@@ -1000,7 +1073,7 @@ namespace sistema_reparto
             this.chkModificarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarU.Location = new System.Drawing.Point(111, 14);
             this.chkModificarU.Name = "chkModificarU";
-            this.chkModificarU.Size = new System.Drawing.Size(108, 17);
+            this.chkModificarU.Size = new System.Drawing.Size(106, 17);
             this.chkModificarU.TabIndex = 36;
             this.chkModificarU.Text = "Modificar Usuario";
             this.chkModificarU.UseVisualStyleBackColor = true;
@@ -1011,7 +1084,7 @@ namespace sistema_reparto
             this.chkDarBajaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaU.Location = new System.Drawing.Point(222, 14);
             this.chkDarBajaU.Name = "chkDarBajaU";
-            this.chkDarBajaU.Size = new System.Drawing.Size(106, 17);
+            this.chkDarBajaU.Size = new System.Drawing.Size(105, 17);
             this.chkDarBajaU.TabIndex = 56;
             this.chkDarBajaU.Text = "Dar Baja Usuario";
             this.chkDarBajaU.UseVisualStyleBackColor = true;
@@ -1022,7 +1095,7 @@ namespace sistema_reparto
             this.chkConsultaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaU.Location = new System.Drawing.Point(329, 14);
             this.chkConsultaU.Name = "chkConsultaU";
-            this.chkConsultaU.Size = new System.Drawing.Size(106, 17);
+            this.chkConsultaU.Size = new System.Drawing.Size(105, 17);
             this.chkConsultaU.TabIndex = 76;
             this.chkConsultaU.Text = "Consulta Usuario";
             this.chkConsultaU.UseVisualStyleBackColor = true;
@@ -1044,7 +1117,7 @@ namespace sistema_reparto
             this.chkModificarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarC.Location = new System.Drawing.Point(555, 13);
             this.chkModificarC.Name = "chkModificarC";
-            this.chkModificarC.Size = new System.Drawing.Size(104, 17);
+            this.chkModificarC.Size = new System.Drawing.Size(103, 17);
             this.chkModificarC.TabIndex = 116;
             this.chkModificarC.Text = "Modificar Cliente";
             this.chkModificarC.UseVisualStyleBackColor = true;
@@ -1132,7 +1205,7 @@ namespace sistema_reparto
             this.chkModificarPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPu.Location = new System.Drawing.Point(437, 49);
             this.chkModificarPu.Name = "chkModificarPu";
-            this.chkModificarPu.Size = new System.Drawing.Size(105, 17);
+            this.chkModificarPu.Size = new System.Drawing.Size(104, 17);
             this.chkModificarPu.TabIndex = 186;
             this.chkModificarPu.Text = "Modificar Puesto";
             this.chkModificarPu.UseVisualStyleBackColor = true;
@@ -1176,7 +1249,7 @@ namespace sistema_reparto
             this.chkModificarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarD.Location = new System.Drawing.Point(3, 49);
             this.chkModificarD.Name = "chkModificarD";
-            this.chkModificarD.Size = new System.Drawing.Size(101, 17);
+            this.chkModificarD.Size = new System.Drawing.Size(100, 17);
             this.chkModificarD.TabIndex = 178;
             this.chkModificarD.Text = "Modificar Depto";
             this.chkModificarD.UseVisualStyleBackColor = true;
@@ -1187,7 +1260,7 @@ namespace sistema_reparto
             this.chkModificarEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarEnc.Location = new System.Drawing.Point(802, 80);
             this.chkModificarEnc.Name = "chkModificarEnc";
-            this.chkModificarEnc.Size = new System.Drawing.Size(134, 17);
+            this.chkModificarEnc.Size = new System.Drawing.Size(132, 17);
             this.chkModificarEnc.TabIndex = 212;
             this.chkModificarEnc.Text = "Modificar Paquete Enc";
             this.chkModificarEnc.UseVisualStyleBackColor = true;
@@ -1198,7 +1271,7 @@ namespace sistema_reparto
             this.chkPaqueteEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPaqueteEnc.Location = new System.Drawing.Point(699, 82);
             this.chkPaqueteEnc.Name = "chkPaqueteEnc";
-            this.chkPaqueteEnc.Size = new System.Drawing.Size(128, 17);
+            this.chkPaqueteEnc.Size = new System.Drawing.Size(112, 16);
             this.chkPaqueteEnc.TabIndex = 210;
             this.chkPaqueteEnc.Text = "Ingresar Paquete Enc";
             this.chkPaqueteEnc.UseVisualStyleBackColor = true;
@@ -1231,7 +1304,7 @@ namespace sistema_reparto
             this.chkModificarE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarE.Location = new System.Drawing.Point(329, 83);
             this.chkModificarE.Name = "chkModificarE";
-            this.chkModificarE.Size = new System.Drawing.Size(119, 17);
+            this.chkModificarE.Size = new System.Drawing.Size(118, 17);
             this.chkModificarE.TabIndex = 204;
             this.chkModificarE.Text = "Modificar Empleado";
             this.chkModificarE.UseVisualStyleBackColor = true;
@@ -1275,7 +1348,7 @@ namespace sistema_reparto
             this.chkModificarPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPi.Location = new System.Drawing.Point(910, 46);
             this.chkModificarPi.Name = "chkModificarPi";
-            this.chkModificarPi.Size = new System.Drawing.Size(98, 17);
+            this.chkModificarPi.Size = new System.Drawing.Size(97, 17);
             this.chkModificarPi.TabIndex = 196;
             this.chkModificarPi.Text = "Modificar Piloto";
             this.chkModificarPi.UseVisualStyleBackColor = true;
@@ -1286,7 +1359,7 @@ namespace sistema_reparto
             this.chkDarBajaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaUb.Location = new System.Drawing.Point(802, 118);
             this.chkDarBajaUb.Name = "chkDarBajaUb";
-            this.chkDarBajaUb.Size = new System.Drawing.Size(118, 17);
+            this.chkDarBajaUb.Size = new System.Drawing.Size(115, 17);
             this.chkDarBajaUb.TabIndex = 230;
             this.chkDarBajaUb.Text = "Dar Baja Ubicacion";
             this.chkDarBajaUb.UseVisualStyleBackColor = true;
@@ -1297,7 +1370,7 @@ namespace sistema_reparto
             this.chkModificarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarUb.Location = new System.Drawing.Point(699, 120);
             this.chkModificarUb.Name = "chkModificarUb";
-            this.chkModificarUb.Size = new System.Drawing.Size(116, 17);
+            this.chkModificarUb.Size = new System.Drawing.Size(106, 16);
             this.chkModificarUb.TabIndex = 228;
             this.chkModificarUb.Text = "Modificar Ubicacion";
             this.chkModificarUb.UseVisualStyleBackColor = true;
@@ -1308,7 +1381,7 @@ namespace sistema_reparto
             this.chkIngresarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarUb.Location = new System.Drawing.Point(570, 120);
             this.chkIngresarUb.Name = "chkIngresarUb";
-            this.chkIngresarUb.Size = new System.Drawing.Size(115, 17);
+            this.chkIngresarUb.Size = new System.Drawing.Size(112, 17);
             this.chkIngresarUb.TabIndex = 226;
             this.chkIngresarUb.Text = "Ingresar Ubicacion";
             this.chkIngresarUb.UseVisualStyleBackColor = true;
@@ -1319,7 +1392,7 @@ namespace sistema_reparto
             this.chkConsultaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaDet.Location = new System.Drawing.Point(447, 120);
             this.chkConsultaDet.Name = "chkConsultaDet";
-            this.chkConsultaDet.Size = new System.Drawing.Size(130, 17);
+            this.chkConsultaDet.Size = new System.Drawing.Size(114, 16);
             this.chkConsultaDet.TabIndex = 224;
             this.chkConsultaDet.Text = "Consulta Paquete Det";
             this.chkConsultaDet.UseVisualStyleBackColor = true;
@@ -1330,7 +1403,7 @@ namespace sistema_reparto
             this.chkDarBajaPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPaDet.Location = new System.Drawing.Point(329, 121);
             this.chkDarBajaPaDet.Name = "chkDarBajaPaDet";
-            this.chkDarBajaPaDet.Size = new System.Drawing.Size(145, 17);
+            this.chkDarBajaPaDet.Size = new System.Drawing.Size(124, 16);
             this.chkDarBajaPaDet.TabIndex = 222;
             this.chkDarBajaPaDet.Text = "Dar de Baja Paquete Det";
             this.chkDarBajaPaDet.UseVisualStyleBackColor = true;
@@ -1341,7 +1414,7 @@ namespace sistema_reparto
             this.chkModificarPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPaDet.Location = new System.Drawing.Point(221, 121);
             this.chkModificarPaDet.Name = "chkModificarPaDet";
-            this.chkModificarPaDet.Size = new System.Drawing.Size(131, 17);
+            this.chkModificarPaDet.Size = new System.Drawing.Size(116, 16);
             this.chkModificarPaDet.TabIndex = 220;
             this.chkModificarPaDet.Text = "Modificar Paquete Det";
             this.chkModificarPaDet.UseVisualStyleBackColor = true;
@@ -1352,7 +1425,7 @@ namespace sistema_reparto
             this.chkIngresarPaDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarPaDe.Location = new System.Drawing.Point(114, 121);
             this.chkIngresarPaDe.Name = "chkIngresarPaDe";
-            this.chkIngresarPaDe.Size = new System.Drawing.Size(127, 17);
+            this.chkIngresarPaDe.Size = new System.Drawing.Size(111, 16);
             this.chkIngresarPaDe.TabIndex = 218;
             this.chkIngresarPaDe.Text = "Ingresar Paquete Det";
             this.chkIngresarPaDe.UseVisualStyleBackColor = true;
@@ -1363,7 +1436,7 @@ namespace sistema_reparto
             this.chkConsultaPaEc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaPaEc.Location = new System.Drawing.Point(3, 121);
             this.chkConsultaPaEc.Name = "chkConsultaPaEc";
-            this.chkConsultaPaEc.Size = new System.Drawing.Size(131, 17);
+            this.chkConsultaPaEc.Size = new System.Drawing.Size(115, 16);
             this.chkConsultaPaEc.TabIndex = 216;
             this.chkConsultaPaEc.Text = "Consulta Paquete Enc";
             this.chkConsultaPaEc.UseVisualStyleBackColor = true;
@@ -1374,7 +1447,7 @@ namespace sistema_reparto
             this.chkDarBajaPaEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPaEnc.Location = new System.Drawing.Point(926, 80);
             this.chkDarBajaPaEnc.Name = "chkDarBajaPaEnc";
-            this.chkDarBajaPaEnc.Size = new System.Drawing.Size(131, 17);
+            this.chkDarBajaPaEnc.Size = new System.Drawing.Size(113, 16);
             this.chkDarBajaPaEnc.TabIndex = 214;
             this.chkDarBajaPaEnc.Text = "Dar Baja Paquete Enc";
             this.chkDarBajaPaEnc.UseVisualStyleBackColor = true;
@@ -1418,7 +1491,7 @@ namespace sistema_reparto
             this.chkModificarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarBo.Location = new System.Drawing.Point(555, 160);
             this.chkModificarBo.Name = "chkModificarBo";
-            this.chkModificarBo.Size = new System.Drawing.Size(109, 17);
+            this.chkModificarBo.Size = new System.Drawing.Size(108, 17);
             this.chkModificarBo.TabIndex = 242;
             this.chkModificarBo.Text = "Modificar Bodega";
             this.chkModificarBo.UseVisualStyleBackColor = true;
@@ -1429,7 +1502,7 @@ namespace sistema_reparto
             this.chkConsultaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaSub.Location = new System.Drawing.Point(329, 161);
             this.chkConsultaSub.Name = "chkConsultaSub";
-            this.chkConsultaSub.Size = new System.Drawing.Size(133, 17);
+            this.chkConsultaSub.Size = new System.Drawing.Size(118, 16);
             this.chkConsultaSub.TabIndex = 240;
             this.chkConsultaSub.Text = "Consulta Sububicacion";
             this.chkConsultaSub.UseVisualStyleBackColor = true;
@@ -1440,7 +1513,7 @@ namespace sistema_reparto
             this.chkDarBajaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaSub.Location = new System.Drawing.Point(221, 161);
             this.chkDarBajaSub.Name = "chkDarBajaSub";
-            this.chkDarBajaSub.Size = new System.Drawing.Size(133, 17);
+            this.chkDarBajaSub.Size = new System.Drawing.Size(116, 16);
             this.chkDarBajaSub.TabIndex = 238;
             this.chkDarBajaSub.Text = "Dar Baja Sububicacion";
             this.chkDarBajaSub.UseVisualStyleBackColor = true;
@@ -1451,7 +1524,7 @@ namespace sistema_reparto
             this.chkModificarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarSub.Location = new System.Drawing.Point(114, 161);
             this.chkModificarSub.Name = "chkModificarSub";
-            this.chkModificarSub.Size = new System.Drawing.Size(134, 17);
+            this.chkModificarSub.Size = new System.Drawing.Size(120, 16);
             this.chkModificarSub.TabIndex = 236;
             this.chkModificarSub.Text = "Modificar Sububicacion";
             this.chkModificarSub.UseVisualStyleBackColor = true;
@@ -1462,7 +1535,7 @@ namespace sistema_reparto
             this.chkIngresarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarSub.Location = new System.Drawing.Point(3, 161);
             this.chkIngresarSub.Name = "chkIngresarSub";
-            this.chkIngresarSub.Size = new System.Drawing.Size(130, 17);
+            this.chkIngresarSub.Size = new System.Drawing.Size(115, 16);
             this.chkIngresarSub.TabIndex = 234;
             this.chkIngresarSub.Text = "Ingresar Sububicacion";
             this.chkIngresarSub.UseVisualStyleBackColor = true;
@@ -1473,7 +1546,7 @@ namespace sistema_reparto
             this.chkConsultaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaUb.Location = new System.Drawing.Point(916, 116);
             this.chkConsultaUb.Name = "chkConsultaUb";
-            this.chkConsultaUb.Size = new System.Drawing.Size(118, 17);
+            this.chkConsultaUb.Size = new System.Drawing.Size(115, 17);
             this.chkConsultaUb.TabIndex = 232;
             this.chkConsultaUb.Text = "Consulta Ubicacion";
             this.chkConsultaUb.UseVisualStyleBackColor = true;
@@ -1484,7 +1557,7 @@ namespace sistema_reparto
             this.chkIngresarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarTra.Location = new System.Drawing.Point(812, 197);
             this.chkIngresarTra.Name = "chkIngresarTra";
-            this.chkIngresarTra.Size = new System.Drawing.Size(118, 17);
+            this.chkIngresarTra.Size = new System.Drawing.Size(116, 17);
             this.chkIngresarTra.TabIndex = 266;
             this.chkIngresarTra.Text = "Ingresar Transporte";
             this.chkIngresarTra.UseVisualStyleBackColor = true;
@@ -1495,7 +1568,7 @@ namespace sistema_reparto
             this.chkConsultarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarTip.Location = new System.Drawing.Point(700, 199);
             this.chkConsultarTip.Name = "chkConsultarTip";
-            this.chkConsultarTip.Size = new System.Drawing.Size(144, 17);
+            this.chkConsultarTip.Size = new System.Drawing.Size(129, 16);
             this.chkConsultarTip.TabIndex = 264;
             this.chkConsultarTip.Text = "Consultar Tipo Transporte";
             this.chkConsultarTip.UseVisualStyleBackColor = true;
@@ -1506,7 +1579,7 @@ namespace sistema_reparto
             this.chkDarBajaTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaTip.Location = new System.Drawing.Point(571, 199);
             this.chkDarBajaTip.Name = "chkDarBajaTip";
-            this.chkDarBajaTip.Size = new System.Drawing.Size(141, 17);
+            this.chkDarBajaTip.Size = new System.Drawing.Size(124, 16);
             this.chkDarBajaTip.TabIndex = 262;
             this.chkDarBajaTip.Text = "Dar Baja Tipo Transporte";
             this.chkDarBajaTip.UseVisualStyleBackColor = true;
@@ -1517,7 +1590,7 @@ namespace sistema_reparto
             this.chkModificarTiT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarTiT.Location = new System.Drawing.Point(448, 199);
             this.chkModificarTiT.Name = "chkModificarTiT";
-            this.chkModificarTiT.Size = new System.Drawing.Size(142, 17);
+            this.chkModificarTiT.Size = new System.Drawing.Size(128, 16);
             this.chkModificarTiT.TabIndex = 260;
             this.chkModificarTiT.Text = "Modificar Tipo Transporte";
             this.chkModificarTiT.UseVisualStyleBackColor = true;
@@ -1528,7 +1601,7 @@ namespace sistema_reparto
             this.chkIngresarTipoT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarTipoT.Location = new System.Drawing.Point(330, 200);
             this.chkIngresarTipoT.Name = "chkIngresarTipoT";
-            this.chkIngresarTipoT.Size = new System.Drawing.Size(138, 17);
+            this.chkIngresarTipoT.Size = new System.Drawing.Size(123, 16);
             this.chkIngresarTipoT.TabIndex = 258;
             this.chkIngresarTipoT.Text = "Ingresar Tipo Transporte";
             this.chkIngresarTipoT.UseVisualStyleBackColor = true;
@@ -1539,7 +1612,7 @@ namespace sistema_reparto
             this.chkConsultarMovBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarMovBo.Location = new System.Drawing.Point(222, 200);
             this.chkConsultarMovBo.Name = "chkConsultarMovBo";
-            this.chkConsultarMovBo.Size = new System.Drawing.Size(134, 17);
+            this.chkConsultarMovBo.Size = new System.Drawing.Size(119, 16);
             this.chkConsultarMovBo.TabIndex = 256;
             this.chkConsultarMovBo.Text = "Consultar Mov Bodega";
             this.chkConsultarMovBo.UseVisualStyleBackColor = true;
@@ -1561,7 +1634,7 @@ namespace sistema_reparto
             this.chkModificarIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarIn.Location = new System.Drawing.Point(4, 200);
             this.chkModificarIn.Name = "chkModificarIn";
-            this.chkModificarIn.Size = new System.Drawing.Size(119, 17);
+            this.chkModificarIn.Size = new System.Drawing.Size(118, 17);
             this.chkModificarIn.TabIndex = 250;
             this.chkModificarIn.Text = "Modificar Inventario";
             this.chkModificarIn.UseVisualStyleBackColor = true;
@@ -1583,7 +1656,7 @@ namespace sistema_reparto
             this.chkConsultarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarRu.Location = new System.Drawing.Point(572, 235);
             this.chkConsultarRu.Name = "chkConsultarRu";
-            this.chkConsultarRu.Size = new System.Drawing.Size(96, 17);
+            this.chkConsultarRu.Size = new System.Drawing.Size(95, 17);
             this.chkConsultarRu.TabIndex = 280;
             this.chkConsultarRu.Text = "Consultar Ruta";
             this.chkConsultarRu.UseVisualStyleBackColor = true;
@@ -1594,7 +1667,7 @@ namespace sistema_reparto
             this.chkDarBajaRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaRu.Location = new System.Drawing.Point(449, 235);
             this.chkDarBajaRu.Name = "chkDarBajaRu";
-            this.chkDarBajaRu.Size = new System.Drawing.Size(93, 17);
+            this.chkDarBajaRu.Size = new System.Drawing.Size(92, 17);
             this.chkDarBajaRu.TabIndex = 278;
             this.chkDarBajaRu.Text = "Dar Baja Ruta";
             this.chkDarBajaRu.UseVisualStyleBackColor = true;
@@ -1605,7 +1678,7 @@ namespace sistema_reparto
             this.chkModificarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarRu.Location = new System.Drawing.Point(331, 236);
             this.chkModificarRu.Name = "chkModificarRu";
-            this.chkModificarRu.Size = new System.Drawing.Size(95, 17);
+            this.chkModificarRu.Size = new System.Drawing.Size(93, 17);
             this.chkModificarRu.TabIndex = 276;
             this.chkModificarRu.Text = "Modificar Ruta";
             this.chkModificarRu.UseVisualStyleBackColor = true;
@@ -1616,7 +1689,7 @@ namespace sistema_reparto
             this.chkIngresarRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarRuta.Location = new System.Drawing.Point(223, 236);
             this.chkIngresarRuta.Name = "chkIngresarRuta";
-            this.chkIngresarRuta.Size = new System.Drawing.Size(90, 17);
+            this.chkIngresarRuta.Size = new System.Drawing.Size(89, 17);
             this.chkIngresarRuta.TabIndex = 274;
             this.chkIngresarRuta.Text = "Ingresar Ruta";
             this.chkIngresarRuta.UseVisualStyleBackColor = true;
@@ -1627,7 +1700,7 @@ namespace sistema_reparto
             this.chkConsultarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarTra.Location = new System.Drawing.Point(116, 236);
             this.chkConsultarTra.Name = "chkConsultarTra";
-            this.chkConsultarTra.Size = new System.Drawing.Size(124, 17);
+            this.chkConsultarTra.Size = new System.Drawing.Size(122, 17);
             this.chkConsultarTra.TabIndex = 272;
             this.chkConsultarTra.Text = "Consultar Transporte";
             this.chkConsultarTra.UseVisualStyleBackColor = true;
@@ -1638,7 +1711,7 @@ namespace sistema_reparto
             this.chkDarBajaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaTra.Location = new System.Drawing.Point(5, 236);
             this.chkDarBajaTra.Name = "chkDarBajaTra";
-            this.chkDarBajaTra.Size = new System.Drawing.Size(121, 17);
+            this.chkDarBajaTra.Size = new System.Drawing.Size(119, 17);
             this.chkDarBajaTra.TabIndex = 270;
             this.chkDarBajaTra.Text = "Dar Baja Transporte";
             this.chkDarBajaTra.UseVisualStyleBackColor = true;
@@ -1649,7 +1722,7 @@ namespace sistema_reparto
             this.chkModificarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarTra.Location = new System.Drawing.Point(919, 196);
             this.chkModificarTra.Name = "chkModificarTra";
-            this.chkModificarTra.Size = new System.Drawing.Size(123, 17);
+            this.chkModificarTra.Size = new System.Drawing.Size(120, 17);
             this.chkModificarTra.TabIndex = 268;
             this.chkModificarTra.Text = "Modificar Transporte";
             this.chkModificarTra.UseVisualStyleBackColor = true;
@@ -1675,7 +1748,7 @@ namespace sistema_reparto
             this.lblTipoPermiso.AutoSize = true;
             this.lblTipoPermiso.Location = new System.Drawing.Point(8, 14);
             this.lblTipoPermiso.Name = "lblTipoPermiso";
-            this.lblTipoPermiso.Size = new System.Drawing.Size(68, 13);
+            this.lblTipoPermiso.Size = new System.Drawing.Size(80, 15);
             this.lblTipoPermiso.TabIndex = 307;
             this.lblTipoPermiso.Text = "Tipo Permiso";
             // 
@@ -1684,7 +1757,7 @@ namespace sistema_reparto
             this.lblCodigoUsuario.AutoSize = true;
             this.lblCodigoUsuario.Location = new System.Drawing.Point(10, 12);
             this.lblCodigoUsuario.Name = "lblCodigoUsuario";
-            this.lblCodigoUsuario.Size = new System.Drawing.Size(79, 13);
+            this.lblCodigoUsuario.Size = new System.Drawing.Size(92, 15);
             this.lblCodigoUsuario.TabIndex = 308;
             this.lblCodigoUsuario.Text = "Codigo Usuario";
             // 
@@ -1709,7 +1782,7 @@ namespace sistema_reparto
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Location = new System.Drawing.Point(10, 8);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(83, 13);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(98, 15);
             this.lblNombreUsuario.TabIndex = 310;
             this.lblNombreUsuario.Text = "Nombre Usuario";
             // 
@@ -1727,7 +1800,7 @@ namespace sistema_reparto
             this.lblContraseñaU.AutoSize = true;
             this.lblContraseñaU.Location = new System.Drawing.Point(3, 10);
             this.lblContraseñaU.Name = "lblContraseñaU";
-            this.lblContraseñaU.Size = new System.Drawing.Size(100, 13);
+            this.lblContraseñaU.Size = new System.Drawing.Size(116, 15);
             this.lblContraseñaU.TabIndex = 312;
             this.lblContraseñaU.Text = "Contraseña Usuario";
             // 
@@ -1745,7 +1818,7 @@ namespace sistema_reparto
             this.lblConfirmarC.AutoSize = true;
             this.lblConfirmarC.Location = new System.Drawing.Point(3, 9);
             this.lblConfirmarC.Name = "lblConfirmarC";
-            this.lblConfirmarC.Size = new System.Drawing.Size(108, 13);
+            this.lblConfirmarC.Size = new System.Drawing.Size(127, 15);
             this.lblConfirmarC.TabIndex = 314;
             this.lblConfirmarC.Text = "Confirmar Contraseña";
             // 
@@ -1762,7 +1835,7 @@ namespace sistema_reparto
             this.lblEstatusU.AutoSize = true;
             this.lblEstatusU.Location = new System.Drawing.Point(21, 11);
             this.lblEstatusU.Name = "lblEstatusU";
-            this.lblEstatusU.Size = new System.Drawing.Size(81, 13);
+            this.lblEstatusU.Size = new System.Drawing.Size(93, 15);
             this.lblEstatusU.TabIndex = 316;
             this.lblEstatusU.Text = "Estatus Usuario";
             // 
@@ -1840,64 +1913,13 @@ namespace sistema_reparto
             this.dgvUsuario.Size = new System.Drawing.Size(443, 150);
             this.dgvUsuario.TabIndex = 318;
             // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "ID Usuario";
-            this.idUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idUsuarioDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idPermisoDataGridViewTextBoxColumn
-            // 
-            this.idPermisoDataGridViewTextBoxColumn.DataPropertyName = "IdPermiso";
-            this.idPermisoDataGridViewTextBoxColumn.HeaderText = "ID Permiso";
-            this.idPermisoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPermisoDataGridViewTextBoxColumn.Name = "idPermisoDataGridViewTextBoxColumn";
-            this.idPermisoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPermisoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // nombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "NombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre Usuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
-            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreUsuarioDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // passUsuarioDataGridViewTextBoxColumn
-            // 
-            this.passUsuarioDataGridViewTextBoxColumn.DataPropertyName = "PassUsuario";
-            this.passUsuarioDataGridViewTextBoxColumn.HeaderText = "Contraseña Usuario";
-            this.passUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passUsuarioDataGridViewTextBoxColumn.Name = "passUsuarioDataGridViewTextBoxColumn";
-            this.passUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passUsuarioDataGridViewTextBoxColumn.ToolTipText = "*";
-            this.passUsuarioDataGridViewTextBoxColumn.Visible = false;
-            this.passUsuarioDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusDataGridViewTextBoxColumn
-            // 
-            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
-            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
-            this.estatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
-            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estatusDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataSource = typeof(sistema_reparto.Clases.Usuarios);
-            // 
             // chkModificarEn
             // 
             this.chkModificarEn.AutoSize = true;
             this.chkModificarEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarEn.Location = new System.Drawing.Point(812, 234);
             this.chkModificarEn.Name = "chkModificarEn";
-            this.chkModificarEn.Size = new System.Drawing.Size(99, 17);
+            this.chkModificarEn.Size = new System.Drawing.Size(98, 17);
             this.chkModificarEn.TabIndex = 323;
             this.chkModificarEn.Text = "Modificar Envio";
             this.chkModificarEn.UseVisualStyleBackColor = true;
@@ -1930,7 +1952,7 @@ namespace sistema_reparto
             this.chkInsertarBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkInsertarBitaTrans.Location = new System.Drawing.Point(116, 271);
             this.chkInsertarBitaTrans.Name = "chkInsertarBitaTrans";
-            this.chkInsertarBitaTrans.Size = new System.Drawing.Size(133, 17);
+            this.chkInsertarBitaTrans.Size = new System.Drawing.Size(119, 16);
             this.chkInsertarBitaTrans.TabIndex = 326;
             this.chkInsertarBitaTrans.Text = "Ingresar Bitacora Trans";
             this.chkInsertarBitaTrans.UseVisualStyleBackColor = true;
@@ -1941,7 +1963,7 @@ namespace sistema_reparto
             this.chkBitacoraUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBitacoraUsuario.Location = new System.Drawing.Point(457, 270);
             this.chkBitacoraUsuario.Name = "chkBitacoraUsuario";
-            this.chkBitacoraUsuario.Size = new System.Drawing.Size(104, 17);
+            this.chkBitacoraUsuario.Size = new System.Drawing.Size(102, 17);
             this.chkBitacoraUsuario.TabIndex = 327;
             this.chkBitacoraUsuario.Text = "Bitacora Usuario";
             this.chkBitacoraUsuario.UseVisualStyleBackColor = true;
@@ -1952,7 +1974,7 @@ namespace sistema_reparto
             this.chkIngresarCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarCalificacion.Location = new System.Drawing.Point(558, 269);
             this.chkIngresarCalificacion.Name = "chkIngresarCalificacion";
-            this.chkIngresarCalificacion.Size = new System.Drawing.Size(121, 17);
+            this.chkIngresarCalificacion.Size = new System.Drawing.Size(119, 17);
             this.chkIngresarCalificacion.TabIndex = 328;
             this.chkIngresarCalificacion.Text = "Ingresar Calificacion";
             this.chkIngresarCalificacion.UseVisualStyleBackColor = true;
@@ -1963,7 +1985,7 @@ namespace sistema_reparto
             this.chkConsultarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarCa.Location = new System.Drawing.Point(803, 268);
             this.chkConsultarCa.Name = "chkConsultarCa";
-            this.chkConsultarCa.Size = new System.Drawing.Size(127, 17);
+            this.chkConsultarCa.Size = new System.Drawing.Size(125, 17);
             this.chkConsultarCa.TabIndex = 329;
             this.chkConsultarCa.Text = "Consultar Calificacion";
             this.chkConsultarCa.UseVisualStyleBackColor = true;
@@ -2018,7 +2040,7 @@ namespace sistema_reparto
             this.chkModificarBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarBi.Location = new System.Drawing.Point(223, 271);
             this.chkModificarBi.Name = "chkModificarBi";
-            this.chkModificarBi.Size = new System.Drawing.Size(137, 17);
+            this.chkModificarBi.Size = new System.Drawing.Size(124, 16);
             this.chkModificarBi.TabIndex = 334;
             this.chkModificarBi.Text = "Modificar Bitacora Trans";
             this.chkModificarBi.UseVisualStyleBackColor = true;
@@ -2029,7 +2051,7 @@ namespace sistema_reparto
             this.chkModificarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarCa.Location = new System.Drawing.Point(676, 269);
             this.chkModificarCa.Name = "chkModificarCa";
-            this.chkModificarCa.Size = new System.Drawing.Size(126, 17);
+            this.chkModificarCa.Size = new System.Drawing.Size(123, 17);
             this.chkModificarCa.TabIndex = 335;
             this.chkModificarCa.Text = "Modificar Calificacion";
             this.chkModificarCa.UseVisualStyleBackColor = true;
@@ -2040,7 +2062,7 @@ namespace sistema_reparto
             this.chkReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkReportes.Location = new System.Drawing.Point(923, 268);
             this.chkReportes.Name = "chkReportes";
-            this.chkReportes.Size = new System.Drawing.Size(69, 17);
+            this.chkReportes.Size = new System.Drawing.Size(68, 17);
             this.chkReportes.TabIndex = 336;
             this.chkReportes.Text = "Reportes";
             this.chkReportes.UseVisualStyleBackColor = true;
@@ -2058,7 +2080,7 @@ namespace sistema_reparto
             this.lblCodigoP.AutoSize = true;
             this.lblCodigoP.Location = new System.Drawing.Point(5, 7);
             this.lblCodigoP.Name = "lblCodigoP";
-            this.lblCodigoP.Size = new System.Drawing.Size(80, 13);
+            this.lblCodigoP.Size = new System.Drawing.Size(95, 15);
             this.lblCodigoP.TabIndex = 337;
             this.lblCodigoP.Text = "Codigo Permiso";
             // 
@@ -2068,7 +2090,7 @@ namespace sistema_reparto
             this.chkConsultarBTTras.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarBTTras.Location = new System.Drawing.Point(341, 270);
             this.chkConsultarBTTras.Name = "chkConsultarBTTras";
-            this.chkConsultarBTTras.Size = new System.Drawing.Size(139, 17);
+            this.chkConsultarBTTras.Size = new System.Drawing.Size(125, 16);
             this.chkConsultarBTTras.TabIndex = 339;
             this.chkConsultarBTTras.Text = "Consultar Bitacora Trans";
             this.chkConsultarBTTras.UseVisualStyleBackColor = true;
@@ -2215,71 +2237,108 @@ namespace sistema_reparto
             this.pnlChecks.Size = new System.Drawing.Size(1087, 301);
             this.pnlChecks.TabIndex = 347;
             // 
-            // btnBodega
+            // pnlEnvio
             // 
-            this.btnBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.btnBodega.Controls.Add(this.picBodega);
-            this.btnBodega.Controls.Add(this.label16);
-            this.btnBodega.Controls.Add(this.lblBodega);
-            this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(-1, 586);
-            this.btnBodega.Name = "btnBodega";
-            this.btnBodega.Size = new System.Drawing.Size(180, 34);
-            this.btnBodega.TabIndex = 57;
-            this.btnBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBodega_MouseClick);
-            this.btnBodega.MouseLeave += new System.EventHandler(this.btnBodega_MouseLeave);
-            this.btnBodega.MouseHover += new System.EventHandler(this.btnBodega_MouseHover);
+            this.pnlEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEnvio.Controls.Add(this.picEnvio);
+            this.pnlEnvio.Controls.Add(this.label15);
+            this.pnlEnvio.Controls.Add(this.lblEnvio);
+            this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEnvio.Location = new System.Drawing.Point(2, 620);
+            this.pnlEnvio.Name = "pnlEnvio";
+            this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
+            this.pnlEnvio.TabIndex = 58;
+            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
+            this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
+            this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
             // 
-            // picBodega
+            // picEnvio
             // 
-            this.picBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBodega.BackgroundImage")));
-            this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
-            this.picBodega.Location = new System.Drawing.Point(19, 10);
-            this.picBodega.Name = "picBodega";
-            this.picBodega.Size = new System.Drawing.Size(20, 21);
-            this.picBodega.TabIndex = 1;
-            this.picBodega.TabStop = false;
-            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBodega_MouseClick);
-            this.picBodega.MouseLeave += new System.EventHandler(this.picBodega_MouseLeave);
-            this.picBodega.MouseHover += new System.EventHandler(this.picBodega_MouseHover);
+            this.picEnvio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEnvio.BackgroundImage")));
+            this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
+            this.picEnvio.Location = new System.Drawing.Point(17, 8);
+            this.picEnvio.Name = "picEnvio";
+            this.picEnvio.Size = new System.Drawing.Size(20, 21);
+            this.picEnvio.TabIndex = 1;
+            this.picEnvio.TabStop = false;
+            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEnvio_MouseClick);
+            this.picEnvio.MouseLeave += new System.EventHandler(this.picEnvio_MouseLeave);
+            this.picEnvio.MouseHover += new System.EventHandler(this.picEnvio_MouseHover);
             // 
-            // label16
+            // label15
             // 
-            this.label16.AutoSize = true;
-            this.label16.Image = ((System.Drawing.Image)(resources.GetObject("label16.Image")));
-            this.label16.Location = new System.Drawing.Point(15, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 13);
-            this.label16.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.Image = ((System.Drawing.Image)(resources.GetObject("label15.Image")));
+            this.label15.Location = new System.Drawing.Point(15, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 15);
+            this.label15.TabIndex = 1;
             // 
-            // lblBodega
+            // lblEnvio
             // 
-            this.lblBodega.AutoSize = true;
-            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblBodega.Location = new System.Drawing.Point(68, 10);
-            this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 17);
-            this.lblBodega.TabIndex = 0;
-            this.lblBodega.Text = "Bodega";
-            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
-            this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
-            this.lblBodega.MouseHover += new System.EventHandler(this.lblBodega_MouseHover);
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEnvio.Location = new System.Drawing.Point(78, 10);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(43, 17);
+            this.lblEnvio.TabIndex = 0;
+            this.lblEnvio.Text = "Envio";
+            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
+            this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
+            this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
             // 
-            // lblEmpleado
+            // idUsuarioDataGridViewTextBoxColumn
             // 
-            this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblEmpleado.Location = new System.Drawing.Point(67, 10);
-            this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(71, 17);
-            this.lblEmpleado.TabIndex = 0;
-            this.lblEmpleado.Text = "Empleado";
-            this.lblEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmpleado_MouseClick);
-            this.lblEmpleado.MouseLeave += new System.EventHandler(this.lblEmpleado_MouseLeave);
-            this.lblEmpleado.MouseHover += new System.EventHandler(this.lblEmpleado_MouseHover);
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "ID Usuario";
+            this.idUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idUsuarioDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idPermisoDataGridViewTextBoxColumn
+            // 
+            this.idPermisoDataGridViewTextBoxColumn.DataPropertyName = "IdPermiso";
+            this.idPermisoDataGridViewTextBoxColumn.HeaderText = "ID Permiso";
+            this.idPermisoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPermisoDataGridViewTextBoxColumn.Name = "idPermisoDataGridViewTextBoxColumn";
+            this.idPermisoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPermisoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // nombreUsuarioDataGridViewTextBoxColumn
+            // 
+            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "NombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre Usuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
+            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreUsuarioDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // passUsuarioDataGridViewTextBoxColumn
+            // 
+            this.passUsuarioDataGridViewTextBoxColumn.DataPropertyName = "PassUsuario";
+            this.passUsuarioDataGridViewTextBoxColumn.HeaderText = "Contraseña Usuario";
+            this.passUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passUsuarioDataGridViewTextBoxColumn.Name = "passUsuarioDataGridViewTextBoxColumn";
+            this.passUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passUsuarioDataGridViewTextBoxColumn.ToolTipText = "*";
+            this.passUsuarioDataGridViewTextBoxColumn.Visible = false;
+            this.passUsuarioDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusDataGridViewTextBoxColumn
+            // 
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estatusDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataSource = typeof(sistema_reparto.Clases.Usuarios);
             // 
             // frmUsuarios
             // 
@@ -2320,6 +2379,9 @@ namespace sistema_reparto
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmUsuarios_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.btnBodega.ResumeLayout(false);
+            this.btnBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
             this.pnlEmpleado.ResumeLayout(false);
             this.pnlEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmple)).EndInit();
@@ -2359,7 +2421,6 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
             this.pnlBordeUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.pnlContenidoTP.ResumeLayout(false);
             this.pnlContenidoTP.PerformLayout();
             this.pnlCodigoP.ResumeLayout(false);
@@ -2376,9 +2437,10 @@ namespace sistema_reparto
             this.pnlEstatusU.PerformLayout();
             this.pnlChecks.ResumeLayout(false);
             this.pnlChecks.PerformLayout();
-            this.btnBodega.ResumeLayout(false);
-            this.btnBodega.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
+            this.pnlEnvio.ResumeLayout(false);
+            this.pnlEnvio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2559,5 +2621,9 @@ namespace sistema_reparto
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblBodega;
         private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.Panel pnlEnvio;
+        private System.Windows.Forms.PictureBox picEnvio;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEnvio;
     }
 }
