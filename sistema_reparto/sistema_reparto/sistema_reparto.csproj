@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EO.Base, Version=21.1.93.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.21.1.93\lib\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser, Version=21.1.93.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.21.1.93\lib\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine, Version=21.1.93.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.21.1.93\lib\EO.WebEngine.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +60,7 @@
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Envio.cs" />
     <Compile Include="Clases\PaqueteEncabezado.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
@@ -72,6 +82,12 @@
     </Compile>
     <Compile Include="frmEmpleado.designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnvio.designer.cs">
+      <DependentUpon>frmEnvio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPaqueteEncabezado.cs">
       <SubType>Form</SubType>
@@ -150,6 +166,9 @@
     <EmbeddedResource Include="frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEnvio.resx">
+      <DependentUpon>frmEnvio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPaqueteEncabezado.resx">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +208,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Cliente.datasource" />
     <None Include="Properties\DataSources\Conexion.datasource" />
     <None Include="Properties\DataSources\Departamento.datasource" />
@@ -196,8 +216,10 @@
     <None Include="Properties\DataSources\frmPrincipal.datasource" />
     <None Include="Properties\DataSources\frmPuestos.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Envio.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.PaqueteEncabezado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Ruta.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.TipoEmpleado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
