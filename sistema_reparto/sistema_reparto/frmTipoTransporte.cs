@@ -1113,5 +1113,12 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
     }
 }

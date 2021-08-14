@@ -103,6 +103,12 @@
     <Compile Include="frmPaqueteEncabezado.Designer.cs">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransporte.Designer.cs">
+      <DependentUpon>frmTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <EmbeddedResource Include="frmTipoTransporte.resx">
       <DependentUpon>frmTipoTransporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTransporte.resx">
+      <DependentUpon>frmTransporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUbicacion.resx">
       <DependentUpon>frmUbicacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +242,7 @@
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ruta.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.SubUbicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.TipoEmpleado.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Transporte.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ubicacion.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Usuarios.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Properties.Resources.datasource" />

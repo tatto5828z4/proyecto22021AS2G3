@@ -1380,5 +1380,12 @@ namespace sistema_reparto
         {
             pnlPD.BackColor = colorNormalCliente;
         }
+
+        private void pnlTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
     }
 }

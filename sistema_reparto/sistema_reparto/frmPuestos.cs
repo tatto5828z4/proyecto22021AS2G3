@@ -1074,6 +1074,13 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPuestos obj = new frmPuestos();
+            obj.Visible = true;
+            Visible = false;
+        }
         /* Final Llenando campos de mi busqueda en la tabla */
 
     }
