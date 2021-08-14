@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlMovBodega = new System.Windows.Forms.Panel();
+            this.picMovBodega = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblMovimientoBodega = new System.Windows.Forms.Label();
             this.btnBodega = new System.Windows.Forms.Panel();
             this.picBodega = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -105,11 +109,11 @@
             this.txtIdCalificacion = new System.Windows.Forms.TextBox();
             this.lbnIdCalificacion = new System.Windows.Forms.Label();
             this.pnlIdPiloto = new System.Windows.Forms.Panel();
+            this.cbxPiloto = new System.Windows.Forms.ComboBox();
             this.lblIdPiloto = new System.Windows.Forms.Label();
             this.pnlIdPaqueteEnc = new System.Windows.Forms.Panel();
-            this.lblPE = new System.Windows.Forms.Label();
-            this.cbxPiloto = new System.Windows.Forms.ComboBox();
             this.cbxPaqueteEnc = new System.Windows.Forms.ComboBox();
+            this.lblPE = new System.Windows.Forms.Label();
             this.pnlIdCliente = new System.Windows.Forms.Panel();
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
@@ -117,11 +121,11 @@
             this.cbxIdEmpleado = new System.Windows.Forms.ComboBox();
             this.lblIdEmpleado = new System.Windows.Forms.Label();
             this.pnlFecha = new System.Windows.Forms.Panel();
-            this.lblFechaRecepcion = new System.Windows.Forms.Label();
             this.dtpFechaRecepcion = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaRecepcion = new System.Windows.Forms.Label();
             this.pnlLlegadaTardia = new System.Windows.Forms.Panel();
-            this.lblLlegada = new System.Windows.Forms.Label();
             this.chbLlegadaT = new System.Windows.Forms.CheckBox();
+            this.lblLlegada = new System.Windows.Forms.Label();
             this.pnlLlegadaTiempo = new System.Windows.Forms.Panel();
             this.chbLlegadaTiempo = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -132,8 +136,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.lblPercances = new System.Windows.Forms.Label();
             this.pnlObservaciones = new System.Windows.Forms.Panel();
-            this.lblObservaciones = new System.Windows.Forms.Label();
             this.richObservaciones = new System.Windows.Forms.RichTextBox();
+            this.lblObservaciones = new System.Windows.Forms.Label();
             this.pnlBotonCalificacion = new System.Windows.Forms.Panel();
             this.txtBuscarCalificacion = new System.Windows.Forms.TextBox();
             this.dgvCalificacion = new System.Windows.Forms.DataGridView();
@@ -144,6 +148,8 @@
             this.pnlLlenarCamposCDC = new System.Windows.Forms.Panel();
             this.pnlLLenarCamposC = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
+            this.pnlMovBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
             this.btnBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
@@ -195,6 +201,7 @@
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlMovBodega);
             this.pnlSidebar.Controls.Add(this.btnBodega);
             this.pnlSidebar.Controls.Add(this.pnlEmpleado);
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
@@ -209,10 +216,61 @@
             this.pnlSidebar.Controls.Add(this.btnPuesto);
             this.pnlSidebar.Controls.Add(this.picLogo);
             this.pnlSidebar.Controls.Add(this.btnCliente);
+            this.pnlSidebar.Controls.Add(this.btnCalificacionP);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 651);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 791);
             this.pnlSidebar.TabIndex = 2;
+            // 
+            // pnlMovBodega
+            // 
+            this.pnlMovBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlMovBodega.Controls.Add(this.picMovBodega);
+            this.pnlMovBodega.Controls.Add(this.label20);
+            this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
+            this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlMovBodega.Location = new System.Drawing.Point(-1, 618);
+            this.pnlMovBodega.Name = "pnlMovBodega";
+            this.pnlMovBodega.Size = new System.Drawing.Size(180, 34);
+            this.pnlMovBodega.TabIndex = 66;
+            this.pnlMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlMovBodega_MouseClick);
+            this.pnlMovBodega.MouseLeave += new System.EventHandler(this.pnlMovBodega_MouseLeave);
+            this.pnlMovBodega.MouseHover += new System.EventHandler(this.pnlMovBodega_MouseHover);
+            // 
+            // picMovBodega
+            // 
+            this.picMovBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMovBodega.BackgroundImage")));
+            this.picMovBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picMovBodega.Location = new System.Drawing.Point(21, 8);
+            this.picMovBodega.Name = "picMovBodega";
+            this.picMovBodega.Size = new System.Drawing.Size(20, 21);
+            this.picMovBodega.TabIndex = 1;
+            this.picMovBodega.TabStop = false;
+            this.picMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picMovBodega_MouseClick);
+            this.picMovBodega.MouseLeave += new System.EventHandler(this.picMovBodega_MouseLeave);
+            this.picMovBodega.MouseHover += new System.EventHandler(this.picMovBodega_MouseHover);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
+            this.label20.Location = new System.Drawing.Point(15, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 13);
+            this.label20.TabIndex = 1;
+            // 
+            // lblMovimientoBodega
+            // 
+            this.lblMovimientoBodega.AutoSize = true;
+            this.lblMovimientoBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblMovimientoBodega.Location = new System.Drawing.Point(49, 10);
+            this.lblMovimientoBodega.Name = "lblMovimientoBodega";
+            this.lblMovimientoBodega.Size = new System.Drawing.Size(101, 13);
+            this.lblMovimientoBodega.TabIndex = 0;
+            this.lblMovimientoBodega.Text = "Movimiento Bodega";
+            this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
+            this.lblMovimientoBodega.MouseLeave += new System.EventHandler(this.lblMovimientoBodega_MouseLeave);
+            this.lblMovimientoBodega.MouseHover += new System.EventHandler(this.lblMovimientoBodega_MouseHover);
             // 
             // btnBodega
             // 
@@ -230,7 +288,6 @@
             // 
             this.picBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBodega.BackgroundImage")));
             this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
             this.picBodega.Location = new System.Drawing.Point(19, 8);
             this.picBodega.Name = "picBodega";
             this.picBodega.Size = new System.Drawing.Size(20, 21);
@@ -249,11 +306,11 @@
             // lblBodega
             // 
             this.lblBodega.AutoSize = true;
-            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.Location = new System.Drawing.Point(75, 10);
             this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 17);
+            this.lblBodega.Size = new System.Drawing.Size(44, 13);
             this.lblBodega.TabIndex = 0;
             this.lblBodega.Text = "Bodega";
             // 
@@ -271,7 +328,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(19, 8);
@@ -292,11 +348,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label15.Location = new System.Drawing.Point(75, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 17);
+            this.label15.Size = new System.Drawing.Size(54, 13);
             this.label15.TabIndex = 0;
             this.label15.Text = "Empleado";
             // 
@@ -319,7 +375,7 @@
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqueteEncabezado.Location = new System.Drawing.Point(43, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(144, 17);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(125, 15);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             // 
@@ -353,6 +409,9 @@
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 32;
+            this.btnUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnUsuarios_MouseClick);
+            this.btnUsuarios.MouseLeave += new System.EventHandler(this.btnUsuarios_MouseLeave);
+            this.btnUsuarios.MouseHover += new System.EventHandler(this.btnUsuarios_MouseHover);
             // 
             // lblUsuarios
             // 
@@ -361,9 +420,12 @@
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUsuarios.Location = new System.Drawing.Point(75, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
+            this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
+            this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
+            this.lblUsuarios.MouseHover += new System.EventHandler(this.lblUsuarios_MouseHover);
             // 
             // picIconoUsuarios
             // 
@@ -374,6 +436,9 @@
             this.picIconoUsuarios.Size = new System.Drawing.Size(20, 21);
             this.picIconoUsuarios.TabIndex = 1;
             this.picIconoUsuarios.TabStop = false;
+            this.picIconoUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoUsuarios_MouseClick);
+            this.picIconoUsuarios.MouseLeave += new System.EventHandler(this.picIconoUsuarios_MouseLeave);
+            this.picIconoUsuarios.MouseHover += new System.EventHandler(this.picIconoUsuarios_MouseHover);
             // 
             // label12
             // 
@@ -403,7 +468,7 @@
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoTransporte.Location = new System.Drawing.Point(56, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(110, 17);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(93, 15);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             // 
@@ -454,7 +519,7 @@
             this.lblTipoMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoMovimiento.Location = new System.Drawing.Point(57, 10);
             this.lblTipoMovimiento.Name = "lblTipoMovimiento";
-            this.lblTipoMovimiento.Size = new System.Drawing.Size(111, 17);
+            this.lblTipoMovimiento.Size = new System.Drawing.Size(98, 15);
             this.lblTipoMovimiento.TabIndex = 2;
             this.lblTipoMovimiento.Text = "Tipo Movimiento";
             // 
@@ -502,11 +567,11 @@
             // lblSubUbicacion
             // 
             this.lblSubUbicacion.AutoSize = true;
-            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblSubUbicacion.Location = new System.Drawing.Point(66, 10);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(95, 17);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             // 
@@ -544,11 +609,11 @@
             // lblRuta
             // 
             this.lblRuta.AutoSize = true;
-            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblRuta.Location = new System.Drawing.Point(82, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(38, 17);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
             // 
@@ -586,11 +651,11 @@
             // lblTipoEmpleado
             // 
             this.lblTipoEmpleado.AutoSize = true;
-            this.lblTipoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoEmpleado.Location = new System.Drawing.Point(63, 10);
             this.lblTipoEmpleado.Name = "lblTipoEmpleado";
-            this.lblTipoEmpleado.Size = new System.Drawing.Size(103, 17);
+            this.lblTipoEmpleado.Size = new System.Drawing.Size(78, 13);
             this.lblTipoEmpleado.TabIndex = 0;
             this.lblTipoEmpleado.Text = "Tipo Empleado";
             // 
@@ -609,11 +674,11 @@
             // lblUbicacion
             // 
             this.lblUbicacion.AutoSize = true;
-            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUbicacion.Location = new System.Drawing.Point(74, 10);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(70, 17);
+            this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
             // 
@@ -651,11 +716,11 @@
             // lblDepartamento
             // 
             this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(67, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(98, 17);
+            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             // 
@@ -712,11 +777,11 @@
             // lblPuesto
             // 
             this.lblPuesto.AutoSize = true;
-            this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(83, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(52, 17);
+            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             // 
@@ -808,11 +873,11 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(81, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(51, 17);
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             // 
@@ -823,9 +888,9 @@
             this.btnCalificacionP.Controls.Add(this.label17);
             this.btnCalificacionP.Controls.Add(this.lblCalificacion);
             this.btnCalificacionP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 617);
+            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 652);
             this.btnCalificacionP.Name = "btnCalificacionP";
-            this.btnCalificacionP.Size = new System.Drawing.Size(180, 34);
+            this.btnCalificacionP.Size = new System.Drawing.Size(180, 32);
             this.btnCalificacionP.TabIndex = 36;
             // 
             // picCalificacion
@@ -851,11 +916,11 @@
             // lblCalificacion
             // 
             this.lblCalificacion.AutoSize = true;
-            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCalificacion.Location = new System.Drawing.Point(54, 10);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(118, 17);
+            this.lblCalificacion.Size = new System.Drawing.Size(90, 13);
             this.lblCalificacion.TabIndex = 0;
             this.lblCalificacion.Text = "Calificación Piloto";
             // 
@@ -866,7 +931,7 @@
             this.lblTituloCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloCalificacion.Location = new System.Drawing.Point(215, 26);
             this.lblTituloCalificacion.Name = "lblTituloCalificacion";
-            this.lblTituloCalificacion.Size = new System.Drawing.Size(320, 40);
+            this.lblTituloCalificacion.Size = new System.Drawing.Size(279, 35);
             this.lblTituloCalificacion.TabIndex = 37;
             this.lblTituloCalificacion.Text = "Calificación Piloto";
             // 
@@ -878,7 +943,7 @@
             this.lblRegistrarCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarCalificacion.Location = new System.Drawing.Point(220, 154);
             this.lblRegistrarCalificacion.Name = "lblRegistrarCalificacion";
-            this.lblRegistrarCalificacion.Size = new System.Drawing.Size(148, 18);
+            this.lblRegistrarCalificacion.Size = new System.Drawing.Size(135, 16);
             this.lblRegistrarCalificacion.TabIndex = 40;
             this.lblRegistrarCalificacion.Text = "Registrar Calificación";
             this.lblRegistrarCalificacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarCalificacion_MouseClick);
@@ -908,7 +973,7 @@
             this.lblAbcCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcCalificacion.Location = new System.Drawing.Point(224, 96);
             this.lblAbcCalificacion.Name = "lblAbcCalificacion";
-            this.lblAbcCalificacion.Size = new System.Drawing.Size(126, 24);
+            this.lblAbcCalificacion.Size = new System.Drawing.Size(108, 20);
             this.lblAbcCalificacion.TabIndex = 38;
             this.lblAbcCalificacion.Text = "Calificar Piloto";
             this.lblAbcCalificacion.DoubleClick += new System.EventHandler(this.lblAbcCalificacion_DoubleClick);
@@ -922,7 +987,7 @@
             this.lblModificarCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarCalificacion.Location = new System.Drawing.Point(520, 155);
             this.lblModificarCalificacion.Name = "lblModificarCalificacion";
-            this.lblModificarCalificacion.Size = new System.Drawing.Size(149, 18);
+            this.lblModificarCalificacion.Size = new System.Drawing.Size(135, 16);
             this.lblModificarCalificacion.TabIndex = 41;
             this.lblModificarCalificacion.Text = "Modificar Calificación";
             this.lblModificarCalificacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblModificarCalificacion_MouseClick);
@@ -967,7 +1032,7 @@
             this.lbnIdCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnIdCalificacion.Location = new System.Drawing.Point(3, 9);
             this.lbnIdCalificacion.Name = "lbnIdCalificacion";
-            this.lbnIdCalificacion.Size = new System.Drawing.Size(108, 16);
+            this.lbnIdCalificacion.Size = new System.Drawing.Size(90, 13);
             this.lbnIdCalificacion.TabIndex = 10;
             this.lbnIdCalificacion.Text = "ID Calificación";
             // 
@@ -980,13 +1045,21 @@
             this.pnlIdPiloto.Size = new System.Drawing.Size(145, 57);
             this.pnlIdPiloto.TabIndex = 47;
             // 
+            // cbxPiloto
+            // 
+            this.cbxPiloto.FormattingEnabled = true;
+            this.cbxPiloto.Location = new System.Drawing.Point(6, 27);
+            this.cbxPiloto.Name = "cbxPiloto";
+            this.cbxPiloto.Size = new System.Drawing.Size(121, 21);
+            this.cbxPiloto.TabIndex = 49;
+            // 
             // lblIdPiloto
             // 
             this.lblIdPiloto.AutoSize = true;
             this.lblIdPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdPiloto.Location = new System.Drawing.Point(3, 9);
             this.lblIdPiloto.Name = "lblIdPiloto";
-            this.lblIdPiloto.Size = new System.Drawing.Size(48, 16);
+            this.lblIdPiloto.Size = new System.Drawing.Size(39, 13);
             this.lblIdPiloto.TabIndex = 10;
             this.lblIdPiloto.Text = "Piloto";
             // 
@@ -999,25 +1072,6 @@
             this.pnlIdPaqueteEnc.Size = new System.Drawing.Size(145, 57);
             this.pnlIdPaqueteEnc.TabIndex = 48;
             // 
-            // lblPE
-            // 
-            this.lblPE.AutoSize = true;
-            this.lblPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPE.Location = new System.Drawing.Point(3, 9);
-            this.lblPE.Name = "lblPE";
-            this.lblPE.Size = new System.Drawing.Size(66, 16);
-            this.lblPE.TabIndex = 10;
-            this.lblPE.Text = "Paquete";
-            this.lblPE.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // cbxPiloto
-            // 
-            this.cbxPiloto.FormattingEnabled = true;
-            this.cbxPiloto.Location = new System.Drawing.Point(6, 27);
-            this.cbxPiloto.Name = "cbxPiloto";
-            this.cbxPiloto.Size = new System.Drawing.Size(121, 21);
-            this.cbxPiloto.TabIndex = 49;
-            // 
             // cbxPaqueteEnc
             // 
             this.cbxPaqueteEnc.FormattingEnabled = true;
@@ -1025,6 +1079,17 @@
             this.cbxPaqueteEnc.Name = "cbxPaqueteEnc";
             this.cbxPaqueteEnc.Size = new System.Drawing.Size(121, 21);
             this.cbxPaqueteEnc.TabIndex = 50;
+            // 
+            // lblPE
+            // 
+            this.lblPE.AutoSize = true;
+            this.lblPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPE.Location = new System.Drawing.Point(3, 9);
+            this.lblPE.Name = "lblPE";
+            this.lblPE.Size = new System.Drawing.Size(54, 13);
+            this.lblPE.TabIndex = 10;
+            this.lblPE.Text = "Paquete";
+            this.lblPE.Click += new System.EventHandler(this.label18_Click);
             // 
             // pnlIdCliente
             // 
@@ -1049,7 +1114,7 @@
             this.lblIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdCliente.Location = new System.Drawing.Point(3, 9);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(56, 16);
+            this.lblIdCliente.Size = new System.Drawing.Size(46, 13);
             this.lblIdCliente.TabIndex = 10;
             this.lblIdCliente.Text = "Cliente";
             // 
@@ -1076,7 +1141,7 @@
             this.lblIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleado.Location = new System.Drawing.Point(3, 9);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(79, 16);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(62, 13);
             this.lblIdEmpleado.TabIndex = 10;
             this.lblIdEmpleado.Text = "Empleado";
             // 
@@ -1089,16 +1154,6 @@
             this.pnlFecha.Size = new System.Drawing.Size(146, 57);
             this.pnlFecha.TabIndex = 53;
             // 
-            // lblFechaRecepcion
-            // 
-            this.lblFechaRecepcion.AutoSize = true;
-            this.lblFechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaRecepcion.Location = new System.Drawing.Point(3, 9);
-            this.lblFechaRecepcion.Name = "lblFechaRecepcion";
-            this.lblFechaRecepcion.Size = new System.Drawing.Size(79, 16);
-            this.lblFechaRecepcion.TabIndex = 10;
-            this.lblFechaRecepcion.Text = "Empleado";
-            // 
             // dtpFechaRecepcion
             // 
             this.dtpFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -1106,6 +1161,16 @@
             this.dtpFechaRecepcion.Name = "dtpFechaRecepcion";
             this.dtpFechaRecepcion.Size = new System.Drawing.Size(122, 20);
             this.dtpFechaRecepcion.TabIndex = 11;
+            // 
+            // lblFechaRecepcion
+            // 
+            this.lblFechaRecepcion.AutoSize = true;
+            this.lblFechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaRecepcion.Location = new System.Drawing.Point(3, 9);
+            this.lblFechaRecepcion.Name = "lblFechaRecepcion";
+            this.lblFechaRecepcion.Size = new System.Drawing.Size(62, 13);
+            this.lblFechaRecepcion.TabIndex = 10;
+            this.lblFechaRecepcion.Text = "Empleado";
             // 
             // pnlLlegadaTardia
             // 
@@ -1116,16 +1181,6 @@
             this.pnlLlegadaTardia.Size = new System.Drawing.Size(126, 48);
             this.pnlLlegadaTardia.TabIndex = 47;
             // 
-            // lblLlegada
-            // 
-            this.lblLlegada.AutoSize = true;
-            this.lblLlegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLlegada.Location = new System.Drawing.Point(3, 9);
-            this.lblLlegada.Name = "lblLlegada";
-            this.lblLlegada.Size = new System.Drawing.Size(115, 16);
-            this.lblLlegada.TabIndex = 10;
-            this.lblLlegada.Text = "Llegada Tardía";
-            // 
             // chbLlegadaT
             // 
             this.chbLlegadaT.AutoSize = true;
@@ -1135,6 +1190,16 @@
             this.chbLlegadaT.TabIndex = 11;
             this.chbLlegadaT.Text = "SI/NO";
             this.chbLlegadaT.UseVisualStyleBackColor = true;
+            // 
+            // lblLlegada
+            // 
+            this.lblLlegada.AutoSize = true;
+            this.lblLlegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLlegada.Location = new System.Drawing.Point(3, 9);
+            this.lblLlegada.Name = "lblLlegada";
+            this.lblLlegada.Size = new System.Drawing.Size(94, 13);
+            this.lblLlegada.TabIndex = 10;
+            this.lblLlegada.Text = "Llegada Tardía";
             // 
             // pnlLlegadaTiempo
             // 
@@ -1161,7 +1226,7 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(3, 9);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(122, 16);
+            this.label18.Size = new System.Drawing.Size(97, 13);
             this.label18.TabIndex = 10;
             this.label18.Text = "Llegada Tiempo";
             // 
@@ -1190,7 +1255,7 @@
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(7, 7);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 16);
+            this.label19.Size = new System.Drawing.Size(57, 13);
             this.label19.TabIndex = 10;
             this.label19.Text = "Retrazos";
             // 
@@ -1219,7 +1284,7 @@
             this.lblPercances.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPercances.Location = new System.Drawing.Point(5, 9);
             this.lblPercances.Name = "lblPercances";
-            this.lblPercances.Size = new System.Drawing.Size(82, 16);
+            this.lblPercances.Size = new System.Drawing.Size(67, 13);
             this.lblPercances.TabIndex = 10;
             this.lblPercances.Text = "Percances";
             // 
@@ -1232,23 +1297,24 @@
             this.pnlObservaciones.Size = new System.Drawing.Size(215, 73);
             this.pnlObservaciones.TabIndex = 51;
             // 
+            // richObservaciones
+            // 
+            this.richObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richObservaciones.Location = new System.Drawing.Point(7, 30);
+            this.richObservaciones.Name = "richObservaciones";
+            this.richObservaciones.Size = new System.Drawing.Size(196, 36);
+            this.richObservaciones.TabIndex = 54;
+            this.richObservaciones.Text = "";
+            // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
             this.lblObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservaciones.Location = new System.Drawing.Point(7, 7);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(117, 16);
+            this.lblObservaciones.Size = new System.Drawing.Size(95, 13);
             this.lblObservaciones.TabIndex = 10;
             this.lblObservaciones.Text = "Observaciones:";
-            // 
-            // richObservaciones
-            // 
-            this.richObservaciones.Location = new System.Drawing.Point(7, 30);
-            this.richObservaciones.Name = "richObservaciones";
-            this.richObservaciones.Size = new System.Drawing.Size(196, 36);
-            this.richObservaciones.TabIndex = 54;
-            this.richObservaciones.Text = "";
             // 
             // pnlBotonCalificacion
             // 
@@ -1356,7 +1422,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 651);
+            this.ClientSize = new System.Drawing.Size(1059, 788);
             this.Controls.Add(this.pnlLLenarCamposC);
             this.Controls.Add(this.pnlLlenarCamposCDC);
             this.Controls.Add(this.pnlActivarC);
@@ -1384,7 +1450,6 @@
             this.Controls.Add(this.pnlBordeModificar);
             this.Controls.Add(this.pnlBordeRegistrar);
             this.Controls.Add(this.lblTituloCalificacion);
-            this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCalificacionPiloto";
@@ -1393,6 +1458,9 @@
             this.Load += new System.EventHandler(this.frmCalificacionPiloto_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmCalificacionPiloto_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlMovBodega.ResumeLayout(false);
+            this.pnlMovBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
             this.btnBodega.ResumeLayout(false);
             this.btnBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
@@ -1582,5 +1650,9 @@
         private System.Windows.Forms.Panel pnlBotonGuardarC;
         private System.Windows.Forms.Panel pnlLlenarCamposCDC;
         private System.Windows.Forms.Panel pnlLLenarCamposC;
+        private System.Windows.Forms.Panel pnlMovBodega;
+        private System.Windows.Forms.PictureBox picMovBodega;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblMovimientoBodega;
     }
 }

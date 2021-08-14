@@ -61,6 +61,8 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Envio.cs" />
+    <Compile Include="Clases\Inventario.cs" />
+    <Compile Include="Clases\MovBodega.cs" />
     <Compile Include="Clases\PaqueteDetalle.cs" />
     <Compile Include="Clases\PaqueteEncabezado.cs" />
     <Compile Include="Clases\Puesto.cs" />
@@ -97,13 +99,21 @@
     <Compile Include="frmEnvio.designer.cs">
       <DependentUpon>frmEnvio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMovimientoBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoBodega.designer.cs">
+      <DependentUpon>frmMovimientoBodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPaqueteDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPaqueteDetalle.designer.cs">
       <DependentUpon>frmPaqueteDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPaqueteEncabezado.cs" />
+    <Compile Include="frmPaqueteEncabezado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPaqueteEncabezado.designer.cs">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </Compile>
@@ -190,6 +200,9 @@
     <EmbeddedResource Include="frmEnvio.resx">
       <DependentUpon>frmEnvio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoBodega.resx">
+      <DependentUpon>frmMovimientoBodega.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPaqueteDetalle.resx">
       <DependentUpon>frmPaqueteDetalle.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,10 +253,14 @@
     <None Include="Properties\DataSources\Conexion.datasource" />
     <None Include="Properties\DataSources\Departamento.datasource" />
     <None Include="Properties\DataSources\frmDepartamento.datasource" />
+    <None Include="Properties\DataSources\frmMovimientoBodega.datasource" />
     <None Include="Properties\DataSources\frmPrincipal.datasource" />
     <None Include="Properties\DataSources\frmPuestos.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Envio.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.inventario.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.Inventario1.datasource" />
+    <None Include="Properties\DataSources\sistema_reparto.Clases.MovBodega.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.PaqueteEncabezado.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Puesto.datasource" />
     <None Include="Properties\DataSources\sistema_reparto.Clases.Ruta.datasource" />
