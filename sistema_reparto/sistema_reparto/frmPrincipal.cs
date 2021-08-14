@@ -363,7 +363,7 @@ namespace sistema_reparto
         {
             /* Inicio de ejecucion de funcion insertar un cliente */
 
-            if(txtIdCliente.Text=="" && txtNombreCliente.Text == "" && txtCampoApellidoC.Text =="" && txtTelefonoC.Text =="" && txtCorreoC.Text == "" && richCliente.Text == "")
+            if(txtIdCliente.Text=="" || txtNombreCliente.Text == "" || txtCampoApellidoC.Text =="" || txtTelefonoC.Text =="" || txtCorreoC.Text == "" || richCliente.Text == "")
             {
                 MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1233,6 +1233,165 @@ namespace sistema_reparto
 
             obj.Visible = true;
 
+            Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverCliente;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalCliente;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void panel3_MouseClick_2(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTransporte_MouseHover(object sender, EventArgs e)
+        {
+            pnlTransporte.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTransporte_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTransporte.BackColor = colorNormalCliente;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalCliente;
+        }
+
+        private void pnlTransporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void panel3_MouseClick_3(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
             Visible = false;
         }
     }

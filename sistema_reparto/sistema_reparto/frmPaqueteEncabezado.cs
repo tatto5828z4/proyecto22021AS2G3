@@ -57,6 +57,7 @@ namespace sistema_reparto
             //fin encabezados
 
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = false;
             pnlCampoIDPE.Visible = false;
             pnlCampoIDCliente.Visible = false;
             pnlCampoFechaRecPE.Visible = false;
@@ -624,6 +625,7 @@ namespace sistema_reparto
             funVaciarCampos();
 
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -645,6 +647,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = true;
             pnlCampoIDPE.Enabled = true;
             pnlCampoIDCliente.Enabled = true;
             pnlCampoFechaRecPE.Enabled = true;
@@ -676,6 +679,7 @@ namespace sistema_reparto
             funVaciarCampos();
 
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -697,6 +701,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = false;
             pnlCampoIDPE.Enabled = false;
             pnlCampoIDCliente.Enabled = false;
             pnlCampoFechaRecPE.Enabled = false;
@@ -740,6 +745,7 @@ namespace sistema_reparto
             funVaciarCampos();
 
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -761,6 +767,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = true;
             pnlCampoIDPE.Enabled = false;
             pnlCampoIDCliente.Enabled = true;
             pnlCampoFechaRecPE.Enabled = true;
@@ -850,12 +857,12 @@ namespace sistema_reparto
         {
             /* Inicio de ejecucion de funcion insertar un cliente */
 
-            if (txtIdPE.Text == "" && txtNombreRemPE.Text == "" && txtDireccionRemitente.Text == "" && txtTelefonoRemitente.Text == "" && txtEstatusPE.Text == "")
-            {
-                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+            //if (txtIdPE.Text == "" || txtNombreRemPE.Text == "" || txtDireccionRemitente.Text == "" || txtTelefonoRemitente.Text == "" || txtEstatusPE.Text == "" || txtCantidad.Text=="")
+            //{
+            //    MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else
+            //{
                 String estatusPaqEncabezado = "A";
                 PaqueteEncabezado paqueteEnc = funObtenerTxt(estatusPaqEncabezado);
                 paqueteEnc.funInsertar();
@@ -863,7 +870,7 @@ namespace sistema_reparto
 
                 funCargarTabla(null);
                 funVaciarCampos();
-            }
+            //}
 
         }
 
@@ -877,14 +884,15 @@ namespace sistema_reparto
             String nombreRem = txtNombreRemPE.Text;
             String direccionRem = txtDireccionRemitente.Text;
             String telefonoRem = txtTelefonoRemitente.Text;
+            String cantidad = txtCantidad.Text;
             String idEmpleado = cbxEmpleado.SelectedValue.ToString();
 
-            String estatusPE = estatus;
+            
 
             /*Final obteniedo variables a usar con mi ABC */
 
             /* Inicio creamos un objeto de tipo paqueteEncabezado para poder utilizar el metodo de insertar */
-            PaqueteEncabezado paqueteEmpleado = new PaqueteEncabezado(codigoPE, clientePE, fechaRecep, fechaCliente, nombreRem, direccionRem, telefonoRem, idEmpleado, estatusPE);
+            PaqueteEncabezado paqueteEmpleado = new PaqueteEncabezado(codigoPE, clientePE, fechaRecep, fechaCliente, nombreRem, direccionRem, telefonoRem, cantidad, idEmpleado, estatus);
             /* Final creamos un objeto de tipo cliente para poder utilizar el metodo de insertar cliente */
 
             return paqueteEmpleado;
@@ -905,6 +913,7 @@ namespace sistema_reparto
             txtDireccionRemitente.Text = "";
             txtTelefonoRemitente.Text = "";
             txtEstatusPE.Text = "";
+            txtCantidad.Text = "";
             txtBuscarPE.Text = "";
         }
 
@@ -917,7 +926,7 @@ namespace sistema_reparto
             paqueteEnc.funModificar(idPaqueteEncabezado);
             funCargarTabla(null);
 
-            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, idPaqueteEncabezado);
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad ,cbxEmpleado, txtEstatusPE, idPaqueteEncabezado);
 
         }
 
@@ -953,13 +962,14 @@ namespace sistema_reparto
             txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
             txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
             txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+            txtCantidad.Text = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
 
-            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
             PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
             paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
             cbxEmpleado.SelectedValue = idEmpleado;
 
-            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[9].Value.ToString();
 
         }
 
@@ -975,7 +985,7 @@ namespace sistema_reparto
             pnlActivarPE.Visible = true;
             pnlDarBajaPE.Visible = false;
 
-            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, pIdPE);
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad, cbxEmpleado, txtEstatusPE, pIdPE);
 
         }
 
@@ -996,13 +1006,14 @@ namespace sistema_reparto
             txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
             txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
             txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+            txtCantidad.Text = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
 
-            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
             PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
             paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
             cbxEmpleado.SelectedValue = idEmpleado;
 
-            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[9].Value.ToString();
 
 
             PaqueteEncabezado paqueteEnc = new PaqueteEncabezado();
@@ -1033,7 +1044,121 @@ namespace sistema_reparto
             pnlDarBajaPE.Visible = true;
             pnlActivarPE.Visible = false;
 
-            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, cbxEmpleado, txtEstatusPE, pIdPE);
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad, cbxEmpleado, txtEstatusPE, pIdPE);
+        }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label14_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void label14_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void label14_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void pnlEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
         }
     }
 

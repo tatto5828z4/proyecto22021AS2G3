@@ -384,7 +384,7 @@ namespace sistema_reparto
         {
             /* Inicio de ejecucion de funcion insertar un SubUbicacion */
 
-            if (txtIdSubUbicacion.Text == "" && txtNombreSubUbicacion.Text == "")
+            if (txtIdSubUbicacion.Text == "" || txtNombreSubUbicacion.Text == "")
             {
                 MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -948,6 +948,142 @@ namespace sistema_reparto
 
             obj.Visible = true;
 
+            Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega bodega = new frmBodega();
+            bodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void label14_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverSubUbicacion;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
             Visible = false;
         }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
