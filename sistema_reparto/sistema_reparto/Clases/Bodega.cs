@@ -15,9 +15,6 @@ namespace sistema_reparto.Clases
         String idBodega;
         String idUbicacionBodega;
         String idSubUbicacionBodega;
-        String idPaqueteE;
-        String idCliente;
-        String idEmpleado;
         String estatusBodega;
 
         public Bodega()
@@ -25,24 +22,20 @@ namespace sistema_reparto.Clases
 
         }
 
-        public Bodega(string idBodega, string idUbicacionBodega, string idSubUbicacionBodega, string idPaqueteE, string idCliente, string idEmpleado, string estatusBodega)
+        public Bodega(String idBodega, String idUbicacionBodega, String idSubUbicacionBodega, String estatusBodega)
         {
-            this.IdBodega = idBodega;
-            this.IdUbicacionBodega = idUbicacionBodega;
-            this.IdSubUbicacionBodega = idSubUbicacionBodega;
-            this.IdPaqueteE = idPaqueteE;
-            this.IdCliente = idCliente;
-            this.IdEmpleado = idEmpleado;
-            this.EstatusBodega = estatusBodega;
+            this.idBodega = idBodega;
+            this.idUbicacionBodega = idUbicacionBodega;
+            this.idSubUbicacionBodega = idSubUbicacionBodega;
+            this.estatusBodega = estatusBodega;
         }
+
+
 
         //Getter and Setters
         public string IdBodega { get => idBodega; set => idBodega = value; }
         public string IdUbicacionBodega { get => idUbicacionBodega; set => idUbicacionBodega = value; }
         public string IdSubUbicacionBodega { get => idSubUbicacionBodega; set => idSubUbicacionBodega = value; }
-        public string IdPaqueteE { get => idPaqueteE; set => idPaqueteE = value; }
-        public string IdCliente { get => idCliente; set => idCliente = value; }
-        public string IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public string EstatusBodega { get => estatusBodega; set => estatusBodega = value; }
 
 
@@ -83,9 +76,9 @@ namespace sistema_reparto.Clases
 
         public void funInsertar()
         {
-            String psql = "INSERT INTO bodega (idBodega,idUbicacionBodega,idSububicacionBodega,idPaqueteE,idCliente,idEmpleado,estatusBodega)" +
+            String psql = "INSERT INTO bodega (idBodega,idUbicacionBodega,idSububicacionBodega,estatusBodega)" +
                 " VALUES ('" + idBodega + "' , '" + idUbicacionBodega + "' , '" + idSubUbicacionBodega + "' , '"
-                + idPaqueteE + "' , '" + idCliente + "', '" + idEmpleado + "', '" + estatusBodega + "')";
+                + estatusBodega + "')";
 
             MySqlConnection conexionBD = Conexion.conexion();
             conexionBD.Open();
@@ -139,11 +132,7 @@ namespace sistema_reparto.Clases
                     bodega.IdUbicacionBodega = reader.GetString("idUbicacionBodega");
 
                     bodega.idSubUbicacionBodega = reader.GetString("idSububicacionBodega");
-                    bodega.IdPaqueteE = reader.GetString("idPaqueteE");
-
-                    bodega.idCliente = reader.GetString("idCliente");
-                    bodega.idEmpleado = reader.GetString("idEmpleado");
-
+                   
                     bodega.estatusBodega = reader.GetString("estatusBodega");
                     
                     lista.Add(bodega);
@@ -161,8 +150,7 @@ namespace sistema_reparto.Clases
         public void funModificar(String idModificar)
         {
             String pSqlModificar = "UPDATE bodega SET idUbicacionBodega='" + IdUbicacionBodega + "'," +
-            " idSububicacionBodega='" + idSubUbicacionBodega + "', idPaqueteE='" + IdPaqueteE + "'," +
-            " idCliente='" + idCliente + "', idEmpleado='" + idEmpleado + "'," +
+            " idSububicacionBodega='" + idSubUbicacionBodega + "',"+
             " estatusBodega = '" + estatusBodega + "'" +
             " WHERE idBodega='" + idModificar+"'";
 
@@ -186,7 +174,7 @@ namespace sistema_reparto.Clases
             }
         }
 
-        public void funBuscarSetearTxt(TextBox id, ComboBox idUbicacion, ComboBox idSubUbic, ComboBox idPaquete, ComboBox idcliente, ComboBox idempleado, TextBox estatus ,String idBodega)
+        public void funBuscarSetearTxt(TextBox id, ComboBox idUbicacion, ComboBox idSubUbic, TextBox estatus ,String idBodega)
         {
             MySqlDataReader leer = null;
 
@@ -205,10 +193,10 @@ namespace sistema_reparto.Clases
                     id.Text = leer.GetString(0);
                     idUbicacion.Text = leer.GetString(1);
                     idSubUbic.Text = leer.GetString(2);
-                    idPaquete.Text = leer.GetString(3);
-                    idcliente.Text = leer.GetString(4);
-                    idempleado.Text = leer.GetString(5);
-                    estatus.Text = leer.GetString(6);
+                    /*idPaquete.Text = leer.GetString(3);
+                      idcliente.Text = leer.GetString(4);
+                      idempleado.Text = leer.GetString(5);*/
+                    estatus.Text = leer.GetString(3);
                 }
             }
             catch (MySqlException ex)
@@ -278,7 +266,7 @@ namespace sistema_reparto.Clases
             }
 
         }
-
+        /*
         public void obtenerNombreCliente(String codigo)
         {
             MySqlDataReader leer = null;
@@ -335,7 +323,7 @@ namespace sistema_reparto.Clases
                 conexionBD.Close();
             }
 
-        }
+        }*/
 
         public String funBuscarEstatus(String idEstatus)
         {

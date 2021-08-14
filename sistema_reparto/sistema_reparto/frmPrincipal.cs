@@ -1387,5 +1387,12 @@ namespace sistema_reparto
             obj.Visible = true;
             Visible = false;
         }
+
+        private void panel3_MouseClick_3(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+            Visible = false;
+        }
     }
 }
