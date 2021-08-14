@@ -527,5 +527,132 @@ namespace sistema_reparto
         {
             pnlTT.BackColor = colorNormalCliente;
         }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlCliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPrincipal obj = new frmPrincipal();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPuestos obj = new frmPuestos();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmDepartamento obj = new frmDepartamento();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlUbicacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUbicacion obj = new frmUbicacion();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void pnlRuta_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmRuta obj = new frmRuta();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlSU_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmSubUbicacion obj = new frmSubUbicacion();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTM_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoMovimiento obj = new frmTipoMovimiento();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTT_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTipoTransporte obj = new frmTipoTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlUsuarios_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmUsuarios obj = new frmUsuarios();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteEncabezado obj = new frmPaqueteEncabezado();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalCliente;
+        }
     }
 }

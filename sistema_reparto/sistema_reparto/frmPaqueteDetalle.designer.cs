@@ -70,6 +70,10 @@
             this.lblModificarPaqDet = new System.Windows.Forms.Label();
             this.pnlEliminar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlTrans = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlBodega = new System.Windows.Forms.Panel();
             this.picBodega = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -147,6 +151,8 @@
             this.pnlCampoIDPE.SuspendLayout();
             this.pnlBordePaqDet.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnlTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
@@ -190,7 +196,7 @@
             this.pnlPD.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlPD, "pnlPD");
             this.pnlPD.Name = "pnlPD";
-            this.pnlPD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            this.pnlPD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
             this.pnlPD.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
             this.pnlPD.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
             // 
@@ -199,6 +205,7 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
             // 
@@ -212,6 +219,7 @@
             resources.ApplyResources(this.lblPaqDet, "lblPaqDet");
             this.lblPaqDet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqDet.Name = "lblPaqDet";
+            this.lblPaqDet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
             this.lblPaqDet.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
             this.lblPaqDet.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
             // 
@@ -453,6 +461,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Controls.Add(this.pnlTrans);
             this.panel3.Controls.Add(this.pnlPD);
             this.panel3.Controls.Add(this.pnlBodega);
             this.panel3.Controls.Add(this.pnlEmpleado);
@@ -471,6 +480,42 @@
             this.panel3.Controls.Add(this.pnlEnvio);
             this.panel3.Name = "panel3";
             // 
+            // pnlTrans
+            // 
+            this.pnlTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlTrans.Controls.Add(this.pictureBox1);
+            this.pnlTrans.Controls.Add(this.label7);
+            this.pnlTrans.Controls.Add(this.label1);
+            this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pnlTrans, "pnlTrans");
+            this.pnlTrans.Name = "pnlTrans";
+            this.pnlTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.pnlTrans.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pnlTrans.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label1.Name = "label1";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.label1.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.label1.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
             // pnlBodega
             // 
             this.pnlBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
@@ -480,6 +525,7 @@
             this.pnlBodega.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlBodega, "pnlBodega");
             this.pnlBodega.Name = "pnlBodega";
+            this.pnlBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
             this.pnlBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
             this.pnlBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
             // 
@@ -488,6 +534,7 @@
             resources.ApplyResources(this.picBodega, "picBodega");
             this.picBodega.Name = "picBodega";
             this.picBodega.TabStop = false;
+            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
             this.picBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
             this.picBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
             // 
@@ -501,6 +548,7 @@
             resources.ApplyResources(this.lblBodega, "lblBodega");
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.Name = "lblBodega";
+            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
             this.lblBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
             this.lblBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
             // 
@@ -513,6 +561,7 @@
             this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlEmpleado, "pnlEmpleado");
             this.pnlEmpleado.Name = "pnlEmpleado";
+            this.pnlEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
             this.pnlEmpleado.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
             this.pnlEmpleado.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
             // 
@@ -521,6 +570,7 @@
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
             this.pictureBox4.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
             // 
@@ -534,6 +584,7 @@
             resources.ApplyResources(this.label19, "label19");
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label19.Name = "label19";
+            this.label19.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
             this.label19.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
             this.label19.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
             // 
@@ -546,6 +597,7 @@
             this.pnlPE.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlPE, "pnlPE");
             this.pnlPE.Name = "pnlPE";
+            this.pnlPE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPE_MouseClick);
             this.pnlPE.MouseLeave += new System.EventHandler(this.pnlPE_MouseLeave);
             this.pnlPE.MouseHover += new System.EventHandler(this.pnlPE_MouseHover);
             // 
@@ -554,6 +606,7 @@
             resources.ApplyResources(this.label20, "label20");
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label20.Name = "label20";
+            this.label20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPE_MouseClick);
             this.label20.MouseLeave += new System.EventHandler(this.pnlPE_MouseLeave);
             this.label20.MouseHover += new System.EventHandler(this.pnlPE_MouseHover);
             // 
@@ -562,6 +615,7 @@
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPE_MouseClick);
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pnlPE_MouseLeave);
             this.pictureBox5.MouseHover += new System.EventHandler(this.pnlPE_MouseHover);
             // 
@@ -579,6 +633,7 @@
             this.pnlUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlUsuarios, "pnlUsuarios");
             this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUsuarios_MouseClick);
             this.pnlUsuarios.MouseLeave += new System.EventHandler(this.pnlUsuarios_MouseLeave);
             this.pnlUsuarios.MouseHover += new System.EventHandler(this.pnlUsuarios_MouseHover);
             // 
@@ -587,6 +642,7 @@
             resources.ApplyResources(this.label22, "label22");
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label22.Name = "label22";
+            this.label22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUsuarios_MouseClick);
             this.label22.MouseLeave += new System.EventHandler(this.pnlUsuarios_MouseLeave);
             this.label22.MouseHover += new System.EventHandler(this.pnlUsuarios_MouseHover);
             // 
@@ -595,6 +651,7 @@
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUsuarios_MouseClick);
             this.pictureBox6.MouseLeave += new System.EventHandler(this.pnlUsuarios_MouseLeave);
             this.pictureBox6.MouseHover += new System.EventHandler(this.pnlUsuarios_MouseHover);
             // 
@@ -612,6 +669,7 @@
             this.pnlTT.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlTT, "pnlTT");
             this.pnlTT.Name = "pnlTT";
+            this.pnlTT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTT_MouseClick);
             this.pnlTT.MouseLeave += new System.EventHandler(this.pnlTT_MouseLeave);
             this.pnlTT.MouseHover += new System.EventHandler(this.pnlTT_MouseHover);
             // 
@@ -620,6 +678,7 @@
             resources.ApplyResources(this.label24, "label24");
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label24.Name = "label24";
+            this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTT_MouseClick);
             this.label24.MouseHover += new System.EventHandler(this.pnlTT_MouseHover);
             // 
             // pictureBox7
@@ -627,6 +686,7 @@
             resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTT_MouseClick);
             this.pictureBox7.MouseHover += new System.EventHandler(this.pnlTT_MouseHover);
             // 
             // label25
@@ -643,6 +703,7 @@
             this.pnlTM.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlTM, "pnlTM");
             this.pnlTM.Name = "pnlTM";
+            this.pnlTM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
             this.pnlTM.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
             this.pnlTM.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
             // 
@@ -651,6 +712,7 @@
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
             this.pictureBox8.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
             this.pictureBox8.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
             // 
@@ -659,6 +721,7 @@
             resources.ApplyResources(this.label26, "label26");
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label26.Name = "label26";
+            this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
             this.label26.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
             this.label26.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
             // 
@@ -676,6 +739,7 @@
             this.pnlSU.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlSU, "pnlSU");
             this.pnlSU.Name = "pnlSU";
+            this.pnlSU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSU_MouseClick);
             this.pnlSU.MouseLeave += new System.EventHandler(this.pnlSU_MouseLeave);
             this.pnlSU.MouseHover += new System.EventHandler(this.pnlSU_MouseHover);
             // 
@@ -684,6 +748,7 @@
             resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSU_MouseClick);
             this.pictureBox9.MouseLeave += new System.EventHandler(this.pnlSU_MouseLeave);
             this.pictureBox9.MouseHover += new System.EventHandler(this.pnlSU_MouseHover);
             // 
@@ -697,6 +762,7 @@
             resources.ApplyResources(this.label29, "label29");
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label29.Name = "label29";
+            this.label29.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlSU_MouseClick);
             this.label29.MouseLeave += new System.EventHandler(this.pnlSU_MouseLeave);
             this.label29.MouseHover += new System.EventHandler(this.pnlSU_MouseHover);
             // 
@@ -709,6 +775,7 @@
             this.pnlRuta.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlRuta, "pnlRuta");
             this.pnlRuta.Name = "pnlRuta";
+            this.pnlRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
             this.pnlRuta.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
             this.pnlRuta.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
             // 
@@ -717,6 +784,7 @@
             resources.ApplyResources(this.pictureBox10, "pictureBox10");
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
             this.pictureBox10.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
             this.pictureBox10.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
             // 
@@ -730,6 +798,7 @@
             resources.ApplyResources(this.label31, "label31");
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label31.Name = "label31";
+            this.label31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
             this.label31.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
             this.label31.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
             // 
@@ -742,6 +811,7 @@
             this.pnlTipoEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlTipoEmpleado, "pnlTipoEmpleado");
             this.pnlTipoEmpleado.Name = "pnlTipoEmpleado";
+            this.pnlTipoEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
             this.pnlTipoEmpleado.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
             this.pnlTipoEmpleado.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
             // 
@@ -750,6 +820,7 @@
             resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
             this.pictureBox11.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
             this.pictureBox11.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
             // 
@@ -763,6 +834,7 @@
             resources.ApplyResources(this.label33, "label33");
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label33.Name = "label33";
+            this.label33.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
             this.label33.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
             this.label33.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
             // 
@@ -775,6 +847,7 @@
             this.pnlUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlUbicacion, "pnlUbicacion");
             this.pnlUbicacion.Name = "pnlUbicacion";
+            this.pnlUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUbicacion_MouseClick);
             this.pnlUbicacion.MouseLeave += new System.EventHandler(this.pnlUbicacion_MouseLeave);
             this.pnlUbicacion.MouseHover += new System.EventHandler(this.pnlUbicacion_MouseHover);
             // 
@@ -783,6 +856,7 @@
             resources.ApplyResources(this.label34, "label34");
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label34.Name = "label34";
+            this.label34.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUbicacion_MouseClick);
             this.label34.MouseLeave += new System.EventHandler(this.pnlUbicacion_MouseLeave);
             this.label34.MouseHover += new System.EventHandler(this.pnlUbicacion_MouseHover);
             // 
@@ -791,6 +865,7 @@
             resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUbicacion_MouseClick);
             this.pictureBox12.MouseLeave += new System.EventHandler(this.pnlUbicacion_MouseLeave);
             this.pictureBox12.MouseHover += new System.EventHandler(this.pnlUbicacion_MouseHover);
             // 
@@ -808,6 +883,7 @@
             this.pnlDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlDepartamento, "pnlDepartamento");
             this.pnlDepartamento.Name = "pnlDepartamento";
+            this.pnlDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDepartamento_MouseClick);
             this.pnlDepartamento.MouseLeave += new System.EventHandler(this.pnlDepartamento_MouseLeave);
             this.pnlDepartamento.MouseHover += new System.EventHandler(this.pnlDepartamento_MouseHover);
             // 
@@ -816,6 +892,7 @@
             resources.ApplyResources(this.label36, "label36");
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label36.Name = "label36";
+            this.label36.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDepartamento_MouseClick);
             this.label36.MouseLeave += new System.EventHandler(this.pnlDepartamento_MouseLeave);
             this.label36.MouseHover += new System.EventHandler(this.pnlDepartamento_MouseHover);
             // 
@@ -824,6 +901,7 @@
             resources.ApplyResources(this.pictureBox13, "pictureBox13");
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDepartamento_MouseClick);
             this.pictureBox13.MouseLeave += new System.EventHandler(this.pnlDepartamento_MouseLeave);
             this.pictureBox13.MouseHover += new System.EventHandler(this.pnlDepartamento_MouseHover);
             // 
@@ -841,6 +919,7 @@
             this.pnlPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlPuesto, "pnlPuesto");
             this.pnlPuesto.Name = "pnlPuesto";
+            this.pnlPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPuesto_MouseClick);
             this.pnlPuesto.MouseLeave += new System.EventHandler(this.pnlPuesto_MouseLeave);
             this.pnlPuesto.MouseHover += new System.EventHandler(this.pnlPuesto_MouseHover);
             // 
@@ -849,6 +928,7 @@
             resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPuesto_MouseClick);
             this.pictureBox14.MouseLeave += new System.EventHandler(this.pictureBox14_MouseLeave);
             this.pictureBox14.MouseHover += new System.EventHandler(this.label39_MouseHover);
             // 
@@ -862,6 +942,7 @@
             resources.ApplyResources(this.label39, "label39");
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label39.Name = "label39";
+            this.label39.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPuesto_MouseClick);
             this.label39.MouseLeave += new System.EventHandler(this.label39_MouseLeave);
             this.label39.MouseHover += new System.EventHandler(this.label39_MouseHover);
             // 
@@ -882,6 +963,7 @@
             this.pnlCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlCliente, "pnlCliente");
             this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCliente_MouseClick);
             this.pnlCliente.MouseLeave += new System.EventHandler(this.pnlCliente_MouseLeave);
             this.pnlCliente.MouseHover += new System.EventHandler(this.pnlCliente_MouseHover);
             // 
@@ -917,6 +999,7 @@
             resources.ApplyResources(this.pictureBox17, "pictureBox17");
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCliente_MouseClick);
             this.pictureBox17.MouseLeave += new System.EventHandler(this.pictureBox17_MouseLeave);
             this.pictureBox17.MouseHover += new System.EventHandler(this.pictureBox17_MouseHover);
             // 
@@ -930,6 +1013,7 @@
             resources.ApplyResources(this.label43, "label43");
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label43.Name = "label43";
+            this.label43.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCliente_MouseClick);
             this.label43.MouseLeave += new System.EventHandler(this.label43_MouseLeave);
             this.label43.MouseHover += new System.EventHandler(this.label43_MouseHover);
             // 
@@ -942,6 +1026,7 @@
             this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pnlEnvio, "pnlEnvio");
             this.pnlEnvio.Name = "pnlEnvio";
+            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
             this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
             this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
             // 
@@ -950,6 +1035,7 @@
             resources.ApplyResources(this.picEnvio, "picEnvio");
             this.picEnvio.Name = "picEnvio";
             this.picEnvio.TabStop = false;
+            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
             this.picEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
             this.picEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
             // 
@@ -963,6 +1049,7 @@
             resources.ApplyResources(this.lblEnvio, "lblEnvio");
             this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
             this.lblEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
             this.lblEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
             // 
@@ -1048,6 +1135,9 @@
             this.pnlCampoIDPE.PerformLayout();
             this.pnlBordePaqDet.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.pnlTrans.ResumeLayout(false);
+            this.pnlTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBodega.ResumeLayout(false);
             this.pnlBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
@@ -1206,5 +1296,9 @@
         private System.Windows.Forms.PictureBox picEnvio;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label lblEnvio;
+        private System.Windows.Forms.Panel pnlTrans;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
     }
 }
