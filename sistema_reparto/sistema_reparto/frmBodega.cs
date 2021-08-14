@@ -770,9 +770,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = false;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -813,9 +813,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = false;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -833,9 +833,9 @@ namespace sistema_reparto
             pnlCampoIDB.Enabled = false;
             pnlIdUbicacion.Enabled = true;
             pnlSubUbicacion.Enabled = true;
-            pnlIdPaquete.Enabled = true;
-            pnlCampoIdC.Enabled = true;
-            pnlcampoIdE.Enabled = true;
+            pnlIdPaquete.Enabled = false;
+            pnlCampoIdC.Enabled = false;
+            pnlcampoIdE.Enabled = false;
             pnlCampoEstatus.Enabled = false;
             txtBuscarBodega.Enabled = true;
             pnlBotonBuscarB.Enabled = true;
@@ -856,9 +856,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = true;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -912,16 +912,13 @@ namespace sistema_reparto
             String idBodega = txtIdBodega.Text;
             String idUbicacion = cbxUbicacion.SelectedValue.ToString();
             String idSubUbicacion = cbxSubUbicacion.SelectedValue.ToString();
-            String idPaqueteE = cbxIdPaqueteE.SelectedValue.ToString();
-            String idCliente = cbxIdCliente.SelectedValue.ToString();
-            String idEmpleado = cbxIdEmpleado.SelectedValue.ToString();
-
-            String estatusPE = estatus;
+            
+            
 
             /*Final obteniedo variables a usar con mi ABC */
 
             /* Inicio creamos un objeto de tipo Bodega para poder utilizar el metodo de insertar */
-            Bodega bodega = new Bodega(idBodega, idUbicacion, idSubUbicacion, idPaqueteE, idCliente, idEmpleado, estatusPE);
+            Bodega bodega = new Bodega(idBodega, idUbicacion, idSubUbicacion, estatus);
             /* Final creamos un objeto de tipo Bodega para poder utilizar el metodo de insertar  */
 
             return bodega;
@@ -930,11 +927,11 @@ namespace sistema_reparto
         private void funVaciarCampos()
         {
             txtIdBodega.Text = "";
-            cbxUbicacion.SelectedIndex = 0;
-            cbxSubUbicacion.SelectedIndex = 0;
-            cbxIdPaqueteE.SelectedIndex = 0;
-            cbxIdCliente.SelectedIndex = 0;
-            cbxIdEmpleado.SelectedIndex = 0;
+            //cbxUbicacion.SelectedIndex = 0;
+            //cbxSubUbicacion.SelectedIndex = 0;
+            //cbxIdPaqueteE.SelectedIndex = 0;
+            //cbxIdCliente.SelectedIndex = 0;
+            //cbxIdEmpleado.SelectedIndex = 0;
             txtEstatusB.Text = "";
             txtBuscarBodega.Text = "";
 
@@ -957,7 +954,7 @@ namespace sistema_reparto
             bodega.funModificar(idBodega);
             funCargarTabla(null);
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, idBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, idBodega);
 
         }
 
@@ -980,22 +977,9 @@ namespace sistema_reparto
             bodega.obtenerNombreSubUbicacion(idSubUbicacion);
             cbxSubUbicacion.SelectedValue = idSubUbicacion;
 
-            cbxIdPaqueteE.SelectedValue = dgvBodega.CurrentRow.Cells[3].Value.ToString();
+           
 
-
-            String idCliente = dgvBodega.CurrentRow.Cells[4].Value.ToString();
-
-            /*Obteniendo Nombre de Cliente*/
-            bodega.obtenerNombreCliente(idCliente);
-            cbxIdCliente.SelectedValue = idCliente;
-
-            String idEmpleado = dgvBodega.CurrentRow.Cells[5].Value.ToString();
-
-            /*Obteniendo Nombre del Empleado*/
-            bodega.obtenerNombreEmpleado(idEmpleado);
-            cbxIdEmpleado.SelectedValue = idEmpleado;
-
-            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[3].Value.ToString();
 
         }
 
@@ -1032,22 +1016,7 @@ namespace sistema_reparto
             bodega.obtenerNombreSubUbicacion(idSubUbicacion);
             cbxSubUbicacion.SelectedValue = idSubUbicacion;
 
-            cbxIdPaqueteE.SelectedValue = dgvBodega.CurrentRow.Cells[3].Value.ToString();
-
-
-            String idCliente = dgvBodega.CurrentRow.Cells[4].Value.ToString();
-
-            /*Obteniendo Nombre de Cliente*/
-            bodega.obtenerNombreCliente(idCliente);
-            cbxIdCliente.SelectedValue = idCliente;
-
-            String idEmpleado = dgvBodega.CurrentRow.Cells[5].Value.ToString();
-
-            /*Obteniendo Nombre del Empleado*/
-            bodega.obtenerNombreEmpleado(idEmpleado);
-            cbxIdEmpleado.SelectedValue = idEmpleado;
-
-            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[3].Value.ToString();
 
 
             Bodega pbodega = new Bodega();
@@ -1078,7 +1047,7 @@ namespace sistema_reparto
             pnlDarBajaB.Visible = true;
             pnlActivarB.Visible = false;
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, pIdBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, pIdBodega);
 
         }
 
@@ -1094,7 +1063,7 @@ namespace sistema_reparto
             pnlDarBajaB.Visible = false;
             pnlActivarB.Visible = true;
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, pIdBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, pIdBodega);
 
         }
 
@@ -1103,61 +1072,61 @@ namespace sistema_reparto
 
         }
 
-        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
         {
-            frmEnvio obj = new frmEnvio();
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
 
-            obj.Visible = true;
+            movBodega.Visible = true;
 
             Visible = false;
         }
 
-        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
         {
-            frmEnvio obj = new frmEnvio();
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
 
-            obj.Visible = true;
+            movBodega.Visible = true;
 
             Visible = false;
         }
 
-        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
         {
-            frmEnvio obj = new frmEnvio();
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
 
-            obj.Visible = true;
+            movBodega.Visible = true;
 
             Visible = false;
         }
 
-        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorHoverBodega;
+            pnlMovBodega.BackColor = colorHoverBodega;
         }
 
-        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorNormalBodega;
+            pnlMovBodega.BackColor = colorHoverBodega;
         }
 
-        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorHoverBodega;
+            pnlMovBodega.BackColor = colorHoverBodega;
         }
 
-        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorNormalBodega;
+            pnlMovBodega.BackColor = colorNormalBodega;
         }
 
-        private void picEnvio_MouseHover(object sender, EventArgs e)
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorHoverBodega;
+            pnlMovBodega.BackColor = colorNormalBodega;
         }
 
-        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
         {
-            pnlEnvio.BackColor = colorNormalBodega;
+            pnlMovBodega.BackColor = colorNormalBodega;
         }
     }
 }

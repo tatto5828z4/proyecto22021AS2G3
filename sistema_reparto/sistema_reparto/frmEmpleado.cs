@@ -120,6 +120,18 @@ namespace sistema_reparto
             Empleado empleado = new Empleado();
             funCargarTabla(null);
 
+            pnlCampoIDE.Enabled = true;
+            pnlEmpleado.Enabled = true;
+            pnlCampoDpiEmpleado.Enabled = true;
+            pnlCampoIdUsuario.Enabled = true;
+            pnlCampoNombreEmpleado.Enabled = true;
+            pnlCampoApellidoEmpleado.Enabled = true;
+            pnlCampoTelEmpleado.Enabled = true;
+            pnlDirEmpleado.Enabled = true;
+            pnlSueldoEmpleado.Enabled = true;
+            pnlCampoIdPuestoEmpleado.Enabled = true;
+           
+
             pnlBordeRegistrar.Visible = true;
             pnlBordeModificar.Visible = false;
             pnlBordeDarBaja.Visible = false;
@@ -140,7 +152,7 @@ namespace sistema_reparto
             pnlDarBajaE.Visible = false;
             pnlActivarE.Visible = false;
             pnlLLenarCamposE.Visible = true;
-            pnlEstatusEmpleado.Visible = true;
+            pnlEstatusEmpleado.Visible = false;
             pnlBotonBuscarE.Visible = true;
             pnlModificarE.Visible = false;
 
@@ -272,6 +284,19 @@ namespace sistema_reparto
         {
             funVaciarCampos();
             funCargarTabla(null);
+
+            pnlCampoIDE.Enabled = false;
+            pnlCampoDpiEmpleado.Enabled = true;
+            pnlCampoIdUsuario.Enabled = true;
+            pnlCampoNombreEmpleado.Enabled = true;
+            pnlCampoApellidoEmpleado.Enabled = true;
+            pnlCampoTelEmpleado.Enabled = true;
+            pnlDirEmpleado.Enabled = true;
+            pnlSueldoEmpleado.Enabled = true;
+            pnlCampoIdPuestoEmpleado.Enabled = true;
+            pnlCampoIdDepEmpleado.Enabled = true;
+            pnlEstatusEmpleado.Enabled = false;
+
 
             pnlBordeRegistrar.Visible = false;
             pnlBordeModificar.Visible = true;
@@ -979,6 +1004,101 @@ namespace sistema_reparto
         private void picEnvio_MouseLeave(object sender, EventArgs e)
         {
             pnlEnvio.BackColor = colorNormalRuta;
+        }
+
+        private void pnlActivarE_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseClick_2(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverRuta;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalRuta;
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverRuta;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalRuta;
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverRuta;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverRuta;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverRuta;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalRuta;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalRuta;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalRuta;
         }
     }
 }

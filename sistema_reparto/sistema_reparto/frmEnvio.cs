@@ -1342,6 +1342,13 @@ namespace sistema_reparto
         {
             pnlEnvio.BackColor = colorNormalEnvio;
         }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
         /* Final funcion para cargar mi tabla de Ruta */
     }
 }
