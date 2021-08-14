@@ -561,3 +561,15 @@ C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\De
 C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
 C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources

@@ -124,17 +124,6 @@
             this.pnlLLenarCamposT = new System.Windows.Forms.Panel();
             this.txtBuscarTransporte = new System.Windows.Forms.TextBox();
             this.dgvTransporte = new System.Windows.Forms.DataGridView();
-            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTipoTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noChasisTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modeloTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.propietarioTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCampoNoChasis = new System.Windows.Forms.Panel();
             this.txtNoChasis = new System.Windows.Forms.TextBox();
             this.lblNoChasis = new System.Windows.Forms.Label();
@@ -162,6 +151,21 @@
             this.pnlBordeModificar = new System.Windows.Forms.Panel();
             this.lblModificarTransporte = new System.Windows.Forms.Label();
             this.pnlBotonBuscarT = new System.Windows.Forms.Panel();
+            this.pnlMovBodega = new System.Windows.Forms.Panel();
+            this.picMovBodega = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMovimientoBodega = new System.Windows.Forms.Label();
+            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTipoTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placaTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noChasisTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propietarioTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.pnlTransporte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -203,7 +207,6 @@
             this.pnlMarcaTransporte.SuspendLayout();
             this.pnlModeloTransporte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporteBindingSource)).BeginInit();
             this.pnlCampoNoChasis.SuspendLayout();
             this.pnlCampoColorTransporte.SuspendLayout();
             this.pnlCampoPlacaTransporte.SuspendLayout();
@@ -211,6 +214,9 @@
             this.pnlCampoNombreT.SuspendLayout();
             this.pnlCampoIDT.SuspendLayout();
             this.pnlBordeTransporte.SuspendLayout();
+            this.pnlMovBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -218,6 +224,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.pnlMovBodega);
             this.panel3.Controls.Add(this.pnlTransporte);
             this.panel3.Controls.Add(this.pnlPD);
             this.panel3.Controls.Add(this.pnlBodega);
@@ -237,7 +244,7 @@
             this.panel3.Controls.Add(this.pnlEnvio);
             this.panel3.Location = new System.Drawing.Point(-2, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(179, 790);
+            this.panel3.Size = new System.Drawing.Size(179, 759);
             this.panel3.TabIndex = 82;
             // 
             // pnlTransporte
@@ -257,7 +264,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -311,7 +317,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -369,7 +374,7 @@
             this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
             this.picBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picBodega.Location = new System.Drawing.Point(22, 10);
+            this.picBodega.Location = new System.Drawing.Point(25, 9);
             this.picBodega.Name = "picBodega";
             this.picBodega.Size = new System.Drawing.Size(20, 21);
             this.picBodega.TabIndex = 1;
@@ -391,12 +396,12 @@
             // lblBodega
             // 
             this.lblBodega.AutoSize = true;
-            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F);
+            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblBodega.Location = new System.Drawing.Point(78, 10);
             this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 16);
+            this.lblBodega.Size = new System.Drawing.Size(44, 13);
             this.lblBodega.TabIndex = 0;
             this.lblBodega.Text = "Bodega";
             this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
@@ -474,12 +479,12 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(46, 10);
+            this.label20.Location = new System.Drawing.Point(57, 10);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(125, 15);
+            this.label20.Size = new System.Drawing.Size(110, 13);
             this.label20.TabIndex = 2;
             this.label20.Text = "Paquete Encabezado";
             this.label20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPE_MouseClick);
@@ -491,7 +496,7 @@
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(30, 8);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 21);
             this.pictureBox5.TabIndex = 1;
@@ -528,12 +533,12 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label22.Location = new System.Drawing.Point(75, 10);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 15);
+            this.label22.Size = new System.Drawing.Size(48, 13);
             this.label22.TabIndex = 2;
             this.label22.Text = "Usuarios";
             this.label22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUsuarios_MouseClick);
@@ -582,12 +587,12 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label24.Location = new System.Drawing.Point(56, 10);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 15);
+            this.label24.Size = new System.Drawing.Size(82, 13);
             this.label24.TabIndex = 2;
             this.label24.Text = "Tipo Transporte";
             this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTT_MouseClick);
@@ -649,12 +654,12 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label26.Location = new System.Drawing.Point(57, 10);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(98, 15);
+            this.label26.Size = new System.Drawing.Size(85, 13);
             this.label26.TabIndex = 2;
             this.label26.Text = "Tipo Movimiento";
             this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
@@ -1118,7 +1123,6 @@
             // 
             // picEnvio
             // 
-            this.picEnvio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEnvio.BackgroundImage")));
             this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
             this.picEnvio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -1144,12 +1148,12 @@
             // lblEnvio
             // 
             this.lblEnvio.AutoSize = true;
-            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblEnvio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblEnvio.Location = new System.Drawing.Point(78, 10);
             this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(37, 15);
+            this.lblEnvio.Size = new System.Drawing.Size(34, 13);
             this.lblEnvio.TabIndex = 0;
             this.lblEnvio.Text = "Envio";
             this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
@@ -1161,7 +1165,7 @@
             this.pnlGuardarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGuardarT.BackgroundImage")));
             this.pnlGuardarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlGuardarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlGuardarT.Location = new System.Drawing.Point(535, 327);
+            this.pnlGuardarT.Location = new System.Drawing.Point(569, 338);
             this.pnlGuardarT.Name = "pnlGuardarT";
             this.pnlGuardarT.Size = new System.Drawing.Size(37, 42);
             this.pnlGuardarT.TabIndex = 100;
@@ -1288,7 +1292,7 @@
             this.pnlActivarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarT.BackgroundImage")));
             this.pnlActivarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarT.Location = new System.Drawing.Point(543, 466);
+            this.pnlActivarT.Location = new System.Drawing.Point(396, 504);
             this.pnlActivarT.Name = "pnlActivarT";
             this.pnlActivarT.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarT.TabIndex = 107;
@@ -1299,7 +1303,7 @@
             this.pnlModificarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarT.BackgroundImage")));
             this.pnlModificarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarT.Location = new System.Drawing.Point(538, 325);
+            this.pnlModificarT.Location = new System.Drawing.Point(572, 336);
             this.pnlModificarT.Name = "pnlModificarT";
             this.pnlModificarT.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarT.TabIndex = 83;
@@ -1310,7 +1314,7 @@
             this.pnlDarBajaT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaT.BackgroundImage")));
             this.pnlDarBajaT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaT.Location = new System.Drawing.Point(542, 466);
+            this.pnlDarBajaT.Location = new System.Drawing.Point(395, 504);
             this.pnlDarBajaT.Name = "pnlDarBajaT";
             this.pnlDarBajaT.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaT.TabIndex = 105;
@@ -1398,70 +1402,6 @@
             this.dgvTransporte.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransporte.Size = new System.Drawing.Size(307, 150);
             this.dgvTransporte.TabIndex = 102;
-            // 
-            // idTransporteDataGridViewTextBoxColumn
-            // 
-            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
-            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
-            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
-            // 
-            // nombreTransporteDataGridViewTextBoxColumn
-            // 
-            this.nombreTransporteDataGridViewTextBoxColumn.DataPropertyName = "NombreTransporte";
-            this.nombreTransporteDataGridViewTextBoxColumn.HeaderText = "Nombre Transporte";
-            this.nombreTransporteDataGridViewTextBoxColumn.Name = "nombreTransporteDataGridViewTextBoxColumn";
-            // 
-            // idTipoTransporteDataGridViewTextBoxColumn
-            // 
-            this.idTipoTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTipoTransporte";
-            this.idTipoTransporteDataGridViewTextBoxColumn.HeaderText = "Id Tipo Transporte";
-            this.idTipoTransporteDataGridViewTextBoxColumn.Name = "idTipoTransporteDataGridViewTextBoxColumn";
-            // 
-            // placaTransporteDataGridViewTextBoxColumn
-            // 
-            this.placaTransporteDataGridViewTextBoxColumn.DataPropertyName = "PlacaTransporte";
-            this.placaTransporteDataGridViewTextBoxColumn.HeaderText = "Placa Transporte";
-            this.placaTransporteDataGridViewTextBoxColumn.Name = "placaTransporteDataGridViewTextBoxColumn";
-            // 
-            // colorTransporteDataGridViewTextBoxColumn
-            // 
-            this.colorTransporteDataGridViewTextBoxColumn.DataPropertyName = "ColorTransporte";
-            this.colorTransporteDataGridViewTextBoxColumn.HeaderText = "Color Transporte";
-            this.colorTransporteDataGridViewTextBoxColumn.Name = "colorTransporteDataGridViewTextBoxColumn";
-            // 
-            // noChasisTransporteDataGridViewTextBoxColumn
-            // 
-            this.noChasisTransporteDataGridViewTextBoxColumn.DataPropertyName = "NoChasisTransporte";
-            this.noChasisTransporteDataGridViewTextBoxColumn.HeaderText = "No Chasis Transporte";
-            this.noChasisTransporteDataGridViewTextBoxColumn.Name = "noChasisTransporteDataGridViewTextBoxColumn";
-            // 
-            // modeloTransporteDataGridViewTextBoxColumn
-            // 
-            this.modeloTransporteDataGridViewTextBoxColumn.DataPropertyName = "ModeloTransporte";
-            this.modeloTransporteDataGridViewTextBoxColumn.HeaderText = "Modelo Transporte";
-            this.modeloTransporteDataGridViewTextBoxColumn.Name = "modeloTransporteDataGridViewTextBoxColumn";
-            // 
-            // marcaTransporteDataGridViewTextBoxColumn
-            // 
-            this.marcaTransporteDataGridViewTextBoxColumn.DataPropertyName = "MarcaTransporte";
-            this.marcaTransporteDataGridViewTextBoxColumn.HeaderText = "Marca Transporte";
-            this.marcaTransporteDataGridViewTextBoxColumn.Name = "marcaTransporteDataGridViewTextBoxColumn";
-            // 
-            // propietarioTransporteDataGridViewTextBoxColumn
-            // 
-            this.propietarioTransporteDataGridViewTextBoxColumn.DataPropertyName = "PropietarioTransporte";
-            this.propietarioTransporteDataGridViewTextBoxColumn.HeaderText = "Propietario Transporte";
-            this.propietarioTransporteDataGridViewTextBoxColumn.Name = "propietarioTransporteDataGridViewTextBoxColumn";
-            // 
-            // estatusTransporteDataGridViewTextBoxColumn
-            // 
-            this.estatusTransporteDataGridViewTextBoxColumn.DataPropertyName = "EstatusTransporte";
-            this.estatusTransporteDataGridViewTextBoxColumn.HeaderText = "Estatus Transporte";
-            this.estatusTransporteDataGridViewTextBoxColumn.Name = "estatusTransporteDataGridViewTextBoxColumn";
-            // 
-            // transporteBindingSource
-            // 
-            this.transporteBindingSource.DataSource = typeof(sistema_reparto.Clases.Transporte);
             // 
             // pnlCampoNoChasis
             // 
@@ -1691,7 +1631,7 @@
             this.pnlBordeRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrar.BackgroundImage")));
             this.pnlBordeRegistrar.Location = new System.Drawing.Point(214, 143);
             this.pnlBordeRegistrar.Name = "pnlBordeRegistrar";
-            this.pnlBordeRegistrar.Size = new System.Drawing.Size(100, 3);
+            this.pnlBordeRegistrar.Size = new System.Drawing.Size(120, 3);
             this.pnlBordeRegistrar.TabIndex = 89;
             // 
             // pnlBordeModificar
@@ -1699,7 +1639,7 @@
             this.pnlBordeModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificar.BackgroundImage")));
             this.pnlBordeModificar.Location = new System.Drawing.Point(521, 142);
             this.pnlBordeModificar.Name = "pnlBordeModificar";
-            this.pnlBordeModificar.Size = new System.Drawing.Size(100, 3);
+            this.pnlBordeModificar.Size = new System.Drawing.Size(120, 3);
             this.pnlBordeModificar.TabIndex = 90;
             // 
             // lblModificarTransporte
@@ -1726,12 +1666,129 @@
             this.pnlBotonBuscarT.TabIndex = 111;
             this.pnlBotonBuscarT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonBuscarT_MouseClick);
             // 
+            // pnlMovBodega
+            // 
+            this.pnlMovBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlMovBodega.Controls.Add(this.picMovBodega);
+            this.pnlMovBodega.Controls.Add(this.label2);
+            this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
+            this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlMovBodega.Location = new System.Drawing.Point(-2, 715);
+            this.pnlMovBodega.Name = "pnlMovBodega";
+            this.pnlMovBodega.Size = new System.Drawing.Size(180, 34);
+            this.pnlMovBodega.TabIndex = 112;
+            this.pnlMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlMovBodega_MouseClick);
+            this.pnlMovBodega.MouseLeave += new System.EventHandler(this.pnlMovBodega_MouseLeave);
+            this.pnlMovBodega.MouseHover += new System.EventHandler(this.pnlMovBodega_MouseHover);
+            // 
+            // picMovBodega
+            // 
+            this.picMovBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMovBodega.BackgroundImage")));
+            this.picMovBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picMovBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picMovBodega.Location = new System.Drawing.Point(19, 8);
+            this.picMovBodega.Name = "picMovBodega";
+            this.picMovBodega.Size = new System.Drawing.Size(20, 21);
+            this.picMovBodega.TabIndex = 1;
+            this.picMovBodega.TabStop = false;
+            this.picMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picMovBodega_MouseClick);
+            this.picMovBodega.MouseLeave += new System.EventHandler(this.picMovBodega_MouseLeave);
+            this.picMovBodega.MouseHover += new System.EventHandler(this.picMovBodega_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(15, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 1;
+            // 
+            // lblMovimientoBodega
+            // 
+            this.lblMovimientoBodega.AutoSize = true;
+            this.lblMovimientoBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblMovimientoBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblMovimientoBodega.Location = new System.Drawing.Point(49, 10);
+            this.lblMovimientoBodega.Name = "lblMovimientoBodega";
+            this.lblMovimientoBodega.Size = new System.Drawing.Size(101, 13);
+            this.lblMovimientoBodega.TabIndex = 0;
+            this.lblMovimientoBodega.Text = "Movimiento Bodega";
+            this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
+            this.lblMovimientoBodega.MouseLeave += new System.EventHandler(this.lblMovimientoBodega_MouseLeave);
+            this.lblMovimientoBodega.MouseHover += new System.EventHandler(this.lblMovimientoBodega_MouseHover);
+            // 
+            // idTransporteDataGridViewTextBoxColumn
+            // 
+            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
+            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
+            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
+            // 
+            // nombreTransporteDataGridViewTextBoxColumn
+            // 
+            this.nombreTransporteDataGridViewTextBoxColumn.DataPropertyName = "NombreTransporte";
+            this.nombreTransporteDataGridViewTextBoxColumn.HeaderText = "Nombre Transporte";
+            this.nombreTransporteDataGridViewTextBoxColumn.Name = "nombreTransporteDataGridViewTextBoxColumn";
+            // 
+            // idTipoTransporteDataGridViewTextBoxColumn
+            // 
+            this.idTipoTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTipoTransporte";
+            this.idTipoTransporteDataGridViewTextBoxColumn.HeaderText = "Id Tipo Transporte";
+            this.idTipoTransporteDataGridViewTextBoxColumn.Name = "idTipoTransporteDataGridViewTextBoxColumn";
+            // 
+            // placaTransporteDataGridViewTextBoxColumn
+            // 
+            this.placaTransporteDataGridViewTextBoxColumn.DataPropertyName = "PlacaTransporte";
+            this.placaTransporteDataGridViewTextBoxColumn.HeaderText = "Placa Transporte";
+            this.placaTransporteDataGridViewTextBoxColumn.Name = "placaTransporteDataGridViewTextBoxColumn";
+            // 
+            // colorTransporteDataGridViewTextBoxColumn
+            // 
+            this.colorTransporteDataGridViewTextBoxColumn.DataPropertyName = "ColorTransporte";
+            this.colorTransporteDataGridViewTextBoxColumn.HeaderText = "Color Transporte";
+            this.colorTransporteDataGridViewTextBoxColumn.Name = "colorTransporteDataGridViewTextBoxColumn";
+            // 
+            // noChasisTransporteDataGridViewTextBoxColumn
+            // 
+            this.noChasisTransporteDataGridViewTextBoxColumn.DataPropertyName = "NoChasisTransporte";
+            this.noChasisTransporteDataGridViewTextBoxColumn.HeaderText = "No Chasis Transporte";
+            this.noChasisTransporteDataGridViewTextBoxColumn.Name = "noChasisTransporteDataGridViewTextBoxColumn";
+            // 
+            // modeloTransporteDataGridViewTextBoxColumn
+            // 
+            this.modeloTransporteDataGridViewTextBoxColumn.DataPropertyName = "ModeloTransporte";
+            this.modeloTransporteDataGridViewTextBoxColumn.HeaderText = "Modelo Transporte";
+            this.modeloTransporteDataGridViewTextBoxColumn.Name = "modeloTransporteDataGridViewTextBoxColumn";
+            // 
+            // marcaTransporteDataGridViewTextBoxColumn
+            // 
+            this.marcaTransporteDataGridViewTextBoxColumn.DataPropertyName = "MarcaTransporte";
+            this.marcaTransporteDataGridViewTextBoxColumn.HeaderText = "Marca Transporte";
+            this.marcaTransporteDataGridViewTextBoxColumn.Name = "marcaTransporteDataGridViewTextBoxColumn";
+            // 
+            // propietarioTransporteDataGridViewTextBoxColumn
+            // 
+            this.propietarioTransporteDataGridViewTextBoxColumn.DataPropertyName = "PropietarioTransporte";
+            this.propietarioTransporteDataGridViewTextBoxColumn.HeaderText = "Propietario Transporte";
+            this.propietarioTransporteDataGridViewTextBoxColumn.Name = "propietarioTransporteDataGridViewTextBoxColumn";
+            // 
+            // estatusTransporteDataGridViewTextBoxColumn
+            // 
+            this.estatusTransporteDataGridViewTextBoxColumn.DataPropertyName = "EstatusTransporte";
+            this.estatusTransporteDataGridViewTextBoxColumn.HeaderText = "Estatus Transporte";
+            this.estatusTransporteDataGridViewTextBoxColumn.Name = "estatusTransporteDataGridViewTextBoxColumn";
+            // 
+            // transporteBindingSource
+            // 
+            this.transporteBindingSource.DataSource = typeof(sistema_reparto.Clases.Transporte);
+            // 
             // frmTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1068, 739);
+            this.ClientSize = new System.Drawing.Size(1068, 760);
             this.Controls.Add(this.pnlBotonBuscarT);
             this.Controls.Add(this.pnlGuardarT);
             this.Controls.Add(this.lblTituloTransporte);
@@ -1829,7 +1886,6 @@
             this.pnlModeloTransporte.ResumeLayout(false);
             this.pnlModeloTransporte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporteBindingSource)).EndInit();
             this.pnlCampoNoChasis.ResumeLayout(false);
             this.pnlCampoNoChasis.PerformLayout();
             this.pnlCampoColorTransporte.ResumeLayout(false);
@@ -1843,6 +1899,10 @@
             this.pnlCampoIDT.ResumeLayout(false);
             this.pnlCampoIDT.PerformLayout();
             this.pnlBordeTransporte.ResumeLayout(false);
+            this.pnlMovBodega.ResumeLayout(false);
+            this.pnlMovBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1980,5 +2040,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaTransporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn propietarioTransporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusTransporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel pnlMovBodega;
+        private System.Windows.Forms.PictureBox picMovBodega;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMovimientoBodega;
     }
 }
