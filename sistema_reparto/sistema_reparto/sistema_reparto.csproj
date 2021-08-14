@@ -79,6 +79,12 @@
     <Compile Include="frmBodega.designer.cs">
       <DependentUpon>frmBodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCalificacionPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalificacionPiloto.Designer.cs">
+      <DependentUpon>frmCalificacionPiloto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,10 +103,8 @@
     <Compile Include="frmPaqueteDetalle.designer.cs">
       <DependentUpon>frmPaqueteDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPaqueteEncabezado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPaqueteEncabezado.Designer.cs">
+    <Compile Include="frmPaqueteEncabezado.cs" />
+    <Compile Include="frmPaqueteEncabezado.designer.cs">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTransporte.cs">
@@ -173,6 +177,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBodega.resx">
       <DependentUpon>frmBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalificacionPiloto.resx">
+      <DependentUpon>frmCalificacionPiloto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
