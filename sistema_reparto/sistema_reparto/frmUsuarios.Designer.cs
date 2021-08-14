@@ -34,9 +34,18 @@ namespace sistema_reparto
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlEnvio = new System.Windows.Forms.Panel();
+            this.picEnvio = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
+            this.btnBodega = new System.Windows.Forms.Panel();
+            this.picBodega = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblBodega = new System.Windows.Forms.Label();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
             this.picEmple = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblEmpleado = new System.Windows.Forms.Label();
             this.btnPaqueteEncabezado = new System.Windows.Forms.Panel();
             this.lblPaqueteEncabezado = new System.Windows.Forms.Label();
             this.picIconoPaqueteE = new System.Windows.Forms.PictureBox();
@@ -201,12 +210,15 @@ namespace sistema_reparto
             this.pnlVeriPass = new System.Windows.Forms.Panel();
             this.pnlEstatusU = new System.Windows.Forms.Panel();
             this.pnlChecks = new System.Windows.Forms.Panel();
-            this.btnBodega = new System.Windows.Forms.Panel();
-            this.picBodega = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblBodega = new System.Windows.Forms.Label();
-            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.pnlTrans = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
+            this.pnlEnvio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
+            this.btnBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmple)).BeginInit();
             this.btnPaqueteEncabezado.SuspendLayout();
@@ -243,8 +255,8 @@ namespace sistema_reparto
             this.pnlVeriPass.SuspendLayout();
             this.pnlEstatusU.SuspendLayout();
             this.pnlChecks.SuspendLayout();
-            this.btnBodega.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
+            this.pnlTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -252,6 +264,8 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlTrans);
+            this.pnlSidebar.Controls.Add(this.pnlEnvio);
             this.pnlSidebar.Controls.Add(this.btnBodega);
             this.pnlSidebar.Controls.Add(this.pnlEmpleado);
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
@@ -270,6 +284,110 @@ namespace sistema_reparto
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(179, 721);
             this.pnlSidebar.TabIndex = 2;
+            // 
+            // pnlEnvio
+            // 
+            this.pnlEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEnvio.Controls.Add(this.picEnvio);
+            this.pnlEnvio.Controls.Add(this.label15);
+            this.pnlEnvio.Controls.Add(this.lblEnvio);
+            this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEnvio.Location = new System.Drawing.Point(2, 620);
+            this.pnlEnvio.Name = "pnlEnvio";
+            this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
+            this.pnlEnvio.TabIndex = 58;
+            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
+            this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
+            this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
+            // 
+            // picEnvio
+            // 
+            this.picEnvio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEnvio.BackgroundImage")));
+            this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
+            this.picEnvio.Location = new System.Drawing.Point(17, 8);
+            this.picEnvio.Name = "picEnvio";
+            this.picEnvio.Size = new System.Drawing.Size(20, 21);
+            this.picEnvio.TabIndex = 1;
+            this.picEnvio.TabStop = false;
+            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEnvio_MouseClick);
+            this.picEnvio.MouseLeave += new System.EventHandler(this.picEnvio_MouseLeave);
+            this.picEnvio.MouseHover += new System.EventHandler(this.picEnvio_MouseHover);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Image = ((System.Drawing.Image)(resources.GetObject("label15.Image")));
+            this.label15.Location = new System.Drawing.Point(15, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 13);
+            this.label15.TabIndex = 1;
+            // 
+            // lblEnvio
+            // 
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEnvio.Location = new System.Drawing.Point(78, 10);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(37, 15);
+            this.lblEnvio.TabIndex = 0;
+            this.lblEnvio.Text = "Envio";
+            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
+            this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
+            this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
+            // 
+            // btnBodega
+            // 
+            this.btnBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBodega.Controls.Add(this.picBodega);
+            this.btnBodega.Controls.Add(this.label16);
+            this.btnBodega.Controls.Add(this.lblBodega);
+            this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBodega.Location = new System.Drawing.Point(-1, 586);
+            this.btnBodega.Name = "btnBodega";
+            this.btnBodega.Size = new System.Drawing.Size(180, 34);
+            this.btnBodega.TabIndex = 57;
+            this.btnBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBodega_MouseClick);
+            this.btnBodega.MouseLeave += new System.EventHandler(this.btnBodega_MouseLeave);
+            this.btnBodega.MouseHover += new System.EventHandler(this.btnBodega_MouseHover);
+            // 
+            // picBodega
+            // 
+            this.picBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBodega.BackgroundImage")));
+            this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
+            this.picBodega.Location = new System.Drawing.Point(19, 10);
+            this.picBodega.Name = "picBodega";
+            this.picBodega.Size = new System.Drawing.Size(20, 21);
+            this.picBodega.TabIndex = 1;
+            this.picBodega.TabStop = false;
+            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBodega_MouseClick);
+            this.picBodega.MouseLeave += new System.EventHandler(this.picBodega_MouseLeave);
+            this.picBodega.MouseHover += new System.EventHandler(this.picBodega_MouseHover);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Image = ((System.Drawing.Image)(resources.GetObject("label16.Image")));
+            this.label16.Location = new System.Drawing.Point(15, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(0, 13);
+            this.label16.TabIndex = 1;
+            // 
+            // lblBodega
+            // 
+            this.lblBodega.AutoSize = true;
+            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBodega.Location = new System.Drawing.Point(68, 10);
+            this.lblBodega.Name = "lblBodega";
+            this.lblBodega.Size = new System.Drawing.Size(57, 16);
+            this.lblBodega.TabIndex = 0;
+            this.lblBodega.Text = "Bodega";
+            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
+            this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
+            this.lblBodega.MouseHover += new System.EventHandler(this.lblBodega_MouseHover);
             // 
             // pnlEmpleado
             // 
@@ -308,6 +426,20 @@ namespace sistema_reparto
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 1;
             // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEmpleado.Location = new System.Drawing.Point(67, 10);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(71, 16);
+            this.lblEmpleado.TabIndex = 0;
+            this.lblEmpleado.Text = "Empleado";
+            this.lblEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmpleado_MouseClick);
+            this.lblEmpleado.MouseLeave += new System.EventHandler(this.lblEmpleado_MouseLeave);
+            this.lblEmpleado.MouseHover += new System.EventHandler(this.lblEmpleado_MouseHover);
+            // 
             // btnPaqueteEncabezado
             // 
             this.btnPaqueteEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
@@ -330,7 +462,7 @@ namespace sistema_reparto
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqueteEncabezado.Location = new System.Drawing.Point(50, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(139, 16);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -381,7 +513,7 @@ namespace sistema_reparto
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUsuarios.Location = new System.Drawing.Point(71, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(62, 16);
+            this.lblUsuarios.Size = new System.Drawing.Size(48, 13);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
@@ -443,7 +575,7 @@ namespace sistema_reparto
             this.lblTipoMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoMovimiento.Location = new System.Drawing.Point(55, 10);
             this.lblTipoMovimiento.Name = "lblTipoMovimiento";
-            this.lblTipoMovimiento.Size = new System.Drawing.Size(108, 16);
+            this.lblTipoMovimiento.Size = new System.Drawing.Size(85, 13);
             this.lblTipoMovimiento.TabIndex = 2;
             this.lblTipoMovimiento.Text = "Tipo Movimiento";
             this.lblTipoMovimiento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoMovimiento_MouseClick);
@@ -504,7 +636,7 @@ namespace sistema_reparto
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblSubUbicacion.Location = new System.Drawing.Point(59, 11);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(93, 16);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
@@ -553,7 +685,7 @@ namespace sistema_reparto
             this.lblTipoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoEmpleado.Location = new System.Drawing.Point(56, 10);
             this.lblTipoEmpleado.Name = "lblTipoEmpleado";
-            this.lblTipoEmpleado.Size = new System.Drawing.Size(102, 16);
+            this.lblTipoEmpleado.Size = new System.Drawing.Size(78, 13);
             this.lblTipoEmpleado.TabIndex = 0;
             this.lblTipoEmpleado.Text = "Tipo Empleado";
             this.lblTipoEmpleado.MouseLeave += new System.EventHandler(this.lblTipoEmpleado_MouseLeave);
@@ -603,7 +735,7 @@ namespace sistema_reparto
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblRuta.Location = new System.Drawing.Point(74, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(36, 16);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
             this.lblRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRuta_MouseClick);
@@ -632,7 +764,7 @@ namespace sistema_reparto
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoTransporte.Location = new System.Drawing.Point(57, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(105, 16);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(82, 13);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
@@ -683,7 +815,7 @@ namespace sistema_reparto
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUbicacion.Location = new System.Drawing.Point(69, 10);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(70, 17);
+            this.lblUbicacion.Size = new System.Drawing.Size(69, 16);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
             this.lblUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUbicacion_MouseClick);
@@ -734,7 +866,7 @@ namespace sistema_reparto
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(61, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(98, 17);
+            this.lblDepartamento.Size = new System.Drawing.Size(94, 16);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             this.lblDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDepartamento_MouseClick);
@@ -807,7 +939,7 @@ namespace sistema_reparto
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(75, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(52, 17);
+            this.lblPuesto.Size = new System.Drawing.Size(50, 16);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             this.lblPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPuesto_MouseClick);
@@ -870,7 +1002,7 @@ namespace sistema_reparto
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(77, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(51, 17);
+            this.lblCliente.Size = new System.Drawing.Size(49, 16);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             this.lblCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCliente_MouseClick);
@@ -884,7 +1016,7 @@ namespace sistema_reparto
             this.lblTituloUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloUsuario.Location = new System.Drawing.Point(207, 12);
             this.lblTituloUsuario.Name = "lblTituloUsuario";
-            this.lblTituloUsuario.Size = new System.Drawing.Size(167, 40);
+            this.lblTituloUsuario.Size = new System.Drawing.Size(145, 35);
             this.lblTituloUsuario.TabIndex = 3;
             this.lblTituloUsuario.Text = "Usuarios";
             // 
@@ -894,7 +1026,7 @@ namespace sistema_reparto
             this.chkIngresarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarU.Location = new System.Drawing.Point(3, 14);
             this.chkIngresarU.Name = "chkIngresarU";
-            this.chkIngresarU.Size = new System.Drawing.Size(103, 17);
+            this.chkIngresarU.Size = new System.Drawing.Size(92, 16);
             this.chkIngresarU.TabIndex = 4;
             this.chkIngresarU.Text = "Ingresar Usuario";
             this.chkIngresarU.UseVisualStyleBackColor = true;
@@ -924,7 +1056,7 @@ namespace sistema_reparto
             this.lblAbcUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcUsuarios.Location = new System.Drawing.Point(208, 77);
             this.lblAbcUsuarios.Name = "lblAbcUsuarios";
-            this.lblAbcUsuarios.Size = new System.Drawing.Size(221, 24);
+            this.lblAbcUsuarios.Size = new System.Drawing.Size(189, 20);
             this.lblAbcUsuarios.TabIndex = 11;
             this.lblAbcUsuarios.Text = "Mantenimientos Usuarios";
             this.lblAbcUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcUsuarios_MouseClick);
@@ -937,7 +1069,7 @@ namespace sistema_reparto
             this.lblRegistrarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarUsuario.Location = new System.Drawing.Point(211, 127);
             this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
-            this.lblRegistrarUsuario.Size = new System.Drawing.Size(124, 18);
+            this.lblRegistrarUsuario.Size = new System.Drawing.Size(113, 16);
             this.lblRegistrarUsuario.TabIndex = 16;
             this.lblRegistrarUsuario.Text = "Registrar Usuario";
             this.lblRegistrarUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarUsuario_MouseClick);
@@ -958,7 +1090,7 @@ namespace sistema_reparto
             this.lblDarBajaUsu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblDarBajaUsu.Location = new System.Drawing.Point(1127, 127);
             this.lblDarBajaUsu.Name = "lblDarBajaUsu";
-            this.lblDarBajaUsu.Size = new System.Drawing.Size(85, 18);
+            this.lblDarBajaUsu.Size = new System.Drawing.Size(80, 16);
             this.lblDarBajaUsu.TabIndex = 18;
             this.lblDarBajaUsu.Text = "Dar de Baja";
             this.lblDarBajaUsu.Click += new System.EventHandler(this.lblDarBajaUsu_Click);
@@ -988,7 +1120,7 @@ namespace sistema_reparto
             this.lblModificarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarUsuario.Location = new System.Drawing.Point(676, 127);
             this.lblModificarUsuario.Name = "lblModificarUsuario";
-            this.lblModificarUsuario.Size = new System.Drawing.Size(125, 18);
+            this.lblModificarUsuario.Size = new System.Drawing.Size(113, 16);
             this.lblModificarUsuario.TabIndex = 17;
             this.lblModificarUsuario.Text = "Modificar Usuario";
             this.lblModificarUsuario.Click += new System.EventHandler(this.lblModificarUsuario_Click);
@@ -1000,7 +1132,7 @@ namespace sistema_reparto
             this.chkModificarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarU.Location = new System.Drawing.Point(111, 14);
             this.chkModificarU.Name = "chkModificarU";
-            this.chkModificarU.Size = new System.Drawing.Size(108, 17);
+            this.chkModificarU.Size = new System.Drawing.Size(97, 16);
             this.chkModificarU.TabIndex = 36;
             this.chkModificarU.Text = "Modificar Usuario";
             this.chkModificarU.UseVisualStyleBackColor = true;
@@ -1011,7 +1143,7 @@ namespace sistema_reparto
             this.chkDarBajaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaU.Location = new System.Drawing.Point(222, 14);
             this.chkDarBajaU.Name = "chkDarBajaU";
-            this.chkDarBajaU.Size = new System.Drawing.Size(106, 17);
+            this.chkDarBajaU.Size = new System.Drawing.Size(93, 16);
             this.chkDarBajaU.TabIndex = 56;
             this.chkDarBajaU.Text = "Dar Baja Usuario";
             this.chkDarBajaU.UseVisualStyleBackColor = true;
@@ -1022,7 +1154,7 @@ namespace sistema_reparto
             this.chkConsultaU.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaU.Location = new System.Drawing.Point(329, 14);
             this.chkConsultaU.Name = "chkConsultaU";
-            this.chkConsultaU.Size = new System.Drawing.Size(106, 17);
+            this.chkConsultaU.Size = new System.Drawing.Size(95, 16);
             this.chkConsultaU.TabIndex = 76;
             this.chkConsultaU.Text = "Consulta Usuario";
             this.chkConsultaU.UseVisualStyleBackColor = true;
@@ -1033,7 +1165,7 @@ namespace sistema_reparto
             this.chkIngresarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarC.Location = new System.Drawing.Point(437, 14);
             this.chkIngresarC.Name = "chkIngresarC";
-            this.chkIngresarC.Size = new System.Drawing.Size(99, 17);
+            this.chkIngresarC.Size = new System.Drawing.Size(89, 16);
             this.chkIngresarC.TabIndex = 96;
             this.chkIngresarC.Text = "Ingresar Cliente";
             this.chkIngresarC.UseVisualStyleBackColor = true;
@@ -1044,7 +1176,7 @@ namespace sistema_reparto
             this.chkModificarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarC.Location = new System.Drawing.Point(555, 13);
             this.chkModificarC.Name = "chkModificarC";
-            this.chkModificarC.Size = new System.Drawing.Size(104, 17);
+            this.chkModificarC.Size = new System.Drawing.Size(94, 16);
             this.chkModificarC.TabIndex = 116;
             this.chkModificarC.Text = "Modificar Cliente";
             this.chkModificarC.UseVisualStyleBackColor = true;
@@ -1055,7 +1187,7 @@ namespace sistema_reparto
             this.chkDarBajaC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaC.Location = new System.Drawing.Point(678, 13);
             this.chkDarBajaC.Name = "chkDarBajaC";
-            this.chkDarBajaC.Size = new System.Drawing.Size(102, 17);
+            this.chkDarBajaC.Size = new System.Drawing.Size(90, 16);
             this.chkDarBajaC.TabIndex = 136;
             this.chkDarBajaC.Text = "Dar Baja Cliente";
             this.chkDarBajaC.UseVisualStyleBackColor = true;
@@ -1066,7 +1198,7 @@ namespace sistema_reparto
             this.chkConsultarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarC.Location = new System.Drawing.Point(807, 13);
             this.chkConsultarC.Name = "chkConsultarC";
-            this.chkConsultarC.Size = new System.Drawing.Size(102, 17);
+            this.chkConsultarC.Size = new System.Drawing.Size(92, 16);
             this.chkConsultarC.TabIndex = 156;
             this.chkConsultarC.Text = "Consulta Cliente";
             this.chkConsultarC.UseVisualStyleBackColor = true;
@@ -1077,7 +1209,7 @@ namespace sistema_reparto
             this.chkIngresarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarD.Location = new System.Drawing.Point(910, 11);
             this.chkIngresarD.Name = "chkIngresarD";
-            this.chkIngresarD.Size = new System.Drawing.Size(96, 17);
+            this.chkIngresarD.Size = new System.Drawing.Size(85, 16);
             this.chkIngresarD.TabIndex = 176;
             this.chkIngresarD.Text = "Ingresar Depto";
             this.chkIngresarD.UseVisualStyleBackColor = true;
@@ -1088,7 +1220,7 @@ namespace sistema_reparto
             this.chkIngresarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarBo.Location = new System.Drawing.Point(446, 159);
             this.chkIngresarBo.Name = "chkIngresarBo";
-            this.chkIngresarBo.Size = new System.Drawing.Size(104, 17);
+            this.chkIngresarBo.Size = new System.Drawing.Size(91, 16);
             this.chkIngresarBo.TabIndex = 194;
             this.chkIngresarBo.Text = "Ingresar Bodega";
             this.chkIngresarBo.UseVisualStyleBackColor = true;
@@ -1099,7 +1231,7 @@ namespace sistema_reparto
             this.chkIngresarPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarPi.Location = new System.Drawing.Point(807, 48);
             this.chkIngresarPi.Name = "chkIngresarPi";
-            this.chkIngresarPi.Size = new System.Drawing.Size(93, 17);
+            this.chkIngresarPi.Size = new System.Drawing.Size(83, 16);
             this.chkIngresarPi.TabIndex = 192;
             this.chkIngresarPi.Text = "Ingresar Piloto";
             this.chkIngresarPi.UseVisualStyleBackColor = true;
@@ -1110,7 +1242,7 @@ namespace sistema_reparto
             this.chkConsultaPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaPu.Location = new System.Drawing.Point(678, 48);
             this.chkConsultaPu.Name = "chkConsultaPu";
-            this.chkConsultaPu.Size = new System.Drawing.Size(103, 17);
+            this.chkConsultaPu.Size = new System.Drawing.Size(92, 16);
             this.chkConsultaPu.TabIndex = 190;
             this.chkConsultaPu.Text = "Consulta Puesto";
             this.chkConsultaPu.UseVisualStyleBackColor = true;
@@ -1121,7 +1253,7 @@ namespace sistema_reparto
             this.chkDarBajaPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPu.Location = new System.Drawing.Point(555, 48);
             this.chkDarBajaPu.Name = "chkDarBajaPu";
-            this.chkDarBajaPu.Size = new System.Drawing.Size(103, 17);
+            this.chkDarBajaPu.Size = new System.Drawing.Size(90, 16);
             this.chkDarBajaPu.TabIndex = 188;
             this.chkDarBajaPu.Text = "Dar Baja Puesto";
             this.chkDarBajaPu.UseVisualStyleBackColor = true;
@@ -1132,7 +1264,7 @@ namespace sistema_reparto
             this.chkModificarPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPu.Location = new System.Drawing.Point(437, 49);
             this.chkModificarPu.Name = "chkModificarPu";
-            this.chkModificarPu.Size = new System.Drawing.Size(105, 17);
+            this.chkModificarPu.Size = new System.Drawing.Size(94, 16);
             this.chkModificarPu.TabIndex = 186;
             this.chkModificarPu.Text = "Modificar Puesto";
             this.chkModificarPu.UseVisualStyleBackColor = true;
@@ -1143,7 +1275,7 @@ namespace sistema_reparto
             this.chkIngresarPu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarPu.Location = new System.Drawing.Point(329, 49);
             this.chkIngresarPu.Name = "chkIngresarPu";
-            this.chkIngresarPu.Size = new System.Drawing.Size(100, 17);
+            this.chkIngresarPu.Size = new System.Drawing.Size(89, 16);
             this.chkIngresarPu.TabIndex = 184;
             this.chkIngresarPu.Text = "Ingresar Puesto";
             this.chkIngresarPu.UseVisualStyleBackColor = true;
@@ -1154,7 +1286,7 @@ namespace sistema_reparto
             this.chkConsultarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarD.Location = new System.Drawing.Point(222, 49);
             this.chkConsultarD.Name = "chkConsultarD";
-            this.chkConsultarD.Size = new System.Drawing.Size(102, 17);
+            this.chkConsultarD.Size = new System.Drawing.Size(91, 16);
             this.chkConsultarD.TabIndex = 182;
             this.chkConsultarD.Text = "Consultar Depto";
             this.chkConsultarD.UseVisualStyleBackColor = true;
@@ -1165,7 +1297,7 @@ namespace sistema_reparto
             this.chkDarBajaD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaD.Location = new System.Drawing.Point(111, 49);
             this.chkDarBajaD.Name = "chkDarBajaD";
-            this.chkDarBajaD.Size = new System.Drawing.Size(99, 17);
+            this.chkDarBajaD.Size = new System.Drawing.Size(86, 16);
             this.chkDarBajaD.TabIndex = 180;
             this.chkDarBajaD.Text = "Dar Baja Depto";
             this.chkDarBajaD.UseVisualStyleBackColor = true;
@@ -1176,7 +1308,7 @@ namespace sistema_reparto
             this.chkModificarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarD.Location = new System.Drawing.Point(3, 49);
             this.chkModificarD.Name = "chkModificarD";
-            this.chkModificarD.Size = new System.Drawing.Size(101, 17);
+            this.chkModificarD.Size = new System.Drawing.Size(90, 16);
             this.chkModificarD.TabIndex = 178;
             this.chkModificarD.Text = "Modificar Depto";
             this.chkModificarD.UseVisualStyleBackColor = true;
@@ -1187,7 +1319,7 @@ namespace sistema_reparto
             this.chkModificarEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarEnc.Location = new System.Drawing.Point(802, 80);
             this.chkModificarEnc.Name = "chkModificarEnc";
-            this.chkModificarEnc.Size = new System.Drawing.Size(134, 17);
+            this.chkModificarEnc.Size = new System.Drawing.Size(117, 16);
             this.chkModificarEnc.TabIndex = 212;
             this.chkModificarEnc.Text = "Modificar Paquete Enc";
             this.chkModificarEnc.UseVisualStyleBackColor = true;
@@ -1198,7 +1330,7 @@ namespace sistema_reparto
             this.chkPaqueteEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPaqueteEnc.Location = new System.Drawing.Point(699, 82);
             this.chkPaqueteEnc.Name = "chkPaqueteEnc";
-            this.chkPaqueteEnc.Size = new System.Drawing.Size(128, 17);
+            this.chkPaqueteEnc.Size = new System.Drawing.Size(96, 14);
             this.chkPaqueteEnc.TabIndex = 210;
             this.chkPaqueteEnc.Text = "Ingresar Paquete Enc";
             this.chkPaqueteEnc.UseVisualStyleBackColor = true;
@@ -1209,7 +1341,7 @@ namespace sistema_reparto
             this.chkConsultaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaE.Location = new System.Drawing.Point(570, 82);
             this.chkConsultaE.Name = "chkConsultaE";
-            this.chkConsultaE.Size = new System.Drawing.Size(117, 17);
+            this.chkConsultaE.Size = new System.Drawing.Size(104, 16);
             this.chkConsultaE.TabIndex = 208;
             this.chkConsultaE.Text = "Consulta Empleado";
             this.chkConsultaE.UseVisualStyleBackColor = true;
@@ -1220,7 +1352,7 @@ namespace sistema_reparto
             this.chkDarBajaE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaE.Location = new System.Drawing.Point(447, 82);
             this.chkDarBajaE.Name = "chkDarBajaE";
-            this.chkDarBajaE.Size = new System.Drawing.Size(117, 17);
+            this.chkDarBajaE.Size = new System.Drawing.Size(102, 16);
             this.chkDarBajaE.TabIndex = 206;
             this.chkDarBajaE.Text = "Dar Baja Empleado";
             this.chkDarBajaE.UseVisualStyleBackColor = true;
@@ -1231,7 +1363,7 @@ namespace sistema_reparto
             this.chkModificarE.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarE.Location = new System.Drawing.Point(329, 83);
             this.chkModificarE.Name = "chkModificarE";
-            this.chkModificarE.Size = new System.Drawing.Size(119, 17);
+            this.chkModificarE.Size = new System.Drawing.Size(106, 16);
             this.chkModificarE.TabIndex = 204;
             this.chkModificarE.Text = "Modificar Empleado";
             this.chkModificarE.UseVisualStyleBackColor = true;
@@ -1242,7 +1374,7 @@ namespace sistema_reparto
             this.chkIngresarEm.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarEm.Location = new System.Drawing.Point(221, 83);
             this.chkIngresarEm.Name = "chkIngresarEm";
-            this.chkIngresarEm.Size = new System.Drawing.Size(114, 17);
+            this.chkIngresarEm.Size = new System.Drawing.Size(101, 16);
             this.chkIngresarEm.TabIndex = 202;
             this.chkIngresarEm.Text = "Ingresar Empleado";
             this.chkIngresarEm.UseVisualStyleBackColor = true;
@@ -1253,7 +1385,7 @@ namespace sistema_reparto
             this.chkConsultaPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaPi.Location = new System.Drawing.Point(114, 83);
             this.chkConsultaPi.Name = "chkConsultaPi";
-            this.chkConsultaPi.Size = new System.Drawing.Size(96, 17);
+            this.chkConsultaPi.Size = new System.Drawing.Size(86, 16);
             this.chkConsultaPi.TabIndex = 200;
             this.chkConsultaPi.Text = "Consulta Piloto";
             this.chkConsultaPi.UseVisualStyleBackColor = true;
@@ -1264,7 +1396,7 @@ namespace sistema_reparto
             this.chkDarBajaPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPi.Location = new System.Drawing.Point(3, 83);
             this.chkDarBajaPi.Name = "chkDarBajaPi";
-            this.chkDarBajaPi.Size = new System.Drawing.Size(96, 17);
+            this.chkDarBajaPi.Size = new System.Drawing.Size(84, 16);
             this.chkDarBajaPi.TabIndex = 198;
             this.chkDarBajaPi.Text = "Dar Baja Piloto";
             this.chkDarBajaPi.UseVisualStyleBackColor = true;
@@ -1275,7 +1407,7 @@ namespace sistema_reparto
             this.chkModificarPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPi.Location = new System.Drawing.Point(910, 46);
             this.chkModificarPi.Name = "chkModificarPi";
-            this.chkModificarPi.Size = new System.Drawing.Size(98, 17);
+            this.chkModificarPi.Size = new System.Drawing.Size(88, 16);
             this.chkModificarPi.TabIndex = 196;
             this.chkModificarPi.Text = "Modificar Piloto";
             this.chkModificarPi.UseVisualStyleBackColor = true;
@@ -1286,7 +1418,7 @@ namespace sistema_reparto
             this.chkDarBajaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaUb.Location = new System.Drawing.Point(802, 118);
             this.chkDarBajaUb.Name = "chkDarBajaUb";
-            this.chkDarBajaUb.Size = new System.Drawing.Size(118, 17);
+            this.chkDarBajaUb.Size = new System.Drawing.Size(102, 16);
             this.chkDarBajaUb.TabIndex = 230;
             this.chkDarBajaUb.Text = "Dar Baja Ubicacion";
             this.chkDarBajaUb.UseVisualStyleBackColor = true;
@@ -1297,7 +1429,7 @@ namespace sistema_reparto
             this.chkModificarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarUb.Location = new System.Drawing.Point(699, 120);
             this.chkModificarUb.Name = "chkModificarUb";
-            this.chkModificarUb.Size = new System.Drawing.Size(116, 17);
+            this.chkModificarUb.Size = new System.Drawing.Size(92, 14);
             this.chkModificarUb.TabIndex = 228;
             this.chkModificarUb.Text = "Modificar Ubicacion";
             this.chkModificarUb.UseVisualStyleBackColor = true;
@@ -1308,7 +1440,7 @@ namespace sistema_reparto
             this.chkIngresarUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarUb.Location = new System.Drawing.Point(570, 120);
             this.chkIngresarUb.Name = "chkIngresarUb";
-            this.chkIngresarUb.Size = new System.Drawing.Size(115, 17);
+            this.chkIngresarUb.Size = new System.Drawing.Size(101, 16);
             this.chkIngresarUb.TabIndex = 226;
             this.chkIngresarUb.Text = "Ingresar Ubicacion";
             this.chkIngresarUb.UseVisualStyleBackColor = true;
@@ -1319,7 +1451,7 @@ namespace sistema_reparto
             this.chkConsultaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaDet.Location = new System.Drawing.Point(447, 120);
             this.chkConsultaDet.Name = "chkConsultaDet";
-            this.chkConsultaDet.Size = new System.Drawing.Size(130, 17);
+            this.chkConsultaDet.Size = new System.Drawing.Size(97, 14);
             this.chkConsultaDet.TabIndex = 224;
             this.chkConsultaDet.Text = "Consulta Paquete Det";
             this.chkConsultaDet.UseVisualStyleBackColor = true;
@@ -1330,7 +1462,7 @@ namespace sistema_reparto
             this.chkDarBajaPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPaDet.Location = new System.Drawing.Point(329, 121);
             this.chkDarBajaPaDet.Name = "chkDarBajaPaDet";
-            this.chkDarBajaPaDet.Size = new System.Drawing.Size(145, 17);
+            this.chkDarBajaPaDet.Size = new System.Drawing.Size(107, 14);
             this.chkDarBajaPaDet.TabIndex = 222;
             this.chkDarBajaPaDet.Text = "Dar de Baja Paquete Det";
             this.chkDarBajaPaDet.UseVisualStyleBackColor = true;
@@ -1341,7 +1473,7 @@ namespace sistema_reparto
             this.chkModificarPaDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarPaDet.Location = new System.Drawing.Point(221, 121);
             this.chkModificarPaDet.Name = "chkModificarPaDet";
-            this.chkModificarPaDet.Size = new System.Drawing.Size(131, 17);
+            this.chkModificarPaDet.Size = new System.Drawing.Size(99, 14);
             this.chkModificarPaDet.TabIndex = 220;
             this.chkModificarPaDet.Text = "Modificar Paquete Det";
             this.chkModificarPaDet.UseVisualStyleBackColor = true;
@@ -1352,7 +1484,7 @@ namespace sistema_reparto
             this.chkIngresarPaDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarPaDe.Location = new System.Drawing.Point(114, 121);
             this.chkIngresarPaDe.Name = "chkIngresarPaDe";
-            this.chkIngresarPaDe.Size = new System.Drawing.Size(127, 17);
+            this.chkIngresarPaDe.Size = new System.Drawing.Size(95, 14);
             this.chkIngresarPaDe.TabIndex = 218;
             this.chkIngresarPaDe.Text = "Ingresar Paquete Det";
             this.chkIngresarPaDe.UseVisualStyleBackColor = true;
@@ -1363,7 +1495,7 @@ namespace sistema_reparto
             this.chkConsultaPaEc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaPaEc.Location = new System.Drawing.Point(3, 121);
             this.chkConsultaPaEc.Name = "chkConsultaPaEc";
-            this.chkConsultaPaEc.Size = new System.Drawing.Size(131, 17);
+            this.chkConsultaPaEc.Size = new System.Drawing.Size(98, 14);
             this.chkConsultaPaEc.TabIndex = 216;
             this.chkConsultaPaEc.Text = "Consulta Paquete Enc";
             this.chkConsultaPaEc.UseVisualStyleBackColor = true;
@@ -1374,7 +1506,7 @@ namespace sistema_reparto
             this.chkDarBajaPaEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaPaEnc.Location = new System.Drawing.Point(926, 80);
             this.chkDarBajaPaEnc.Name = "chkDarBajaPaEnc";
-            this.chkDarBajaPaEnc.Size = new System.Drawing.Size(131, 17);
+            this.chkDarBajaPaEnc.Size = new System.Drawing.Size(98, 14);
             this.chkDarBajaPaEnc.TabIndex = 214;
             this.chkDarBajaPaEnc.Text = "Dar Baja Paquete Enc";
             this.chkDarBajaPaEnc.UseVisualStyleBackColor = true;
@@ -1385,7 +1517,7 @@ namespace sistema_reparto
             this.chkInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkInventario.Location = new System.Drawing.Point(910, 158);
             this.chkInventario.Name = "chkInventario";
-            this.chkInventario.Size = new System.Drawing.Size(114, 17);
+            this.chkInventario.Size = new System.Drawing.Size(102, 16);
             this.chkInventario.TabIndex = 248;
             this.chkInventario.Text = "Ingresar Inventario";
             this.chkInventario.UseVisualStyleBackColor = true;
@@ -1396,7 +1528,7 @@ namespace sistema_reparto
             this.chkConsultarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarBo.Location = new System.Drawing.Point(807, 160);
             this.chkConsultarBo.Name = "chkConsultarBo";
-            this.chkConsultarBo.Size = new System.Drawing.Size(110, 17);
+            this.chkConsultarBo.Size = new System.Drawing.Size(97, 16);
             this.chkConsultarBo.TabIndex = 246;
             this.chkConsultarBo.Text = "Consultar Bodega";
             this.chkConsultarBo.UseVisualStyleBackColor = true;
@@ -1407,7 +1539,7 @@ namespace sistema_reparto
             this.chkDarBajaBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaBo.Location = new System.Drawing.Point(678, 160);
             this.chkDarBajaBo.Name = "chkDarBajaBo";
-            this.chkDarBajaBo.Size = new System.Drawing.Size(107, 17);
+            this.chkDarBajaBo.Size = new System.Drawing.Size(92, 16);
             this.chkDarBajaBo.TabIndex = 244;
             this.chkDarBajaBo.Text = "Dar Baja Bodega";
             this.chkDarBajaBo.UseVisualStyleBackColor = true;
@@ -1418,7 +1550,7 @@ namespace sistema_reparto
             this.chkModificarBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarBo.Location = new System.Drawing.Point(555, 160);
             this.chkModificarBo.Name = "chkModificarBo";
-            this.chkModificarBo.Size = new System.Drawing.Size(109, 17);
+            this.chkModificarBo.Size = new System.Drawing.Size(96, 16);
             this.chkModificarBo.TabIndex = 242;
             this.chkModificarBo.Text = "Modificar Bodega";
             this.chkModificarBo.UseVisualStyleBackColor = true;
@@ -1429,7 +1561,7 @@ namespace sistema_reparto
             this.chkConsultaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaSub.Location = new System.Drawing.Point(329, 161);
             this.chkConsultaSub.Name = "chkConsultaSub";
-            this.chkConsultaSub.Size = new System.Drawing.Size(133, 17);
+            this.chkConsultaSub.Size = new System.Drawing.Size(101, 14);
             this.chkConsultaSub.TabIndex = 240;
             this.chkConsultaSub.Text = "Consulta Sububicacion";
             this.chkConsultaSub.UseVisualStyleBackColor = true;
@@ -1440,7 +1572,7 @@ namespace sistema_reparto
             this.chkDarBajaSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaSub.Location = new System.Drawing.Point(221, 161);
             this.chkDarBajaSub.Name = "chkDarBajaSub";
-            this.chkDarBajaSub.Size = new System.Drawing.Size(133, 17);
+            this.chkDarBajaSub.Size = new System.Drawing.Size(101, 14);
             this.chkDarBajaSub.TabIndex = 238;
             this.chkDarBajaSub.Text = "Dar Baja Sububicacion";
             this.chkDarBajaSub.UseVisualStyleBackColor = true;
@@ -1451,7 +1583,7 @@ namespace sistema_reparto
             this.chkModificarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarSub.Location = new System.Drawing.Point(114, 161);
             this.chkModificarSub.Name = "chkModificarSub";
-            this.chkModificarSub.Size = new System.Drawing.Size(134, 17);
+            this.chkModificarSub.Size = new System.Drawing.Size(103, 14);
             this.chkModificarSub.TabIndex = 236;
             this.chkModificarSub.Text = "Modificar Sububicacion";
             this.chkModificarSub.UseVisualStyleBackColor = true;
@@ -1462,7 +1594,7 @@ namespace sistema_reparto
             this.chkIngresarSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarSub.Location = new System.Drawing.Point(3, 161);
             this.chkIngresarSub.Name = "chkIngresarSub";
-            this.chkIngresarSub.Size = new System.Drawing.Size(130, 17);
+            this.chkIngresarSub.Size = new System.Drawing.Size(99, 14);
             this.chkIngresarSub.TabIndex = 234;
             this.chkIngresarSub.Text = "Ingresar Sububicacion";
             this.chkIngresarSub.UseVisualStyleBackColor = true;
@@ -1473,7 +1605,7 @@ namespace sistema_reparto
             this.chkConsultaUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaUb.Location = new System.Drawing.Point(916, 116);
             this.chkConsultaUb.Name = "chkConsultaUb";
-            this.chkConsultaUb.Size = new System.Drawing.Size(118, 17);
+            this.chkConsultaUb.Size = new System.Drawing.Size(104, 16);
             this.chkConsultaUb.TabIndex = 232;
             this.chkConsultaUb.Text = "Consulta Ubicacion";
             this.chkConsultaUb.UseVisualStyleBackColor = true;
@@ -1484,7 +1616,7 @@ namespace sistema_reparto
             this.chkIngresarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarTra.Location = new System.Drawing.Point(812, 197);
             this.chkIngresarTra.Name = "chkIngresarTra";
-            this.chkIngresarTra.Size = new System.Drawing.Size(118, 17);
+            this.chkIngresarTra.Size = new System.Drawing.Size(104, 16);
             this.chkIngresarTra.TabIndex = 266;
             this.chkIngresarTra.Text = "Ingresar Transporte";
             this.chkIngresarTra.UseVisualStyleBackColor = true;
@@ -1495,7 +1627,7 @@ namespace sistema_reparto
             this.chkConsultarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarTip.Location = new System.Drawing.Point(700, 199);
             this.chkConsultarTip.Name = "chkConsultarTip";
-            this.chkConsultarTip.Size = new System.Drawing.Size(144, 17);
+            this.chkConsultarTip.Size = new System.Drawing.Size(113, 14);
             this.chkConsultarTip.TabIndex = 264;
             this.chkConsultarTip.Text = "Consultar Tipo Transporte";
             this.chkConsultarTip.UseVisualStyleBackColor = true;
@@ -1506,7 +1638,7 @@ namespace sistema_reparto
             this.chkDarBajaTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaTip.Location = new System.Drawing.Point(571, 199);
             this.chkDarBajaTip.Name = "chkDarBajaTip";
-            this.chkDarBajaTip.Size = new System.Drawing.Size(141, 17);
+            this.chkDarBajaTip.Size = new System.Drawing.Size(110, 14);
             this.chkDarBajaTip.TabIndex = 262;
             this.chkDarBajaTip.Text = "Dar Baja Tipo Transporte";
             this.chkDarBajaTip.UseVisualStyleBackColor = true;
@@ -1517,7 +1649,7 @@ namespace sistema_reparto
             this.chkModificarTiT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarTiT.Location = new System.Drawing.Point(448, 199);
             this.chkModificarTiT.Name = "chkModificarTiT";
-            this.chkModificarTiT.Size = new System.Drawing.Size(142, 17);
+            this.chkModificarTiT.Size = new System.Drawing.Size(112, 14);
             this.chkModificarTiT.TabIndex = 260;
             this.chkModificarTiT.Text = "Modificar Tipo Transporte";
             this.chkModificarTiT.UseVisualStyleBackColor = true;
@@ -1528,7 +1660,7 @@ namespace sistema_reparto
             this.chkIngresarTipoT.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarTipoT.Location = new System.Drawing.Point(330, 200);
             this.chkIngresarTipoT.Name = "chkIngresarTipoT";
-            this.chkIngresarTipoT.Size = new System.Drawing.Size(138, 17);
+            this.chkIngresarTipoT.Size = new System.Drawing.Size(108, 14);
             this.chkIngresarTipoT.TabIndex = 258;
             this.chkIngresarTipoT.Text = "Ingresar Tipo Transporte";
             this.chkIngresarTipoT.UseVisualStyleBackColor = true;
@@ -1539,7 +1671,7 @@ namespace sistema_reparto
             this.chkConsultarMovBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarMovBo.Location = new System.Drawing.Point(222, 200);
             this.chkConsultarMovBo.Name = "chkConsultarMovBo";
-            this.chkConsultarMovBo.Size = new System.Drawing.Size(134, 17);
+            this.chkConsultarMovBo.Size = new System.Drawing.Size(101, 14);
             this.chkConsultarMovBo.TabIndex = 256;
             this.chkConsultarMovBo.Text = "Consultar Mov Bodega";
             this.chkConsultarMovBo.UseVisualStyleBackColor = true;
@@ -1550,7 +1682,7 @@ namespace sistema_reparto
             this.chkConsultaIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaIn.Location = new System.Drawing.Point(115, 200);
             this.chkConsultaIn.Name = "chkConsultaIn";
-            this.chkConsultaIn.Size = new System.Drawing.Size(120, 17);
+            this.chkConsultaIn.Size = new System.Drawing.Size(108, 16);
             this.chkConsultaIn.TabIndex = 254;
             this.chkConsultaIn.Text = "Consultar Inventario";
             this.chkConsultaIn.UseVisualStyleBackColor = true;
@@ -1561,7 +1693,7 @@ namespace sistema_reparto
             this.chkModificarIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarIn.Location = new System.Drawing.Point(4, 200);
             this.chkModificarIn.Name = "chkModificarIn";
-            this.chkModificarIn.Size = new System.Drawing.Size(119, 17);
+            this.chkModificarIn.Size = new System.Drawing.Size(107, 16);
             this.chkModificarIn.TabIndex = 250;
             this.chkModificarIn.Text = "Modificar Inventario";
             this.chkModificarIn.UseVisualStyleBackColor = true;
@@ -1572,7 +1704,7 @@ namespace sistema_reparto
             this.chkIngresarEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarEnvio.Location = new System.Drawing.Point(697, 234);
             this.chkIngresarEnvio.Name = "chkIngresarEnvio";
-            this.chkIngresarEnvio.Size = new System.Drawing.Size(94, 17);
+            this.chkIngresarEnvio.Size = new System.Drawing.Size(84, 16);
             this.chkIngresarEnvio.TabIndex = 284;
             this.chkIngresarEnvio.Text = "Ingresar Envio";
             this.chkIngresarEnvio.UseVisualStyleBackColor = true;
@@ -1583,7 +1715,7 @@ namespace sistema_reparto
             this.chkConsultarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarRu.Location = new System.Drawing.Point(572, 235);
             this.chkConsultarRu.Name = "chkConsultarRu";
-            this.chkConsultarRu.Size = new System.Drawing.Size(96, 17);
+            this.chkConsultarRu.Size = new System.Drawing.Size(86, 16);
             this.chkConsultarRu.TabIndex = 280;
             this.chkConsultarRu.Text = "Consultar Ruta";
             this.chkConsultarRu.UseVisualStyleBackColor = true;
@@ -1594,7 +1726,7 @@ namespace sistema_reparto
             this.chkDarBajaRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaRu.Location = new System.Drawing.Point(449, 235);
             this.chkDarBajaRu.Name = "chkDarBajaRu";
-            this.chkDarBajaRu.Size = new System.Drawing.Size(93, 17);
+            this.chkDarBajaRu.Size = new System.Drawing.Size(81, 16);
             this.chkDarBajaRu.TabIndex = 278;
             this.chkDarBajaRu.Text = "Dar Baja Ruta";
             this.chkDarBajaRu.UseVisualStyleBackColor = true;
@@ -1605,7 +1737,7 @@ namespace sistema_reparto
             this.chkModificarRu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarRu.Location = new System.Drawing.Point(331, 236);
             this.chkModificarRu.Name = "chkModificarRu";
-            this.chkModificarRu.Size = new System.Drawing.Size(95, 17);
+            this.chkModificarRu.Size = new System.Drawing.Size(85, 16);
             this.chkModificarRu.TabIndex = 276;
             this.chkModificarRu.Text = "Modificar Ruta";
             this.chkModificarRu.UseVisualStyleBackColor = true;
@@ -1616,7 +1748,7 @@ namespace sistema_reparto
             this.chkIngresarRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarRuta.Location = new System.Drawing.Point(223, 236);
             this.chkIngresarRuta.Name = "chkIngresarRuta";
-            this.chkIngresarRuta.Size = new System.Drawing.Size(90, 17);
+            this.chkIngresarRuta.Size = new System.Drawing.Size(80, 16);
             this.chkIngresarRuta.TabIndex = 274;
             this.chkIngresarRuta.Text = "Ingresar Ruta";
             this.chkIngresarRuta.UseVisualStyleBackColor = true;
@@ -1627,7 +1759,7 @@ namespace sistema_reparto
             this.chkConsultarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarTra.Location = new System.Drawing.Point(116, 236);
             this.chkConsultarTra.Name = "chkConsultarTra";
-            this.chkConsultarTra.Size = new System.Drawing.Size(124, 17);
+            this.chkConsultarTra.Size = new System.Drawing.Size(110, 16);
             this.chkConsultarTra.TabIndex = 272;
             this.chkConsultarTra.Text = "Consultar Transporte";
             this.chkConsultarTra.UseVisualStyleBackColor = true;
@@ -1638,7 +1770,7 @@ namespace sistema_reparto
             this.chkDarBajaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaTra.Location = new System.Drawing.Point(5, 236);
             this.chkDarBajaTra.Name = "chkDarBajaTra";
-            this.chkDarBajaTra.Size = new System.Drawing.Size(121, 17);
+            this.chkDarBajaTra.Size = new System.Drawing.Size(105, 16);
             this.chkDarBajaTra.TabIndex = 270;
             this.chkDarBajaTra.Text = "Dar Baja Transporte";
             this.chkDarBajaTra.UseVisualStyleBackColor = true;
@@ -1649,7 +1781,7 @@ namespace sistema_reparto
             this.chkModificarTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarTra.Location = new System.Drawing.Point(919, 196);
             this.chkModificarTra.Name = "chkModificarTra";
-            this.chkModificarTra.Size = new System.Drawing.Size(123, 17);
+            this.chkModificarTra.Size = new System.Drawing.Size(109, 16);
             this.chkModificarTra.TabIndex = 268;
             this.chkModificarTra.Text = "Modificar Transporte";
             this.chkModificarTra.UseVisualStyleBackColor = true;
@@ -1897,7 +2029,7 @@ namespace sistema_reparto
             this.chkModificarEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarEn.Location = new System.Drawing.Point(812, 234);
             this.chkModificarEn.Name = "chkModificarEn";
-            this.chkModificarEn.Size = new System.Drawing.Size(99, 17);
+            this.chkModificarEn.Size = new System.Drawing.Size(89, 16);
             this.chkModificarEn.TabIndex = 323;
             this.chkModificarEn.Text = "Modificar Envio";
             this.chkModificarEn.UseVisualStyleBackColor = true;
@@ -1908,7 +2040,7 @@ namespace sistema_reparto
             this.chkDarBajaEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDarBajaEn.Location = new System.Drawing.Point(919, 234);
             this.chkDarBajaEn.Name = "chkDarBajaEn";
-            this.chkDarBajaEn.Size = new System.Drawing.Size(97, 17);
+            this.chkDarBajaEn.Size = new System.Drawing.Size(85, 16);
             this.chkDarBajaEn.TabIndex = 324;
             this.chkDarBajaEn.Text = "Dar Baja Envio";
             this.chkDarBajaEn.UseVisualStyleBackColor = true;
@@ -1919,7 +2051,7 @@ namespace sistema_reparto
             this.chkConsultaEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultaEn.Location = new System.Drawing.Point(6, 271);
             this.chkConsultaEn.Name = "chkConsultaEn";
-            this.chkConsultaEn.Size = new System.Drawing.Size(97, 17);
+            this.chkConsultaEn.Size = new System.Drawing.Size(87, 16);
             this.chkConsultaEn.TabIndex = 325;
             this.chkConsultaEn.Text = "Consulta Envio";
             this.chkConsultaEn.UseVisualStyleBackColor = true;
@@ -1930,7 +2062,7 @@ namespace sistema_reparto
             this.chkInsertarBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkInsertarBitaTrans.Location = new System.Drawing.Point(116, 271);
             this.chkInsertarBitaTrans.Name = "chkInsertarBitaTrans";
-            this.chkInsertarBitaTrans.Size = new System.Drawing.Size(133, 17);
+            this.chkInsertarBitaTrans.Size = new System.Drawing.Size(104, 14);
             this.chkInsertarBitaTrans.TabIndex = 326;
             this.chkInsertarBitaTrans.Text = "Ingresar Bitacora Trans";
             this.chkInsertarBitaTrans.UseVisualStyleBackColor = true;
@@ -1941,7 +2073,7 @@ namespace sistema_reparto
             this.chkBitacoraUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBitacoraUsuario.Location = new System.Drawing.Point(457, 270);
             this.chkBitacoraUsuario.Name = "chkBitacoraUsuario";
-            this.chkBitacoraUsuario.Size = new System.Drawing.Size(104, 17);
+            this.chkBitacoraUsuario.Size = new System.Drawing.Size(92, 16);
             this.chkBitacoraUsuario.TabIndex = 327;
             this.chkBitacoraUsuario.Text = "Bitacora Usuario";
             this.chkBitacoraUsuario.UseVisualStyleBackColor = true;
@@ -1952,7 +2084,7 @@ namespace sistema_reparto
             this.chkIngresarCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIngresarCalificacion.Location = new System.Drawing.Point(558, 269);
             this.chkIngresarCalificacion.Name = "chkIngresarCalificacion";
-            this.chkIngresarCalificacion.Size = new System.Drawing.Size(121, 17);
+            this.chkIngresarCalificacion.Size = new System.Drawing.Size(108, 16);
             this.chkIngresarCalificacion.TabIndex = 328;
             this.chkIngresarCalificacion.Text = "Ingresar Calificacion";
             this.chkIngresarCalificacion.UseVisualStyleBackColor = true;
@@ -1963,7 +2095,7 @@ namespace sistema_reparto
             this.chkConsultarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarCa.Location = new System.Drawing.Point(803, 268);
             this.chkConsultarCa.Name = "chkConsultarCa";
-            this.chkConsultarCa.Size = new System.Drawing.Size(127, 17);
+            this.chkConsultarCa.Size = new System.Drawing.Size(114, 16);
             this.chkConsultarCa.TabIndex = 329;
             this.chkConsultarCa.Text = "Consultar Calificacion";
             this.chkConsultarCa.UseVisualStyleBackColor = true;
@@ -2018,7 +2150,7 @@ namespace sistema_reparto
             this.chkModificarBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarBi.Location = new System.Drawing.Point(223, 271);
             this.chkModificarBi.Name = "chkModificarBi";
-            this.chkModificarBi.Size = new System.Drawing.Size(137, 17);
+            this.chkModificarBi.Size = new System.Drawing.Size(108, 14);
             this.chkModificarBi.TabIndex = 334;
             this.chkModificarBi.Text = "Modificar Bitacora Trans";
             this.chkModificarBi.UseVisualStyleBackColor = true;
@@ -2029,7 +2161,7 @@ namespace sistema_reparto
             this.chkModificarCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkModificarCa.Location = new System.Drawing.Point(676, 269);
             this.chkModificarCa.Name = "chkModificarCa";
-            this.chkModificarCa.Size = new System.Drawing.Size(126, 17);
+            this.chkModificarCa.Size = new System.Drawing.Size(113, 16);
             this.chkModificarCa.TabIndex = 335;
             this.chkModificarCa.Text = "Modificar Calificacion";
             this.chkModificarCa.UseVisualStyleBackColor = true;
@@ -2040,7 +2172,7 @@ namespace sistema_reparto
             this.chkReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkReportes.Location = new System.Drawing.Point(923, 268);
             this.chkReportes.Name = "chkReportes";
-            this.chkReportes.Size = new System.Drawing.Size(69, 17);
+            this.chkReportes.Size = new System.Drawing.Size(62, 16);
             this.chkReportes.TabIndex = 336;
             this.chkReportes.Text = "Reportes";
             this.chkReportes.UseVisualStyleBackColor = true;
@@ -2068,7 +2200,7 @@ namespace sistema_reparto
             this.chkConsultarBTTras.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConsultarBTTras.Location = new System.Drawing.Point(341, 270);
             this.chkConsultarBTTras.Name = "chkConsultarBTTras";
-            this.chkConsultarBTTras.Size = new System.Drawing.Size(139, 17);
+            this.chkConsultarBTTras.Size = new System.Drawing.Size(109, 14);
             this.chkConsultarBTTras.TabIndex = 339;
             this.chkConsultarBTTras.Text = "Consultar Bitacora Trans";
             this.chkConsultarBTTras.UseVisualStyleBackColor = true;
@@ -2215,71 +2347,51 @@ namespace sistema_reparto
             this.pnlChecks.Size = new System.Drawing.Size(1087, 301);
             this.pnlChecks.TabIndex = 347;
             // 
-            // btnBodega
+            // pnlTrans
             // 
-            this.btnBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.btnBodega.Controls.Add(this.picBodega);
-            this.btnBodega.Controls.Add(this.label16);
-            this.btnBodega.Controls.Add(this.lblBodega);
-            this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(-1, 586);
-            this.btnBodega.Name = "btnBodega";
-            this.btnBodega.Size = new System.Drawing.Size(180, 34);
-            this.btnBodega.TabIndex = 57;
-            this.btnBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBodega_MouseClick);
-            this.btnBodega.MouseLeave += new System.EventHandler(this.btnBodega_MouseLeave);
-            this.btnBodega.MouseHover += new System.EventHandler(this.btnBodega_MouseHover);
+            this.pnlTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlTrans.Controls.Add(this.pictureBox2);
+            this.pnlTrans.Controls.Add(this.label10);
+            this.pnlTrans.Controls.Add(this.label25);
+            this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlTrans.Location = new System.Drawing.Point(0, 654);
+            this.pnlTrans.Name = "pnlTrans";
+            this.pnlTrans.Size = new System.Drawing.Size(180, 34);
+            this.pnlTrans.TabIndex = 59;
+            this.pnlTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick);
             // 
-            // picBodega
+            // pictureBox2
             // 
-            this.picBodega.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBodega.BackgroundImage")));
-            this.picBodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBodega.Image = ((System.Drawing.Image)(resources.GetObject("picBodega.Image")));
-            this.picBodega.Location = new System.Drawing.Point(19, 10);
-            this.picBodega.Name = "picBodega";
-            this.picBodega.Size = new System.Drawing.Size(20, 21);
-            this.picBodega.TabIndex = 1;
-            this.picBodega.TabStop = false;
-            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBodega_MouseClick);
-            this.picBodega.MouseLeave += new System.EventHandler(this.picBodega_MouseLeave);
-            this.picBodega.MouseHover += new System.EventHandler(this.picBodega_MouseHover);
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // label16
+            // label10
             // 
-            this.label16.AutoSize = true;
-            this.label16.Image = ((System.Drawing.Image)(resources.GetObject("label16.Image")));
-            this.label16.Location = new System.Drawing.Point(15, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 13);
-            this.label16.TabIndex = 1;
+            this.label10.AutoSize = true;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(15, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 1;
             // 
-            // lblBodega
+            // label25
             // 
-            this.lblBodega.AutoSize = true;
-            this.lblBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblBodega.Location = new System.Drawing.Point(68, 10);
-            this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 17);
-            this.lblBodega.TabIndex = 0;
-            this.lblBodega.Text = "Bodega";
-            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
-            this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
-            this.lblBodega.MouseHover += new System.EventHandler(this.lblBodega_MouseHover);
-            // 
-            // lblEmpleado
-            // 
-            this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblEmpleado.Location = new System.Drawing.Point(67, 10);
-            this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(71, 17);
-            this.lblEmpleado.TabIndex = 0;
-            this.lblEmpleado.Text = "Empleado";
-            this.lblEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEmpleado_MouseClick);
-            this.lblEmpleado.MouseLeave += new System.EventHandler(this.lblEmpleado_MouseLeave);
-            this.lblEmpleado.MouseHover += new System.EventHandler(this.lblEmpleado_MouseHover);
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label25.Location = new System.Drawing.Point(68, 10);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Transporte";
             // 
             // frmUsuarios
             // 
@@ -2320,6 +2432,12 @@ namespace sistema_reparto
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmUsuarios_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlEnvio.ResumeLayout(false);
+            this.pnlEnvio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
+            this.btnBodega.ResumeLayout(false);
+            this.btnBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
             this.pnlEmpleado.ResumeLayout(false);
             this.pnlEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmple)).EndInit();
@@ -2376,9 +2494,9 @@ namespace sistema_reparto
             this.pnlEstatusU.PerformLayout();
             this.pnlChecks.ResumeLayout(false);
             this.pnlChecks.PerformLayout();
-            this.btnBodega.ResumeLayout(false);
-            this.btnBodega.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
+            this.pnlTrans.ResumeLayout(false);
+            this.pnlTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2559,5 +2677,13 @@ namespace sistema_reparto
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblBodega;
         private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.Panel pnlEnvio;
+        private System.Windows.Forms.PictureBox picEnvio;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEnvio;
+        private System.Windows.Forms.Panel pnlTrans;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label25;
     }
 }
