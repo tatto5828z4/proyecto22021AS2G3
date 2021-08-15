@@ -56,7 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\BitacoraTransporte.cs" />
     <Compile Include="Clases\Bodega.cs" />
+    <Compile Include="Clases\CalificacionPiloto.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
@@ -65,16 +67,22 @@
     <Compile Include="Clases\MovBodega.cs" />
     <Compile Include="Clases\PaqueteDetalle.cs" />
     <Compile Include="Clases\PaqueteEncabezado.cs" />
+    <Compile Include="Clases\Piloto.cs" />
     <Compile Include="Clases\Puesto.cs" />
     <Compile Include="Clases\Departamento.cs" />
     <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Clases\SubUbicacion.cs" />
-    <Compile Include="Clases\TipoEmpleado.cs" />
     <Compile Include="Clases\TipoMovimiento.cs" />
     <Compile Include="Clases\TipoTransporte.cs" />
     <Compile Include="Clases\Transporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="frmBitacoraTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBitacoraTransporte.designer.cs">
+      <DependentUpon>frmBitacoraTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +124,12 @@
     </Compile>
     <Compile Include="frmPaqueteEncabezado.designer.cs">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPiloto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPiloto.designer.cs">
+      <DependentUpon>frmPiloto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTransporte.cs">
       <SubType>Form</SubType>
@@ -159,12 +173,6 @@
     <Compile Include="frmSubUbicacion.Designer.cs">
       <DependentUpon>frmSubUbicacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmtipoEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmtipoEmpleado.Designer.cs">
-      <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTipoMovimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +193,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBitacoraTransporte.resx">
+      <DependentUpon>frmBitacoraTransporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBodega.resx">
       <DependentUpon>frmBodega.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +220,9 @@
     <EmbeddedResource Include="frmPaqueteEncabezado.resx">
       <DependentUpon>frmPaqueteEncabezado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPiloto.resx">
+      <DependentUpon>frmPiloto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubUbicacion.resx">
       <DependentUpon>frmSubUbicacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmtipoEmpleado.resx">
-      <DependentUpon>frmtipoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoMovimiento.resx">
       <DependentUpon>frmTipoMovimiento.cs</DependentUpon>

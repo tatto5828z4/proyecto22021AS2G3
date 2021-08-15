@@ -45,10 +45,13 @@ namespace sistema_reparto
             /*LLENADO DE COMBOBOX*/
             /*Llamando Combobox*/
             Envio envio = new Envio();
-            envio.cargarCombobox(cbxPiloto, "piloto", "idPiloto", "nombrePiloto");
-            envio.cargarCombobox(cbxIdTransporte, "transporte", "idTransporte", "nombreTransporte");      
-            envio.cargarCombobox(cbxIdRuta, "ruta", "idRuta", "idRuta");
-            envio.cargarCombobox(cbxMoBodega, "movimientoBodega", "idMovBodega", "idMovBodega");
+           envio.cargarCombobox(cbxPiloto, "piloto", "idPiloto", "nombrePiloto");
+           envio.cargarCombobox(cbxIdTransporte, "transporte", "idTransporte", "nombreTransporte");      
+           envio.cargarCombobox(cbxIdRuta, "ruta", "idRuta", "idRuta");
+           
+          envio.cargarCombobox(cbxMoBodega, "movimientoBodega", "idMovBodega", "idMovBodega");
+
+            
 
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
@@ -83,6 +86,10 @@ namespace sistema_reparto
             pnlCambiaEstado.Visible = false;
             pnlEntregado.Visible = false;
 
+            pnlIdBodega.Visible = false;
+            pnlIdPaquete.Visible = false;
+            pnlIdCliente.Visible = false;
+            pnlIdEmpleado.Visible = false;
 
 
         }
@@ -155,7 +162,10 @@ namespace sistema_reparto
             pnlEnviado.Visible = false;
             pnlRecibido.Visible = false;
             lblCambiaEstado.Visible = true;
-            
+
+           
+
+
             pnlCambiaEstado.Visible = false;
 
         }
@@ -177,6 +187,9 @@ namespace sistema_reparto
            // String buscarE = txtBuscarEnvio.Text;
             funCargarTabla(null);
             mapa();
+            
+
+
             pnlBordeRegistrar.Visible = true;
             pnlCampoIdPiloto.Visible = true;
             pnlOrdenEnvio.Visible = true;
@@ -200,13 +213,29 @@ namespace sistema_reparto
             pnlRecibido.Visible = false;
             pnlLlenarCamposEDB.Visible = false;
             pnlCambiaEstado.Visible = false;
-            
+
+            pnlIdBodega.Visible = true;
+            pnlIdPaquete.Visible = true;
+            pnlIdCliente.Visible = true;
+            pnlIdEmpleado.Visible = true;
+
             /*Desabilitando Campos*/
             pnlOrdenEnvio.Visible = false;
             txtOrdenEnvio.Enabled = false;
             pnlEstatusEnvio.Visible = false;
 
             pnlEntregado.Visible = false;
+
+            pnlIdBodega.Enabled = false;
+            pnlIdPaquete.Enabled = false;
+            pnlIdCliente.Enabled = false;
+            pnlIdEmpleado.Enabled = false;
+
+            pnlCampoIdPiloto.Enabled = true;
+            pnlIdTransporte.Enabled = true;
+            pnlRuta.Enabled = true;
+            pnlMoBodega.Enabled = true;
+
         }
 
         private void lblModificarEnvio_MouseClick(object sender, MouseEventArgs e)
@@ -222,15 +251,15 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = true;
 
             pnlBotonGuardarEnvio.Visible = false;
-            pnlModificarEnvio.Visible = true;
+            pnlModificarEnvio.Visible = false;
 
 
             pnlOrdenEnvio.Visible = true;
 
-            
+            pnlEstatusEnvio.Enabled = false;
             pnlCampoIdPiloto.Visible = true;
             pnlIdTransporte.Visible = true;
-            pnlEstatusEnvio.Visible = false;
+            pnlEstatusEnvio.Visible = true;
             pnlRuta.Visible = true;
             pnlMoBodega.Visible = true;
             pnlFechaEnvio.Visible = true;
@@ -242,8 +271,16 @@ namespace sistema_reparto
             txtIdRuta.Visible = true;
             pnlIdRuta.Visible = true;
             dgvRuta.Visible = true;
-           
-            pnlBordeModificar.Visible = true;
+
+            pnlCampoIdPiloto.Enabled = false;
+            pnlIdTransporte.Enabled = false;
+            pnlRuta.Enabled = false;
+            pnlMoBodega.Enabled = false;
+
+            
+
+
+
             pnlEnviado.Visible = false;
             pnlRecibido.Visible = false;
             pnlCambiaEstado.Visible = false;
@@ -254,7 +291,17 @@ namespace sistema_reparto
             pnlLlenarCamposEDB.Visible = true;
             txtEstatusMoEnvio.Enabled = false;
             pnlLlenarCamposEDB.Visible = false;
-           
+
+            pnlIdBodega.Enabled = false;
+            pnlIdPaquete.Enabled = false;
+            pnlIdCliente.Enabled = false;
+            pnlIdEmpleado.Enabled = false;
+
+            pnlIdBodega.Visible = true;
+            pnlIdPaquete.Visible = true;
+            pnlIdCliente.Visible = true;
+            pnlIdEmpleado.Visible = true;
+
         }
 
         private void btnCliente_MouseHover(object sender, EventArgs e)
@@ -462,59 +509,47 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverEnvio;
+           
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalEnvio;
+            
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverEnvio;
+          
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalEnvio;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverEnvio;
+           
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalEnvio;
+           
         }
 
         private void btnRuta_MouseClick(object sender, MouseEventArgs e)
@@ -666,32 +701,32 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+            
         }
 
         private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+            
         }
 
         private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+         
         }
 
         private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void btnTipoTransporte_MouseClick(object sender, MouseEventArgs e)
@@ -940,24 +975,17 @@ namespace sistema_reparto
 
         private void pnlBotonGuardarEnvio_MouseClick(object sender, MouseEventArgs e)
         {
-            /* Inicio de ejecucion de funcion insertar un cliente */
 
-           /* if (txtEstatusMoEnvio.Text == "")
-            {
-                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {*/
-           /*Estados del estatus :  E --  , R */
-                
-                String estatusE = "P";
-                Envio envio = funObtenerTxt(estatusE);
+
+            String estatusEP = "P";
+
+                Envio envio = funObtenerTxt(estatusEP);
                 envio.funInsertar();
                 /* Final de ejecucion de funcion insertar un cliente */
 
                 funCargarTabla(null);
                 funVaciarCampos();
-           // }
+           
         }
 
 
@@ -969,6 +997,14 @@ namespace sistema_reparto
             String idOrdenE = "0";
             String idTransporteE = cbxIdTransporte.SelectedValue.ToString();
             String idRutaE = cbxIdRuta.SelectedValue.ToString();
+
+            //revisar por si da error aca
+            String idBodega = txtIdBodega.Text;
+            String idPaquete = txtIdPaquete.Text;
+            String idCliente = txtIdCliente.Text;
+            String idEmpleado = txtIdEmpleado.Text;
+
+
             String idMovBodegaE = cbxMoBodega.SelectedValue.ToString();
             String fechaE = txtFechaClienteEntPE.Value.ToString("yyyy-MM-dd");
 
@@ -977,9 +1013,9 @@ namespace sistema_reparto
 
             /*Final obteniedo variables a usar con mi ABC */
 
-            /* Inicio creamos un objeto de tipo paqueteEncabezado para poder utilizar el metodo de insertar */
-            Envio envio = new Envio(idPiloto, idOrdenE, idTransporteE, idRutaE, idMovBodegaE, fechaE, estatusEnvio);
-            /* Final creamos un objeto de tipo cliente para poder utilizar el metodo de insertar cliente */
+            /* Inicio creamos un objeto de tipo envio para poder utilizar el metodo de insertar */
+            Envio envio = new Envio(idPiloto, idOrdenE, idTransporteE, idRutaE, idMovBodegaE, idBodega, idPaquete, idCliente, idEmpleado, fechaE, estatusEnvio);
+            /* Final creamos un objeto de tipo envio para poder utilizar el metodo de insertar cliente */
 
             return envio;
         }
@@ -992,6 +1028,13 @@ namespace sistema_reparto
             String idTransporteE = cbxIdTransporte.SelectedValue.ToString();
             String idRutaE = cbxIdRuta.SelectedValue.ToString();
             String idMovBodegaE = cbxMoBodega.SelectedValue.ToString();
+
+            //revisar por si da error aca
+            String idBodega = txtIdBodega.Text;
+            String idPaquete = txtIdPaquete.Text;
+            String idCliente = txtIdCliente.Text;
+            String idEmpleado = txtIdEmpleado.Text;
+
             String fechaE = txtFechaClienteEntPE.Value.ToString("yyyy-MM-dd");
 
 
@@ -1000,7 +1043,7 @@ namespace sistema_reparto
             /*Final obteniedo variables a usar con mi ABC */
 
             /* Inicio creamos un objeto de tipo paqueteEncabezado para poder utilizar el metodo de insertar */
-            Envio envio = new Envio(idPiloto, idOrdenE, idTransporteE, idRutaE, idMovBodegaE, fechaE, estatus);
+            Envio envio = new Envio(idPiloto, idOrdenE, idTransporteE, idRutaE, idMovBodegaE, idBodega, idPaquete, idCliente, idEmpleado, fechaE, estatusEnvio);
             /* Final creamos un objeto de tipo cliente para poder utilizar el metodo de insertar cliente */
 
             return envio;
@@ -1044,48 +1087,74 @@ namespace sistema_reparto
             envio.funModificar(idOrdenE);
             funCargarTabla(null);
 
-            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtFechaClienteEntPE, txtEstatusMoEnvio);
+
+            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtIdBodega, txtIdPaquete, txtIdCliente, txtIdEmpleado, txtFechaClienteEntPE, txtEstatusMoEnvio);
             funVaciarCampos();
         }
 
         private void pnlLLenarCamposEnvio_MouseClick(object sender, MouseEventArgs e)
         {
-            txtOrdenEnvio.Text = dgvEnvio.CurrentRow.Cells[1].Value.ToString();
+            
 
             String idPiloto = dgvEnvio.CurrentRow.Cells[0].Value.ToString();
             Envio envio = new Envio();
-            envio.obtenerNombre(idPiloto);
+            envio.obtenerNombrePiloto(idPiloto);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
             cbxPiloto.SelectedValue = idPiloto;
 
+            txtOrdenEnvio.Text = dgvEnvio.CurrentRow.Cells[1].Value.ToString();
+
             String idTransporteE = dgvEnvio.CurrentRow.Cells[2].Value.ToString();
             Envio Transporte = new Envio();
-            Transporte.obtenerNombre(idTransporteE);
+            Transporte.obtenerNombreTransporte(idTransporteE);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
             cbxIdTransporte.SelectedValue = idTransporteE;
 
 
             String idRutaE = dgvEnvio.CurrentRow.Cells[3].Value.ToString();
             Envio ruta = new Envio();
-            ruta.obtenerNombre(idRutaE);
+            ruta.obtenerNombreRuta(idRutaE);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
-            cbxIdTransporte.SelectedValue = idRutaE;
+            cbxIdRuta.SelectedValue = idRutaE;
 
             String idMovBodegaE = dgvEnvio.CurrentRow.Cells[4].Value.ToString();
             Envio mBodega = new Envio();
-            ruta.obtenerNombre(idMovBodegaE);
+            ruta.obtenerNombreMB(idMovBodegaE);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
-            cbxIdTransporte.SelectedValue = idMovBodegaE;
+            cbxMoBodega.SelectedValue = idMovBodegaE;
 
+            txtIdBodega.Text = dgvEnvio.CurrentRow.Cells[5].Value.ToString();
+
+            txtIdPaquete.Text = dgvEnvio.CurrentRow.Cells[6].Value.ToString();
+            
+           // txtIdCliente.Text = dgvEnvio.CurrentRow.Cells[7].Value.ToString();
+            String idcliente = dgvEnvio.CurrentRow.Cells[7].Value.ToString();
+            Envio envios = new Envio();
+            
+            String cliente = envios.obtenerNombreCliente(idcliente);
+            txtIdCliente.Text = cliente;
+
+
+           // txtIdEmpleado.Text = dgvEnvio.CurrentRow.Cells[8].Value.ToString();
+           String idEmpleado = dgvEnvio.CurrentRow.Cells[8].Value.ToString();
+            
+
+            String Empleado = envios.obtenerNombreEmpleado(idEmpleado);
+            txtIdEmpleado.Text = Empleado;
 
 
             // De string a dateTime
-            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvEnvio.CurrentRow.Cells[5].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvEnvio.CurrentRow.Cells[9].Value.ToString());
           
        
 
-            txtEstatusMoEnvio.Text = dgvEnvio.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusMoEnvio.Text = dgvEnvio.CurrentRow.Cells[10].Value.ToString();
 
+           /* String idMovBodega = cbxMoBodega.SelectedValue.ToString();
+            Envio envios = new Envio();
+
+            envios.funLlenarCamposNombre(idMovBodega, txtIdEmpleado, txtIdCliente);
+           */
         }
 
         private void pnlEnviado_MouseClick(object sender, MouseEventArgs e)
@@ -1101,7 +1170,7 @@ namespace sistema_reparto
             pnlRecibido.Visible = true;
             pnlEntregado.Visible = false;
 
-            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtFechaClienteEntPE, txtEstatusMoEnvio);
+            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtIdBodega, txtIdPaquete, txtIdCliente, txtIdEmpleado, txtFechaClienteEntPE, txtEstatusMoEnvio);
             txtEstatusMoEnvio.Text = "E";
             // pnlEnviado.Visible = false;
         }
@@ -1119,20 +1188,22 @@ namespace sistema_reparto
             pnlRecibido.Visible = false;
             pnlEntregado.Visible = true;
 
-            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtFechaClienteEntPE, txtEstatusMoEnvio);
+            envio.funBuscarSetearTxt(cbxPiloto, txtOrdenEnvio, cbxIdTransporte, cbxIdRuta, cbxMoBodega, txtIdBodega, txtIdPaquete, txtIdCliente, txtIdEmpleado, txtFechaClienteEntPE, txtEstatusMoEnvio);
             txtEstatusMoEnvio.Text = "R";
             // pnlRecibido.Visible = false; 
         }
 
         private void pnlLlenarCamposEDB_MouseClick(object sender, MouseEventArgs e)
         {
-            txtOrdenEnvio.Text = dgvEnvio.CurrentRow.Cells[1].Value.ToString();
+            
 
             String idPiloto = dgvEnvio.CurrentRow.Cells[0].Value.ToString();
             Envio envio = new Envio();
             envio.obtenerNombre(idPiloto);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
             cbxPiloto.SelectedValue = idPiloto;
+
+            txtOrdenEnvio.Text = dgvEnvio.CurrentRow.Cells[1].Value.ToString();
 
             String idTransporteE = dgvEnvio.CurrentRow.Cells[2].Value.ToString();
             Envio Transporte = new Envio();
@@ -1145,20 +1216,31 @@ namespace sistema_reparto
             Envio ruta = new Envio();
             ruta.obtenerNombre(idRutaE);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
-            cbxIdTransporte.SelectedValue = idRutaE;
+            cbxIdRuta.SelectedValue = idRutaE;
 
             String idMovBodegaE = dgvEnvio.CurrentRow.Cells[4].Value.ToString();
             Envio mBodega = new Envio();
             ruta.obtenerNombre(idMovBodegaE);
             //en la funcion idPiloto se le asigna el nombre que existe en la BD y se le coloca al combobox
-            cbxIdTransporte.SelectedValue = idMovBodegaE;
+            cbxMoBodega.SelectedValue = idMovBodegaE;
 
+            txtIdBodega.Text = dgvEnvio.CurrentRow.Cells[5].Value.ToString();
+
+            txtIdPaquete.Text = dgvEnvio.CurrentRow.Cells[6].Value.ToString();
+
+            // txtIdCliente.Text = dgvEnvio.CurrentRow.Cells[7].Value.ToString();
+            String idcliente = dgvEnvio.CurrentRow.Cells[7].Value.ToString();
+            Envio envios = new Envio();
+            envios.obtenerNombreCliente(idcliente);
+            txtIdCliente.Text = idcliente;
+
+            txtIdEmpleado.Text = dgvEnvio.CurrentRow.Cells[8].Value.ToString();
 
 
             // De string a dateTime
-            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvEnvio.CurrentRow.Cells[5].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvEnvio.CurrentRow.Cells[9].Value.ToString());
 
-            txtEstatusMoEnvio.Text = dgvEnvio.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusMoEnvio.Text = dgvEnvio.CurrentRow.Cells[10].Value.ToString();
 
             Envio envioB = new Envio();
             String idOE = txtOrdenEnvio.Text;
@@ -1218,6 +1300,16 @@ namespace sistema_reparto
             txtIdRuta.Visible = true;
             pnlIdRuta.Visible = true;
             txtEstatusMoEnvio.Enabled = false;
+
+            pnlIdBodega.Enabled = false;
+            pnlIdPaquete.Enabled = false;
+            pnlIdCliente.Enabled = false;
+            pnlIdEmpleado.Enabled = false;
+
+            pnlIdBodega.Visible = true;
+            pnlIdPaquete.Visible = true;
+            pnlIdCliente.Visible = true;
+            pnlIdEmpleado.Visible = true;
         }
 
         private void lblModificarEnvio_MouseCaptureChanged(object sender, EventArgs e)
@@ -1343,11 +1435,250 @@ namespace sistema_reparto
             pnlEnvio.BackColor = colorNormalEnvio;
         }
 
-        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        private void cbxMoBodega_SelectedIndexChanged(object sender, EventArgs e)
         {
-            frmTransporte obj = new frmTransporte();
+
+            String idMovBodega = cbxMoBodega.SelectedValue.ToString();
+            Envio envio = new Envio();
+
+            envio.funsetenadotexts(idMovBodega,txtIdEmpleado, txtIdBodega, txtIdPaquete, txtIdCliente);
+
+           // envio.funseteandoEmpleado(idMovBodega, txtIdEmpleado);
+        }
+
+        private void cbxMoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
+
             obj.Visible = true;
+
             Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverEnvio;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalEnvio;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverEnvio;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalEnvio;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverEnvio;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalEnvio;
+        }
+
+        private void btnCalificacionP_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnCalificacionP_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverEnvio;
+        }
+
+        private void lblCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverEnvio;
+        }
+
+        private void picCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverEnvio;
+        }
+
+        private void btnCalificacionP_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalEnvio;
+        }
+
+        private void lblCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalEnvio;
+        }
+
+        private void picCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalEnvio;
+        }
+
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label22_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void panel3_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label11_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void panel4_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void label22_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void panel4_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void label22_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void panel3_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void label11_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void panel3_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
         }
         /* Final funcion para cargar mi tabla de Ruta */
     }
