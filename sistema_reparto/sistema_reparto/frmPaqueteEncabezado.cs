@@ -39,6 +39,11 @@ namespace sistema_reparto
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            /*Llamando Combobox*/
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.cargarCombobox(cbxCliente, "cliente", "idCliente", "nombreCliente");
+            paqueteEncabezado.cargarCombobox(cbxEmpleado, "empleado", "idEmpleado", "nombreEmpleado");
+
             lblTituloPaqueteEncabezado.Visible = true;
             lblAbcPaqueteEncabezado.Visible = true;
             pnlBordePE.Visible = false;
@@ -52,6 +57,7 @@ namespace sistema_reparto
             //fin encabezados
 
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = false;
             pnlCampoIDPE.Visible = false;
             pnlCampoIDCliente.Visible = false;
             pnlCampoFechaRecPE.Visible = false;
@@ -171,26 +177,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void btnRuta_MouseClick(object sender, MouseEventArgs e)
@@ -456,17 +453,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+           
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+            
         }
 
         private void btnTipoEmpleado_Paint(object sender, PaintEventArgs e)
@@ -476,12 +473,12 @@ namespace sistema_reparto
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPE;
+           
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPE;
+           
         }
 
         private void btnRuta_MouseHover(object sender, EventArgs e)
@@ -546,32 +543,32 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverPE;
+          
         }
 
         private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverPE;
+            
         }
 
         private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverPE;
+        
         }
 
         private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalPE;
+            
         }
 
         private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalPE;
+        
         }
 
         private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalPE;
+           
         }
 
         private void btnTipoTransporte_MouseHover(object sender, EventArgs e)
@@ -615,7 +612,11 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = false;
             pnlBordeDarBaja.Visible = false;
 
+            funCargarTabla(null);
+            funVaciarCampos();
+
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -637,6 +638,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = true;
             pnlCampoIDPE.Enabled = true;
             pnlCampoIDCliente.Enabled = true;
             pnlCampoFechaRecPE.Enabled = true;
@@ -664,7 +666,11 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = false;
             pnlBordeDarBaja.Visible = true;
 
+            funCargarTabla(null);
+            funVaciarCampos();
+
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -673,7 +679,7 @@ namespace sistema_reparto
             pnlCampoDireccionRemitente.Visible = true;
             pnlCampoTelRem.Visible = true;
             pnlCampoIdEmpleado.Visible = true;
-            pnlEstatusPE.Visible = false;
+            pnlEstatusPE.Visible = true;
             txtBuscarPE.Visible = true;
             pnlBotonBuscarPE.Visible = true;
             dgvPaqueteEncabezado.Visible = true;
@@ -686,6 +692,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = false;
             pnlCampoIDPE.Enabled = false;
             pnlCampoIDCliente.Enabled = false;
             pnlCampoFechaRecPE.Enabled = false;
@@ -725,7 +732,11 @@ namespace sistema_reparto
             pnlBordeModificar.Visible = true;
             pnlBordeDarBaja.Visible = false;
 
+            funCargarTabla(null);
+            funVaciarCampos();
+
             /*Habilitando componentes*/
+            pnlCampoCantidad.Visible = true;
             pnlCampoIDPE.Visible = true;
             pnlCampoIDCliente.Visible = true;
             pnlCampoFechaRecPE.Visible = true;
@@ -747,6 +758,7 @@ namespace sistema_reparto
             /*Habilitando componentes*/
 
             /*Habilitando elementos permitidos*/
+            pnlCampoCantidad.Enabled = true;
             pnlCampoIDPE.Enabled = false;
             pnlCampoIDCliente.Enabled = true;
             pnlCampoFechaRecPE.Enabled = true;
@@ -831,6 +843,515 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlBotonGuardarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            /* Inicio de ejecucion de funcion insertar un cliente */
+
+            //if (txtIdPE.Text == "" || txtNombreRemPE.Text == "" || txtDireccionRemitente.Text == "" || txtTelefonoRemitente.Text == "" || txtEstatusPE.Text == "" || txtCantidad.Text=="")
+            //{
+            //    MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else
+            //{
+                String estatusPaqEncabezado = "A";
+                PaqueteEncabezado paqueteEnc = funObtenerTxt(estatusPaqEncabezado);
+                paqueteEnc.funInsertar();
+                /* Final de ejecucion de funcion insertar un cliente */
+
+                funCargarTabla(null);
+                funVaciarCampos();
+            //}
+
+        }
+
+        public PaqueteEncabezado funObtenerTxt(String estatus)
+        {
+            /*Inicio obteniedo variables a usar con mi ABC cliente */
+            String codigoPE = txtIdPE.Text;
+            String clientePE = cbxCliente.SelectedValue.ToString();
+            String fechaRecep = txtFechaRecPE.Value.ToString("yyyy-MM-dd");
+            String fechaCliente = txtFechaClienteEntPE.Value.ToString("yyyy-MM-dd");
+            String nombreRem = txtNombreRemPE.Text;
+            String direccionRem = txtDireccionRemitente.Text;
+            String telefonoRem = txtTelefonoRemitente.Text;
+            String cantidad = txtCantidad.Text;
+            String idEmpleado = cbxEmpleado.SelectedValue.ToString();
+
+            
+
+            /*Final obteniedo variables a usar con mi ABC */
+
+            /* Inicio creamos un objeto de tipo paqueteEncabezado para poder utilizar el metodo de insertar */
+            PaqueteEncabezado paqueteEmpleado = new PaqueteEncabezado(codigoPE, clientePE, fechaRecep, fechaCliente, nombreRem, direccionRem, telefonoRem, cantidad, idEmpleado, estatus);
+            /* Final creamos un objeto de tipo cliente para poder utilizar el metodo de insertar cliente */
+
+            return paqueteEmpleado;
+        }
+
+        private void funCargarTabla(string dato)
+        {
+            List<PaqueteEncabezado> lista = new List<PaqueteEncabezado>();
+            PaqueteEncabezado paqueteEnc = new PaqueteEncabezado();
+
+            dgvPaqueteEncabezado.DataSource = paqueteEnc.consulta(dato);
+        }
+
+        public void funVaciarCampos()
+        {
+            txtIdPE.Text = "";
+            txtNombreRemPE.Text = "";
+            txtDireccionRemitente.Text = "";
+            txtTelefonoRemitente.Text = "";
+            txtEstatusPE.Text = "";
+            txtCantidad.Text = "";
+            txtBuscarPE.Text = "";
+        }
+
+        private void pnlModificarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatusPaqueteEncabezado = "A";
+            String idPaqueteEncabezado = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatusPaqueteEncabezado);
+
+            paqueteEnc.funModificar(idPaqueteEncabezado);
+            funCargarTabla(null);
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad ,cbxEmpleado, txtEstatusPE, idPaqueteEncabezado);
+
+        }
+
+        private void pnlBotonBuscarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            /* Inicio buscando el dato ingresado por el usuario y llenando mi tabla */
+            String buscarPE = txtBuscarPE.Text;
+            funCargarTabla(buscarPE);
+            /* Final buscando el dato ingresado por el usuario y llenando mi tabla */
+
+            /* Inicio Vaciando los campos */
+            funVaciarCampos();
+            pnlActivarPE.Visible = false;
+            pnlDarBajaPE.Visible = false;
+            /* Final Vaciando los campos */
+        }
+
+        private void pnlLLenarCamposPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtIdPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[0].Value.ToString();
+
+            String idCliente = dgvPaqueteEncabezado.CurrentRow.Cells[1].Value.ToString();
+
+            PaqueteEncabezado paqueteEn = new PaqueteEncabezado();
+            paqueteEn.obtenerNombre(idCliente);
+            //en la funcion idCliente se le asigna el nombre que existe en la BD y se le coloca al combobox
+            cbxCliente.SelectedValue = idCliente;
+
+            // De string a dateTime
+            txtFechaRecPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[2].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[3].Value.ToString());
+
+            txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
+            txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
+            txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+            txtCantidad.Text = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
+            cbxEmpleado.SelectedValue = idEmpleado;
+
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[9].Value.ToString();
+
+        }
+
+        private void pnlDarBajaPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatus = "A";
+            String pIdPE = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatus);
+
+            paqueteEnc.funDarBajaCliente();
+            funCargarTabla(null);
+
+            pnlActivarPE.Visible = true;
+            pnlDarBajaPE.Visible = false;
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad, cbxEmpleado, txtEstatusPE, pIdPE);
+
+        }
+
+        private void pnlLlenarCamposPEDB_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtIdPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[0].Value.ToString();
+
+            String idCliente = dgvPaqueteEncabezado.CurrentRow.Cells[1].Value.ToString();
+
+            PaqueteEncabezado paqueteEn = new PaqueteEncabezado();
+            paqueteEn.obtenerNombre(idCliente);
+            cbxCliente.SelectedValue = idCliente;
+
+            // De string a dateTime
+            txtFechaRecPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[2].Value.ToString());
+            txtFechaClienteEntPE.Value = Convert.ToDateTime(dgvPaqueteEncabezado.CurrentRow.Cells[3].Value.ToString());
+
+            txtNombreRemPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[4].Value.ToString();
+            txtDireccionRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[5].Value.ToString();
+            txtTelefonoRemitente.Text = dgvPaqueteEncabezado.CurrentRow.Cells[6].Value.ToString();
+            txtCantidad.Text = dgvPaqueteEncabezado.CurrentRow.Cells[7].Value.ToString();
+
+            String idEmpleado = dgvPaqueteEncabezado.CurrentRow.Cells[8].Value.ToString();
+            PaqueteEncabezado paqueteEncabezado = new PaqueteEncabezado();
+            paqueteEncabezado.obtenerNombreEmpleado(idEmpleado);
+            cbxEmpleado.SelectedValue = idEmpleado;
+
+            txtEstatusPE.Text = dgvPaqueteEncabezado.CurrentRow.Cells[9].Value.ToString();
+
+
+            PaqueteEncabezado paqueteEnc = new PaqueteEncabezado();
+            String pidPE = txtIdPE.Text;
+            String pEstatusPE = paqueteEnc.funBuscarEstatus(pidPE);
+
+            if (pEstatusPE == "A")
+            {
+                pnlActivarPE.Visible = false;
+                pnlDarBajaPE.Visible = true;
+            }
+            else if (pEstatusPE == "I")
+            {
+                pnlDarBajaPE.Visible = false;
+                pnlActivarPE.Visible = true;
+            }
+        }
+
+        private void pnlActivarPE_MouseClick(object sender, MouseEventArgs e)
+        {
+            String estatus = "I";
+            String pIdPE = txtIdPE.Text;
+            PaqueteEncabezado paqueteEnc = funObtenerTxt(estatus);
+
+            paqueteEnc.funActivarCliente();
+            funCargarTabla(null);
+
+            pnlDarBajaPE.Visible = true;
+            pnlActivarPE.Visible = false;
+
+            paqueteEnc.funBuscarSetearTxt(txtIdPE, cbxCliente, txtFechaRecPE, txtFechaClienteEntPE, txtNombreRemPE, txtDireccionRemitente, txtTelefonoRemitente, txtCantidad, cbxEmpleado, txtEstatusPE, pIdPE);
+        }
+
+        private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label14_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEmpleado obj = new frmEmpleado();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBodega obj = new frmBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void label14_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorHoverPE;
+        }
+
+        private void btnBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void lblBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void picBodega_MouseHover(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorHoverPE;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void label14_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void pnlEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEmpleado.BackColor = colorNormalPE;
+        }
+
+        private void btnBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void lblBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void picBodega_MouseLeave(object sender, EventArgs e)
+        {
+            btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
+        }
+
+        private void btnCalificacionP_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnCalificacionP_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverPE;
+        }
+
+        private void lblCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverPE;
+        }
+
+        private void picCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverPE;
+        }
+
+        private void btnCalificacionP_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalPE;
+        }
+
+        private void lblCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalPE;
+        }
+
+        private void picCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalPE;
+        }
+
+        private void frmPaqueteEncabezado_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
-    
+
 }
