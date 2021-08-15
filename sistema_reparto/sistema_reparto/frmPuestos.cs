@@ -558,59 +558,47 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPuesto;
+           
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPuesto;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPuesto;
+            
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPuesto;
+            
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPuesto;
+            
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPuesto;
+            
         }
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void dgvPuesto_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1080,6 +1068,90 @@ namespace sistema_reparto
             frmPuestos obj = new frmPuestos();
             obj.Visible = true;
             Visible = false;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPuesto;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPuesto;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPuesto;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPuesto;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPuesto;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPuesto;
+        }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPuesto;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPuesto;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPuesto;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPuesto;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPuesto;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPuesto;
         }
         /* Final Llenando campos de mi busqueda en la tabla */
 

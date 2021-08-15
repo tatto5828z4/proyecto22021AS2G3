@@ -43,6 +43,12 @@
             this.pnlBotonBuscarPD = new System.Windows.Forms.Panel();
             this.txtBuscarPD = new System.Windows.Forms.TextBox();
             this.dgvPD = new System.Windows.Forms.DataGridView();
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paqueteDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotonGuardarPD = new System.Windows.Forms.Panel();
             this.pnlCampoDP = new System.Windows.Forms.Panel();
             this.richDescProd = new System.Windows.Forms.RichTextBox();
@@ -70,18 +76,22 @@
             this.lblModificarPaqDet = new System.Windows.Forms.Label();
             this.pnlEliminar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlMovBodega = new System.Windows.Forms.Panel();
+            this.picMovBodega = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMovimientoBodega = new System.Windows.Forms.Label();
             this.pnlTrans = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlBodega = new System.Windows.Forms.Panel();
-            this.picBodega = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblBodega = new System.Windows.Forms.Label();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.pnlBodega = new System.Windows.Forms.Panel();
+            this.picBodega = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblBodega = new System.Windows.Forms.Label();
             this.pnlPE = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -106,10 +116,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.pnlTipoEmpleado = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.pnlUbicacion = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -135,15 +141,10 @@
             this.picEnvio = new System.Windows.Forms.PictureBox();
             this.label44 = new System.Windows.Forms.Label();
             this.lblEnvio = new System.Windows.Forms.Label();
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paqueteDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlPD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paqueteDetalleBindingSource)).BeginInit();
             this.pnlCampoDP.SuspendLayout();
             this.pnlCampoIdOrden.SuspendLayout();
             this.pnlCampoIdEmpleado.SuspendLayout();
@@ -151,12 +152,14 @@
             this.pnlCampoIDPE.SuspendLayout();
             this.pnlBordePaqDet.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnlMovBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
             this.pnlTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlBodega.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
             this.pnlPE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlUsuarios.SuspendLayout();
@@ -169,8 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.pnlRuta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.pnlTipoEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.pnlUbicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.pnlDepartamento.SuspendLayout();
@@ -184,7 +185,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.pnlEnvio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paqueteDetalleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPD
@@ -290,6 +290,40 @@
             this.dgvPD.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
             this.dgvPD.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            // 
+            // idPaqueteEncabezadoDataGridViewTextBoxColumn
+            // 
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
+            resources.ApplyResources(this.idPaqueteEncabezadoDataGridViewTextBoxColumn, "idPaqueteEncabezadoDataGridViewTextBoxColumn");
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            resources.ApplyResources(this.idClienteDataGridViewTextBoxColumn, "idClienteDataGridViewTextBoxColumn");
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            resources.ApplyResources(this.idEmpleadoDataGridViewTextBoxColumn, "idEmpleadoDataGridViewTextBoxColumn");
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // idOrdenDataGridViewTextBoxColumn
+            // 
+            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
+            resources.ApplyResources(this.idOrdenDataGridViewTextBoxColumn, "idOrdenDataGridViewTextBoxColumn");
+            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
+            // 
+            // descripcionProductoDataGridViewTextBoxColumn
+            // 
+            this.descripcionProductoDataGridViewTextBoxColumn.DataPropertyName = "DescripcionProducto";
+            resources.ApplyResources(this.descripcionProductoDataGridViewTextBoxColumn, "descripcionProductoDataGridViewTextBoxColumn");
+            this.descripcionProductoDataGridViewTextBoxColumn.Name = "descripcionProductoDataGridViewTextBoxColumn";
+            // 
+            // paqueteDetalleBindingSource
+            // 
+            this.paqueteDetalleBindingSource.DataSource = typeof(sistema_reparto.Clases.PaqueteDetalle);
             // 
             // pnlBotonGuardarPD
             // 
@@ -461,17 +495,17 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Controls.Add(this.pnlMovBodega);
             this.panel3.Controls.Add(this.pnlTrans);
+            this.panel3.Controls.Add(this.pnlEmpleado);
             this.panel3.Controls.Add(this.pnlPD);
             this.panel3.Controls.Add(this.pnlBodega);
-            this.panel3.Controls.Add(this.pnlEmpleado);
             this.panel3.Controls.Add(this.pnlPE);
             this.panel3.Controls.Add(this.pnlUsuarios);
             this.panel3.Controls.Add(this.pnlTT);
             this.panel3.Controls.Add(this.pnlTM);
             this.panel3.Controls.Add(this.pnlSU);
             this.panel3.Controls.Add(this.pnlRuta);
-            this.panel3.Controls.Add(this.pnlTipoEmpleado);
             this.panel3.Controls.Add(this.pnlUbicacion);
             this.panel3.Controls.Add(this.pnlDepartamento);
             this.panel3.Controls.Add(this.pnlPuesto);
@@ -479,6 +513,43 @@
             this.panel3.Controls.Add(this.pnlCliente);
             this.panel3.Controls.Add(this.pnlEnvio);
             this.panel3.Name = "panel3";
+            // 
+            // pnlMovBodega
+            // 
+            this.pnlMovBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlMovBodega.Controls.Add(this.picMovBodega);
+            this.pnlMovBodega.Controls.Add(this.label2);
+            this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
+            this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pnlMovBodega, "pnlMovBodega");
+            this.pnlMovBodega.Name = "pnlMovBodega";
+            this.pnlMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlMovBodega_MouseClick);
+            this.pnlMovBodega.MouseLeave += new System.EventHandler(this.pnlMovBodega_MouseLeave);
+            this.pnlMovBodega.MouseHover += new System.EventHandler(this.pnlMovBodega_MouseHover);
+            this.pnlMovBodega.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlMovBodega_MouseMove);
+            // 
+            // picMovBodega
+            // 
+            resources.ApplyResources(this.picMovBodega, "picMovBodega");
+            this.picMovBodega.Name = "picMovBodega";
+            this.picMovBodega.TabStop = false;
+            this.picMovBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picMovBodega_MouseClick);
+            this.picMovBodega.MouseLeave += new System.EventHandler(this.picMovBodega_MouseLeave);
+            this.picMovBodega.MouseHover += new System.EventHandler(this.picMovBodega_MouseHover);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // lblMovimientoBodega
+            // 
+            resources.ApplyResources(this.lblMovimientoBodega, "lblMovimientoBodega");
+            this.lblMovimientoBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblMovimientoBodega.Name = "lblMovimientoBodega";
+            this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
+            this.lblMovimientoBodega.MouseLeave += new System.EventHandler(this.lblMovimientoBodega_MouseLeave);
+            this.lblMovimientoBodega.MouseHover += new System.EventHandler(this.lblMovimientoBodega_MouseHover);
             // 
             // pnlTrans
             // 
@@ -516,42 +587,6 @@
             this.label1.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
             this.label1.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
             // 
-            // pnlBodega
-            // 
-            this.pnlBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlBodega.Controls.Add(this.picBodega);
-            this.pnlBodega.Controls.Add(this.label17);
-            this.pnlBodega.Controls.Add(this.lblBodega);
-            this.pnlBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pnlBodega, "pnlBodega");
-            this.pnlBodega.Name = "pnlBodega";
-            this.pnlBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
-            this.pnlBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
-            this.pnlBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
-            // 
-            // picBodega
-            // 
-            resources.ApplyResources(this.picBodega, "picBodega");
-            this.picBodega.Name = "picBodega";
-            this.picBodega.TabStop = false;
-            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
-            this.picBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
-            this.picBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
-            // lblBodega
-            // 
-            resources.ApplyResources(this.lblBodega, "lblBodega");
-            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblBodega.Name = "lblBodega";
-            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
-            this.lblBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
-            this.lblBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
-            // 
             // pnlEmpleado
             // 
             this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
@@ -587,6 +622,42 @@
             this.label19.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseClick);
             this.label19.MouseLeave += new System.EventHandler(this.pnlEmpleado_MouseLeave);
             this.label19.MouseHover += new System.EventHandler(this.pnlEmpleado_MouseHover);
+            // 
+            // pnlBodega
+            // 
+            this.pnlBodega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlBodega.Controls.Add(this.picBodega);
+            this.pnlBodega.Controls.Add(this.label17);
+            this.pnlBodega.Controls.Add(this.lblBodega);
+            this.pnlBodega.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pnlBodega, "pnlBodega");
+            this.pnlBodega.Name = "pnlBodega";
+            this.pnlBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
+            this.pnlBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
+            this.pnlBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
+            // 
+            // picBodega
+            // 
+            resources.ApplyResources(this.picBodega, "picBodega");
+            this.picBodega.Name = "picBodega";
+            this.picBodega.TabStop = false;
+            this.picBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
+            this.picBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
+            this.picBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // lblBodega
+            // 
+            resources.ApplyResources(this.lblBodega, "lblBodega");
+            this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBodega.Name = "lblBodega";
+            this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBodega_MouseClick);
+            this.lblBodega.MouseLeave += new System.EventHandler(this.pnlBodega_MouseLeave);
+            this.lblBodega.MouseHover += new System.EventHandler(this.pnlBodega_MouseHover);
             // 
             // pnlPE
             // 
@@ -801,42 +872,6 @@
             this.label31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlRuta_MouseClick);
             this.label31.MouseLeave += new System.EventHandler(this.pnlRuta_MouseLeave);
             this.label31.MouseHover += new System.EventHandler(this.pnlRuta_MouseHover);
-            // 
-            // pnlTipoEmpleado
-            // 
-            this.pnlTipoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlTipoEmpleado.Controls.Add(this.pictureBox11);
-            this.pnlTipoEmpleado.Controls.Add(this.label32);
-            this.pnlTipoEmpleado.Controls.Add(this.label33);
-            this.pnlTipoEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pnlTipoEmpleado, "pnlTipoEmpleado");
-            this.pnlTipoEmpleado.Name = "pnlTipoEmpleado";
-            this.pnlTipoEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
-            this.pnlTipoEmpleado.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
-            this.pnlTipoEmpleado.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
-            // 
-            // pictureBox11
-            // 
-            resources.ApplyResources(this.pictureBox11, "pictureBox11");
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
-            this.pictureBox11.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
-            this.pictureBox11.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
-            // 
-            // label33
-            // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.label33.Name = "label33";
-            this.label33.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTipoEmpleado_MouseClick);
-            this.label33.MouseLeave += new System.EventHandler(this.pnlTipoEmpleado_MouseLeave);
-            this.label33.MouseHover += new System.EventHandler(this.pnlTipoEmpleado_MouseHover);
             // 
             // pnlUbicacion
             // 
@@ -1053,40 +1088,6 @@
             this.lblEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
             this.lblEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
             // 
-            // idPaqueteEncabezadoDataGridViewTextBoxColumn
-            // 
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
-            resources.ApplyResources(this.idPaqueteEncabezadoDataGridViewTextBoxColumn, "idPaqueteEncabezadoDataGridViewTextBoxColumn");
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            resources.ApplyResources(this.idClienteDataGridViewTextBoxColumn, "idClienteDataGridViewTextBoxColumn");
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            resources.ApplyResources(this.idEmpleadoDataGridViewTextBoxColumn, "idEmpleadoDataGridViewTextBoxColumn");
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            // 
-            // idOrdenDataGridViewTextBoxColumn
-            // 
-            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
-            resources.ApplyResources(this.idOrdenDataGridViewTextBoxColumn, "idOrdenDataGridViewTextBoxColumn");
-            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
-            // 
-            // descripcionProductoDataGridViewTextBoxColumn
-            // 
-            this.descripcionProductoDataGridViewTextBoxColumn.DataPropertyName = "DescripcionProducto";
-            resources.ApplyResources(this.descripcionProductoDataGridViewTextBoxColumn, "descripcionProductoDataGridViewTextBoxColumn");
-            this.descripcionProductoDataGridViewTextBoxColumn.Name = "descripcionProductoDataGridViewTextBoxColumn";
-            // 
-            // paqueteDetalleBindingSource
-            // 
-            this.paqueteDetalleBindingSource.DataSource = typeof(sistema_reparto.Clases.PaqueteDetalle);
-            // 
             // frmPaqueteDetalle
             // 
             resources.ApplyResources(this, "$this");
@@ -1123,6 +1124,7 @@
             this.pnlPD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paqueteDetalleBindingSource)).EndInit();
             this.pnlCampoDP.ResumeLayout(false);
             this.pnlCampoDP.PerformLayout();
             this.pnlCampoIdOrden.ResumeLayout(false);
@@ -1135,15 +1137,18 @@
             this.pnlCampoIDPE.PerformLayout();
             this.pnlBordePaqDet.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.pnlMovBodega.ResumeLayout(false);
+            this.pnlMovBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
             this.pnlTrans.ResumeLayout(false);
             this.pnlTrans.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlBodega.ResumeLayout(false);
-            this.pnlBodega.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
             this.pnlEmpleado.ResumeLayout(false);
             this.pnlEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlBodega.ResumeLayout(false);
+            this.pnlBodega.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
             this.pnlPE.ResumeLayout(false);
             this.pnlPE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1162,9 +1167,6 @@
             this.pnlRuta.ResumeLayout(false);
             this.pnlRuta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.pnlTipoEmpleado.ResumeLayout(false);
-            this.pnlTipoEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.pnlUbicacion.ResumeLayout(false);
             this.pnlUbicacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -1184,7 +1186,6 @@
             this.pnlEnvio.ResumeLayout(false);
             this.pnlEnvio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paqueteDetalleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1267,10 +1268,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Panel pnlTipoEmpleado;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel pnlUbicacion;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -1300,5 +1297,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlMovBodega;
+        private System.Windows.Forms.PictureBox picMovBodega;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMovimientoBodega;
     }
 }

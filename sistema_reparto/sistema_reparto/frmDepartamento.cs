@@ -545,59 +545,47 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+            
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverDepartamento;
+            
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+            
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+           
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalDepartamento;
+            
         }
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
@@ -1146,6 +1134,60 @@ namespace sistema_reparto
             frmTransporte obj = new frmTransporte();
             obj.Visible = true;
             Visible = false;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverDepartamento;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverDepartamento;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverDepartamento;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalDepartamento;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalDepartamento;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalDepartamento;
         }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }

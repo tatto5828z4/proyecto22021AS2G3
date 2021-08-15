@@ -196,26 +196,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void btnRuta_MouseClick(object sender, MouseEventArgs e)
@@ -1070,6 +1061,120 @@ namespace sistema_reparto
         private void pnlBotonGuardarB_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalBodega;
         }
     }
 }

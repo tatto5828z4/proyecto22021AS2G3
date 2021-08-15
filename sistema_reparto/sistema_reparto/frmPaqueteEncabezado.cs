@@ -177,26 +177,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void btnRuta_MouseClick(object sender, MouseEventArgs e)
@@ -462,17 +453,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+           
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverPE;
+            
         }
 
         private void btnTipoEmpleado_Paint(object sender, PaintEventArgs e)
@@ -482,12 +473,12 @@ namespace sistema_reparto
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPE;
+           
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalPE;
+           
         }
 
         private void btnRuta_MouseHover(object sender, EventArgs e)
@@ -1159,6 +1150,147 @@ namespace sistema_reparto
         private void picBodega_MouseLeave(object sender, EventArgs e)
         {
             btnBodega.BackColor = colorNormalPE;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverPE;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalPE;
+        }
+
+        private void btnUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void lblUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void picIconoUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorHoverPE;
+        }
+
+        private void btnUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void picIconoUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = colorNormalPE;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
+        }
+
+        private void picEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverPE;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalPE;
         }
     }
 
