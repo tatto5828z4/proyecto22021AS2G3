@@ -34,14 +34,18 @@ namespace sistema_reparto
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.pnlEnvio = new System.Windows.Forms.Panel();
-            this.picEnvio = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEnvio = new System.Windows.Forms.Label();
+            this.btnBitaTrans = new System.Windows.Forms.Panel();
+            this.lblBitaTrans = new System.Windows.Forms.Label();
+            this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.pnlMovBodega = new System.Windows.Forms.Panel();
             this.picMovBodega = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblMovimientoBodega = new System.Windows.Forms.Label();
+            this.btnPiloto = new System.Windows.Forms.Panel();
+            this.lblPiloto = new System.Windows.Forms.Label();
+            this.picIconoPiloto = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnUsuarios = new System.Windows.Forms.Panel();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.picIconoUsuarios = new System.Windows.Forms.PictureBox();
@@ -87,6 +91,10 @@ namespace sistema_reparto
             this.picIconoCliente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.pnlEnvio = new System.Windows.Forms.Panel();
+            this.picEnvio = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
             this.lblTituloPaqueteEncabezado = new System.Windows.Forms.Label();
             this.lblRegistrarPE = new System.Windows.Forms.Label();
             this.pnlBordePE = new System.Windows.Forms.Panel();
@@ -127,6 +135,17 @@ namespace sistema_reparto
             this.pnlBotonBuscarPE = new System.Windows.Forms.Panel();
             this.txtBuscarPE = new System.Windows.Forms.TextBox();
             this.dgvPaqueteEncabezado = new System.Windows.Forms.DataGridView();
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRecepcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaClienteEntregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paqueteEncabezadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlActivarPE = new System.Windows.Forms.Panel();
             this.pnlDarBajaPE = new System.Windows.Forms.Panel();
             this.pnlBotonGuardarPE = new System.Windows.Forms.Panel();
@@ -140,22 +159,13 @@ namespace sistema_reparto
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRecepcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaClienteEntregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoRemitenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paqueteEncabezadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
-            this.pnlEnvio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
+            this.btnBitaTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.pnlMovBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
+            this.btnPiloto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).BeginInit();
             this.btnUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).BeginInit();
             this.btnBodega.SuspendLayout();
@@ -179,6 +189,8 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.btnCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
+            this.pnlEnvio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
             this.pnlBordePE.SuspendLayout();
             this.pnlCampoIDPE.SuspendLayout();
             this.pnlCampoTelRem.SuspendLayout();
@@ -190,10 +202,10 @@ namespace sistema_reparto
             this.pnlCampoIDCliente.SuspendLayout();
             this.pnlEstatusPE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaqueteEncabezado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paqueteEncabezadoBindingSource)).BeginInit();
             this.pnlCampoCantidad.SuspendLayout();
             this.btnCalificacionP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paqueteEncabezadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -201,7 +213,9 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.btnBitaTrans);
             this.pnlSidebar.Controls.Add(this.pnlMovBodega);
+            this.pnlSidebar.Controls.Add(this.btnPiloto);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnBodega);
             this.pnlSidebar.Controls.Add(this.pnlEmpleado);
@@ -216,59 +230,59 @@ namespace sistema_reparto
             this.pnlSidebar.Controls.Add(this.btnCliente);
             this.pnlSidebar.Location = new System.Drawing.Point(-1, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 698);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 751);
             this.pnlSidebar.TabIndex = 2;
             // 
-            // pnlEnvio
+            // btnBitaTrans
             // 
-            this.pnlEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlEnvio.Controls.Add(this.picEnvio);
-            this.pnlEnvio.Controls.Add(this.label7);
-            this.pnlEnvio.Controls.Add(this.lblEnvio);
-            this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEnvio.Location = new System.Drawing.Point(-2, 558);
-            this.pnlEnvio.Name = "pnlEnvio";
-            this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
-            this.pnlEnvio.TabIndex = 84;
-            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
-            this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
-            this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
+            this.btnBitaTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBitaTrans.Controls.Add(this.lblBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.label11);
+            this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBitaTrans.Location = new System.Drawing.Point(-10, 691);
+            this.btnBitaTrans.Name = "btnBitaTrans";
+            this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
+            this.btnBitaTrans.TabIndex = 351;
+            this.btnBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBitaTrans_MouseClick);
+            this.btnBitaTrans.MouseLeave += new System.EventHandler(this.btnBitaTrans_MouseLeave);
+            this.btnBitaTrans.MouseHover += new System.EventHandler(this.btnBitaTrans_MouseHover);
             // 
-            // picEnvio
+            // lblBitaTrans
             // 
-            this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
-            this.picEnvio.Location = new System.Drawing.Point(19, 8);
-            this.picEnvio.Name = "picEnvio";
-            this.picEnvio.Size = new System.Drawing.Size(20, 21);
-            this.picEnvio.TabIndex = 1;
-            this.picEnvio.TabStop = false;
-            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEnvio_MouseClick);
-            this.picEnvio.MouseLeave += new System.EventHandler(this.picEnvio_MouseLeave);
-            this.picEnvio.MouseHover += new System.EventHandler(this.picEnvio_MouseHover);
+            this.lblBitaTrans.AutoSize = true;
+            this.lblBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBitaTrans.Location = new System.Drawing.Point(56, 10);
+            this.lblBitaTrans.Name = "lblBitaTrans";
+            this.lblBitaTrans.Size = new System.Drawing.Size(114, 15);
+            this.lblBitaTrans.TabIndex = 2;
+            this.lblBitaTrans.Text = "Bitacora Transporte";
+            this.lblBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBitaTrans_MouseClick);
+            this.lblBitaTrans.MouseLeave += new System.EventHandler(this.lblBitaTrans_MouseLeave);
+            this.lblBitaTrans.MouseHover += new System.EventHandler(this.lblBitaTrans_MouseHover);
             // 
-            // label7
+            // picIconoBitaTrans
             // 
-            this.label7.AutoSize = true;
-            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
-            this.label7.Location = new System.Drawing.Point(15, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 1;
+            this.picIconoBitaTrans.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoBitaTrans.BackgroundImage")));
+            this.picIconoBitaTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoBitaTrans.Location = new System.Drawing.Point(28, 8);
+            this.picIconoBitaTrans.Name = "picIconoBitaTrans";
+            this.picIconoBitaTrans.Size = new System.Drawing.Size(20, 21);
+            this.picIconoBitaTrans.TabIndex = 1;
+            this.picIconoBitaTrans.TabStop = false;
+            this.picIconoBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoBitaTrans_MouseClick);
+            this.picIconoBitaTrans.MouseLeave += new System.EventHandler(this.picIconoBitaTrans_MouseLeave);
+            this.picIconoBitaTrans.MouseHover += new System.EventHandler(this.picIconoBitaTrans_MouseHover);
             // 
-            // lblEnvio
+            // label11
             // 
-            this.lblEnvio.AutoSize = true;
-            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblEnvio.Location = new System.Drawing.Point(78, 10);
-            this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(43, 17);
-            this.lblEnvio.TabIndex = 0;
-            this.lblEnvio.Text = "Envio";
-            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
-            this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
-            this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
+            this.label11.AutoSize = true;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(15, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 1;
             // 
             // pnlMovBodega
             // 
@@ -317,12 +331,63 @@ namespace sistema_reparto
             this.lblMovimientoBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblMovimientoBodega.Location = new System.Drawing.Point(47, 10);
             this.lblMovimientoBodega.Name = "lblMovimientoBodega";
-            this.lblMovimientoBodega.Size = new System.Drawing.Size(129, 16);
+            this.lblMovimientoBodega.Size = new System.Drawing.Size(101, 13);
             this.lblMovimientoBodega.TabIndex = 0;
             this.lblMovimientoBodega.Text = "Movimiento Bodega";
             this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
             this.lblMovimientoBodega.MouseLeave += new System.EventHandler(this.lblMovimientoBodega_MouseLeave);
             this.lblMovimientoBodega.MouseHover += new System.EventHandler(this.lblMovimientoBodega_MouseHover);
+            // 
+            // btnPiloto
+            // 
+            this.btnPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnPiloto.Controls.Add(this.lblPiloto);
+            this.btnPiloto.Controls.Add(this.picIconoPiloto);
+            this.btnPiloto.Controls.Add(this.label17);
+            this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPiloto.Location = new System.Drawing.Point(-10, 658);
+            this.btnPiloto.Name = "btnPiloto";
+            this.btnPiloto.Size = new System.Drawing.Size(189, 34);
+            this.btnPiloto.TabIndex = 350;
+            this.btnPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPiloto_MouseClick);
+            this.btnPiloto.MouseLeave += new System.EventHandler(this.btnPiloto_MouseLeave);
+            this.btnPiloto.MouseHover += new System.EventHandler(this.btnPiloto_MouseHover);
+            // 
+            // lblPiloto
+            // 
+            this.lblPiloto.AutoSize = true;
+            this.lblPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPiloto.Location = new System.Drawing.Point(88, 10);
+            this.lblPiloto.Name = "lblPiloto";
+            this.lblPiloto.Size = new System.Drawing.Size(38, 15);
+            this.lblPiloto.TabIndex = 2;
+            this.lblPiloto.Text = "Piloto";
+            this.lblPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPiloto_MouseClick);
+            this.lblPiloto.MouseLeave += new System.EventHandler(this.lblPiloto_MouseLeave);
+            this.lblPiloto.MouseHover += new System.EventHandler(this.lblPiloto_MouseHover);
+            // 
+            // picIconoPiloto
+            // 
+            this.picIconoPiloto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoPiloto.BackgroundImage")));
+            this.picIconoPiloto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoPiloto.Location = new System.Drawing.Point(28, 8);
+            this.picIconoPiloto.Name = "picIconoPiloto";
+            this.picIconoPiloto.Size = new System.Drawing.Size(20, 21);
+            this.picIconoPiloto.TabIndex = 1;
+            this.picIconoPiloto.TabStop = false;
+            this.picIconoPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoPiloto_MouseClick);
+            this.picIconoPiloto.MouseLeave += new System.EventHandler(this.picIconoPiloto_MouseLeave);
+            this.picIconoPiloto.MouseHover += new System.EventHandler(this.picIconoPiloto_MouseHover);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Image = ((System.Drawing.Image)(resources.GetObject("label17.Image")));
+            this.label17.Location = new System.Drawing.Point(15, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(0, 13);
+            this.label17.TabIndex = 1;
             // 
             // btnUsuarios
             // 
@@ -346,7 +411,7 @@ namespace sistema_reparto
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUsuarios.Location = new System.Drawing.Point(68, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
@@ -419,7 +484,7 @@ namespace sistema_reparto
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.Location = new System.Drawing.Point(68, 10);
             this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 16);
+            this.lblBodega.Size = new System.Drawing.Size(44, 13);
             this.lblBodega.TabIndex = 0;
             this.lblBodega.Text = "Bodega";
             this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
@@ -470,7 +535,7 @@ namespace sistema_reparto
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label14.Location = new System.Drawing.Point(70, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 16);
+            this.label14.Size = new System.Drawing.Size(54, 13);
             this.label14.TabIndex = 0;
             this.label14.Text = "Empleado";
             this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
@@ -498,7 +563,7 @@ namespace sistema_reparto
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqueteEncabezado.Location = new System.Drawing.Point(51, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(139, 16);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -571,7 +636,7 @@ namespace sistema_reparto
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblSubUbicacion.Location = new System.Drawing.Point(61, 10);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(93, 16);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
@@ -622,7 +687,7 @@ namespace sistema_reparto
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblRuta.Location = new System.Drawing.Point(73, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(36, 16);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
             this.lblRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRuta_MouseClick);
@@ -651,7 +716,7 @@ namespace sistema_reparto
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoTransporte.Location = new System.Drawing.Point(59, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(105, 16);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(82, 13);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             this.lblTipoTransporte.Click += new System.EventHandler(this.lblTipoTransporte_Click);
@@ -703,7 +768,7 @@ namespace sistema_reparto
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUbicacion.Location = new System.Drawing.Point(64, 10);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(69, 16);
+            this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
             this.lblUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUbicacion_MouseClick);
@@ -754,7 +819,7 @@ namespace sistema_reparto
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(61, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(94, 16);
+            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             this.lblDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDepartamento_MouseClick);
@@ -827,7 +892,7 @@ namespace sistema_reparto
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(75, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(50, 16);
+            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             this.lblPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPuesto_MouseClick);
@@ -853,7 +918,7 @@ namespace sistema_reparto
             this.btnCliente.Controls.Add(this.label1);
             this.btnCliente.Controls.Add(this.lblCliente);
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCliente.Location = new System.Drawing.Point(-1, 177);
+            this.btnCliente.Location = new System.Drawing.Point(-2, 178);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(180, 34);
             this.btnCliente.TabIndex = 1;
@@ -890,12 +955,63 @@ namespace sistema_reparto
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(73, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(49, 16);
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             this.lblCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCliente_MouseClick);
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
             this.lblCliente.MouseHover += new System.EventHandler(this.lblCliente_MouseHover);
+            // 
+            // pnlEnvio
+            // 
+            this.pnlEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlEnvio.Controls.Add(this.picEnvio);
+            this.pnlEnvio.Controls.Add(this.label7);
+            this.pnlEnvio.Controls.Add(this.lblEnvio);
+            this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEnvio.Location = new System.Drawing.Point(-2, 558);
+            this.pnlEnvio.Name = "pnlEnvio";
+            this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
+            this.pnlEnvio.TabIndex = 84;
+            this.pnlEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlEnvio_MouseClick);
+            this.pnlEnvio.MouseLeave += new System.EventHandler(this.pnlEnvio_MouseLeave);
+            this.pnlEnvio.MouseHover += new System.EventHandler(this.pnlEnvio_MouseHover);
+            // 
+            // picEnvio
+            // 
+            this.picEnvio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picEnvio.Image = ((System.Drawing.Image)(resources.GetObject("picEnvio.Image")));
+            this.picEnvio.Location = new System.Drawing.Point(19, 8);
+            this.picEnvio.Name = "picEnvio";
+            this.picEnvio.Size = new System.Drawing.Size(20, 21);
+            this.picEnvio.TabIndex = 1;
+            this.picEnvio.TabStop = false;
+            this.picEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picEnvio_MouseClick);
+            this.picEnvio.MouseLeave += new System.EventHandler(this.picEnvio_MouseLeave);
+            this.picEnvio.MouseHover += new System.EventHandler(this.picEnvio_MouseHover);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.Location = new System.Drawing.Point(15, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 1;
+            // 
+            // lblEnvio
+            // 
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblEnvio.Location = new System.Drawing.Point(78, 10);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(37, 15);
+            this.lblEnvio.TabIndex = 0;
+            this.lblEnvio.Text = "Envio";
+            this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
+            this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
+            this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
             // 
             // lblTituloPaqueteEncabezado
             // 
@@ -904,7 +1020,7 @@ namespace sistema_reparto
             this.lblTituloPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloPaqueteEncabezado.Location = new System.Drawing.Point(200, 26);
             this.lblTituloPaqueteEncabezado.Name = "lblTituloPaqueteEncabezado";
-            this.lblTituloPaqueteEncabezado.Size = new System.Drawing.Size(379, 40);
+            this.lblTituloPaqueteEncabezado.Size = new System.Drawing.Size(328, 35);
             this.lblTituloPaqueteEncabezado.TabIndex = 3;
             this.lblTituloPaqueteEncabezado.Text = "Paquete Encabezado";
             // 
@@ -916,7 +1032,7 @@ namespace sistema_reparto
             this.lblRegistrarPE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarPE.Location = new System.Drawing.Point(208, 137);
             this.lblRegistrarPE.Name = "lblRegistrarPE";
-            this.lblRegistrarPE.Size = new System.Drawing.Size(213, 18);
+            this.lblRegistrarPE.Size = new System.Drawing.Size(197, 16);
             this.lblRegistrarPE.TabIndex = 12;
             this.lblRegistrarPE.Text = "Registrar Paquete Encabezado";
             this.lblRegistrarPE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarPE_MouseClick);
@@ -954,7 +1070,7 @@ namespace sistema_reparto
             this.lblAbcPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcPaqueteEncabezado.Location = new System.Drawing.Point(203, 77);
             this.lblAbcPaqueteEncabezado.Name = "lblAbcPaqueteEncabezado";
-            this.lblAbcPaqueteEncabezado.Size = new System.Drawing.Size(330, 24);
+            this.lblAbcPaqueteEncabezado.Size = new System.Drawing.Size(280, 20);
             this.lblAbcPaqueteEncabezado.TabIndex = 10;
             this.lblAbcPaqueteEncabezado.Text = "Mantenimientos Paquete Encabezado";
             this.lblAbcPaqueteEncabezado.Click += new System.EventHandler(this.lblAbcPaqueteEncabezado_Click);
@@ -968,7 +1084,7 @@ namespace sistema_reparto
             this.lblDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblDarBaja.Location = new System.Drawing.Point(832, 138);
             this.lblDarBaja.Name = "lblDarBaja";
-            this.lblDarBaja.Size = new System.Drawing.Size(85, 18);
+            this.lblDarBaja.Size = new System.Drawing.Size(80, 16);
             this.lblDarBaja.TabIndex = 14;
             this.lblDarBaja.Text = "Dar de Baja";
             this.lblDarBaja.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDarBaja_MouseClick);
@@ -997,7 +1113,7 @@ namespace sistema_reparto
             this.lblModificarPE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarPE.Location = new System.Drawing.Point(517, 138);
             this.lblModificarPE.Name = "lblModificarPE";
-            this.lblModificarPE.Size = new System.Drawing.Size(214, 18);
+            this.lblModificarPE.Size = new System.Drawing.Size(197, 16);
             this.lblModificarPE.TabIndex = 13;
             this.lblModificarPE.Text = "Modificar Paquete Encabezado";
             this.lblModificarPE.Click += new System.EventHandler(this.lblModificarPE_Click);
@@ -1028,7 +1144,7 @@ namespace sistema_reparto
             this.lbnIdPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnIdPE.Location = new System.Drawing.Point(3, 9);
             this.lbnIdPE.Name = "lbnIdPE";
-            this.lbnIdPE.Size = new System.Drawing.Size(176, 16);
+            this.lbnIdPE.Size = new System.Drawing.Size(145, 13);
             this.lbnIdPE.TabIndex = 10;
             this.lbnIdPE.Text = "ID Paquete Encabezado";
             // 
@@ -1057,7 +1173,7 @@ namespace sistema_reparto
             this.lblTelRemTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelRemTE.Location = new System.Drawing.Point(3, 9);
             this.lblTelRemTE.Name = "lblTelRemTE";
-            this.lblTelRemTE.Size = new System.Drawing.Size(144, 16);
+            this.lblTelRemTE.Size = new System.Drawing.Size(118, 13);
             this.lblTelRemTE.TabIndex = 10;
             this.lblTelRemTE.Text = "Teléfono Remitente";
             // 
@@ -1086,7 +1202,7 @@ namespace sistema_reparto
             this.lblIdEmpleadoPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleadoPE.Location = new System.Drawing.Point(3, 9);
             this.lblIdEmpleadoPE.Name = "lblIdEmpleadoPE";
-            this.lblIdEmpleadoPE.Size = new System.Drawing.Size(79, 16);
+            this.lblIdEmpleadoPE.Size = new System.Drawing.Size(62, 13);
             this.lblIdEmpleadoPE.TabIndex = 10;
             this.lblIdEmpleadoPE.Text = "Empleado";
             // 
@@ -1115,7 +1231,7 @@ namespace sistema_reparto
             this.lblDireccionRemPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccionRemPE.Location = new System.Drawing.Point(3, 9);
             this.lblDireccionRemPE.Name = "lblDireccionRemPE";
-            this.lblDireccionRemPE.Size = new System.Drawing.Size(148, 16);
+            this.lblDireccionRemPE.Size = new System.Drawing.Size(122, 13);
             this.lblDireccionRemPE.TabIndex = 10;
             this.lblDireccionRemPE.Text = "Direccion Remitente";
             // 
@@ -1144,7 +1260,7 @@ namespace sistema_reparto
             this.lblNombreRemPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreRemPE.Location = new System.Drawing.Point(3, 9);
             this.lblNombreRemPE.Name = "lblNombreRemPE";
-            this.lblNombreRemPE.Size = new System.Drawing.Size(137, 16);
+            this.lblNombreRemPE.Size = new System.Drawing.Size(111, 13);
             this.lblNombreRemPE.TabIndex = 10;
             this.lblNombreRemPE.Text = "Nombre Remitente";
             // 
@@ -1163,7 +1279,7 @@ namespace sistema_reparto
             this.lblFechaClienteEntPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaClienteEntPE.Location = new System.Drawing.Point(3, 9);
             this.lblFechaClienteEntPE.Name = "lblFechaClienteEntPE";
-            this.lblFechaClienteEntPE.Size = new System.Drawing.Size(161, 16);
+            this.lblFechaClienteEntPE.Size = new System.Drawing.Size(133, 13);
             this.lblFechaClienteEntPE.TabIndex = 10;
             this.lblFechaClienteEntPE.Text = "Fecha Cliente Entrega";
             // 
@@ -1189,7 +1305,7 @@ namespace sistema_reparto
             this.lblFechaRecPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaRecPE.Location = new System.Drawing.Point(3, 9);
             this.lblFechaRecPE.Name = "lblFechaRecPE";
-            this.lblFechaRecPE.Size = new System.Drawing.Size(134, 16);
+            this.lblFechaRecPE.Size = new System.Drawing.Size(111, 13);
             this.lblFechaRecPE.TabIndex = 10;
             this.lblFechaRecPE.Text = "Fecha Recepcion ";
             // 
@@ -1224,7 +1340,7 @@ namespace sistema_reparto
             this.lblIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdCliente.Location = new System.Drawing.Point(3, 9);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(56, 16);
+            this.lblIdCliente.Size = new System.Drawing.Size(46, 13);
             this.lblIdCliente.TabIndex = 10;
             this.lblIdCliente.Text = "Cliente";
             // 
@@ -1253,7 +1369,7 @@ namespace sistema_reparto
             this.lblEstatusPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatusPE.Location = new System.Drawing.Point(3, 9);
             this.lblEstatusPE.Name = "lblEstatusPE";
-            this.lblEstatusPE.Size = new System.Drawing.Size(121, 16);
+            this.lblEstatusPE.Size = new System.Drawing.Size(100, 13);
             this.lblEstatusPE.TabIndex = 10;
             this.lblEstatusPE.Text = "Estatus Paquete";
             // 
@@ -1312,6 +1428,90 @@ namespace sistema_reparto
             this.dgvPaqueteEncabezado.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPaqueteEncabezado.Size = new System.Drawing.Size(307, 150);
             this.dgvPaqueteEncabezado.TabIndex = 21;
+            // 
+            // idPaqueteEncabezadoDataGridViewTextBoxColumn
+            // 
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.HeaderText = "ID Paquete Encabezado";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
+            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // fechaRecepcionDataGridViewTextBoxColumn
+            // 
+            this.fechaRecepcionDataGridViewTextBoxColumn.DataPropertyName = "FechaRecepcion";
+            this.fechaRecepcionDataGridViewTextBoxColumn.HeaderText = "Fecha Recepcion";
+            this.fechaRecepcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaRecepcionDataGridViewTextBoxColumn.Name = "fechaRecepcionDataGridViewTextBoxColumn";
+            this.fechaRecepcionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // fechaClienteEntregaDataGridViewTextBoxColumn
+            // 
+            this.fechaClienteEntregaDataGridViewTextBoxColumn.DataPropertyName = "FechaClienteEntrega";
+            this.fechaClienteEntregaDataGridViewTextBoxColumn.HeaderText = "Fecha Cliente Entrega";
+            this.fechaClienteEntregaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaClienteEntregaDataGridViewTextBoxColumn.Name = "fechaClienteEntregaDataGridViewTextBoxColumn";
+            this.fechaClienteEntregaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // nombreRemitenteDataGridViewTextBoxColumn
+            // 
+            this.nombreRemitenteDataGridViewTextBoxColumn.DataPropertyName = "NombreRemitente";
+            this.nombreRemitenteDataGridViewTextBoxColumn.HeaderText = "Nombre Remitente";
+            this.nombreRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreRemitenteDataGridViewTextBoxColumn.Name = "nombreRemitenteDataGridViewTextBoxColumn";
+            this.nombreRemitenteDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // direccionRemitenteDataGridViewTextBoxColumn
+            // 
+            this.direccionRemitenteDataGridViewTextBoxColumn.DataPropertyName = "DireccionRemitente";
+            this.direccionRemitenteDataGridViewTextBoxColumn.HeaderText = "Direccion Remitente";
+            this.direccionRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionRemitenteDataGridViewTextBoxColumn.Name = "direccionRemitenteDataGridViewTextBoxColumn";
+            this.direccionRemitenteDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // telefonoRemitenteDataGridViewTextBoxColumn
+            // 
+            this.telefonoRemitenteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoRemitente";
+            this.telefonoRemitenteDataGridViewTextBoxColumn.HeaderText = "Teléfono Remitente";
+            this.telefonoRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoRemitenteDataGridViewTextBoxColumn.Name = "telefonoRemitenteDataGridViewTextBoxColumn";
+            this.telefonoRemitenteDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad Productos";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusPaqEncabezadoDataGridViewTextBoxColumn
+            // 
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "EstatusPaqEncabezado";
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.HeaderText = "Estatus Paquete Encabezado";
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.Name = "estatusPaqEncabezadoDataGridViewTextBoxColumn";
+            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // paqueteEncabezadoBindingSource
+            // 
+            this.paqueteEncabezadoBindingSource.DataSource = typeof(sistema_reparto.Clases.PaqueteEncabezado);
             // 
             // pnlActivarPE
             // 
@@ -1404,7 +1604,7 @@ namespace sistema_reparto
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(3, 9);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(70, 16);
+            this.lblCantidad.Size = new System.Drawing.Size(57, 13);
             this.lblCantidad.TabIndex = 10;
             this.lblCantidad.Text = "Cantidad";
             // 
@@ -1453,103 +1653,19 @@ namespace sistema_reparto
             this.lblCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCalificacion.Location = new System.Drawing.Point(54, 10);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(114, 16);
+            this.lblCalificacion.Size = new System.Drawing.Size(90, 13);
             this.lblCalificacion.TabIndex = 0;
             this.lblCalificacion.Text = "Calificación Piloto";
             this.lblCalificacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCalificacion_MouseClick);
             this.lblCalificacion.MouseLeave += new System.EventHandler(this.lblCalificacion_MouseLeave);
             this.lblCalificacion.MouseHover += new System.EventHandler(this.lblCalificacion_MouseHover);
             // 
-            // idPaqueteEncabezadoDataGridViewTextBoxColumn
-            // 
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.HeaderText = "ID Paquete Encabezado";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
-            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // fechaRecepcionDataGridViewTextBoxColumn
-            // 
-            this.fechaRecepcionDataGridViewTextBoxColumn.DataPropertyName = "FechaRecepcion";
-            this.fechaRecepcionDataGridViewTextBoxColumn.HeaderText = "Fecha Recepcion";
-            this.fechaRecepcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaRecepcionDataGridViewTextBoxColumn.Name = "fechaRecepcionDataGridViewTextBoxColumn";
-            this.fechaRecepcionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // fechaClienteEntregaDataGridViewTextBoxColumn
-            // 
-            this.fechaClienteEntregaDataGridViewTextBoxColumn.DataPropertyName = "FechaClienteEntrega";
-            this.fechaClienteEntregaDataGridViewTextBoxColumn.HeaderText = "Fecha Cliente Entrega";
-            this.fechaClienteEntregaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaClienteEntregaDataGridViewTextBoxColumn.Name = "fechaClienteEntregaDataGridViewTextBoxColumn";
-            this.fechaClienteEntregaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // nombreRemitenteDataGridViewTextBoxColumn
-            // 
-            this.nombreRemitenteDataGridViewTextBoxColumn.DataPropertyName = "NombreRemitente";
-            this.nombreRemitenteDataGridViewTextBoxColumn.HeaderText = "Nombre Remitente";
-            this.nombreRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreRemitenteDataGridViewTextBoxColumn.Name = "nombreRemitenteDataGridViewTextBoxColumn";
-            this.nombreRemitenteDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // direccionRemitenteDataGridViewTextBoxColumn
-            // 
-            this.direccionRemitenteDataGridViewTextBoxColumn.DataPropertyName = "DireccionRemitente";
-            this.direccionRemitenteDataGridViewTextBoxColumn.HeaderText = "Direccion Remitente";
-            this.direccionRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionRemitenteDataGridViewTextBoxColumn.Name = "direccionRemitenteDataGridViewTextBoxColumn";
-            this.direccionRemitenteDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // telefonoRemitenteDataGridViewTextBoxColumn
-            // 
-            this.telefonoRemitenteDataGridViewTextBoxColumn.DataPropertyName = "TelefonoRemitente";
-            this.telefonoRemitenteDataGridViewTextBoxColumn.HeaderText = "Teléfono Remitente";
-            this.telefonoRemitenteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoRemitenteDataGridViewTextBoxColumn.Name = "telefonoRemitenteDataGridViewTextBoxColumn";
-            this.telefonoRemitenteDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad Productos";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusPaqEncabezadoDataGridViewTextBoxColumn
-            // 
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "EstatusPaqEncabezado";
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.HeaderText = "Estatus Paquete Encabezado";
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.Name = "estatusPaqEncabezadoDataGridViewTextBoxColumn";
-            this.estatusPaqEncabezadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // paqueteEncabezadoBindingSource
-            // 
-            this.paqueteEncabezadoBindingSource.DataSource = typeof(sistema_reparto.Clases.PaqueteEncabezado);
-            // 
             // frmPaqueteEncabezado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 695);
+            this.ClientSize = new System.Drawing.Size(1059, 788);
             this.Controls.Add(this.pnlEnvio);
             this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlBotonGuardarPE);
@@ -1588,12 +1704,15 @@ namespace sistema_reparto
             this.Load += new System.EventHandler(this.frmPaqueteEncabezado_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPaqueteEncabezado_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
-            this.pnlEnvio.ResumeLayout(false);
-            this.pnlEnvio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
+            this.btnBitaTrans.ResumeLayout(false);
+            this.btnBitaTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
             this.pnlMovBodega.ResumeLayout(false);
             this.pnlMovBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
+            this.btnPiloto.ResumeLayout(false);
+            this.btnPiloto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).EndInit();
             this.btnUsuarios.ResumeLayout(false);
             this.btnUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).EndInit();
@@ -1628,6 +1747,9 @@ namespace sistema_reparto
             this.btnCliente.ResumeLayout(false);
             this.btnCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
+            this.pnlEnvio.ResumeLayout(false);
+            this.pnlEnvio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
             this.pnlBordePE.ResumeLayout(false);
             this.pnlCampoIDPE.ResumeLayout(false);
             this.pnlCampoIDPE.PerformLayout();
@@ -1648,12 +1770,12 @@ namespace sistema_reparto
             this.pnlEstatusPE.ResumeLayout(false);
             this.pnlEstatusPE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaqueteEncabezado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paqueteEncabezadoBindingSource)).EndInit();
             this.pnlCampoCantidad.ResumeLayout(false);
             this.pnlCampoCantidad.PerformLayout();
             this.btnCalificacionP.ResumeLayout(false);
             this.btnCalificacionP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paqueteEncabezadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1779,5 +1901,13 @@ namespace sistema_reparto
         private System.Windows.Forms.PictureBox picCalificacion;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblCalificacion;
+        private System.Windows.Forms.Panel btnBitaTrans;
+        private System.Windows.Forms.Label lblBitaTrans;
+        private System.Windows.Forms.PictureBox picIconoBitaTrans;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel btnPiloto;
+        private System.Windows.Forms.Label lblPiloto;
+        private System.Windows.Forms.PictureBox picIconoPiloto;
+        private System.Windows.Forms.Label label17;
     }
 }

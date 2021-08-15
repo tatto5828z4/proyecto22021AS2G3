@@ -33,10 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnBitaTrans = new System.Windows.Forms.Panel();
+            this.lblBitaTrans = new System.Windows.Forms.Label();
+            this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.pnlEnvio = new System.Windows.Forms.Panel();
             this.picEnvio = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblEnvio = new System.Windows.Forms.Label();
+            this.btnPiloto = new System.Windows.Forms.Panel();
+            this.lblPiloto = new System.Windows.Forms.Label();
+            this.picIconoPiloto = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnlMovBodega = new System.Windows.Forms.Panel();
             this.picMovBodega = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -126,6 +134,11 @@
             this.pnlBotonBuscarB = new System.Windows.Forms.Panel();
             this.txtBuscarBodega = new System.Windows.Forms.TextBox();
             this.dgvBodega = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUbicacionBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlActivarB = new System.Windows.Forms.Panel();
             this.pnlModificarB = new System.Windows.Forms.Panel();
             this.pnlDarBajaB = new System.Windows.Forms.Panel();
@@ -134,14 +147,13 @@
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUbicacionBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
+            this.btnBitaTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.pnlEnvio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
+            this.btnPiloto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).BeginInit();
             this.pnlMovBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
             this.btnUbicacion.SuspendLayout();
@@ -178,9 +190,9 @@
             this.pnlcampoIdE.SuspendLayout();
             this.pnlCampoEstatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
             this.btnCalificacionP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -188,7 +200,9 @@
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.btnBitaTrans);
             this.pnlSidebar.Controls.Add(this.pnlEnvio);
+            this.pnlSidebar.Controls.Add(this.btnPiloto);
             this.pnlSidebar.Controls.Add(this.pnlMovBodega);
             this.pnlSidebar.Controls.Add(this.btnUbicacion);
             this.pnlSidebar.Controls.Add(this.btnDepartamento);
@@ -204,8 +218,59 @@
             this.pnlSidebar.Controls.Add(this.btnSubUbicacion);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 706);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 757);
             this.pnlSidebar.TabIndex = 1;
+            // 
+            // btnBitaTrans
+            // 
+            this.btnBitaTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBitaTrans.Controls.Add(this.lblBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.label11);
+            this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBitaTrans.Location = new System.Drawing.Point(-10, 687);
+            this.btnBitaTrans.Name = "btnBitaTrans";
+            this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
+            this.btnBitaTrans.TabIndex = 353;
+            this.btnBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBitaTrans_MouseClick);
+            this.btnBitaTrans.MouseLeave += new System.EventHandler(this.btnBitaTrans_MouseLeave);
+            this.btnBitaTrans.MouseHover += new System.EventHandler(this.btnBitaTrans_MouseHover);
+            // 
+            // lblBitaTrans
+            // 
+            this.lblBitaTrans.AutoSize = true;
+            this.lblBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBitaTrans.Location = new System.Drawing.Point(56, 10);
+            this.lblBitaTrans.Name = "lblBitaTrans";
+            this.lblBitaTrans.Size = new System.Drawing.Size(114, 15);
+            this.lblBitaTrans.TabIndex = 2;
+            this.lblBitaTrans.Text = "Bitacora Transporte";
+            this.lblBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBitaTrans_MouseClick);
+            this.lblBitaTrans.MouseLeave += new System.EventHandler(this.lblBitaTrans_MouseLeave);
+            this.lblBitaTrans.MouseHover += new System.EventHandler(this.lblBitaTrans_MouseHover);
+            // 
+            // picIconoBitaTrans
+            // 
+            this.picIconoBitaTrans.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoBitaTrans.BackgroundImage")));
+            this.picIconoBitaTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoBitaTrans.Location = new System.Drawing.Point(28, 8);
+            this.picIconoBitaTrans.Name = "picIconoBitaTrans";
+            this.picIconoBitaTrans.Size = new System.Drawing.Size(20, 21);
+            this.picIconoBitaTrans.TabIndex = 1;
+            this.picIconoBitaTrans.TabStop = false;
+            this.picIconoBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoBitaTrans_MouseClick);
+            this.picIconoBitaTrans.MouseLeave += new System.EventHandler(this.picIconoBitaTrans_MouseLeave);
+            this.picIconoBitaTrans.MouseHover += new System.EventHandler(this.picIconoBitaTrans_MouseHover);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(18, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 1;
             // 
             // pnlEnvio
             // 
@@ -251,12 +316,63 @@
             this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblEnvio.Location = new System.Drawing.Point(78, 10);
             this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(43, 17);
+            this.lblEnvio.Size = new System.Drawing.Size(37, 15);
             this.lblEnvio.TabIndex = 0;
             this.lblEnvio.Text = "Envio";
             this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
             this.lblEnvio.MouseLeave += new System.EventHandler(this.lblEnvio_MouseLeave);
             this.lblEnvio.MouseHover += new System.EventHandler(this.lblEnvio_MouseHover);
+            // 
+            // btnPiloto
+            // 
+            this.btnPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnPiloto.Controls.Add(this.lblPiloto);
+            this.btnPiloto.Controls.Add(this.picIconoPiloto);
+            this.btnPiloto.Controls.Add(this.label19);
+            this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPiloto.Location = new System.Drawing.Point(-10, 654);
+            this.btnPiloto.Name = "btnPiloto";
+            this.btnPiloto.Size = new System.Drawing.Size(189, 34);
+            this.btnPiloto.TabIndex = 352;
+            this.btnPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPiloto_MouseClick);
+            this.btnPiloto.MouseLeave += new System.EventHandler(this.btnPiloto_MouseLeave);
+            this.btnPiloto.MouseHover += new System.EventHandler(this.btnPiloto_MouseHover);
+            // 
+            // lblPiloto
+            // 
+            this.lblPiloto.AutoSize = true;
+            this.lblPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPiloto.Location = new System.Drawing.Point(88, 10);
+            this.lblPiloto.Name = "lblPiloto";
+            this.lblPiloto.Size = new System.Drawing.Size(38, 15);
+            this.lblPiloto.TabIndex = 2;
+            this.lblPiloto.Text = "Piloto";
+            this.lblPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPiloto_MouseClick);
+            this.lblPiloto.MouseLeave += new System.EventHandler(this.lblPiloto_MouseLeave);
+            this.lblPiloto.MouseHover += new System.EventHandler(this.lblPiloto_MouseHover);
+            // 
+            // picIconoPiloto
+            // 
+            this.picIconoPiloto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoPiloto.BackgroundImage")));
+            this.picIconoPiloto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoPiloto.Location = new System.Drawing.Point(28, 8);
+            this.picIconoPiloto.Name = "picIconoPiloto";
+            this.picIconoPiloto.Size = new System.Drawing.Size(20, 21);
+            this.picIconoPiloto.TabIndex = 1;
+            this.picIconoPiloto.TabStop = false;
+            this.picIconoPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoPiloto_MouseClick);
+            this.picIconoPiloto.MouseLeave += new System.EventHandler(this.picIconoPiloto_MouseLeave);
+            this.picIconoPiloto.MouseHover += new System.EventHandler(this.picIconoPiloto_MouseHover);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
+            this.label19.Location = new System.Drawing.Point(15, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 13);
+            this.label19.TabIndex = 1;
             // 
             // pnlMovBodega
             // 
@@ -302,7 +418,7 @@
             this.lblMovimientoBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblMovimientoBodega.Location = new System.Drawing.Point(49, 10);
             this.lblMovimientoBodega.Name = "lblMovimientoBodega";
-            this.lblMovimientoBodega.Size = new System.Drawing.Size(129, 16);
+            this.lblMovimientoBodega.Size = new System.Drawing.Size(101, 13);
             this.lblMovimientoBodega.TabIndex = 0;
             this.lblMovimientoBodega.Text = "Movimiento Bodega";
             this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
@@ -331,7 +447,7 @@
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUbicacion.Location = new System.Drawing.Point(74, 10);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(69, 16);
+            this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
             this.lblUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUbicacion_MouseClick);
@@ -382,7 +498,7 @@
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(67, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(94, 16);
+            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             this.lblDepartamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDepartamento_MouseClick);
@@ -453,7 +569,7 @@
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.Location = new System.Drawing.Point(75, 10);
             this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 16);
+            this.lblBodega.Size = new System.Drawing.Size(44, 13);
             this.lblBodega.TabIndex = 0;
             this.lblBodega.Text = "Bodega";
             this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
@@ -503,7 +619,7 @@
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(83, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(50, 16);
+            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             this.lblPuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPuesto_MouseClick);
@@ -566,7 +682,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label15.Location = new System.Drawing.Point(75, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 16);
+            this.label15.Size = new System.Drawing.Size(54, 13);
             this.label15.TabIndex = 0;
             this.label15.Text = "Empleado";
             this.label15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label15_MouseClick);
@@ -659,7 +775,7 @@
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(81, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(49, 16);
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             this.lblCliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCliente_MouseClick);
@@ -710,7 +826,7 @@
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblRuta.Location = new System.Drawing.Point(82, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(36, 16);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
             this.lblRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRuta_MouseClick);
@@ -739,7 +855,7 @@
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqueteEncabezado.Location = new System.Drawing.Point(43, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(144, 17);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(125, 15);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -790,7 +906,7 @@
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoTransporte.Location = new System.Drawing.Point(56, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(110, 17);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(93, 15);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
@@ -841,7 +957,7 @@
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUsuarios.Location = new System.Drawing.Point(75, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
@@ -915,7 +1031,7 @@
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblSubUbicacion.Location = new System.Drawing.Point(66, 10);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(93, 16);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
@@ -929,7 +1045,7 @@
             this.lblTituloBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloBodega.Location = new System.Drawing.Point(221, 26);
             this.lblTituloBodega.Name = "lblTituloBodega";
-            this.lblTituloBodega.Size = new System.Drawing.Size(147, 40);
+            this.lblTituloBodega.Size = new System.Drawing.Size(127, 35);
             this.lblTituloBodega.TabIndex = 2;
             this.lblTituloBodega.Text = "Bodega";
             // 
@@ -941,7 +1057,7 @@
             this.lblRegistrarBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarBodega.Location = new System.Drawing.Point(225, 145);
             this.lblRegistrarBodega.Name = "lblRegistrarBodega";
-            this.lblRegistrarBodega.Size = new System.Drawing.Size(123, 18);
+            this.lblRegistrarBodega.Size = new System.Drawing.Size(115, 16);
             this.lblRegistrarBodega.TabIndex = 12;
             this.lblRegistrarBodega.Text = "Registrar Bodega";
             this.lblRegistrarBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrarBodega_MouseClick);
@@ -979,7 +1095,7 @@
             this.lblAbcBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcBodega.Location = new System.Drawing.Point(223, 87);
             this.lblAbcBodega.Name = "lblAbcBodega";
-            this.lblAbcBodega.Size = new System.Drawing.Size(214, 24);
+            this.lblAbcBodega.Size = new System.Drawing.Size(182, 20);
             this.lblAbcBodega.TabIndex = 10;
             this.lblAbcBodega.Text = "Mantenimientos Bodega";
             this.lblAbcBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcBodega_MouseClick);
@@ -992,7 +1108,7 @@
             this.lblDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblDarBaja.Location = new System.Drawing.Point(841, 151);
             this.lblDarBaja.Name = "lblDarBaja";
-            this.lblDarBaja.Size = new System.Drawing.Size(85, 18);
+            this.lblDarBaja.Size = new System.Drawing.Size(80, 16);
             this.lblDarBaja.TabIndex = 14;
             this.lblDarBaja.Text = "Dar de Baja";
             this.lblDarBaja.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDarBaja_MouseClick);
@@ -1021,7 +1137,7 @@
             this.lblModificarBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarBodega.Location = new System.Drawing.Point(525, 146);
             this.lblModificarBodega.Name = "lblModificarBodega";
-            this.lblModificarBodega.Size = new System.Drawing.Size(124, 18);
+            this.lblModificarBodega.Size = new System.Drawing.Size(115, 16);
             this.lblModificarBodega.TabIndex = 13;
             this.lblModificarBodega.Text = "Modificar Bodega";
             this.lblModificarBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblModificarBodega_MouseClick);
@@ -1051,7 +1167,7 @@
             this.lbnIdBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnIdBodega.Location = new System.Drawing.Point(3, 9);
             this.lbnIdBodega.Name = "lbnIdBodega";
-            this.lbnIdBodega.Size = new System.Drawing.Size(82, 16);
+            this.lbnIdBodega.Size = new System.Drawing.Size(67, 13);
             this.lbnIdBodega.TabIndex = 10;
             this.lbnIdBodega.Text = "ID Bodega";
             // 
@@ -1079,7 +1195,7 @@
             this.lblIdUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdUbicacion.Location = new System.Drawing.Point(3, 9);
             this.lblIdUbicacion.Name = "lblIdUbicacion";
-            this.lblIdUbicacion.Size = new System.Drawing.Size(78, 16);
+            this.lblIdUbicacion.Size = new System.Drawing.Size(64, 13);
             this.lblIdUbicacion.TabIndex = 10;
             this.lblIdUbicacion.Text = "Ubicación";
             // 
@@ -1107,7 +1223,7 @@
             this.lblSubUb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubUb.Location = new System.Drawing.Point(3, 9);
             this.lblSubUb.Name = "lblSubUb";
-            this.lblSubUb.Size = new System.Drawing.Size(109, 16);
+            this.lblSubUb.Size = new System.Drawing.Size(90, 13);
             this.lblSubUb.TabIndex = 10;
             this.lblSubUb.Text = "Sub Ubicación";
             // 
@@ -1135,7 +1251,7 @@
             this.lblIdPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdPE.Location = new System.Drawing.Point(3, 9);
             this.lblIdPE.Name = "lblIdPE";
-            this.lblIdPE.Size = new System.Drawing.Size(66, 16);
+            this.lblIdPE.Size = new System.Drawing.Size(54, 13);
             this.lblIdPE.TabIndex = 10;
             this.lblIdPE.Text = "Paquete";
             // 
@@ -1163,7 +1279,7 @@
             this.lblIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdCliente.Location = new System.Drawing.Point(3, 9);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(56, 16);
+            this.lblIdCliente.Size = new System.Drawing.Size(46, 13);
             this.lblIdCliente.TabIndex = 10;
             this.lblIdCliente.Text = "Cliente";
             // 
@@ -1191,7 +1307,7 @@
             this.lblIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleado.Location = new System.Drawing.Point(3, 9);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(79, 16);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(62, 13);
             this.lblIdEmpleado.TabIndex = 10;
             this.lblIdEmpleado.Text = "Empleado";
             // 
@@ -1220,7 +1336,7 @@
             this.lblEstatusB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatusB.Location = new System.Drawing.Point(3, 9);
             this.lblEstatusB.Name = "lblEstatusB";
-            this.lblEstatusB.Size = new System.Drawing.Size(118, 16);
+            this.lblEstatusB.Size = new System.Drawing.Size(96, 13);
             this.lblEstatusB.TabIndex = 10;
             this.lblEstatusB.Text = "Estatus Bodega";
             // 
@@ -1295,6 +1411,42 @@
             this.dgvBodega.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBodega.Size = new System.Drawing.Size(376, 150);
             this.dgvBodega.TabIndex = 24;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdBodega";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID Bodega";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 115;
+            // 
+            // idUbicacionBodegaDataGridViewTextBoxColumn
+            // 
+            this.idUbicacionBodegaDataGridViewTextBoxColumn.DataPropertyName = "IdUbicacionBodega";
+            this.idUbicacionBodegaDataGridViewTextBoxColumn.HeaderText = "ID Ubicación Bodega";
+            this.idUbicacionBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idUbicacionBodegaDataGridViewTextBoxColumn.Name = "idUbicacionBodegaDataGridViewTextBoxColumn";
+            this.idUbicacionBodegaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idSubUbicacionBodegaDataGridViewTextBoxColumn
+            // 
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.DataPropertyName = "IdSubUbicacionBodega";
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.HeaderText = "ID Sub Ubicación Bodega";
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.Name = "idSubUbicacionBodegaDataGridViewTextBoxColumn";
+            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusBodegaDataGridViewTextBoxColumn
+            // 
+            this.estatusBodegaDataGridViewTextBoxColumn.DataPropertyName = "EstatusBodega";
+            this.estatusBodegaDataGridViewTextBoxColumn.HeaderText = "Estatus Bodega";
+            this.estatusBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusBodegaDataGridViewTextBoxColumn.Name = "estatusBodegaDataGridViewTextBoxColumn";
+            this.estatusBodegaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // bodegaBindingSource
+            // 
+            this.bodegaBindingSource.DataSource = typeof(sistema_reparto.Clases.Bodega);
             // 
             // pnlActivarB
             // 
@@ -1386,55 +1538,19 @@
             this.lblCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCalificacion.Location = new System.Drawing.Point(54, 10);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(114, 16);
+            this.lblCalificacion.Size = new System.Drawing.Size(90, 13);
             this.lblCalificacion.TabIndex = 0;
             this.lblCalificacion.Text = "Calificación Piloto";
             this.lblCalificacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCalificacion_MouseClick);
             this.lblCalificacion.MouseLeave += new System.EventHandler(this.lblCalificacion_MouseLeave);
             this.lblCalificacion.MouseHover += new System.EventHandler(this.lblCalificacion_MouseHover);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdBodega";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Bodega";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 115;
-            // 
-            // idUbicacionBodegaDataGridViewTextBoxColumn
-            // 
-            this.idUbicacionBodegaDataGridViewTextBoxColumn.DataPropertyName = "IdUbicacionBodega";
-            this.idUbicacionBodegaDataGridViewTextBoxColumn.HeaderText = "ID Ubicación Bodega";
-            this.idUbicacionBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idUbicacionBodegaDataGridViewTextBoxColumn.Name = "idUbicacionBodegaDataGridViewTextBoxColumn";
-            this.idUbicacionBodegaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idSubUbicacionBodegaDataGridViewTextBoxColumn
-            // 
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.DataPropertyName = "IdSubUbicacionBodega";
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.HeaderText = "ID Sub Ubicación Bodega";
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.Name = "idSubUbicacionBodegaDataGridViewTextBoxColumn";
-            this.idSubUbicacionBodegaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusBodegaDataGridViewTextBoxColumn
-            // 
-            this.estatusBodegaDataGridViewTextBoxColumn.DataPropertyName = "EstatusBodega";
-            this.estatusBodegaDataGridViewTextBoxColumn.HeaderText = "Estatus Bodega";
-            this.estatusBodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusBodegaDataGridViewTextBoxColumn.Name = "estatusBodegaDataGridViewTextBoxColumn";
-            this.estatusBodegaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // bodegaBindingSource
-            // 
-            this.bodegaBindingSource.DataSource = typeof(sistema_reparto.Clases.Bodega);
-            // 
             // frmBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 705);
+            this.ClientSize = new System.Drawing.Size(1059, 788);
             this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlModificarB);
             this.Controls.Add(this.pnlBotonGuardarB);
@@ -1469,9 +1585,15 @@
             this.Load += new System.EventHandler(this.frmBodega_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmBodega_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.btnBitaTrans.ResumeLayout(false);
+            this.btnBitaTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
             this.pnlEnvio.ResumeLayout(false);
             this.pnlEnvio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
+            this.btnPiloto.ResumeLayout(false);
+            this.btnPiloto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).EndInit();
             this.pnlMovBodega.ResumeLayout(false);
             this.pnlMovBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
@@ -1528,10 +1650,10 @@
             this.pnlCampoEstatus.ResumeLayout(false);
             this.pnlCampoEstatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
             this.btnCalificacionP.ResumeLayout(false);
             this.btnCalificacionP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1647,5 +1769,13 @@
         private System.Windows.Forms.PictureBox picCalificacion;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblCalificacion;
+        private System.Windows.Forms.Panel btnBitaTrans;
+        private System.Windows.Forms.Label lblBitaTrans;
+        private System.Windows.Forms.PictureBox picIconoBitaTrans;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel btnPiloto;
+        private System.Windows.Forms.Label lblPiloto;
+        private System.Windows.Forms.PictureBox picIconoPiloto;
+        private System.Windows.Forms.Label label19;
     }
 }

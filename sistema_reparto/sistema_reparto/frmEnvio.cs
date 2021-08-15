@@ -701,32 +701,32 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+            
         }
 
         private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+            
         }
 
         private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverEnvio;
+         
         }
 
         private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalEnvio;
+            
         }
 
         private void btnTipoTransporte_MouseClick(object sender, MouseEventArgs e)
@@ -1560,6 +1560,125 @@ namespace sistema_reparto
         private void picCalificacion_MouseLeave(object sender, EventArgs e)
         {
             btnCalificacionP.BackColor = colorNormalEnvio;
+        }
+
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label22_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void panel3_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void label11_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void panel4_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void label22_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorHoverEnvio;
+        }
+
+        private void panel4_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void label22_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = colorNormalEnvio;
+        }
+
+        private void panel3_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void label11_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorHoverEnvio;
+        }
+
+        private void panel3_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.BackColor = colorNormalEnvio;
         }
         /* Final funcion para cargar mi tabla de Ruta */
     }
