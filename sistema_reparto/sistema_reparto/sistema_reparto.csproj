@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Bodega.cs" />
+    <Compile Include="Clases\CalificacionPiloto.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
