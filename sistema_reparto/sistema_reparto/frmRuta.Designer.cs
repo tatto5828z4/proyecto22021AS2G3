@@ -33,10 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnBitaTrans = new System.Windows.Forms.Panel();
+            this.lblBitaTrans = new System.Windows.Forms.Label();
+            this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnBodega = new System.Windows.Forms.Panel();
             this.picBodega = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.lblBodega = new System.Windows.Forms.Label();
+            this.btnPiloto = new System.Windows.Forms.Panel();
+            this.lblPiloto = new System.Windows.Forms.Label();
+            this.picIconoPiloto = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.pnlMovBodega = new System.Windows.Forms.Panel();
             this.picMovBodega = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -103,6 +111,11 @@
             this.pnlBotonBuscarR = new System.Windows.Forms.Panel();
             this.txtBuscarRuta = new System.Windows.Forms.TextBox();
             this.dgvRuta = new System.Windows.Forms.DataGridView();
+            this.idRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlFinalR = new System.Windows.Forms.Panel();
             this.txtFinalRuta = new System.Windows.Forms.TextBox();
             this.lblFinalRuta = new System.Windows.Forms.Label();
@@ -125,14 +138,13 @@
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
-            this.idRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusRutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
+            this.btnBitaTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.btnBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
+            this.btnPiloto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).BeginInit();
             this.pnlMovBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
             this.pnlTrans.SuspendLayout();
@@ -162,13 +174,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
             this.pnlBordeRuta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRuta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).BeginInit();
             this.pnlFinalR.SuspendLayout();
             this.pnlCampoInicioR.SuspendLayout();
             this.pnlCampoIdR.SuspendLayout();
             this.pnlEstatusR.SuspendLayout();
             this.btnCalificacionP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -176,7 +188,9 @@
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.btnBitaTrans);
             this.pnlSidebar.Controls.Add(this.btnBodega);
+            this.pnlSidebar.Controls.Add(this.btnPiloto);
             this.pnlSidebar.Controls.Add(this.pnlMovBodega);
             this.pnlSidebar.Controls.Add(this.pnlTrans);
             this.pnlSidebar.Controls.Add(this.pnlRuta);
@@ -193,8 +207,59 @@
             this.pnlSidebar.Controls.Add(this.btnCliente);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 734);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 776);
             this.pnlSidebar.TabIndex = 1;
+            // 
+            // btnBitaTrans
+            // 
+            this.btnBitaTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBitaTrans.Controls.Add(this.lblBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.label11);
+            this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBitaTrans.Location = new System.Drawing.Point(-10, 728);
+            this.btnBitaTrans.Name = "btnBitaTrans";
+            this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
+            this.btnBitaTrans.TabIndex = 50;
+            this.btnBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBitaTrans_MouseClick);
+            this.btnBitaTrans.MouseLeave += new System.EventHandler(this.btnBitaTrans_MouseLeave);
+            this.btnBitaTrans.MouseHover += new System.EventHandler(this.btnBitaTrans_MouseHover);
+            // 
+            // lblBitaTrans
+            // 
+            this.lblBitaTrans.AutoSize = true;
+            this.lblBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBitaTrans.Location = new System.Drawing.Point(56, 10);
+            this.lblBitaTrans.Name = "lblBitaTrans";
+            this.lblBitaTrans.Size = new System.Drawing.Size(114, 15);
+            this.lblBitaTrans.TabIndex = 2;
+            this.lblBitaTrans.Text = "Bitacora Transporte";
+            this.lblBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBitaTrans_MouseClick);
+            this.lblBitaTrans.MouseLeave += new System.EventHandler(this.lblBitaTrans_MouseLeave);
+            this.lblBitaTrans.MouseHover += new System.EventHandler(this.lblBitaTrans_MouseHover);
+            // 
+            // picIconoBitaTrans
+            // 
+            this.picIconoBitaTrans.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoBitaTrans.BackgroundImage")));
+            this.picIconoBitaTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoBitaTrans.Location = new System.Drawing.Point(28, 8);
+            this.picIconoBitaTrans.Name = "picIconoBitaTrans";
+            this.picIconoBitaTrans.Size = new System.Drawing.Size(20, 21);
+            this.picIconoBitaTrans.TabIndex = 1;
+            this.picIconoBitaTrans.TabStop = false;
+            this.picIconoBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoBitaTrans_MouseClick);
+            this.picIconoBitaTrans.MouseLeave += new System.EventHandler(this.picIconoBitaTrans_MouseLeave);
+            this.picIconoBitaTrans.MouseHover += new System.EventHandler(this.picIconoBitaTrans_MouseHover);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(17, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 1;
             // 
             // btnBodega
             // 
@@ -240,12 +305,63 @@
             this.lblBodega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblBodega.Location = new System.Drawing.Point(73, 10);
             this.lblBodega.Name = "lblBodega";
-            this.lblBodega.Size = new System.Drawing.Size(57, 16);
+            this.lblBodega.Size = new System.Drawing.Size(44, 13);
             this.lblBodega.TabIndex = 0;
             this.lblBodega.Text = "Bodega";
             this.lblBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBodega_MouseClick);
             this.lblBodega.MouseLeave += new System.EventHandler(this.lblBodega_MouseLeave);
             this.lblBodega.MouseHover += new System.EventHandler(this.lblBodega_MouseHover);
+            // 
+            // btnPiloto
+            // 
+            this.btnPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnPiloto.Controls.Add(this.lblPiloto);
+            this.btnPiloto.Controls.Add(this.picIconoPiloto);
+            this.btnPiloto.Controls.Add(this.label18);
+            this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPiloto.Location = new System.Drawing.Point(-10, 695);
+            this.btnPiloto.Name = "btnPiloto";
+            this.btnPiloto.Size = new System.Drawing.Size(189, 34);
+            this.btnPiloto.TabIndex = 49;
+            this.btnPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPiloto_MouseClick);
+            this.btnPiloto.MouseLeave += new System.EventHandler(this.btnPiloto_MouseLeave);
+            this.btnPiloto.MouseHover += new System.EventHandler(this.btnPiloto_MouseHover);
+            // 
+            // lblPiloto
+            // 
+            this.lblPiloto.AutoSize = true;
+            this.lblPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPiloto.Location = new System.Drawing.Point(88, 10);
+            this.lblPiloto.Name = "lblPiloto";
+            this.lblPiloto.Size = new System.Drawing.Size(38, 15);
+            this.lblPiloto.TabIndex = 2;
+            this.lblPiloto.Text = "Piloto";
+            this.lblPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPiloto_MouseClick);
+            this.lblPiloto.MouseLeave += new System.EventHandler(this.lblPiloto_MouseLeave);
+            this.lblPiloto.MouseHover += new System.EventHandler(this.lblPiloto_MouseHover);
+            // 
+            // picIconoPiloto
+            // 
+            this.picIconoPiloto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoPiloto.BackgroundImage")));
+            this.picIconoPiloto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoPiloto.Location = new System.Drawing.Point(28, 8);
+            this.picIconoPiloto.Name = "picIconoPiloto";
+            this.picIconoPiloto.Size = new System.Drawing.Size(20, 21);
+            this.picIconoPiloto.TabIndex = 1;
+            this.picIconoPiloto.TabStop = false;
+            this.picIconoPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoPiloto_MouseClick);
+            this.picIconoPiloto.MouseLeave += new System.EventHandler(this.picIconoPiloto_MouseLeave);
+            this.picIconoPiloto.MouseHover += new System.EventHandler(this.picIconoPiloto_MouseHover);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Image = ((System.Drawing.Image)(resources.GetObject("label18.Image")));
+            this.label18.Location = new System.Drawing.Point(15, 10);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 13);
+            this.label18.TabIndex = 1;
             // 
             // pnlMovBodega
             // 
@@ -294,7 +410,7 @@
             this.lblMovimientoBodega.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblMovimientoBodega.Location = new System.Drawing.Point(49, 10);
             this.lblMovimientoBodega.Name = "lblMovimientoBodega";
-            this.lblMovimientoBodega.Size = new System.Drawing.Size(129, 16);
+            this.lblMovimientoBodega.Size = new System.Drawing.Size(101, 13);
             this.lblMovimientoBodega.TabIndex = 0;
             this.lblMovimientoBodega.Text = "Movimiento Bodega";
             this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
@@ -343,7 +459,7 @@
             this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label25.Location = new System.Drawing.Point(68, 10);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(74, 16);
+            this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 0;
             this.label25.Text = "Transporte";
             // 
@@ -369,7 +485,7 @@
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblRuta.Location = new System.Drawing.Point(78, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(36, 16);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 2;
             this.lblRuta.Text = "Ruta";
             this.lblRuta.MouseLeave += new System.EventHandler(this.lblRuta_MouseLeave);
@@ -440,7 +556,7 @@
             this.lblEnvio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblEnvio.Location = new System.Drawing.Point(78, 10);
             this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(43, 17);
+            this.lblEnvio.Size = new System.Drawing.Size(37, 15);
             this.lblEnvio.TabIndex = 0;
             this.lblEnvio.Text = "Envio";
             this.lblEnvio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEnvio_MouseClick);
@@ -491,7 +607,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.label12.Location = new System.Drawing.Point(75, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 16);
+            this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 0;
             this.label12.Text = "Empleado";
             this.label12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label12_MouseClick);
@@ -520,7 +636,7 @@
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPaqueteEncabezado.Location = new System.Drawing.Point(49, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(139, 16);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -571,7 +687,7 @@
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUsuarios.Location = new System.Drawing.Point(68, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(62, 16);
+            this.lblUsuarios.Size = new System.Drawing.Size(48, 13);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
@@ -622,7 +738,7 @@
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblTipoTransporte.Location = new System.Drawing.Point(54, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(105, 16);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(82, 13);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
@@ -696,7 +812,7 @@
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblSubUbicacion.Location = new System.Drawing.Point(61, 10);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(93, 16);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
@@ -724,7 +840,7 @@
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblUbicacion.Location = new System.Drawing.Point(64, 10);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(69, 16);
+            this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
             this.lblUbicacion.Text = "Ubicación";
             this.lblUbicacion.MouseLeave += new System.EventHandler(this.lblUbicacion_MouseLeave);
@@ -772,7 +888,7 @@
             this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblDepartamento.Location = new System.Drawing.Point(59, 10);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(94, 16);
+            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
             this.lblDepartamento.TabIndex = 2;
             this.lblDepartamento.Text = "Departamento";
             this.lblDepartamento.MouseLeave += new System.EventHandler(this.lblDepartamento_MouseLeave);
@@ -841,7 +957,7 @@
             this.lblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblPuesto.Location = new System.Drawing.Point(75, 10);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(50, 16);
+            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
             this.lblPuesto.TabIndex = 0;
             this.lblPuesto.Text = "Puesto";
             this.lblPuesto.MouseLeave += new System.EventHandler(this.lblPuesto_MouseLeave);
@@ -901,7 +1017,7 @@
             this.lblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCliente.Location = new System.Drawing.Point(73, 10);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(49, 16);
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             this.lblCliente.MouseLeave += new System.EventHandler(this.lblCliente_MouseLeave);
@@ -932,7 +1048,7 @@
             this.lblAbcRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblAbcRuta.Location = new System.Drawing.Point(222, 87);
             this.lblAbcRuta.Name = "lblAbcRuta";
-            this.lblAbcRuta.Size = new System.Drawing.Size(186, 24);
+            this.lblAbcRuta.Size = new System.Drawing.Size(161, 20);
             this.lblAbcRuta.TabIndex = 9;
             this.lblAbcRuta.Text = "Mantenimientos Ruta";
             this.lblAbcRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblAbcRuta_MouseClick);
@@ -944,7 +1060,7 @@
             this.lblTituloRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.lblTituloRuta.Location = new System.Drawing.Point(220, 28);
             this.lblTituloRuta.Name = "lblTituloRuta";
-            this.lblTituloRuta.Size = new System.Drawing.Size(97, 40);
+            this.lblTituloRuta.Size = new System.Drawing.Size(84, 35);
             this.lblTituloRuta.TabIndex = 8;
             this.lblTituloRuta.Text = "Ruta";
             this.lblTituloRuta.Click += new System.EventHandler(this.lblTituloRuta_Click);
@@ -1065,6 +1181,42 @@
             this.dgvRuta.Size = new System.Drawing.Size(307, 150);
             this.dgvRuta.TabIndex = 39;
             // 
+            // idRutaDataGridViewTextBoxColumn
+            // 
+            this.idRutaDataGridViewTextBoxColumn.DataPropertyName = "IdRuta";
+            this.idRutaDataGridViewTextBoxColumn.HeaderText = "Id Ruta";
+            this.idRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idRutaDataGridViewTextBoxColumn.Name = "idRutaDataGridViewTextBoxColumn";
+            this.idRutaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "InicioRuta";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Inicio Ruta";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 115;
+            // 
+            // finalRutaDataGridViewTextBoxColumn
+            // 
+            this.finalRutaDataGridViewTextBoxColumn.DataPropertyName = "FinalRuta";
+            this.finalRutaDataGridViewTextBoxColumn.HeaderText = "Final Ruta";
+            this.finalRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.finalRutaDataGridViewTextBoxColumn.Name = "finalRutaDataGridViewTextBoxColumn";
+            this.finalRutaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusRutaDataGridViewTextBoxColumn
+            // 
+            this.estatusRutaDataGridViewTextBoxColumn.DataPropertyName = "EstatusRuta";
+            this.estatusRutaDataGridViewTextBoxColumn.HeaderText = "Estatus Ruta";
+            this.estatusRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusRutaDataGridViewTextBoxColumn.Name = "estatusRutaDataGridViewTextBoxColumn";
+            this.estatusRutaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // rutaBindingSource
+            // 
+            this.rutaBindingSource.DataSource = typeof(sistema_reparto.Clases.Ruta);
+            // 
             // pnlFinalR
             // 
             this.pnlFinalR.Controls.Add(this.txtFinalRuta);
@@ -1089,7 +1241,7 @@
             this.lblFinalRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinalRuta.Location = new System.Drawing.Point(3, 9);
             this.lblFinalRuta.Name = "lblFinalRuta";
-            this.lblFinalRuta.Size = new System.Drawing.Size(78, 16);
+            this.lblFinalRuta.Size = new System.Drawing.Size(65, 13);
             this.lblFinalRuta.TabIndex = 10;
             this.lblFinalRuta.Text = "Final Ruta";
             // 
@@ -1117,7 +1269,7 @@
             this.lblNombreDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreDepartamento.Location = new System.Drawing.Point(3, 9);
             this.lblNombreDepartamento.Name = "lblNombreDepartamento";
-            this.lblNombreDepartamento.Size = new System.Drawing.Size(81, 16);
+            this.lblNombreDepartamento.Size = new System.Drawing.Size(69, 13);
             this.lblNombreDepartamento.TabIndex = 10;
             this.lblNombreDepartamento.Text = "Inicio Ruta";
             // 
@@ -1145,7 +1297,7 @@
             this.lbnIdRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnIdRuta.Location = new System.Drawing.Point(3, 9);
             this.lbnIdRuta.Name = "lbnIdRuta";
-            this.lbnIdRuta.Size = new System.Drawing.Size(59, 16);
+            this.lbnIdRuta.Size = new System.Drawing.Size(51, 13);
             this.lbnIdRuta.TabIndex = 10;
             this.lbnIdRuta.Text = "ID Ruta";
             // 
@@ -1157,7 +1309,7 @@
             this.lblRegistrarRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblRegistrarRuta.Location = new System.Drawing.Point(202, 143);
             this.lblRegistrarRuta.Name = "lblRegistrarRuta";
-            this.lblRegistrarRuta.Size = new System.Drawing.Size(103, 18);
+            this.lblRegistrarRuta.Size = new System.Drawing.Size(94, 16);
             this.lblRegistrarRuta.TabIndex = 30;
             this.lblRegistrarRuta.Text = "Registrar Ruta";
             this.lblRegistrarRuta.Click += new System.EventHandler(this.lblRegistrarRuta_Click);
@@ -1179,7 +1331,7 @@
             this.lblDarBajaRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblDarBajaRuta.Location = new System.Drawing.Point(826, 143);
             this.lblDarBajaRuta.Name = "lblDarBajaRuta";
-            this.lblDarBajaRuta.Size = new System.Drawing.Size(85, 18);
+            this.lblDarBajaRuta.Size = new System.Drawing.Size(80, 16);
             this.lblDarBajaRuta.TabIndex = 32;
             this.lblDarBajaRuta.Text = "Dar de Baja";
             this.lblDarBajaRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblDarBajaRuta_MouseClick);
@@ -1208,7 +1360,7 @@
             this.lblModificarRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lblModificarRuta.Location = new System.Drawing.Point(511, 143);
             this.lblModificarRuta.Name = "lblModificarRuta";
-            this.lblModificarRuta.Size = new System.Drawing.Size(104, 18);
+            this.lblModificarRuta.Size = new System.Drawing.Size(94, 16);
             this.lblModificarRuta.TabIndex = 31;
             this.lblModificarRuta.Text = "Modificar Ruta";
             this.lblModificarRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblModificarRuta_MouseClick);
@@ -1237,7 +1389,7 @@
             this.lblEstatusR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatusR.Location = new System.Drawing.Point(3, 9);
             this.lblEstatusR.Name = "lblEstatusR";
-            this.lblEstatusR.Size = new System.Drawing.Size(95, 16);
+            this.lblEstatusR.Size = new System.Drawing.Size(80, 13);
             this.lblEstatusR.TabIndex = 10;
             this.lblEstatusR.Text = "Estatus Ruta";
             // 
@@ -1286,55 +1438,19 @@
             this.lblCalificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.lblCalificacion.Location = new System.Drawing.Point(54, 10);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(114, 16);
+            this.lblCalificacion.Size = new System.Drawing.Size(90, 13);
             this.lblCalificacion.TabIndex = 0;
             this.lblCalificacion.Text = "Calificación Piloto";
             this.lblCalificacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCalificacion_MouseClick);
             this.lblCalificacion.MouseLeave += new System.EventHandler(this.lblCalificacion_MouseLeave);
             this.lblCalificacion.MouseHover += new System.EventHandler(this.lblCalificacion_MouseHover);
             // 
-            // idRutaDataGridViewTextBoxColumn
-            // 
-            this.idRutaDataGridViewTextBoxColumn.DataPropertyName = "IdRuta";
-            this.idRutaDataGridViewTextBoxColumn.HeaderText = "Id Ruta";
-            this.idRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idRutaDataGridViewTextBoxColumn.Name = "idRutaDataGridViewTextBoxColumn";
-            this.idRutaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "InicioRuta";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Inicio Ruta";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 115;
-            // 
-            // finalRutaDataGridViewTextBoxColumn
-            // 
-            this.finalRutaDataGridViewTextBoxColumn.DataPropertyName = "FinalRuta";
-            this.finalRutaDataGridViewTextBoxColumn.HeaderText = "Final Ruta";
-            this.finalRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.finalRutaDataGridViewTextBoxColumn.Name = "finalRutaDataGridViewTextBoxColumn";
-            this.finalRutaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusRutaDataGridViewTextBoxColumn
-            // 
-            this.estatusRutaDataGridViewTextBoxColumn.DataPropertyName = "EstatusRuta";
-            this.estatusRutaDataGridViewTextBoxColumn.HeaderText = "Estatus Ruta";
-            this.estatusRutaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusRutaDataGridViewTextBoxColumn.Name = "estatusRutaDataGridViewTextBoxColumn";
-            this.estatusRutaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // rutaBindingSource
-            // 
-            this.rutaBindingSource.DataSource = typeof(sistema_reparto.Clases.Ruta);
-            // 
             // frmRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 729);
+            this.ClientSize = new System.Drawing.Size(1059, 788);
             this.ControlBox = false;
             this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlLLenarCamposR);
@@ -1367,9 +1483,15 @@
             this.Load += new System.EventHandler(this.frmRuta_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmRuta_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.btnBitaTrans.ResumeLayout(false);
+            this.btnBitaTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
             this.btnBodega.ResumeLayout(false);
             this.btnBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).EndInit();
+            this.btnPiloto.ResumeLayout(false);
+            this.btnPiloto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).EndInit();
             this.pnlMovBodega.ResumeLayout(false);
             this.pnlMovBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
@@ -1412,6 +1534,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).EndInit();
             this.pnlBordeRuta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRuta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).EndInit();
             this.pnlFinalR.ResumeLayout(false);
             this.pnlFinalR.PerformLayout();
             this.pnlCampoInicioR.ResumeLayout(false);
@@ -1423,7 +1546,6 @@
             this.btnCalificacionP.ResumeLayout(false);
             this.btnCalificacionP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rutaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1530,5 +1652,13 @@
         private System.Windows.Forms.PictureBox picCalificacion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblCalificacion;
+        private System.Windows.Forms.Panel btnBitaTrans;
+        private System.Windows.Forms.Label lblBitaTrans;
+        private System.Windows.Forms.PictureBox picIconoBitaTrans;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel btnPiloto;
+        private System.Windows.Forms.Label lblPiloto;
+        private System.Windows.Forms.PictureBox picIconoPiloto;
+        private System.Windows.Forms.Label label18;
     }
 }

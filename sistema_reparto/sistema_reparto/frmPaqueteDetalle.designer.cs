@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPaqueteDetalle));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPD = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -76,10 +76,18 @@
             this.lblModificarPaqDet = new System.Windows.Forms.Label();
             this.pnlEliminar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBitaTrans = new System.Windows.Forms.Panel();
+            this.lblBitaTrans = new System.Windows.Forms.Label();
+            this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.pnlMovBodega = new System.Windows.Forms.Panel();
             this.picMovBodega = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMovimientoBodega = new System.Windows.Forms.Label();
+            this.btnPiloto = new System.Windows.Forms.Panel();
+            this.lblPiloto = new System.Windows.Forms.Label();
+            this.picIconoPiloto = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlTrans = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -104,10 +112,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.pnlTM = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.pnlSU = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -156,8 +160,12 @@
             this.pnlCampoIDPE.SuspendLayout();
             this.pnlBordePaqDet.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.btnBitaTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.pnlMovBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).BeginInit();
+            this.btnPiloto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).BeginInit();
             this.pnlTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlEmpleado.SuspendLayout();
@@ -170,8 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnlTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.pnlTM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlSU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.pnlRuta.SuspendLayout();
@@ -286,16 +292,16 @@
             resources.ApplyResources(this.dgvPD, "dgvPD");
             this.dgvPD.Name = "dgvPD";
             this.dgvPD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPD.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvPD.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPD.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvPD.RowsDefaultCellStyle = dataGridViewCellStyle2;
             // 
             // idPaqueteEncabezadoDataGridViewTextBoxColumn
             // 
@@ -501,7 +507,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Controls.Add(this.btnBitaTrans);
             this.panel3.Controls.Add(this.pnlMovBodega);
+            this.panel3.Controls.Add(this.btnPiloto);
             this.panel3.Controls.Add(this.pnlTrans);
             this.panel3.Controls.Add(this.pnlEmpleado);
             this.panel3.Controls.Add(this.pnlPD);
@@ -509,7 +517,6 @@
             this.panel3.Controls.Add(this.pnlPE);
             this.panel3.Controls.Add(this.pnlUsuarios);
             this.panel3.Controls.Add(this.pnlTT);
-            this.panel3.Controls.Add(this.pnlTM);
             this.panel3.Controls.Add(this.pnlSU);
             this.panel3.Controls.Add(this.pnlRuta);
             this.panel3.Controls.Add(this.pnlUbicacion);
@@ -519,6 +526,42 @@
             this.panel3.Controls.Add(this.pnlCliente);
             this.panel3.Controls.Add(this.pnlEnvio);
             this.panel3.Name = "panel3";
+            // 
+            // btnBitaTrans
+            // 
+            this.btnBitaTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnBitaTrans.Controls.Add(this.lblBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
+            this.btnBitaTrans.Controls.Add(this.label13);
+            this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnBitaTrans, "btnBitaTrans");
+            this.btnBitaTrans.Name = "btnBitaTrans";
+            this.btnBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBitaTrans_MouseClick);
+            this.btnBitaTrans.MouseLeave += new System.EventHandler(this.btnBitaTrans_MouseLeave);
+            this.btnBitaTrans.MouseHover += new System.EventHandler(this.btnBitaTrans_MouseHover);
+            // 
+            // lblBitaTrans
+            // 
+            resources.ApplyResources(this.lblBitaTrans, "lblBitaTrans");
+            this.lblBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblBitaTrans.Name = "lblBitaTrans";
+            this.lblBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBitaTrans_MouseClick);
+            this.lblBitaTrans.MouseLeave += new System.EventHandler(this.lblBitaTrans_MouseLeave);
+            this.lblBitaTrans.MouseHover += new System.EventHandler(this.lblBitaTrans_MouseHover);
+            // 
+            // picIconoBitaTrans
+            // 
+            resources.ApplyResources(this.picIconoBitaTrans, "picIconoBitaTrans");
+            this.picIconoBitaTrans.Name = "picIconoBitaTrans";
+            this.picIconoBitaTrans.TabStop = false;
+            this.picIconoBitaTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoBitaTrans_MouseClick);
+            this.picIconoBitaTrans.MouseLeave += new System.EventHandler(this.picIconoBitaTrans_MouseLeave);
+            this.picIconoBitaTrans.MouseHover += new System.EventHandler(this.picIconoBitaTrans_MouseHover);
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
             // pnlMovBodega
             // 
@@ -556,6 +599,42 @@
             this.lblMovimientoBodega.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblMovimientoBodega_MouseClick);
             this.lblMovimientoBodega.MouseLeave += new System.EventHandler(this.lblMovimientoBodega_MouseLeave);
             this.lblMovimientoBodega.MouseHover += new System.EventHandler(this.lblMovimientoBodega_MouseHover);
+            // 
+            // btnPiloto
+            // 
+            this.btnPiloto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnPiloto.Controls.Add(this.lblPiloto);
+            this.btnPiloto.Controls.Add(this.picIconoPiloto);
+            this.btnPiloto.Controls.Add(this.label10);
+            this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnPiloto, "btnPiloto");
+            this.btnPiloto.Name = "btnPiloto";
+            this.btnPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPiloto_MouseClick);
+            this.btnPiloto.MouseLeave += new System.EventHandler(this.btnPiloto_MouseLeave);
+            this.btnPiloto.MouseHover += new System.EventHandler(this.btnPiloto_MouseHover);
+            // 
+            // lblPiloto
+            // 
+            resources.ApplyResources(this.lblPiloto, "lblPiloto");
+            this.lblPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPiloto.Name = "lblPiloto";
+            this.lblPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPiloto_MouseClick);
+            this.lblPiloto.MouseLeave += new System.EventHandler(this.lblPiloto_MouseLeave);
+            this.lblPiloto.MouseHover += new System.EventHandler(this.lblPiloto_MouseHover);
+            // 
+            // picIconoPiloto
+            // 
+            resources.ApplyResources(this.picIconoPiloto, "picIconoPiloto");
+            this.picIconoPiloto.Name = "picIconoPiloto";
+            this.picIconoPiloto.TabStop = false;
+            this.picIconoPiloto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picIconoPiloto_MouseClick);
+            this.picIconoPiloto.MouseLeave += new System.EventHandler(this.picIconoPiloto_MouseLeave);
+            this.picIconoPiloto.MouseHover += new System.EventHandler(this.picIconoPiloto_MouseHover);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // pnlTrans
             // 
@@ -770,42 +849,6 @@
             // 
             resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
-            // 
-            // pnlTM
-            // 
-            this.pnlTM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.pnlTM.Controls.Add(this.pictureBox8);
-            this.pnlTM.Controls.Add(this.label26);
-            this.pnlTM.Controls.Add(this.label27);
-            this.pnlTM.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pnlTM, "pnlTM");
-            this.pnlTM.Name = "pnlTM";
-            this.pnlTM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
-            this.pnlTM.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
-            this.pnlTM.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
-            // 
-            // pictureBox8
-            // 
-            resources.ApplyResources(this.pictureBox8, "pictureBox8");
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
-            this.pictureBox8.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
-            this.pictureBox8.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.label26.Name = "label26";
-            this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTM_MouseClick);
-            this.label26.MouseLeave += new System.EventHandler(this.pnlTM_MouseLeave);
-            this.label26.MouseHover += new System.EventHandler(this.pnlTM_MouseHover);
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
             // 
             // pnlSU
             // 
@@ -1180,9 +1223,15 @@
             this.pnlCampoIDPE.PerformLayout();
             this.pnlBordePaqDet.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.btnBitaTrans.ResumeLayout(false);
+            this.btnBitaTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
             this.pnlMovBodega.ResumeLayout(false);
             this.pnlMovBodega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMovBodega)).EndInit();
+            this.btnPiloto.ResumeLayout(false);
+            this.btnPiloto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoPiloto)).EndInit();
             this.pnlTrans.ResumeLayout(false);
             this.pnlTrans.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1201,9 +1250,6 @@
             this.pnlTT.ResumeLayout(false);
             this.pnlTT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.pnlTM.ResumeLayout(false);
-            this.pnlTM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlSU.ResumeLayout(false);
             this.pnlSU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -1302,10 +1348,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Panel pnlTM;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel pnlSU;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label28;
@@ -1351,5 +1393,13 @@
         private System.Windows.Forms.PictureBox picCalificacion;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblCalificacion;
+        private System.Windows.Forms.Panel btnBitaTrans;
+        private System.Windows.Forms.Label lblBitaTrans;
+        private System.Windows.Forms.PictureBox picIconoBitaTrans;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel btnPiloto;
+        private System.Windows.Forms.Label lblPiloto;
+        private System.Windows.Forms.PictureBox picIconoPiloto;
+        private System.Windows.Forms.Label label10;
     }
 }
