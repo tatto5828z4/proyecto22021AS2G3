@@ -306,7 +306,6 @@ C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_r
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
-C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
@@ -619,3 +618,16 @@ C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_repar
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\MySql.Data.xml
 C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
