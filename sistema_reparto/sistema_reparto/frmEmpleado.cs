@@ -588,7 +588,7 @@ namespace sistema_reparto
 
         private void panel7_MouseHover(object sender, EventArgs e)
         {
-            panel7.BackColor = colorHoverRuta;
+            
 
         }
 
@@ -634,7 +634,7 @@ namespace sistema_reparto
 
         private void panel7_MouseLeave(object sender, EventArgs e)
         {
-            panel7.BackColor = colorNormalRuta;
+            
 
         }
 

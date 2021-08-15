@@ -762,63 +762,50 @@ namespace sistema_reparto
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void panel3_MouseClick_1(object sender, MouseEventArgs e)
@@ -1359,6 +1346,61 @@ namespace sistema_reparto
         private void picMovBodega_MouseLeave(object sender, EventArgs e)
         {
             pnlMovBodega.BackColor = colorNormalCliente;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+            obj.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void pnlEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void picEnvio_MouseMove(object sender, MouseEventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
         }
     }
 }

@@ -179,26 +179,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado objtipoEmpleado = new frmtipoEmpleado();
-
-            objtipoEmpleado.Visible = true;
-            Visible = false;
+          
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado objtipoEmpleado = new frmtipoEmpleado();
-
-            objtipoEmpleado.Visible = true;
-            Visible = false;
+            
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado objtipoEmpleado = new frmtipoEmpleado();
-
-            objtipoEmpleado.Visible = true;
-            Visible = false;
+          
         }
 
         private void pnlSubUbicacion_MouseClick(object sender, MouseEventArgs e)
@@ -536,37 +527,34 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverSubUbicacion;
+           
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalSubUbicacion;
+          
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverSubUbicacion;
+           
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalSubUbicacion;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverSubUbicacion;
+           
         }
 
-        private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
-        {
-            btnTipoEmpleado.BackColor = colorNormalSubUbicacion;
-        }
+        
 
         private void pnlSubUbicacion_MouseHover(object sender, EventArgs e)
         {
-            btnSubUbicacion.BackColor = colorHoverSubUbicacion;
+            
         }
 
         private void btnSubUbicacion_MouseLeave(object sender, EventArgs e)
