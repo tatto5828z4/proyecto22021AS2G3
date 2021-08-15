@@ -217,32 +217,32 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverTM;
+            
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverTM;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverTM;
+            
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalTM;
+          
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalTM;
+            
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalTM;
+            
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -340,18 +340,12 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_Click(object sender, EventArgs e)
@@ -361,10 +355,7 @@ namespace sistema_reparto
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void lblTituloCliente_Click(object sender, EventArgs e)
@@ -1112,6 +1103,11 @@ namespace sistema_reparto
             frmTransporte obj = new frmTransporte();
             obj.Visible = true;
             Visible = false;
+        }
+
+        private void pnlSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     

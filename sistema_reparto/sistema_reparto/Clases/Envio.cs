@@ -17,24 +17,36 @@ namespace sistema_reparto.Clases
         String idTransporteE;
         String idRutaE;
         String idMovBodegaE;
+        String idBodega;
+        String idPaquete;
+        String idCliente;
+        String idEmpleado;
         String fechaE;
         String estatusE;
+
         
+
+
+
 
         public Envio()
         {
 
         }
 
-        public Envio(string idPiloto, string idOrdenE, string idTransporteE, string idRutaE, string idMovBodegaE, string fechaE, string estatusE)
+        public Envio(string idPiloto, string idOrdenE, string idTransporteE, string idRutaE, string idMovBodegaE, string idBodega, string idPaquete, string idCliente, string idEmpleado, string fechaE, string estatusE)
         {
-            this.IdPiloto = idPiloto;
-            this.IdOrdenE = idOrdenE;
-            this.IdTransporteE = idTransporteE;
-            this.IdRutaE = idRutaE;
-            this.IdMovBodegaE = idMovBodegaE;
-            this.FechaE = fechaE;
-            this.EstatusE = estatusE;
+            this.idPiloto = idPiloto;
+            this.idOrdenE = idOrdenE;
+            this.idTransporteE = idTransporteE;
+            this.idRutaE = idRutaE;
+            this.idMovBodegaE = idMovBodegaE;
+            this.idBodega = idBodega;
+            this.idPaquete = idPaquete;
+            this.idCliente = idCliente;
+            this.idEmpleado = idEmpleado;
+            this.fechaE = fechaE;
+            this.estatusE = estatusE;
         }
 
         public string IdPiloto { get => idPiloto; set => idPiloto = value; }
@@ -44,15 +56,26 @@ namespace sistema_reparto.Clases
         public string IdMovBodegaE { get => idMovBodegaE; set => idMovBodegaE = value; }
         public string FechaE { get => fechaE; set => fechaE = value; }
         public string EstatusE { get => estatusE; set => estatusE = value; }
-
+        public string IdBodega { get => idBodega; set => idBodega = value; }
+        public string IdPaquete { get => idPaquete; set => idPaquete = value; }
+        public string IdCliente { get => idCliente; set => idCliente = value; }
+        public string IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
 
         public void funInsertar()
+
         {
-            String psql = "INSERT INTO envio(idPiloto,idOrdenE,idTransporteE,idRutaE,idMovBodegaE," +
-                "fechaE,estatusE)" +
-                " VALUES ('" + idPiloto + "' , '" + idOrdenE + "' , '" + idTransporteE + "' , '"
-                + idRutaE + "' , '" + idMovBodegaE + "', '" + fechaE + "', '" + estatusE
-                + "')";
+
+            idBodega = funBuscarDato("idBodega", "movimientoBodega", "idMovBodega", idMovBodegaE);
+            idPaquete = funBuscarDato("idPaquete", "movimientoBodega", "idMovBodega", idMovBodegaE);
+            idEmpleado = funBuscarDato("idEmpleadoMB", "movimientoBodega", "idMovBodega", idMovBodegaE);
+            idCliente = funBuscarDato("idCliente", "movimientoBodega", "idMovBodega", idMovBodegaE);
+
+
+            String psql = "INSERT INTO envio(idPiloto,idOrdenE,idTransporteE,idRutaE,idMovBodega,idBodega,idPaquete,idCliente,idEmpleado,fechaE,estatusE)" +
+            " VALUES('" + idPiloto + "','" + idOrdenE + "' , '" + idTransporteE + "','" + idRutaE + "' , '" + idMovBodegaE + "' , '" + idBodega + "' , '" + idPaquete + "' , '" + idCliente + "' , '" + idEmpleado + "','" + fechaE + "','" + estatusE + "' )";
+
+            Console.WriteLine(psql);
+
 
             //Console.WriteLine(psql);
             MySqlConnection conexionBD = Conexion.conexion();
@@ -144,7 +167,14 @@ namespace sistema_reparto.Clases
 
                     envio.idTransporteE = reader.GetString("idTransporteE");
                     envio.idRutaE = reader.GetString("idRutaE");
-                    envio.idMovBodegaE = reader.GetString("idMovBodegaE");
+                    envio.idMovBodegaE = reader.GetString("idMovBodega");
+                    envio.idBodega = reader.GetString("idBodega");
+
+                    envio.idPaquete = reader.GetString("idPaquete");
+                    envio.idCliente = reader.GetString("idCliente");
+                    envio.idEmpleado = reader.GetString("idEmpleado");
+
+
                     envio.fechaE = reader.GetString("fechaE");
                     envio.estatusE = reader.GetString("estatusE");
                     
@@ -248,6 +278,66 @@ namespace sistema_reparto.Clases
 
         }
 
+        public String obtenerNombreCliente(String codigo)
+        {
+            MySqlDataReader leer = null;
+            String cliente = "";
+
+            String pSqlBuscar = "SELECT nombreCliente from cliente WHERE idCliente='" + codigo + "'";
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+            try
+            {
+                MySqlCommand buscar = new MySqlCommand(pSqlBuscar, conexionBD);
+                leer = buscar.ExecuteReader();
+
+                while (leer.Read())
+                {
+                   
+                    cliente = leer.GetString("nombreCliente");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar los datos " + ex.Message);
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
+            return cliente;
+        }
+
+        public String obtenerNombreEmpleado(String codigo)
+        {
+            MySqlDataReader leer = null;
+            String empleado = "";
+
+            String pSqlBuscar = "SELECT nombreEmpleado from empleado WHERE idEmpleado='" + codigo + "'";
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+            try
+            {
+                MySqlCommand buscar = new MySqlCommand(pSqlBuscar, conexionBD);
+                leer = buscar.ExecuteReader();
+
+                while (leer.Read())
+                {
+
+                    empleado = leer.GetString("nombreEmpleado");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar los datos " + ex.Message);
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
+            return empleado;
+        }
+
         /*Ruta*/
         public void obtenerNombreRuta(String codigo)
         {
@@ -290,7 +380,7 @@ namespace sistema_reparto.Clases
 
                 while (leer.Read())
                 {
-                    codigo = leer.GetString("idRuta");
+                    codigo = leer.GetString("idMovBodega");
                 }
             }
             catch (MySqlException ex)
@@ -306,15 +396,17 @@ namespace sistema_reparto.Clases
 
         public void funModificar(String idModificar)
         {
-            
 
+            
             String pSqlModificar = "UPDATE envio SET idPiloto='" + idPiloto + "'," +
             " idTransporteE='" + idTransporteE + "', idRutaE='" + idRutaE + "'," +
-            " idMovBodegaE='" + idMovBodegaE + "', fechaE='" + fechaE + "'," +
+            " idMovBodegaE='" + idMovBodegaE + "'" + " idBodega='" + idBodega + "'" + 
+            "idPaquete='" + idPaquete + "idCliente='"+ idCliente +"'"+ "idEmpleado='"+ idEmpleado +
+            ", fechaE ='" + fechaE + "'," +
             " estatusE = '" + estatusE + "'"+
             " WHERE idOrdenE='" + idOrdenE + "'";
 
-            
+           
 
             //Console.WriteLine(psql);
             MySqlConnection conexionBD = Conexion.conexion();
@@ -336,7 +428,7 @@ namespace sistema_reparto.Clases
             }
         }
 
-        public void funBuscarSetearTxt(ComboBox idPiloto, TextBox idOrdenE, ComboBox idTransporteE, ComboBox idRutaE, ComboBox idMovBodegaE, DateTimePicker fechaE,TextBox estatusE) { 
+        public void funBuscarSetearTxt(ComboBox idPiloto, TextBox idOrdenE, ComboBox idTransporteE, ComboBox idRutaE, ComboBox idMovBodegaE, TextBox idBodega , TextBox idPaquete, TextBox idCliente, TextBox idEmpleado, DateTimePicker fechaE,TextBox estatusE) { 
             MySqlDataReader leer = null;
 
             String pSqlBuscar = "SELECT * from envio WHERE idOrdenE='" + idOrdenE + "'";
@@ -356,6 +448,15 @@ namespace sistema_reparto.Clases
                     idTransporteE.Text = leer.GetString("idTransporteE");
                     idRutaE.Text = leer.GetString("idRutaE");
                     idMovBodegaE.Text = leer.GetString("idMovBodegaE");
+
+                    idBodega.Text = leer.GetString("idBodega");
+                    idPaquete.Text = leer.GetString("idPaquete");
+
+                    //String RetornoNombre = leer.GetString("idCliente");
+
+                    idCliente.Text = leer.GetString("idCliente");
+                    idEmpleado.Text = leer.GetString("idEmpleado");
+
                     fechaE.Text = leer.GetString("fechaE");
                     estatusE.Text = leer.GetString("estatusE");
                     
@@ -459,5 +560,85 @@ namespace sistema_reparto.Clases
         }
 
 
+        /*funcion para buscar datos*/
+        public String funBuscarDato(String dato, String tabla, String idBuscar, String id)
+        {
+            MySqlDataReader leer = null;
+            String sql;
+            String datoEncontrado = "";
+
+            sql = "SELECT" + " " + dato + " " + "FROM" + " " + tabla + " " + "WHERE" + " " + idBuscar + "=" + id;
+
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+
+            try
+            {
+                MySqlCommand buscarDatos = new MySqlCommand(sql, conexionBD);
+                leer = buscarDatos.ExecuteReader();
+
+                while (leer.Read())
+                {
+                    datoEncontrado = leer.GetString(dato);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al cargar los datos " + ex.Message);
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
+
+            return datoEncontrado;
+        }
+
+        //, TextBox idempleado
+        public void funsetenadotexts(String id,  TextBox idempleado,TextBox bodega, TextBox paquete, TextBox  cliente)
+        {
+
+            String IdEmpleado = funBuscarDato("idEmpleadoMB", "movimientoBodega", "idMovBodega", id);
+            String NombreEmpleado = funBuscarDato("nombreEmpleado", "empleado", "idEmpleado", IdEmpleado);
+
+
+            /*Encontrar campo idbodega*/
+            String idBodega = funBuscarDato("idBodega", "movimientoBodega", "idMovBodega", id);
+            String idBodegaEnvio = funBuscarDato("idBodega", "bodega", "idBodega", idBodega);
+
+            /*Encontrar campo idpaquete*/
+            String idPaquete = funBuscarDato("idPaquete", "movimientoBodega", "idMovBodega", id);
+            String idPaqueteEnvio = funBuscarDato("idPaqueteEncabezado", "paqueteEncabezado", "idPaqueteEncabezado", idPaquete);
+
+            /*Encontrar campo id y nombre del cliente*/
+            String idCliente = funBuscarDato("idCliente", "movimientoBodega", "idMovBodega", id);
+            String nombreCliente = funBuscarDato("nombreCliente", "cliente", "idCliente", idCliente);
+
+            /*Encontrar campo id y nombre empleado*/
+
+            // String idEmpleadol = funBuscarDato("idEmpleado", "movimientoBodega", "idMovBodega", id);
+            //  String nombreEmpleado = funBuscarDato("nombreEmpleado", "empleado", "idEmpleado", idEmpleadol);
+
+            idempleado.Text = NombreEmpleado;
+            bodega.Text = idBodegaEnvio;
+            paquete.Text = idPaqueteEnvio;
+            cliente.Text = nombreCliente;
+          
+
+
+        }
+
+        public void funLlenarCamposNombre(String id, TextBox idempleado, TextBox cliente)
+        {
+            String IdEmpleado = funBuscarDato("idEmpleadoMB", "movimientoBodega", "idMovBodega", id);
+            String NombreEmpleado = funBuscarDato("nombreEmpleado", "empleado", "idEmpleado", IdEmpleado);
+
+            /*Encontrar campo id y nombre del cliente*/
+            String idCliente = funBuscarDato("idCliente", "movimientoBodega", "idMovBodega", id);
+            String nombreCliente = funBuscarDato("nombreCliente", "cliente", "idCliente", idCliente);
+
+            idempleado.Text = NombreEmpleado;
+            cliente.Text = nombreCliente;
+        }
     }
 }

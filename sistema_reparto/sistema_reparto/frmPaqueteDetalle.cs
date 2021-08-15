@@ -420,12 +420,12 @@ namespace sistema_reparto
 
         private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            pnlTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void pnlTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            pnlTipoEmpleado.BackColor = colorNormalCliente;
+           
         }
 
         private void pnlRuta_MouseHover(object sender, EventArgs e)

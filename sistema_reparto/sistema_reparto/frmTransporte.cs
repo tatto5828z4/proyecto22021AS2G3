@@ -452,12 +452,12 @@ namespace sistema_reparto
 
         private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            pnlTipoEmpleado.BackColor = colorHoverRuta;
+            
         }
 
         private void pnlTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            pnlTipoEmpleado.BackColor = colorNormalRuta;
+            
         }
 
         private void pnlRuta_MouseHover(object sender, EventArgs e)
@@ -653,11 +653,7 @@ namespace sistema_reparto
 
         private void pnlTipoEmpleado_MouseClick_1(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void pnlRuta_MouseClick_1(object sender, MouseEventArgs e)

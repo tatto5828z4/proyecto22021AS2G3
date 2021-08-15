@@ -634,10 +634,7 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
-
-            Visible = false;
+            
         }
 
         private void btnTipoEmpleado_MouseHover(object sender, EventArgs e)
@@ -800,18 +797,14 @@ namespace sistema_reparto
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado tmov = new frmtipoEmpleado();
-            tmov.Visible = true;
+            
 
-            Visible = false;
+            
         }
 
         private void lblRuta_MouseClick(object sender, MouseEventArgs e)
