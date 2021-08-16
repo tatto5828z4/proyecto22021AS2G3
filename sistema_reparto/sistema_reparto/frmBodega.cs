@@ -85,6 +85,13 @@ namespace sistema_reparto
             pnlActivarB.Visible = false;
             pnlDarBajaB.Visible = false;
             /*Fin Ocultando elementos (elementos)*/
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -196,26 +203,17 @@ namespace sistema_reparto
 
         private void btnTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void btnRuta_MouseClick(object sender, MouseEventArgs e)
@@ -478,17 +476,17 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverBodega;
+  
         }
 
         private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverBodega;
+   
         }
 
         private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverBodega;
+
         }
 
         private void btnTipoTransporte_MouseHover(object sender, EventArgs e)
@@ -643,17 +641,17 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalBodega;
+
         }
 
         private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalBodega;
+
         }
 
         private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalBodega;
+
         }
 
         private void btnTipoTransporte_MouseLeave(object sender, EventArgs e)
@@ -770,9 +768,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = false;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -813,9 +811,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = false;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -833,9 +831,9 @@ namespace sistema_reparto
             pnlCampoIDB.Enabled = false;
             pnlIdUbicacion.Enabled = true;
             pnlSubUbicacion.Enabled = true;
-            pnlIdPaquete.Enabled = true;
-            pnlCampoIdC.Enabled = true;
-            pnlcampoIdE.Enabled = true;
+            pnlIdPaquete.Enabled = false;
+            pnlCampoIdC.Enabled = false;
+            pnlcampoIdE.Enabled = false;
             pnlCampoEstatus.Enabled = false;
             txtBuscarBodega.Enabled = true;
             pnlBotonBuscarB.Enabled = true;
@@ -856,9 +854,9 @@ namespace sistema_reparto
             pnlCampoIDB.Visible = true;
             pnlIdUbicacion.Visible = true;
             pnlSubUbicacion.Visible = true;
-            pnlIdPaquete.Visible = true;
-            pnlCampoIdC.Visible = true;
-            pnlcampoIdE.Visible = true;
+            pnlIdPaquete.Visible = false;
+            pnlCampoIdC.Visible = false;
+            pnlcampoIdE.Visible = false;
             pnlCampoEstatus.Visible = true;
             txtBuscarBodega.Visible = true;
             pnlBotonBuscarB.Visible = true;
@@ -912,16 +910,13 @@ namespace sistema_reparto
             String idBodega = txtIdBodega.Text;
             String idUbicacion = cbxUbicacion.SelectedValue.ToString();
             String idSubUbicacion = cbxSubUbicacion.SelectedValue.ToString();
-            String idPaqueteE = cbxIdPaqueteE.SelectedValue.ToString();
-            String idCliente = cbxIdCliente.SelectedValue.ToString();
-            String idEmpleado = cbxIdEmpleado.SelectedValue.ToString();
-
-            String estatusPE = estatus;
+            
+            
 
             /*Final obteniedo variables a usar con mi ABC */
 
             /* Inicio creamos un objeto de tipo Bodega para poder utilizar el metodo de insertar */
-            Bodega bodega = new Bodega(idBodega, idUbicacion, idSubUbicacion, idPaqueteE, idCliente, idEmpleado, estatusPE);
+            Bodega bodega = new Bodega(idBodega, idUbicacion, idSubUbicacion, estatus);
             /* Final creamos un objeto de tipo Bodega para poder utilizar el metodo de insertar  */
 
             return bodega;
@@ -930,11 +925,11 @@ namespace sistema_reparto
         private void funVaciarCampos()
         {
             txtIdBodega.Text = "";
-            cbxUbicacion.SelectedIndex = 0;
-            cbxSubUbicacion.SelectedIndex = 0;
-            cbxIdPaqueteE.SelectedIndex = 0;
-            cbxIdCliente.SelectedIndex = 0;
-            cbxIdEmpleado.SelectedIndex = 0;
+            //cbxUbicacion.SelectedIndex = 0;
+            //cbxSubUbicacion.SelectedIndex = 0;
+            //cbxIdPaqueteE.SelectedIndex = 0;
+            //cbxIdCliente.SelectedIndex = 0;
+            //cbxIdEmpleado.SelectedIndex = 0;
             txtEstatusB.Text = "";
             txtBuscarBodega.Text = "";
 
@@ -957,7 +952,7 @@ namespace sistema_reparto
             bodega.funModificar(idBodega);
             funCargarTabla(null);
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, idBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, idBodega);
 
         }
 
@@ -980,22 +975,9 @@ namespace sistema_reparto
             bodega.obtenerNombreSubUbicacion(idSubUbicacion);
             cbxSubUbicacion.SelectedValue = idSubUbicacion;
 
-            cbxIdPaqueteE.SelectedValue = dgvBodega.CurrentRow.Cells[3].Value.ToString();
+           
 
-
-            String idCliente = dgvBodega.CurrentRow.Cells[4].Value.ToString();
-
-            /*Obteniendo Nombre de Cliente*/
-            bodega.obtenerNombreCliente(idCliente);
-            cbxIdCliente.SelectedValue = idCliente;
-
-            String idEmpleado = dgvBodega.CurrentRow.Cells[5].Value.ToString();
-
-            /*Obteniendo Nombre del Empleado*/
-            bodega.obtenerNombreEmpleado(idEmpleado);
-            cbxIdEmpleado.SelectedValue = idEmpleado;
-
-            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[3].Value.ToString();
 
         }
 
@@ -1032,22 +1014,7 @@ namespace sistema_reparto
             bodega.obtenerNombreSubUbicacion(idSubUbicacion);
             cbxSubUbicacion.SelectedValue = idSubUbicacion;
 
-            cbxIdPaqueteE.SelectedValue = dgvBodega.CurrentRow.Cells[3].Value.ToString();
-
-
-            String idCliente = dgvBodega.CurrentRow.Cells[4].Value.ToString();
-
-            /*Obteniendo Nombre de Cliente*/
-            bodega.obtenerNombreCliente(idCliente);
-            cbxIdCliente.SelectedValue = idCliente;
-
-            String idEmpleado = dgvBodega.CurrentRow.Cells[5].Value.ToString();
-
-            /*Obteniendo Nombre del Empleado*/
-            bodega.obtenerNombreEmpleado(idEmpleado);
-            cbxIdEmpleado.SelectedValue = idEmpleado;
-
-            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[6].Value.ToString();
+            txtEstatusB.Text = dgvBodega.CurrentRow.Cells[3].Value.ToString();
 
 
             Bodega pbodega = new Bodega();
@@ -1078,7 +1045,7 @@ namespace sistema_reparto
             pnlDarBajaB.Visible = true;
             pnlActivarB.Visible = false;
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, pIdBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, pIdBodega);
 
         }
 
@@ -1094,13 +1061,70 @@ namespace sistema_reparto
             pnlDarBajaB.Visible = false;
             pnlActivarB.Visible = true;
 
-            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, cbxIdPaqueteE, cbxIdCliente, cbxIdEmpleado, txtEstatusB, pIdBodega);
+            bodega.funBuscarSetearTxt(txtIdBodega, cbxUbicacion, cbxSubUbicacion, txtEstatusB, pIdBodega);
 
         }
 
         private void pnlBotonGuardarB_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega movBodega = new frmMovimientoBodega();
+
+            movBodega.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverBodega;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalBodega;
         }
 
         private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
@@ -1140,14 +1164,14 @@ namespace sistema_reparto
             pnlEnvio.BackColor = colorNormalBodega;
         }
 
-        private void lblEnvio_MouseHover(object sender, EventArgs e)
-        {
-            pnlEnvio.BackColor = colorHoverBodega;
-        }
-
         private void lblEnvio_MouseLeave(object sender, EventArgs e)
         {
             pnlEnvio.BackColor = colorNormalBodega;
+        }
+
+        private void lblEnvio_MouseHover(object sender, EventArgs e)
+        {
+            pnlEnvio.BackColor = colorHoverBodega;
         }
 
         private void picEnvio_MouseHover(object sender, EventArgs e)
@@ -1160,39 +1184,177 @@ namespace sistema_reparto
             pnlEnvio.BackColor = colorNormalBodega;
         }
 
-        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        private void btnCalificacionP_MouseClick(object sender, MouseEventArgs e)
         {
-            frmTransporte obj = new frmTransporte();
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
             obj.Visible = true;
 
             Visible = false;
         }
 
-        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        private void lblCalificacion_MouseClick(object sender, MouseEventArgs e)
         {
-            pnlTrans.BackColor = colorHoverBodega;
-        }
-
-        private void pnlTrans_MouseLeave(object sender, EventArgs e)
-        {
-            pnlTrans.BackColor = colorNormalBodega;
-        }
-
-        private void pnlPD_MouseHover(object sender, EventArgs e)
-        {
-            pnlPD.BackColor = colorHoverBodega;
-        }
-
-        private void pnlPD_MouseLeave(object sender, EventArgs e)
-        {
-            pnlPD.BackColor = colorNormalBodega;
-        }
-
-        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
-        {
-            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
             obj.Visible = true;
+
             Visible = false;
+        }
+
+        private void picCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnCalificacionP_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverBodega;
+        }
+
+        private void lblCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverBodega;
+        }
+
+        private void picCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverBodega;
+        }
+
+        private void btnCalificacionP_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalBodega;
+        }
+
+        private void lblCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalBodega;
+        }
+
+        private void picCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalBodega;
+        }
+
+        private void btnPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverBodega;
+        }
+
+        private void lblPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverBodega;
+        }
+
+        private void picIconoPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverBodega;
+        }
+
+        private void btnPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalBodega;
+        }
+
+        private void lblPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalBodega;
+        }
+
+        private void picIconoPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalBodega;
+        }
+
+        private void btnBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverBodega;
+        }
+
+        private void lblBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverBodega;
+        }
+
+        private void picIconoBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverBodega;
+        }
+
+        private void btnBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalBodega;
+        }
+
+        private void lblBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalBodega;
+        }
+
+        private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalBodega;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

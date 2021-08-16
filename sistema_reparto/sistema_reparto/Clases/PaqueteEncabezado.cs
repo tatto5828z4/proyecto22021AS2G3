@@ -19,6 +19,7 @@ namespace sistema_reparto.Clases
         String nombreRemitente;
         String direccionRemitente;
         String telefonoRemitente;
+        String cantidad;
         String idEmpleado;
         String estatusPaqEncabezado;
 
@@ -27,15 +28,16 @@ namespace sistema_reparto.Clases
 
         }
 
-        public PaqueteEncabezado(string idPaqueteEncabezado, string idCliente, string fechaRecepcion, string fechaClienteEntrega, string nombreRemitente, string direccionRemitente, string telefonoRemitente, string idEmpleado, string estatusPaqEncabezado)
+        public PaqueteEncabezado(string idPaqueteEncabezado, string idCliente, string fechaRecepcion, string fechaClienteEntrega, string nombreRemitente, string direccionRemitente, string telefonoRemitente, string cantidad, string idEmpleado, string estatusPaqEncabezado)
         {
             this.idPaqueteEncabezado = idPaqueteEncabezado;
             this.idCliente = idCliente;
-            this.FechaRecepcion = fechaRecepcion;
-            this.FechaClienteEntrega = fechaClienteEntrega;
+            this.fechaRecepcion = fechaRecepcion;
+            this.fechaClienteEntrega = fechaClienteEntrega;
             this.nombreRemitente = nombreRemitente;
             this.direccionRemitente = direccionRemitente;
             this.telefonoRemitente = telefonoRemitente;
+            this.Cantidad = cantidad;
             this.idEmpleado = idEmpleado;
             this.estatusPaqEncabezado = estatusPaqEncabezado;
         }
@@ -49,6 +51,7 @@ namespace sistema_reparto.Clases
         public string TelefonoRemitente { get => telefonoRemitente; set => telefonoRemitente = value; }
         public string IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public string EstatusPaqEncabezado { get => estatusPaqEncabezado; set => estatusPaqEncabezado = value; }
+        public string Cantidad { get => cantidad; set => cantidad = value; }
 
 
         //Metodos
@@ -56,9 +59,9 @@ namespace sistema_reparto.Clases
         public void funInsertar()
         {
             String psql = "INSERT INTO paqueteEncabezado(idPaqueteEncabezado,idCliente,fechaRecepcion,fechaClienteEntrega,NombreRemitente," +
-                "direccionRemitente,telefonoRemitente, idEmpleado,estatusPaqEncabezado)" +
+                "direccionRemitente,telefonoRemitente, cantidadPaquetes, idEmpleado,estatusPaqEncabezado)" +
                 " VALUES ('" + idPaqueteEncabezado + "' , '" + idCliente + "' , '" + FechaRecepcion + "' , '"
-                + FechaClienteEntrega + "' , '" + nombreRemitente + "', '" + direccionRemitente + "', '" + telefonoRemitente
+                + FechaClienteEntrega + "' , '" + nombreRemitente + "', '" + direccionRemitente + "', '" + telefonoRemitente+"', '"+Cantidad
                 + "', '" + idEmpleado + "', '" + estatusPaqEncabezado + "')";
 
             //Console.WriteLine(psql);
@@ -155,6 +158,7 @@ namespace sistema_reparto.Clases
                     paqueteE.nombreRemitente = reader.GetString("NombreRemitente");
                     paqueteE.direccionRemitente = reader.GetString("direccionRemitente");
                     paqueteE.telefonoRemitente = reader.GetString("telefonoRemitente");
+                    paqueteE.cantidad = reader.GetString("cantidadPaquetes");
                     paqueteE.idEmpleado = reader.GetString("idEmpleado");
                     paqueteE.estatusPaqEncabezado = reader.GetString("estatusPaqEncabezado");
 
@@ -230,7 +234,8 @@ namespace sistema_reparto.Clases
             String pSqlModificar = "UPDATE paqueteEncabezado SET idCliente='" + idCliente + "'," +
             " fechaRecepcion='" + fechaRecepcion + "', fechaClienteEntrega='" + fechaClienteEntrega + "',"+
             " NombreRemitente='" + nombreRemitente + "', direccionRemitente='" + direccionRemitente + "',"+
-            " telefonoRemitente = '" + telefonoRemitente + "', idEmpleado = '" + idEmpleado + "',"+
+            " telefonoRemitente = '" + telefonoRemitente + "', cantidadPaquetes = '" + cantidad + "'," +
+            " idEmpleado = '" + idEmpleado + "',"+
             " estatusPaqEncabezado='"+estatusPaqEncabezado+"'"+
             " WHERE idPaqueteEncabezado='" + IdPaqueteEncabezado + "'";
 
@@ -254,7 +259,7 @@ namespace sistema_reparto.Clases
             }
         }
 
-        public void funBuscarSetearTxt(TextBox idPE, ComboBox idCliente, DateTimePicker fechaRecepcion, DateTimePicker fechaClienteEntrega, TextBox nombreRemitente, TextBox direccionRemitente, TextBox telefonoRemitente,ComboBox idEmpleado, TextBox estatus, String idPaqueteEncabezado)
+        public void funBuscarSetearTxt(TextBox idPE, ComboBox idCliente, DateTimePicker fechaRecepcion, DateTimePicker fechaClienteEntrega, TextBox nombreRemitente, TextBox direccionRemitente, TextBox telefonoRemitente, TextBox cantidad, ComboBox idEmpleado, TextBox estatus, String idPaqueteEncabezado)
         {
             MySqlDataReader leer = null;
 
@@ -277,8 +282,9 @@ namespace sistema_reparto.Clases
                     nombreRemitente.Text = leer.GetString(4);
                     direccionRemitente.Text = leer.GetString(5);
                     telefonoRemitente.Text = leer.GetString(6);
-                    idEmpleado.Text = leer.GetString(7);
-                    estatus.Text = leer.GetString(8);
+                    cantidad.Text = leer.GetString(7);
+                    idEmpleado.Text = leer.GetString(8);
+                    estatus.Text = leer.GetString(9);
                 }
             }
             catch (MySqlException ex)

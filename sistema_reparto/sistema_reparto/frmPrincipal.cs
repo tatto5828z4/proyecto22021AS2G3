@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using sistema_reparto.Clases;
 
 namespace sistema_reparto
 {
@@ -85,6 +85,13 @@ namespace sistema_reparto
             /*Final obteniedo variables a usar con mi ABC cliente */
 
             pnlMantenimientoC.Visible = false;
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
 
 
         }
@@ -762,63 +769,50 @@ namespace sistema_reparto
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
         }
 
         private void lblTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+           
         }
 
         private void picTipoEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
             pnlMantenimientoC.Visible = false;
 
-            frmtipoEmpleado obj = new frmtipoEmpleado();
-
-            obj.Visible = true;
-
-            Visible = false;
+          
         }
 
         private void pnlTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void picTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void lblTipoEmpleado_MouseHover(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorHoverCliente;
+            
         }
 
         private void btnTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void lblTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void picTipoEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoEmpleado.BackColor = colorNormalCliente;
+            
         }
 
         private void panel3_MouseClick_1(object sender, MouseEventArgs e)
@@ -926,32 +920,32 @@ namespace sistema_reparto
 
         private void btnTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverCliente;
+           
         }
 
         private void lblTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverCliente;
+           
         }
 
         private void picTipoMovimiento_MouseHover(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorHoverCliente;
+           
         }
 
         private void btnTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalCliente;
+          
         }
 
         private void lblTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalCliente;
+
         }
 
         private void picTipoMovimiento_MouseLeave(object sender, EventArgs e)
         {
-            btnTipoMovimiento.BackColor = colorNormalCliente;
+          
         }
 
         private void panel3_MouseHover(object sender, EventArgs e)
@@ -1141,12 +1135,12 @@ namespace sistema_reparto
 
         private void lblPaqueteEncabezado_MouseLeave(object sender, EventArgs e)
         {
-            btnPaqueteEncabezado.BackColor = colorHoverCliente;
+            btnPaqueteEncabezado.BackColor = colorNormalCliente;
         }
 
         private void picIconoPaqueteE_MouseLeave(object sender, EventArgs e)
         {
-            btnPaqueteEncabezado.BackColor = colorHoverCliente;
+            btnPaqueteEncabezado.BackColor = colorNormalCliente;
         }
 
         private void pnlEmpleado_MouseClick(object sender, MouseEventArgs e)
@@ -1296,19 +1290,83 @@ namespace sistema_reparto
             btnBodega.BackColor = colorNormalCliente;
         }
 
-        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        private void label17_MouseClick(object sender, MouseEventArgs e)
         {
-            frmEnvio obj = new frmEnvio();
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
 
             obj.Visible = true;
 
             Visible = false;
         }
 
+        private void lblMovimientoBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picMovBodega_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmMovimientoBodega obj = new frmMovimientoBodega();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void pnlMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverCliente;
+        }
+
+        private void lblMovimientoBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverCliente;
+        }
+
+        private void picMovBodega_MouseHover(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorHoverCliente;
+        }
+
+        private void pnlMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalCliente;
+        }
+
+        private void lblMovimientoBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalCliente;
+        }
+
+        private void picMovBodega_MouseLeave(object sender, EventArgs e)
+        {
+            pnlMovBodega.BackColor = colorNormalCliente;
+        }
+
+        private void pnlEnvio_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmEnvio obj = new frmEnvio();
+            obj.Visible = true;
+
+            Visible = false;
+
+        }
+
         private void lblEnvio_MouseClick(object sender, MouseEventArgs e)
         {
             frmEnvio obj = new frmEnvio();
-
             obj.Visible = true;
 
             Visible = false;
@@ -1317,7 +1375,6 @@ namespace sistema_reparto
         private void picEnvio_MouseClick(object sender, MouseEventArgs e)
         {
             frmEnvio obj = new frmEnvio();
-
             obj.Visible = true;
 
             Visible = false;
@@ -1333,59 +1390,206 @@ namespace sistema_reparto
             pnlEnvio.BackColor = colorNormalCliente;
         }
 
-        private void lblEnvio_MouseLeave(object sender, EventArgs e)
-        {
-            
-            pnlEnvio.BackColor = colorNormalCliente;
-        }
-
         private void lblEnvio_MouseHover(object sender, EventArgs e)
         {
             pnlEnvio.BackColor = colorHoverCliente;
         }
 
-        private void picEnvio_MouseHover(object sender, EventArgs e)
-        {
-            pnlEnvio.BackColor = colorHoverCliente;
-        }
-
-        private void picEnvio_MouseLeave(object sender, EventArgs e)
+        private void lblEnvio_MouseLeave(object sender, EventArgs e)
         {
             pnlEnvio.BackColor = colorNormalCliente;
         }
 
-        private void panel3_MouseClick_2(object sender, MouseEventArgs e)
+        private void picEnvio_MouseLeave(object sender, EventArgs e)
         {
-            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            pnlEnvio.BackColor = colorHoverCliente;
+        }
+
+        private void picEnvio_MouseMove(object sender, MouseEventArgs e)
+        {
+            pnlEnvio.BackColor = colorNormalCliente;
+        }
+
+        private void btnCalificacionP_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
             obj.Visible = true;
+
             Visible = false;
         }
 
-        private void pnlPD_MouseHover(object sender, EventArgs e)
+        private void lblCalificacion_MouseClick(object sender, MouseEventArgs e)
         {
-            pnlPD.BackColor = colorHoverCliente;
-        }
+            pnlMantenimientoC.Visible = false;
 
-        private void pnlTransporte_MouseHover(object sender, EventArgs e)
-        {
-            pnlTransporte.BackColor = colorHoverCliente;
-        }
-
-        private void pnlTransporte_MouseLeave(object sender, EventArgs e)
-        {
-            pnlTransporte.BackColor = colorNormalCliente;
-        }
-
-        private void pnlPD_MouseLeave(object sender, EventArgs e)
-        {
-            pnlPD.BackColor = colorNormalCliente;
-        }
-
-        private void pnlTransporte_MouseClick(object sender, MouseEventArgs e)
-        {
-            frmTransporte obj = new frmTransporte();
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
             obj.Visible = true;
+
             Visible = false;
+        }
+
+        private void picCalificacion_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnlMantenimientoC.Visible = false;
+
+            frmCalificacionPiloto obj = new frmCalificacionPiloto();
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnCalificacionP_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverCliente;
+        }
+
+        private void lblCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverCliente;
+        }
+
+        private void picCalificacion_MouseHover(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorHoverCliente;
+        }
+
+        private void btnCalificacionP_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalCliente;
+        }
+
+        private void lblCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalCliente;
+        }
+
+        private void picCalificacion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCalificacionP.BackColor = colorNormalCliente;
+        }
+
+        private void btnPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+
+        }
+
+        private void lblPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoPiloto_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPiloto obj = new frmPiloto();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoBitaTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmBitacoraTransporte obj = new frmBitacoraTransporte();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void btnPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverCliente;
+        }
+
+        private void lblPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverCliente;
+        }
+
+        private void picIconoPiloto_MouseHover(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorHoverCliente;
+        }
+
+        private void btnPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalCliente;
+        }
+
+        private void lblPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoPiloto_MouseLeave(object sender, EventArgs e)
+        {
+            btnPiloto.BackColor = colorNormalCliente;
+        }
+
+        private void btnBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverCliente;
+        }
+
+        private void lblBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverCliente;
+        }
+
+        private void picIconoBitaTrans_MouseHover(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorHoverCliente;
+        }
+
+        private void btnBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalCliente;
+        }
+
+        private void lblBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalCliente;
+        }
+
+        private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
+        {
+            btnBitaTrans.BackColor = colorNormalCliente;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
+    
+    
 }

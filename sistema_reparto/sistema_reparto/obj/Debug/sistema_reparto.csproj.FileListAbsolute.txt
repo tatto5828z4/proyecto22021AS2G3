@@ -104,7 +104,6 @@ C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debu
 C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
-C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
 C:\Users\jorgi\Desktop\ProyectoAnalisis\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe.config
 C:\Users\jorgi\Desktop\ProyectoAnalisis\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe
 C:\Users\jorgi\Desktop\ProyectoAnalisis\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.pdb
@@ -306,7 +305,6 @@ C:\Users\Wilmer\Desktop\BU08\sistema_reparto\sistema_reparto\obj\Debug\sistema_r
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
-C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
 C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
@@ -515,3 +513,285 @@ C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe.config
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.pdb
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\Google.Protobuf.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\Zstandard.Net.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\Renci.SshNet.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\System.Buffers.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\System.Memory.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\bin\Debug\MySql.Data.xml
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csprojAssemblyReference.cache
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPrincipal.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.Properties.Resources.resources
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.GenerateResource.cache
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CoreCompileInputs.cache
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Brayan Cifuentes\Desktop\este si\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Langas\source\repos\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csprojAssemblyReference.cache
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPrincipal.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.Properties.Resources.resources
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.GenerateResource.cache
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CoreCompileInputs.cache
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe.config
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.pdb
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\Google.Protobuf.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\Zstandard.Net.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\Renci.SshNet.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\System.Buffers.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\System.Memory.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\bin\Debug\MySql.Data.xml
+C:\Users\geova\Documents\Octavo_Semestre\Analisis2\BackUpVersion11\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Brayan Cifuentes\Desktop\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csprojAssemblyReference.cache
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBitacoraTransporte.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPiloto.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPrincipal.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.Properties.Resources.resources
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.GenerateResource.cache
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe.config
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.pdb
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\Google.Protobuf.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\Zstandard.Net.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\Renci.SshNet.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\System.Buffers.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\System.Memory.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\bin\Debug\MySql.Data.xml
+C:\Users\Wilmer\Desktop\proyecto22021AS2G3-main\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csprojAssemblyReference.cache
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBitacoraTransporte.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPiloto.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPrincipal.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.Properties.Resources.resources
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.GenerateResource.cache
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe.config
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.exe
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\sistema_reparto.pdb
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\Google.Protobuf.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\Zstandard.Net.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\Renci.SshNet.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\System.Buffers.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\System.Memory.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\bin\Debug\MySql.Data.xml
+C:\Users\Wilmer\Desktop\Este Si se sube xD\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBitacoraTransporte.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPiloto.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Wilmer\Documents\Mantenimiento\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\sistema_reparto.exe.config
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\sistema_reparto.exe
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\sistema_reparto.pdb
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.Base.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.WebBrowser.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.WebEngine.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\MySql.Data.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\Google.Protobuf.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\Zstandard.Net.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\Renci.SshNet.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\System.Buffers.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\System.Memory.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.Base.xml
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.WebBrowser.xml
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\EO.WebEngine.xml
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\bin\Debug\MySql.Data.xml
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.csproj.AssemblyReference.cache
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmBitacoraTransporte.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmBodega.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmDepartamento.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmEmpleado.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmEnvio.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteDetalle.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmPaqueteEncabezado.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmPiloto.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmPrincipal.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmTransporte.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmUsuarios.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.Properties.Resources.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.csproj.GenerateResource.cache
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.csproj.CoreCompileInputs.cache
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.exe
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmLogin.resources
+C:\Users\Langas\Desktop\sistema_reparto-nuevo\sistema_reparto\obj\Debug\sistema_reparto.frmRegistro.resources
