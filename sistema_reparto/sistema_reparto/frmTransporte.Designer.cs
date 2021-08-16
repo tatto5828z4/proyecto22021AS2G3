@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransporte));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
@@ -166,6 +166,12 @@
             this.pnlBordeModificar = new System.Windows.Forms.Panel();
             this.lblModificarTransporte = new System.Windows.Forms.Label();
             this.pnlBotonBuscarT = new System.Windows.Forms.Panel();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
@@ -244,7 +250,7 @@
             this.panel3.Controls.Add(this.pnlCliente);
             this.panel3.Location = new System.Drawing.Point(-2, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(179, 784);
+            this.panel3.Size = new System.Drawing.Size(179, 789);
             this.panel3.TabIndex = 82;
             // 
             // btnBitaTrans
@@ -1224,7 +1230,7 @@
             this.pnlGuardarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGuardarT.BackgroundImage")));
             this.pnlGuardarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlGuardarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlGuardarT.Location = new System.Drawing.Point(569, 338);
+            this.pnlGuardarT.Location = new System.Drawing.Point(615, 391);
             this.pnlGuardarT.Name = "pnlGuardarT";
             this.pnlGuardarT.Size = new System.Drawing.Size(37, 42);
             this.pnlGuardarT.TabIndex = 100;
@@ -1246,7 +1252,7 @@
             // 
             this.pnlEstatusTrans.Controls.Add(this.txtEstatusTransporte);
             this.pnlEstatusTrans.Controls.Add(this.lblEstatusTr);
-            this.pnlEstatusTrans.Location = new System.Drawing.Point(364, 450);
+            this.pnlEstatusTrans.Location = new System.Drawing.Point(410, 503);
             this.pnlEstatusTrans.Name = "pnlEstatusTrans";
             this.pnlEstatusTrans.Size = new System.Drawing.Size(141, 48);
             this.pnlEstatusTrans.TabIndex = 96;
@@ -1274,7 +1280,7 @@
             // 
             this.pnlCampoPropietarioTransporte.Controls.Add(this.txtPropietarioTransporte);
             this.pnlCampoPropietarioTransporte.Controls.Add(this.lblPropietarioTransporte);
-            this.pnlCampoPropietarioTransporte.Location = new System.Drawing.Point(364, 396);
+            this.pnlCampoPropietarioTransporte.Location = new System.Drawing.Point(410, 449);
             this.pnlCampoPropietarioTransporte.Name = "pnlCampoPropietarioTransporte";
             this.pnlCampoPropietarioTransporte.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoPropietarioTransporte.TabIndex = 109;
@@ -1311,7 +1317,7 @@
             // 
             this.pnlMarcaTransporte.Controls.Add(this.txtMarcaTransporte);
             this.pnlMarcaTransporte.Controls.Add(this.lblMarcaTransporte);
-            this.pnlMarcaTransporte.Location = new System.Drawing.Point(364, 338);
+            this.pnlMarcaTransporte.Location = new System.Drawing.Point(410, 391);
             this.pnlMarcaTransporte.Name = "pnlMarcaTransporte";
             this.pnlMarcaTransporte.Size = new System.Drawing.Size(141, 48);
             this.pnlMarcaTransporte.TabIndex = 101;
@@ -1340,7 +1346,7 @@
             this.pnlLlenarCamposTDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposTDB.BackgroundImage")));
             this.pnlLlenarCamposTDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposTDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposTDB.Location = new System.Drawing.Point(792, 489);
+            this.pnlLlenarCamposTDB.Location = new System.Drawing.Point(838, 542);
             this.pnlLlenarCamposTDB.Name = "pnlLlenarCamposTDB";
             this.pnlLlenarCamposTDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposTDB.TabIndex = 106;
@@ -1351,7 +1357,7 @@
             this.pnlActivarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarT.BackgroundImage")));
             this.pnlActivarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarT.Location = new System.Drawing.Point(396, 504);
+            this.pnlActivarT.Location = new System.Drawing.Point(442, 557);
             this.pnlActivarT.Name = "pnlActivarT";
             this.pnlActivarT.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarT.TabIndex = 107;
@@ -1362,7 +1368,7 @@
             this.pnlModificarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarT.BackgroundImage")));
             this.pnlModificarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarT.Location = new System.Drawing.Point(572, 336);
+            this.pnlModificarT.Location = new System.Drawing.Point(618, 389);
             this.pnlModificarT.Name = "pnlModificarT";
             this.pnlModificarT.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarT.TabIndex = 83;
@@ -1373,7 +1379,7 @@
             this.pnlDarBajaT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaT.BackgroundImage")));
             this.pnlDarBajaT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaT.Location = new System.Drawing.Point(395, 504);
+            this.pnlDarBajaT.Location = new System.Drawing.Point(441, 557);
             this.pnlDarBajaT.Name = "pnlDarBajaT";
             this.pnlDarBajaT.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaT.TabIndex = 105;
@@ -1383,7 +1389,7 @@
             // 
             this.pnlModeloTransporte.Controls.Add(this.txtModeloTransporte);
             this.pnlModeloTransporte.Controls.Add(this.lblModeloTransporte);
-            this.pnlModeloTransporte.Location = new System.Drawing.Point(364, 282);
+            this.pnlModeloTransporte.Location = new System.Drawing.Point(410, 335);
             this.pnlModeloTransporte.Name = "pnlModeloTransporte";
             this.pnlModeloTransporte.Size = new System.Drawing.Size(141, 48);
             this.pnlModeloTransporte.TabIndex = 99;
@@ -1412,7 +1418,7 @@
             this.pnlLLenarCamposT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLLenarCamposT.BackgroundImage")));
             this.pnlLLenarCamposT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLLenarCamposT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLLenarCamposT.Location = new System.Drawing.Point(792, 487);
+            this.pnlLLenarCamposT.Location = new System.Drawing.Point(838, 540);
             this.pnlLLenarCamposT.Name = "pnlLLenarCamposT";
             this.pnlLLenarCamposT.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposT.TabIndex = 104;
@@ -1421,7 +1427,7 @@
             // txtBuscarTransporte
             // 
             this.txtBuscarTransporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarTransporte.Location = new System.Drawing.Point(733, 265);
+            this.txtBuscarTransporte.Location = new System.Drawing.Point(779, 318);
             this.txtBuscarTransporte.Name = "txtBuscarTransporte";
             this.txtBuscarTransporte.Size = new System.Drawing.Size(221, 13);
             this.txtBuscarTransporte.TabIndex = 103;
@@ -1445,20 +1451,20 @@
             this.propietarioTransporteDataGridViewTextBoxColumn,
             this.estatusTransporteDataGridViewTextBoxColumn});
             this.dgvTransporte.DataSource = this.transporteBindingSource;
-            this.dgvTransporte.Location = new System.Drawing.Point(689, 313);
+            this.dgvTransporte.Location = new System.Drawing.Point(735, 366);
             this.dgvTransporte.Name = "dgvTransporte";
             this.dgvTransporte.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransporte.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransporte.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTransporte.RowHeadersWidth = 45;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvTransporte.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvTransporte.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTransporte.Size = new System.Drawing.Size(307, 150);
             this.dgvTransporte.TabIndex = 102;
             // 
@@ -1550,7 +1556,7 @@
             // 
             this.pnlCampoNoChasis.Controls.Add(this.txtNoChasis);
             this.pnlCampoNoChasis.Controls.Add(this.lblNoChasis);
-            this.pnlCampoNoChasis.Location = new System.Drawing.Point(363, 227);
+            this.pnlCampoNoChasis.Location = new System.Drawing.Point(409, 280);
             this.pnlCampoNoChasis.Name = "pnlCampoNoChasis";
             this.pnlCampoNoChasis.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoNoChasis.TabIndex = 95;
@@ -1578,7 +1584,7 @@
             // 
             this.pnlCampoColorTransporte.Controls.Add(this.txtColorTransporte);
             this.pnlCampoColorTransporte.Controls.Add(this.lblColorTransporte);
-            this.pnlCampoColorTransporte.Location = new System.Drawing.Point(192, 450);
+            this.pnlCampoColorTransporte.Location = new System.Drawing.Point(238, 503);
             this.pnlCampoColorTransporte.Name = "pnlCampoColorTransporte";
             this.pnlCampoColorTransporte.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoColorTransporte.TabIndex = 94;
@@ -1606,7 +1612,7 @@
             // 
             this.pnlCampoPlacaTransporte.Controls.Add(this.txtPlacaTransporte);
             this.pnlCampoPlacaTransporte.Controls.Add(this.lblPlacaTransporte);
-            this.pnlCampoPlacaTransporte.Location = new System.Drawing.Point(191, 396);
+            this.pnlCampoPlacaTransporte.Location = new System.Drawing.Point(237, 449);
             this.pnlCampoPlacaTransporte.Name = "pnlCampoPlacaTransporte";
             this.pnlCampoPlacaTransporte.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoPlacaTransporte.TabIndex = 98;
@@ -1634,7 +1640,7 @@
             // 
             this.pnlCampoIdTipoTrans.Controls.Add(this.cbxIdTipoTrans);
             this.pnlCampoIdTipoTrans.Controls.Add(this.lblIdTipoTransporte);
-            this.pnlCampoIdTipoTrans.Location = new System.Drawing.Point(190, 340);
+            this.pnlCampoIdTipoTrans.Location = new System.Drawing.Point(236, 393);
             this.pnlCampoIdTipoTrans.Name = "pnlCampoIdTipoTrans";
             this.pnlCampoIdTipoTrans.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoIdTipoTrans.TabIndex = 97;
@@ -1653,7 +1659,7 @@
             // 
             this.pnlCampoNombreT.Controls.Add(this.txtNombreT);
             this.pnlCampoNombreT.Controls.Add(this.lblNombreTransporte);
-            this.pnlCampoNombreT.Location = new System.Drawing.Point(190, 283);
+            this.pnlCampoNombreT.Location = new System.Drawing.Point(236, 336);
             this.pnlCampoNombreT.Name = "pnlCampoNombreT";
             this.pnlCampoNombreT.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoNombreT.TabIndex = 93;
@@ -1681,7 +1687,7 @@
             // 
             this.pnlCampoIDT.Controls.Add(this.txtIdTransporte);
             this.pnlCampoIDT.Controls.Add(this.lbnIdTransporte);
-            this.pnlCampoIDT.Location = new System.Drawing.Point(190, 227);
+            this.pnlCampoIDT.Location = new System.Drawing.Point(236, 280);
             this.pnlCampoIDT.Name = "pnlCampoIDT";
             this.pnlCampoIDT.Size = new System.Drawing.Size(141, 48);
             this.pnlCampoIDT.TabIndex = 92;
@@ -1711,7 +1717,7 @@
             this.lblRegistrarTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrarTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblRegistrarTransporte.Location = new System.Drawing.Point(208, 125);
+            this.lblRegistrarTransporte.Location = new System.Drawing.Point(279, 143);
             this.lblRegistrarTransporte.Name = "lblRegistrarTransporte";
             this.lblRegistrarTransporte.Size = new System.Drawing.Size(132, 16);
             this.lblRegistrarTransporte.TabIndex = 86;
@@ -1738,7 +1744,7 @@
             // pnlBordeDarBaja
             // 
             this.pnlBordeDarBaja.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeDarBaja.BackgroundImage")));
-            this.pnlBordeDarBaja.Location = new System.Drawing.Point(835, 142);
+            this.pnlBordeDarBaja.Location = new System.Drawing.Point(906, 160);
             this.pnlBordeDarBaja.Name = "pnlBordeDarBaja";
             this.pnlBordeDarBaja.Size = new System.Drawing.Size(70, 3);
             this.pnlBordeDarBaja.TabIndex = 91;
@@ -1762,7 +1768,7 @@
             this.lblDarBaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblDarBaja.Location = new System.Drawing.Point(832, 125);
+            this.lblDarBaja.Location = new System.Drawing.Point(903, 143);
             this.lblDarBaja.Name = "lblDarBaja";
             this.lblDarBaja.Size = new System.Drawing.Size(80, 16);
             this.lblDarBaja.TabIndex = 88;
@@ -1772,7 +1778,7 @@
             // pnlBordeRegistrar
             // 
             this.pnlBordeRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrar.BackgroundImage")));
-            this.pnlBordeRegistrar.Location = new System.Drawing.Point(214, 143);
+            this.pnlBordeRegistrar.Location = new System.Drawing.Point(285, 161);
             this.pnlBordeRegistrar.Name = "pnlBordeRegistrar";
             this.pnlBordeRegistrar.Size = new System.Drawing.Size(120, 3);
             this.pnlBordeRegistrar.TabIndex = 89;
@@ -1780,7 +1786,7 @@
             // pnlBordeModificar
             // 
             this.pnlBordeModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificar.BackgroundImage")));
-            this.pnlBordeModificar.Location = new System.Drawing.Point(521, 142);
+            this.pnlBordeModificar.Location = new System.Drawing.Point(592, 160);
             this.pnlBordeModificar.Name = "pnlBordeModificar";
             this.pnlBordeModificar.Size = new System.Drawing.Size(120, 3);
             this.pnlBordeModificar.TabIndex = 90;
@@ -1791,7 +1797,7 @@
             this.lblModificarTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblModificarTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblModificarTransporte.Location = new System.Drawing.Point(517, 125);
+            this.lblModificarTransporte.Location = new System.Drawing.Point(588, 143);
             this.lblModificarTransporte.Name = "lblModificarTransporte";
             this.lblModificarTransporte.Size = new System.Drawing.Size(132, 16);
             this.lblModificarTransporte.TabIndex = 87;
@@ -1803,11 +1809,74 @@
             this.pnlBotonBuscarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarT.BackgroundImage")));
             this.pnlBotonBuscarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarT.Location = new System.Drawing.Point(960, 257);
+            this.pnlBotonBuscarT.Location = new System.Drawing.Point(1006, 310);
             this.pnlBotonBuscarT.Name = "pnlBotonBuscarT";
             this.pnlBotonBuscarT.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarT.TabIndex = 111;
             this.pnlBotonBuscarT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonBuscarT_MouseClick);
+            // 
+            // txtIdUsu
+            // 
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(910, 41);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 117;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigoUsu
+            // 
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(885, 41);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 116;
+            this.lblCodigoUsu.Text = "ID:";
+            // 
+            // txtNombreUsu
+            // 
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(792, 41);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 115;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlImagenU
+            // 
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(653, 36);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 114;
+            // 
+            // lblUsuarioLog
+            // 
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(677, 40);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 113;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1037, 12);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 112;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
             // frmTransporte
             // 
@@ -1815,6 +1884,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1068, 788);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
+            this.Controls.Add(this.pnlCerrar);
             this.Controls.Add(this.pnlBotonBuscarT);
             this.Controls.Add(this.pnlGuardarT);
             this.Controls.Add(this.lblTituloTransporte);
@@ -2070,5 +2145,11 @@
         private System.Windows.Forms.Label lblPiloto;
         private System.Windows.Forms.PictureBox picIconoPiloto;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

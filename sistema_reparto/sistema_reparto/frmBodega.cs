@@ -85,6 +85,13 @@ namespace sistema_reparto
             pnlActivarB.Visible = false;
             pnlDarBajaB.Visible = false;
             /*Fin Ocultando elementos (elementos)*/
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -1343,6 +1350,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalBodega;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

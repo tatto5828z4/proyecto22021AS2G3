@@ -66,7 +66,12 @@ namespace sistema_reparto
             pnlLlenarCamposTRDB.Visible = false;
             pnlLLenarCamposTR.Visible = false;
 
+            String idUsuario = Login.idUsuario;
 
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
 
         }
 
@@ -1366,6 +1371,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalTipoReparto;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

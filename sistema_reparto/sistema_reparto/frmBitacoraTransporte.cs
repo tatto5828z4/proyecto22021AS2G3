@@ -75,7 +75,15 @@ namespace sistema_reparto
             dgvBitaTrans.Visible = false;
             pnlLLenarCamposBT.Visible = false;
 
+
             /*Final Esconder contenidos de mi form Bitacora Transporte */
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void frmBitacoraTransporte_Load(object sender, EventArgs e)
@@ -1355,6 +1363,11 @@ namespace sistema_reparto
         private void picCalificacion_MouseLeave(object sender, EventArgs e)
         {
             btnCalificacionP.BackColor = colorNormalBitaTrans;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

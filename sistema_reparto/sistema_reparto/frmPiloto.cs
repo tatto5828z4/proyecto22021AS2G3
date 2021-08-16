@@ -74,6 +74,13 @@ namespace sistema_reparto
             pnlLlenarCamposPilDB.Visible = false;
             pnlLLenarCamposPil.Visible = false;
             /*Final Esconder contenidos de mi form Piloto */
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void frmPiloto_Load(object sender, EventArgs e)
@@ -1422,6 +1429,11 @@ namespace sistema_reparto
         private void picCalificacion_MouseLeave(object sender, EventArgs e)
         {
             btnCalificacionP.BackColor = colorNormalPiloto;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

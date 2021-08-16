@@ -143,6 +143,12 @@ namespace sistema_reparto
             this.pnlLLenarCamposP = new System.Windows.Forms.Panel();
             this.pnlModificarP = new System.Windows.Forms.Panel();
             this.pnlBotonGuardarP = new System.Windows.Forms.Panel();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.btnBT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBT)).BeginInit();
@@ -216,7 +222,7 @@ namespace sistema_reparto
             this.pnlSidebar.Controls.Add(this.btnPaqueteEncabezado);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 784);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 788);
             this.pnlSidebar.TabIndex = 1;
             // 
             // btnBT
@@ -1227,7 +1233,7 @@ namespace sistema_reparto
             this.lblRegistrarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrarPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblRegistrarPuesto.Location = new System.Drawing.Point(203, 147);
+            this.lblRegistrarPuesto.Location = new System.Drawing.Point(266, 167);
             this.lblRegistrarPuesto.Name = "lblRegistrarPuesto";
             this.lblRegistrarPuesto.Size = new System.Drawing.Size(108, 16);
             this.lblRegistrarPuesto.TabIndex = 10;
@@ -1237,7 +1243,7 @@ namespace sistema_reparto
             // pnlBordeDarBajaP
             // 
             this.pnlBordeDarBajaP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeDarBajaP.BackgroundImage")));
-            this.pnlBordeDarBajaP.Location = new System.Drawing.Point(830, 164);
+            this.pnlBordeDarBajaP.Location = new System.Drawing.Point(893, 184);
             this.pnlBordeDarBajaP.Name = "pnlBordeDarBajaP";
             this.pnlBordeDarBajaP.Size = new System.Drawing.Size(70, 3);
             this.pnlBordeDarBajaP.TabIndex = 15;
@@ -1248,7 +1254,7 @@ namespace sistema_reparto
             this.lblDarBajaP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDarBajaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarBajaP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblDarBajaP.Location = new System.Drawing.Point(827, 147);
+            this.lblDarBajaP.Location = new System.Drawing.Point(890, 167);
             this.lblDarBajaP.Name = "lblDarBajaP";
             this.lblDarBajaP.Size = new System.Drawing.Size(80, 16);
             this.lblDarBajaP.TabIndex = 12;
@@ -1258,7 +1264,7 @@ namespace sistema_reparto
             // pnlBordeRegistrarP
             // 
             this.pnlBordeRegistrarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrarP.BackgroundImage")));
-            this.pnlBordeRegistrarP.Location = new System.Drawing.Point(205, 165);
+            this.pnlBordeRegistrarP.Location = new System.Drawing.Point(268, 185);
             this.pnlBordeRegistrarP.Name = "pnlBordeRegistrarP";
             this.pnlBordeRegistrarP.Size = new System.Drawing.Size(100, 3);
             this.pnlBordeRegistrarP.TabIndex = 13;
@@ -1266,7 +1272,7 @@ namespace sistema_reparto
             // pnlBordeModificarP
             // 
             this.pnlBordeModificarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificarP.BackgroundImage")));
-            this.pnlBordeModificarP.Location = new System.Drawing.Point(516, 164);
+            this.pnlBordeModificarP.Location = new System.Drawing.Point(579, 184);
             this.pnlBordeModificarP.Name = "pnlBordeModificarP";
             this.pnlBordeModificarP.Size = new System.Drawing.Size(100, 3);
             this.pnlBordeModificarP.TabIndex = 14;
@@ -1277,7 +1283,7 @@ namespace sistema_reparto
             this.lblModificarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblModificarPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblModificarPuesto.Location = new System.Drawing.Point(512, 147);
+            this.lblModificarPuesto.Location = new System.Drawing.Point(575, 167);
             this.lblModificarPuesto.Name = "lblModificarPuesto";
             this.lblModificarPuesto.Size = new System.Drawing.Size(108, 16);
             this.lblModificarPuesto.TabIndex = 11;
@@ -1288,7 +1294,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIdP.Controls.Add(this.txtIdPuesto);
             this.pnlCampoIdP.Controls.Add(this.lbnIdPuesto);
-            this.pnlCampoIdP.Location = new System.Drawing.Point(249, 301);
+            this.pnlCampoIdP.Location = new System.Drawing.Point(262, 344);
             this.pnlCampoIdP.Name = "pnlCampoIdP";
             this.pnlCampoIdP.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoIdP.TabIndex = 16;
@@ -1316,7 +1322,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoNombreP.Controls.Add(this.txtNombrePuesto);
             this.pnlCampoNombreP.Controls.Add(this.lblNombrePuesto);
-            this.pnlCampoNombreP.Location = new System.Drawing.Point(428, 301);
+            this.pnlCampoNombreP.Location = new System.Drawing.Point(441, 344);
             this.pnlCampoNombreP.Name = "pnlCampoNombreP";
             this.pnlCampoNombreP.Size = new System.Drawing.Size(130, 48);
             this.pnlCampoNombreP.TabIndex = 17;
@@ -1344,7 +1350,7 @@ namespace sistema_reparto
             // 
             this.pnlContenidoEP.Controls.Add(this.txtEstatusPuesto);
             this.pnlContenidoEP.Controls.Add(this.lblEstatusPuesto);
-            this.pnlContenidoEP.Location = new System.Drawing.Point(338, 370);
+            this.pnlContenidoEP.Location = new System.Drawing.Point(351, 413);
             this.pnlContenidoEP.Name = "pnlContenidoEP";
             this.pnlContenidoEP.Size = new System.Drawing.Size(130, 48);
             this.pnlContenidoEP.TabIndex = 18;
@@ -1373,7 +1379,7 @@ namespace sistema_reparto
             this.pnlBotonBuscarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarP.BackgroundImage")));
             this.pnlBotonBuscarP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarP.Location = new System.Drawing.Point(880, 309);
+            this.pnlBotonBuscarP.Location = new System.Drawing.Point(893, 352);
             this.pnlBotonBuscarP.Name = "pnlBotonBuscarP";
             this.pnlBotonBuscarP.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarP.TabIndex = 21;
@@ -1383,7 +1389,7 @@ namespace sistema_reparto
             // txtBuscarPuesto
             // 
             this.txtBuscarPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarPuesto.Location = new System.Drawing.Point(653, 314);
+            this.txtBuscarPuesto.Location = new System.Drawing.Point(666, 357);
             this.txtBuscarPuesto.Name = "txtBuscarPuesto";
             this.txtBuscarPuesto.Size = new System.Drawing.Size(221, 13);
             this.txtBuscarPuesto.TabIndex = 20;
@@ -1401,7 +1407,7 @@ namespace sistema_reparto
             this.nombrePuesto1DataGridViewTextBoxColumn,
             this.estatusPuestoDataGridViewTextBoxColumn});
             this.dgvPuesto.DataSource = this.puestoBindingSource;
-            this.dgvPuesto.Location = new System.Drawing.Point(617, 345);
+            this.dgvPuesto.Location = new System.Drawing.Point(630, 388);
             this.dgvPuesto.Name = "dgvPuesto";
             this.dgvPuesto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1452,7 +1458,7 @@ namespace sistema_reparto
             this.pnlActivarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarP.BackgroundImage")));
             this.pnlActivarP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarP.Location = new System.Drawing.Point(364, 435);
+            this.pnlActivarP.Location = new System.Drawing.Point(377, 478);
             this.pnlActivarP.Name = "pnlActivarP";
             this.pnlActivarP.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarP.TabIndex = 23;
@@ -1463,7 +1469,7 @@ namespace sistema_reparto
             this.pnlDarBajaP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaP.BackgroundImage")));
             this.pnlDarBajaP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaP.Location = new System.Drawing.Point(364, 435);
+            this.pnlDarBajaP.Location = new System.Drawing.Point(377, 478);
             this.pnlDarBajaP.Name = "pnlDarBajaP";
             this.pnlDarBajaP.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaP.TabIndex = 22;
@@ -1474,7 +1480,7 @@ namespace sistema_reparto
             this.pnlLlenarCamposPDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposPDB.BackgroundImage")));
             this.pnlLlenarCamposPDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposPDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(717, 516);
+            this.pnlLlenarCamposPDB.Location = new System.Drawing.Point(730, 559);
             this.pnlLlenarCamposPDB.Name = "pnlLlenarCamposPDB";
             this.pnlLlenarCamposPDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposPDB.TabIndex = 25;
@@ -1486,7 +1492,7 @@ namespace sistema_reparto
             this.pnlLLenarCamposP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLLenarCamposP.BackgroundImage")));
             this.pnlLLenarCamposP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLLenarCamposP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLLenarCamposP.Location = new System.Drawing.Point(717, 515);
+            this.pnlLLenarCamposP.Location = new System.Drawing.Point(730, 558);
             this.pnlLLenarCamposP.Name = "pnlLLenarCamposP";
             this.pnlLLenarCamposP.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposP.TabIndex = 24;
@@ -1498,7 +1504,7 @@ namespace sistema_reparto
             this.pnlModificarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarP.BackgroundImage")));
             this.pnlModificarP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarP.Location = new System.Drawing.Point(382, 379);
+            this.pnlModificarP.Location = new System.Drawing.Point(395, 422);
             this.pnlModificarP.Name = "pnlModificarP";
             this.pnlModificarP.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarP.TabIndex = 26;
@@ -1509,11 +1515,74 @@ namespace sistema_reparto
             this.pnlBotonGuardarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonGuardarP.BackgroundImage")));
             this.pnlBotonGuardarP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonGuardarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonGuardarP.Location = new System.Drawing.Point(385, 379);
+            this.pnlBotonGuardarP.Location = new System.Drawing.Point(398, 422);
             this.pnlBotonGuardarP.Name = "pnlBotonGuardarP";
             this.pnlBotonGuardarP.Size = new System.Drawing.Size(37, 42);
             this.pnlBotonGuardarP.TabIndex = 27;
             this.pnlBotonGuardarP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonGuardarP_MouseClick);
+            // 
+            // txtIdUsu
+            // 
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(915, 31);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 33;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigoUsu
+            // 
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(890, 31);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 32;
+            this.lblCodigoUsu.Text = "ID:";
+            // 
+            // txtNombreUsu
+            // 
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(797, 31);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 31;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlImagenU
+            // 
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(658, 26);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 30;
+            // 
+            // lblUsuarioLog
+            // 
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(682, 30);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 29;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1030, 4);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 28;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
             // frmPuestos
             // 
@@ -1522,6 +1591,12 @@ namespace sistema_reparto
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1059, 788);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
+            this.Controls.Add(this.pnlCerrar);
             this.Controls.Add(this.pnlDarBajaP);
             this.Controls.Add(this.pnlModificarP);
             this.Controls.Add(this.pnlBotonGuardarP);
@@ -1735,5 +1810,11 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblPil;
         private System.Windows.Forms.PictureBox picIconoPil;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

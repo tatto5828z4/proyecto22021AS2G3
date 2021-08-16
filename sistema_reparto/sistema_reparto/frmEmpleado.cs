@@ -78,6 +78,13 @@ namespace sistema_reparto
             pnlBotonBuscarE.Visible = false;
             pnlBordeEmpleado.Visible = false;
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void frmEmpleado_Load(object sender, EventArgs e)
@@ -1278,6 +1285,11 @@ namespace sistema_reparto
         private void picIconoPiloto_MouseLeave(object sender, EventArgs e)
         {
             btnPiloto.BackColor = colorNormalRuta;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

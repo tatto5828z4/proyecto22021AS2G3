@@ -73,6 +73,13 @@ namespace sistema_reparto
             pnlLlenarCamposUSDB.Visible = false;
             pnlLLenarCamposUS.Visible = false;
             pnlChecks.Visible = false;
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
@@ -2308,6 +2315,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalUsuarios;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }
