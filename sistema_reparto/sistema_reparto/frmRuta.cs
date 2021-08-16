@@ -66,6 +66,13 @@ namespace sistema_reparto
             dgvRuta.Visible = false;
             pnlBordeDarBajaR.Visible = false;
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
 
@@ -1217,6 +1224,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalRuta;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -43,18 +43,6 @@
             this.pnlBotonBuscarE = new System.Windows.Forms.Panel();
             this.txtBuscarEmpleado = new System.Windows.Forms.TextBox();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dpiEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotonGuardarE = new System.Windows.Forms.Panel();
             this.pnlCampoTelEmpleado = new System.Windows.Forms.Panel();
             this.txtTelEmpleado = new System.Windows.Forms.TextBox();
@@ -171,9 +159,26 @@
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dpiEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sueldoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDirEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             this.pnlCampoTelEmpleado.SuspendLayout();
             this.pnlCampoApellidoEmpleado.SuspendLayout();
             this.pnlCampoNombreEmpleado.SuspendLayout();
@@ -223,6 +228,7 @@
             this.pnlEstatusEmpleado.SuspendLayout();
             this.btnCalificacionP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLlenarCamposEDB
@@ -366,98 +372,6 @@
             this.dgvEmpleado.Size = new System.Drawing.Size(307, 150);
             this.dgvEmpleado.TabIndex = 38;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Empleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // dpiEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.dpiEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "DpiEmpleado";
-            this.dpiEmpleadoDataGridViewTextBoxColumn.HeaderText = "Dpi Empleado";
-            this.dpiEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dpiEmpleadoDataGridViewTextBoxColumn.Name = "dpiEmpleadoDataGridViewTextBoxColumn";
-            this.dpiEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "Id Usuario";
-            this.idUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // nombreEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.nombreEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpleado";
-            this.nombreEmpleadoDataGridViewTextBoxColumn.HeaderText = "Nombre Empleado";
-            this.nombreEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreEmpleadoDataGridViewTextBoxColumn.Name = "nombreEmpleadoDataGridViewTextBoxColumn";
-            this.nombreEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // apellidoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.apellidoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoEmpleado";
-            this.apellidoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Apellido Empleado";
-            this.apellidoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoEmpleadoDataGridViewTextBoxColumn.Name = "apellidoEmpleadoDataGridViewTextBoxColumn";
-            this.apellidoEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // telefonoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.telefonoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "TelefonoEmpleado";
-            this.telefonoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Telefono Empleado";
-            this.telefonoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoEmpleadoDataGridViewTextBoxColumn.Name = "telefonoEmpleadoDataGridViewTextBoxColumn";
-            this.telefonoEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // direccionEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.direccionEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "DireccionEmpleado";
-            this.direccionEmpleadoDataGridViewTextBoxColumn.HeaderText = "Direccion Empleado";
-            this.direccionEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionEmpleadoDataGridViewTextBoxColumn.Name = "direccionEmpleadoDataGridViewTextBoxColumn";
-            this.direccionEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // sueldoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.sueldoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "SueldoEmpleado";
-            this.sueldoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Sueldo Empleado";
-            this.sueldoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sueldoEmpleadoDataGridViewTextBoxColumn.Name = "sueldoEmpleadoDataGridViewTextBoxColumn";
-            this.sueldoEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idDepartamentoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdDepartamentoEmpleado";
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Departamento Empleado";
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.Name = "idDepartamentoEmpleadoDataGridViewTextBoxColumn";
-            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idPuestoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdPuestoEmpleado";
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Puesto Empleado";
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn.Name = "idPuestoEmpleadoDataGridViewTextBoxColumn";
-            this.idPuestoEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // estatusEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.estatusEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "EstatusEmpleado";
-            this.estatusEmpleadoDataGridViewTextBoxColumn.HeaderText = "Estatus Empleado";
-            this.estatusEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estatusEmpleadoDataGridViewTextBoxColumn.Name = "estatusEmpleadoDataGridViewTextBoxColumn";
-            this.estatusEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataSource = typeof(sistema_reparto.Clases.Empleado);
             // 
             // pnlBotonGuardarE
             // 
@@ -1787,12 +1701,173 @@
             this.lblCalificacion.MouseLeave += new System.EventHandler(this.lblCalificacion_MouseLeave);
             this.lblCalificacion.MouseHover += new System.EventHandler(this.lblCalificacion_MouseHover);
             // 
+            // txtIdUsu
+            // 
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(859, 40);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 355;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigoUsu
+            // 
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(834, 40);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 354;
+            this.lblCodigoUsu.Text = "ID:";
+            // 
+            // txtNombreUsu
+            // 
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(741, 40);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 353;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlImagenU
+            // 
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(602, 35);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 352;
+            // 
+            // lblUsuarioLog
+            // 
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(626, 39);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 351;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1025, 9);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 356;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Empleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // dpiEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.dpiEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "DpiEmpleado";
+            this.dpiEmpleadoDataGridViewTextBoxColumn.HeaderText = "Dpi Empleado";
+            this.dpiEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dpiEmpleadoDataGridViewTextBoxColumn.Name = "dpiEmpleadoDataGridViewTextBoxColumn";
+            this.dpiEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "Id Usuario";
+            this.idUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // nombreEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.nombreEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpleado";
+            this.nombreEmpleadoDataGridViewTextBoxColumn.HeaderText = "Nombre Empleado";
+            this.nombreEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreEmpleadoDataGridViewTextBoxColumn.Name = "nombreEmpleadoDataGridViewTextBoxColumn";
+            this.nombreEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // apellidoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.apellidoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoEmpleado";
+            this.apellidoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Apellido Empleado";
+            this.apellidoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidoEmpleadoDataGridViewTextBoxColumn.Name = "apellidoEmpleadoDataGridViewTextBoxColumn";
+            this.apellidoEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // telefonoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.telefonoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "TelefonoEmpleado";
+            this.telefonoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Telefono Empleado";
+            this.telefonoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonoEmpleadoDataGridViewTextBoxColumn.Name = "telefonoEmpleadoDataGridViewTextBoxColumn";
+            this.telefonoEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // direccionEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.direccionEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "DireccionEmpleado";
+            this.direccionEmpleadoDataGridViewTextBoxColumn.HeaderText = "Direccion Empleado";
+            this.direccionEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionEmpleadoDataGridViewTextBoxColumn.Name = "direccionEmpleadoDataGridViewTextBoxColumn";
+            this.direccionEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // sueldoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.sueldoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "SueldoEmpleado";
+            this.sueldoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Sueldo Empleado";
+            this.sueldoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sueldoEmpleadoDataGridViewTextBoxColumn.Name = "sueldoEmpleadoDataGridViewTextBoxColumn";
+            this.sueldoEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idDepartamentoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdDepartamentoEmpleado";
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Departamento Empleado";
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.Name = "idDepartamentoEmpleadoDataGridViewTextBoxColumn";
+            this.idDepartamentoEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idPuestoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdPuestoEmpleado";
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Puesto Empleado";
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn.Name = "idPuestoEmpleadoDataGridViewTextBoxColumn";
+            this.idPuestoEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // estatusEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.estatusEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "EstatusEmpleado";
+            this.estatusEmpleadoDataGridViewTextBoxColumn.HeaderText = "Estatus Empleado";
+            this.estatusEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusEmpleadoDataGridViewTextBoxColumn.Name = "estatusEmpleadoDataGridViewTextBoxColumn";
+            this.estatusEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataSource = typeof(sistema_reparto.Clases.Empleado);
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1059, 788);
+            this.Controls.Add(this.pnlCerrar);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
             this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlBotonGuardarE);
             this.Controls.Add(this.lblTituloEmpleado);
@@ -1834,7 +1909,6 @@
             this.pnlDirEmpleado.ResumeLayout(false);
             this.pnlDirEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.pnlCampoTelEmpleado.ResumeLayout(false);
             this.pnlCampoTelEmpleado.PerformLayout();
             this.pnlCampoApellidoEmpleado.ResumeLayout(false);
@@ -1912,6 +1986,7 @@
             this.btnCalificacionP.ResumeLayout(false);
             this.btnCalificacionP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2057,5 +2132,11 @@
         private System.Windows.Forms.Label lblPiloto;
         private System.Windows.Forms.PictureBox picIconoPiloto;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

@@ -82,6 +82,13 @@ namespace sistema_reparto
             txtCliente.Enabled = false;
             cbxIdTipoMobB.Enabled = false;
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void frmMovimientoBodega_Load(object sender, EventArgs e)
@@ -1339,6 +1346,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalMovB;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
         /* Final funcion para cargar mi tabla de Inventario */
 

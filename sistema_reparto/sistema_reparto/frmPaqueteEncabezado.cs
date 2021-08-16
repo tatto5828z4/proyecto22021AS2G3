@@ -77,6 +77,13 @@ namespace sistema_reparto
             pnlDarBajaPE.Visible = false;
             pnlActivarPE.Visible = false;
             /*Habilitando componentes*/
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -1420,6 +1427,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalPE;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 

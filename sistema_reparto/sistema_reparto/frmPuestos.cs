@@ -62,6 +62,13 @@ namespace sistema_reparto
             pnlBotonGuardarP.Visible = false;
             pnlModificarP.Visible = false;
             /*Final Esconder contenidos de mi form puestos */
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void frmPuestos_Load(object sender, EventArgs e)
@@ -1321,6 +1328,11 @@ namespace sistema_reparto
         private void picIconoBT_MouseLeave(object sender, EventArgs e)
         {
             btnBT.BackColor = colorNormalPuesto;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
         /* Final Llenando campos de mi busqueda en la tabla */

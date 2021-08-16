@@ -31,8 +31,8 @@ namespace sistema_reparto
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubUbicacion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
@@ -135,6 +135,12 @@ namespace sistema_reparto
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
@@ -203,7 +209,7 @@ namespace sistema_reparto
             this.pnlSidebar.Controls.Add(this.btnCliente);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 776);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 788);
             this.pnlSidebar.TabIndex = 2;
             // 
             // btnBitaTrans
@@ -1103,7 +1109,7 @@ namespace sistema_reparto
             this.lblRegistrarSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrarSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblRegistrarSubUbicacion.Location = new System.Drawing.Point(224, 170);
+            this.lblRegistrarSubUbicacion.Location = new System.Drawing.Point(257, 181);
             this.lblRegistrarSubUbicacion.Name = "lblRegistrarSubUbicacion";
             this.lblRegistrarSubUbicacion.Size = new System.Drawing.Size(151, 16);
             this.lblRegistrarSubUbicacion.TabIndex = 16;
@@ -1113,7 +1119,7 @@ namespace sistema_reparto
             // pnlBordeDarBajaSubUbicacion
             // 
             this.pnlBordeDarBajaSubUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeDarBajaSubUbicacion.BackgroundImage")));
-            this.pnlBordeDarBajaSubUbicacion.Location = new System.Drawing.Point(851, 187);
+            this.pnlBordeDarBajaSubUbicacion.Location = new System.Drawing.Point(884, 198);
             this.pnlBordeDarBajaSubUbicacion.Name = "pnlBordeDarBajaSubUbicacion";
             this.pnlBordeDarBajaSubUbicacion.Size = new System.Drawing.Size(70, 3);
             this.pnlBordeDarBajaSubUbicacion.TabIndex = 21;
@@ -1124,7 +1130,7 @@ namespace sistema_reparto
             this.lblDarBajaSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDarBajaSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarBajaSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblDarBajaSubUbicacion.Location = new System.Drawing.Point(848, 170);
+            this.lblDarBajaSubUbicacion.Location = new System.Drawing.Point(881, 181);
             this.lblDarBajaSubUbicacion.Name = "lblDarBajaSubUbicacion";
             this.lblDarBajaSubUbicacion.Size = new System.Drawing.Size(80, 16);
             this.lblDarBajaSubUbicacion.TabIndex = 18;
@@ -1134,7 +1140,7 @@ namespace sistema_reparto
             // pnlBordeRegistrarSubUbicacion
             // 
             this.pnlBordeRegistrarSubUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrarSubUbicacion.BackgroundImage")));
-            this.pnlBordeRegistrarSubUbicacion.Location = new System.Drawing.Point(226, 188);
+            this.pnlBordeRegistrarSubUbicacion.Location = new System.Drawing.Point(259, 199);
             this.pnlBordeRegistrarSubUbicacion.Name = "pnlBordeRegistrarSubUbicacion";
             this.pnlBordeRegistrarSubUbicacion.Size = new System.Drawing.Size(140, 3);
             this.pnlBordeRegistrarSubUbicacion.TabIndex = 19;
@@ -1142,7 +1148,7 @@ namespace sistema_reparto
             // pnlBordeModificarSubUbicacion
             // 
             this.pnlBordeModificarSubUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificarSubUbicacion.BackgroundImage")));
-            this.pnlBordeModificarSubUbicacion.Location = new System.Drawing.Point(537, 187);
+            this.pnlBordeModificarSubUbicacion.Location = new System.Drawing.Point(570, 198);
             this.pnlBordeModificarSubUbicacion.Name = "pnlBordeModificarSubUbicacion";
             this.pnlBordeModificarSubUbicacion.Size = new System.Drawing.Size(140, 3);
             this.pnlBordeModificarSubUbicacion.TabIndex = 20;
@@ -1153,7 +1159,7 @@ namespace sistema_reparto
             this.lblModificarSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblModificarSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblModificarSubUbicacion.Location = new System.Drawing.Point(533, 170);
+            this.lblModificarSubUbicacion.Location = new System.Drawing.Point(566, 181);
             this.lblModificarSubUbicacion.Name = "lblModificarSubUbicacion";
             this.lblModificarSubUbicacion.Size = new System.Drawing.Size(151, 16);
             this.lblModificarSubUbicacion.TabIndex = 17;
@@ -1275,17 +1281,17 @@ namespace sistema_reparto
             this.dgvSubUbicacion.Location = new System.Drawing.Point(644, 389);
             this.dgvSubUbicacion.Name = "dgvSubUbicacion";
             this.dgvSubUbicacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubUbicacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubUbicacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSubUbicacion.RowHeadersWidth = 45;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvSubUbicacion.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvSubUbicacion.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSubUbicacion.Size = new System.Drawing.Size(307, 150);
             this.dgvSubUbicacion.TabIndex = 34;
             this.dgvSubUbicacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubUbicacion_CellContentClick);
@@ -1411,12 +1417,81 @@ namespace sistema_reparto
             this.lblCalificacion.MouseLeave += new System.EventHandler(this.lblCalificacion_MouseLeave);
             this.lblCalificacion.MouseHover += new System.EventHandler(this.lblCalificacion_MouseHover);
             // 
+            // txtIdUsu
+            // 
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(912, 31);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 55;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigoUsu
+            // 
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(887, 31);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 54;
+            this.lblCodigoUsu.Text = "ID:";
+            // 
+            // txtNombreUsu
+            // 
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(794, 31);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 53;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlImagenU
+            // 
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(655, 26);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 52;
+            // 
+            // lblUsuarioLog
+            // 
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(679, 30);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 51;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1027, 4);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 50;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
+            // 
             // frmSubUbicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1059, 788);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
+            this.Controls.Add(this.pnlCerrar);
             this.Controls.Add(this.btnCalificacionP);
             this.Controls.Add(this.pnlLlenarCamposSUDB);
             this.Controls.Add(this.pnlLLenarCamposSU);
@@ -1618,5 +1693,11 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblPiloto;
         private System.Windows.Forms.PictureBox picIconoPiloto;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

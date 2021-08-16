@@ -74,6 +74,13 @@ namespace sistema_reparto
             pnlModificarSU.Visible = false;
             pnlBotonGuardarSU.Visible = false;
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -1325,6 +1332,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalSubUbicacion;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
         /* Final de funcion para evitar el uso de recursivo de tantas variables */
     }

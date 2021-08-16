@@ -91,6 +91,13 @@ namespace sistema_reparto
             pnlIdCliente.Visible = false;
             pnlIdEmpleado.Visible = false;
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
 
         }
 
@@ -1679,6 +1686,11 @@ namespace sistema_reparto
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             panel3.BackColor = colorNormalEnvio;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
         /* Final funcion para cargar mi tabla de Ruta */
     }

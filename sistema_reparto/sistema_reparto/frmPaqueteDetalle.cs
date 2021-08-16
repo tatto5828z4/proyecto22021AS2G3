@@ -80,7 +80,12 @@ namespace sistema_reparto
 
         private void frmPaqueteDetalle_Load(object sender, EventArgs e)
         {
+            String idUsuario = Login.idUsuario;
 
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void frmPaqueteDetalle_MouseDown(object sender, MouseEventArgs e)
@@ -887,6 +892,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalCliente;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
