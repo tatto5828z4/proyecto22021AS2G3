@@ -88,6 +88,18 @@ namespace sistema_reparto
             this.pnlBotonBuscarBitaTrans = new System.Windows.Forms.Panel();
             this.txtBuscarBitaTrans = new System.Windows.Forms.TextBox();
             this.dgvBitaTrans = new System.Windows.Forms.DataGridView();
+            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kimInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kimFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarLlegadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivelGasolinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bitacoraTransporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCampoIDBiTran = new System.Windows.Forms.Panel();
             this.txtIdBiTran = new System.Windows.Forms.TextBox();
@@ -158,18 +170,12 @@ namespace sistema_reparto
             this.picIconoUsuarios = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kimInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kimFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarLlegadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelGasolinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.pnlSubUbicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).BeginInit();
             this.btnRuta.SuspendLayout();
@@ -584,7 +590,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIDPiloto.Controls.Add(this.cbxIdPiloto);
             this.pnlCampoIDPiloto.Controls.Add(this.lblIdPiloto);
-            this.pnlCampoIDPiloto.Location = new System.Drawing.Point(204, 308);
+            this.pnlCampoIDPiloto.Location = new System.Drawing.Point(225, 391);
             this.pnlCampoIDPiloto.Name = "pnlCampoIDPiloto";
             this.pnlCampoIDPiloto.Size = new System.Drawing.Size(186, 52);
             this.pnlCampoIDPiloto.TabIndex = 61;
@@ -612,7 +618,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoNivelGas.Controls.Add(this.txtNivelGas);
             this.pnlCampoNivelGas.Controls.Add(this.lblNivelGas);
-            this.pnlCampoNivelGas.Location = new System.Drawing.Point(461, 416);
+            this.pnlCampoNivelGas.Location = new System.Drawing.Point(482, 499);
             this.pnlCampoNivelGas.Name = "pnlCampoNivelGas";
             this.pnlCampoNivelGas.Size = new System.Drawing.Size(230, 48);
             this.pnlCampoNivelGas.TabIndex = 86;
@@ -641,7 +647,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoLugarSal.Controls.Add(this.txtLugarSal);
             this.pnlCampoLugarSal.Controls.Add(this.lblLugarSal);
-            this.pnlCampoLugarSal.Location = new System.Drawing.Point(461, 304);
+            this.pnlCampoLugarSal.Location = new System.Drawing.Point(482, 387);
             this.pnlCampoLugarSal.Name = "pnlCampoLugarSal";
             this.pnlCampoLugarSal.Size = new System.Drawing.Size(210, 48);
             this.pnlCampoLugarSal.TabIndex = 85;
@@ -670,7 +676,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoHoraEnt.Controls.Add(this.txtHoraEnt);
             this.pnlCampoHoraEnt.Controls.Add(this.lblHoraEnt);
-            this.pnlCampoHoraEnt.Location = new System.Drawing.Point(461, 248);
+            this.pnlCampoHoraEnt.Location = new System.Drawing.Point(482, 331);
             this.pnlCampoHoraEnt.Name = "pnlCampoHoraEnt";
             this.pnlCampoHoraEnt.Size = new System.Drawing.Size(230, 48);
             this.pnlCampoHoraEnt.TabIndex = 84;
@@ -697,7 +703,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoHoraSal.Controls.Add(this.txtHoraSal);
             this.pnlCampoHoraSal.Controls.Add(this.lblHoraSal);
-            this.pnlCampoHoraSal.Location = new System.Drawing.Point(461, 193);
+            this.pnlCampoHoraSal.Location = new System.Drawing.Point(482, 276);
             this.pnlCampoHoraSal.Name = "pnlCampoHoraSal";
             this.pnlCampoHoraSal.Size = new System.Drawing.Size(230, 48);
             this.pnlCampoHoraSal.TabIndex = 83;
@@ -724,7 +730,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoKMFin.Controls.Add(this.txtKMFin);
             this.pnlCampoKMFin.Controls.Add(this.lblKMFin);
-            this.pnlCampoKMFin.Location = new System.Drawing.Point(204, 423);
+            this.pnlCampoKMFin.Location = new System.Drawing.Point(225, 506);
             this.pnlCampoKMFin.Name = "pnlCampoKMFin";
             this.pnlCampoKMFin.Size = new System.Drawing.Size(226, 48);
             this.pnlCampoKMFin.TabIndex = 82;
@@ -753,7 +759,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoKMIni.Controls.Add(this.txtKMIni);
             this.pnlCampoKMIni.Controls.Add(this.lblKMIni);
-            this.pnlCampoKMIni.Location = new System.Drawing.Point(204, 367);
+            this.pnlCampoKMIni.Location = new System.Drawing.Point(225, 450);
             this.pnlCampoKMIni.Name = "pnlCampoKMIni";
             this.pnlCampoKMIni.Size = new System.Drawing.Size(227, 48);
             this.pnlCampoKMIni.TabIndex = 81;
@@ -783,7 +789,7 @@ namespace sistema_reparto
             this.pnlLLenarCamposBT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLLenarCamposBT.BackgroundImage")));
             this.pnlLLenarCamposBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLLenarCamposBT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLLenarCamposBT.Location = new System.Drawing.Point(816, 450);
+            this.pnlLLenarCamposBT.Location = new System.Drawing.Point(837, 533);
             this.pnlLLenarCamposBT.Name = "pnlLLenarCamposBT";
             this.pnlLLenarCamposBT.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposBT.TabIndex = 80;
@@ -794,7 +800,7 @@ namespace sistema_reparto
             this.pnlModificarBT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarBT.BackgroundImage")));
             this.pnlModificarBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarBT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarBT.Location = new System.Drawing.Point(557, 478);
+            this.pnlModificarBT.Location = new System.Drawing.Point(578, 561);
             this.pnlModificarBT.Name = "pnlModificarBT";
             this.pnlModificarBT.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarBT.TabIndex = 78;
@@ -806,7 +812,7 @@ namespace sistema_reparto
             this.pnlBotonGuardarBT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonGuardarBT.BackgroundImage")));
             this.pnlBotonGuardarBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonGuardarBT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonGuardarBT.Location = new System.Drawing.Point(556, 474);
+            this.pnlBotonGuardarBT.Location = new System.Drawing.Point(577, 557);
             this.pnlBotonGuardarBT.Name = "pnlBotonGuardarBT";
             this.pnlBotonGuardarBT.Size = new System.Drawing.Size(37, 42);
             this.pnlBotonGuardarBT.TabIndex = 77;
@@ -817,7 +823,7 @@ namespace sistema_reparto
             this.pnlBotonBuscarBitaTrans.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarBitaTrans.BackgroundImage")));
             this.pnlBotonBuscarBitaTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarBitaTrans.Location = new System.Drawing.Point(955, 224);
+            this.pnlBotonBuscarBitaTrans.Location = new System.Drawing.Point(976, 307);
             this.pnlBotonBuscarBitaTrans.Name = "pnlBotonBuscarBitaTrans";
             this.pnlBotonBuscarBitaTrans.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarBitaTrans.TabIndex = 74;
@@ -826,7 +832,7 @@ namespace sistema_reparto
             // txtBuscarBitaTrans
             // 
             this.txtBuscarBitaTrans.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarBitaTrans.Location = new System.Drawing.Point(713, 224);
+            this.txtBuscarBitaTrans.Location = new System.Drawing.Point(734, 307);
             this.txtBuscarBitaTrans.Multiline = true;
             this.txtBuscarBitaTrans.Name = "txtBuscarBitaTrans";
             this.txtBuscarBitaTrans.Size = new System.Drawing.Size(221, 20);
@@ -853,7 +859,7 @@ namespace sistema_reparto
             this.lugarLlegadaDataGridViewTextBoxColumn,
             this.nivelGasolinaDataGridViewTextBoxColumn});
             this.dgvBitaTrans.DataSource = this.bitacoraTransporteBindingSource;
-            this.dgvBitaTrans.Location = new System.Drawing.Point(713, 268);
+            this.dgvBitaTrans.Location = new System.Drawing.Point(734, 351);
             this.dgvBitaTrans.Name = "dgvBitaTrans";
             this.dgvBitaTrans.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -870,6 +876,78 @@ namespace sistema_reparto
             this.dgvBitaTrans.Size = new System.Drawing.Size(307, 150);
             this.dgvBitaTrans.TabIndex = 72;
             // 
+            // idBitacoraDataGridViewTextBoxColumn
+            // 
+            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "Id Bitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
+            // 
+            // idTransporteDataGridViewTextBoxColumn
+            // 
+            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
+            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
+            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
+            // 
+            // idPilotoDataGridViewTextBoxColumn
+            // 
+            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
+            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
+            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            // 
+            // kimInicialDataGridViewTextBoxColumn
+            // 
+            this.kimInicialDataGridViewTextBoxColumn.DataPropertyName = "KimInicial";
+            this.kimInicialDataGridViewTextBoxColumn.HeaderText = "Kim Inicial";
+            this.kimInicialDataGridViewTextBoxColumn.Name = "kimInicialDataGridViewTextBoxColumn";
+            // 
+            // kimFinalDataGridViewTextBoxColumn
+            // 
+            this.kimFinalDataGridViewTextBoxColumn.DataPropertyName = "KimFinal";
+            this.kimFinalDataGridViewTextBoxColumn.HeaderText = "Kim Final";
+            this.kimFinalDataGridViewTextBoxColumn.Name = "kimFinalDataGridViewTextBoxColumn";
+            // 
+            // fechaSalidaDataGridViewTextBoxColumn
+            // 
+            this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "FechaSalida";
+            this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
+            this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
+            // 
+            // fechaEntradaDataGridViewTextBoxColumn
+            // 
+            this.fechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "FechaEntrada";
+            this.fechaEntradaDataGridViewTextBoxColumn.HeaderText = "Fecha Entrada";
+            this.fechaEntradaDataGridViewTextBoxColumn.Name = "fechaEntradaDataGridViewTextBoxColumn";
+            // 
+            // horaSalidaDataGridViewTextBoxColumn
+            // 
+            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida";
+            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
+            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
+            // 
+            // horaEntradaDataGridViewTextBoxColumn
+            // 
+            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "Hora Entrada";
+            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
+            // 
+            // lugarSalidaDataGridViewTextBoxColumn
+            // 
+            this.lugarSalidaDataGridViewTextBoxColumn.DataPropertyName = "LugarSalida";
+            this.lugarSalidaDataGridViewTextBoxColumn.HeaderText = "Lugar Salida";
+            this.lugarSalidaDataGridViewTextBoxColumn.Name = "lugarSalidaDataGridViewTextBoxColumn";
+            // 
+            // lugarLlegadaDataGridViewTextBoxColumn
+            // 
+            this.lugarLlegadaDataGridViewTextBoxColumn.DataPropertyName = "LugarLlegada";
+            this.lugarLlegadaDataGridViewTextBoxColumn.HeaderText = "Lugar Llegada";
+            this.lugarLlegadaDataGridViewTextBoxColumn.Name = "lugarLlegadaDataGridViewTextBoxColumn";
+            // 
+            // nivelGasolinaDataGridViewTextBoxColumn
+            // 
+            this.nivelGasolinaDataGridViewTextBoxColumn.DataPropertyName = "NivelGasolina";
+            this.nivelGasolinaDataGridViewTextBoxColumn.HeaderText = "Nivel Gasolina";
+            this.nivelGasolinaDataGridViewTextBoxColumn.Name = "nivelGasolinaDataGridViewTextBoxColumn";
+            // 
             // bitacoraTransporteBindingSource
             // 
             this.bitacoraTransporteBindingSource.DataSource = typeof(sistema_reparto.Clases.BitacoraTransporte);
@@ -878,7 +956,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIDBiTran.Controls.Add(this.txtIdBiTran);
             this.pnlCampoIDBiTran.Controls.Add(this.lblIdBiTran);
-            this.pnlCampoIDBiTran.Location = new System.Drawing.Point(204, 194);
+            this.pnlCampoIDBiTran.Location = new System.Drawing.Point(225, 277);
             this.pnlCampoIDBiTran.Name = "pnlCampoIDBiTran";
             this.pnlCampoIDBiTran.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoIDBiTran.TabIndex = 70;
@@ -909,7 +987,7 @@ namespace sistema_reparto
             this.lblRegistrarBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrarBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblRegistrarBitaTrans.Location = new System.Drawing.Point(205, 147);
+            this.lblRegistrarBitaTrans.Location = new System.Drawing.Point(371, 166);
             this.lblRegistrarBitaTrans.Name = "lblRegistrarBitaTrans";
             this.lblRegistrarBitaTrans.Size = new System.Drawing.Size(185, 16);
             this.lblRegistrarBitaTrans.TabIndex = 64;
@@ -949,7 +1027,7 @@ namespace sistema_reparto
             // pnlBordeRegistrar
             // 
             this.pnlBordeRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrar.BackgroundImage")));
-            this.pnlBordeRegistrar.Location = new System.Drawing.Point(207, 166);
+            this.pnlBordeRegistrar.Location = new System.Drawing.Point(373, 185);
             this.pnlBordeRegistrar.Name = "pnlBordeRegistrar";
             this.pnlBordeRegistrar.Size = new System.Drawing.Size(175, 3);
             this.pnlBordeRegistrar.TabIndex = 67;
@@ -957,7 +1035,7 @@ namespace sistema_reparto
             // pnlBordeModificar
             // 
             this.pnlBordeModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificar.BackgroundImage")));
-            this.pnlBordeModificar.Location = new System.Drawing.Point(501, 166);
+            this.pnlBordeModificar.Location = new System.Drawing.Point(667, 185);
             this.pnlBordeModificar.Name = "pnlBordeModificar";
             this.pnlBordeModificar.Size = new System.Drawing.Size(175, 3);
             this.pnlBordeModificar.TabIndex = 68;
@@ -968,7 +1046,7 @@ namespace sistema_reparto
             this.lblModificarBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblModificarBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblModificarBitaTrans.Location = new System.Drawing.Point(497, 149);
+            this.lblModificarBitaTrans.Location = new System.Drawing.Point(663, 168);
             this.lblModificarBitaTrans.Name = "lblModificarBitaTrans";
             this.lblModificarBitaTrans.Size = new System.Drawing.Size(185, 16);
             this.lblModificarBitaTrans.TabIndex = 65;
@@ -990,7 +1068,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIDTrans.Controls.Add(this.cbxIdTrans);
             this.pnlCampoIDTrans.Controls.Add(this.lblIdTrans);
-            this.pnlCampoIDTrans.Location = new System.Drawing.Point(204, 249);
+            this.pnlCampoIDTrans.Location = new System.Drawing.Point(225, 332);
             this.pnlCampoIDTrans.Name = "pnlCampoIDTrans";
             this.pnlCampoIDTrans.Size = new System.Drawing.Size(186, 52);
             this.pnlCampoIDTrans.TabIndex = 62;
@@ -1018,7 +1096,7 @@ namespace sistema_reparto
             // 
             this.pnlFechaSal.Controls.Add(this.lblFechaSal);
             this.pnlFechaSal.Controls.Add(this.txtFechaSal);
-            this.pnlFechaSal.Location = new System.Drawing.Point(203, 478);
+            this.pnlFechaSal.Location = new System.Drawing.Point(224, 561);
             this.pnlFechaSal.Name = "pnlFechaSal";
             this.pnlFechaSal.Size = new System.Drawing.Size(227, 59);
             this.pnlFechaSal.TabIndex = 87;
@@ -1044,7 +1122,7 @@ namespace sistema_reparto
             // 
             this.pnlFechaEnt.Controls.Add(this.lblFechaEnt);
             this.pnlFechaEnt.Controls.Add(this.txtFechaEnt);
-            this.pnlFechaEnt.Location = new System.Drawing.Point(203, 544);
+            this.pnlFechaEnt.Location = new System.Drawing.Point(224, 627);
             this.pnlFechaEnt.Name = "pnlFechaEnt";
             this.pnlFechaEnt.Size = new System.Drawing.Size(227, 59);
             this.pnlFechaEnt.TabIndex = 88;
@@ -1070,7 +1148,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoLugarLle.Controls.Add(this.txtLugarLlegada);
             this.pnlCampoLugarLle.Controls.Add(this.lblLugarLle);
-            this.pnlCampoLugarLle.Location = new System.Drawing.Point(461, 360);
+            this.pnlCampoLugarLle.Location = new System.Drawing.Point(482, 443);
             this.pnlCampoLugarLle.Name = "pnlCampoLugarLle";
             this.pnlCampoLugarLle.Size = new System.Drawing.Size(210, 48);
             this.pnlCampoLugarLle.TabIndex = 89;
@@ -1204,7 +1282,7 @@ namespace sistema_reparto
             this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
             this.btnBitaTrans.Controls.Add(this.label13);
             this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBitaTrans.Location = new System.Drawing.Point(-1, 738);
+            this.btnBitaTrans.Location = new System.Drawing.Point(-20, 737);
             this.btnBitaTrans.Name = "btnBitaTrans";
             this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
             this.btnBitaTrans.TabIndex = 8;
@@ -1216,7 +1294,7 @@ namespace sistema_reparto
             this.lblBitaTrans.AutoSize = true;
             this.lblBitaTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBitaTrans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblBitaTrans.Location = new System.Drawing.Point(52, 10);
+            this.lblBitaTrans.Location = new System.Drawing.Point(66, 10);
             this.lblBitaTrans.Name = "lblBitaTrans";
             this.lblBitaTrans.Size = new System.Drawing.Size(114, 15);
             this.lblBitaTrans.TabIndex = 2;
@@ -1228,7 +1306,7 @@ namespace sistema_reparto
             // 
             this.picIconoBitaTrans.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoBitaTrans.BackgroundImage")));
             this.picIconoBitaTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoBitaTrans.Location = new System.Drawing.Point(20, 8);
+            this.picIconoBitaTrans.Location = new System.Drawing.Point(38, 8);
             this.picIconoBitaTrans.Name = "picIconoBitaTrans";
             this.picIconoBitaTrans.Size = new System.Drawing.Size(20, 21);
             this.picIconoBitaTrans.TabIndex = 1;
@@ -1271,7 +1349,7 @@ namespace sistema_reparto
             this.pnlBgSide.Controls.Add(this.pnlSubUbicacion);
             this.pnlBgSide.Location = new System.Drawing.Point(0, 0);
             this.pnlBgSide.Name = "pnlBgSide";
-            this.pnlBgSide.Size = new System.Drawing.Size(179, 785);
+            this.pnlBgSide.Size = new System.Drawing.Size(179, 776);
             this.pnlBgSide.TabIndex = 91;
             this.pnlBgSide.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBgSide_Paint);
             // 
@@ -1702,84 +1780,81 @@ namespace sistema_reparto
             this.pictureBox12.TabIndex = 1;
             this.pictureBox12.TabStop = false;
             // 
-            // idBitacoraDataGridViewTextBoxColumn
+            // txtIdUsu
             // 
-            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "Id Bitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(914, 31);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 96;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // idTransporteDataGridViewTextBoxColumn
+            // lblCodigoUsu
             // 
-            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
-            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
-            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(889, 31);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 95;
+            this.lblCodigoUsu.Text = "ID:";
             // 
-            // idPilotoDataGridViewTextBoxColumn
+            // txtNombreUsu
             // 
-            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
-            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
-            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(796, 31);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 94;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kimInicialDataGridViewTextBoxColumn
+            // pnlImagenU
             // 
-            this.kimInicialDataGridViewTextBoxColumn.DataPropertyName = "KimInicial";
-            this.kimInicialDataGridViewTextBoxColumn.HeaderText = "Kim Inicial";
-            this.kimInicialDataGridViewTextBoxColumn.Name = "kimInicialDataGridViewTextBoxColumn";
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(657, 26);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 93;
             // 
-            // kimFinalDataGridViewTextBoxColumn
+            // lblUsuarioLog
             // 
-            this.kimFinalDataGridViewTextBoxColumn.DataPropertyName = "KimFinal";
-            this.kimFinalDataGridViewTextBoxColumn.HeaderText = "Kim Final";
-            this.kimFinalDataGridViewTextBoxColumn.Name = "kimFinalDataGridViewTextBoxColumn";
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(681, 30);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 92;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
             // 
-            // fechaSalidaDataGridViewTextBoxColumn
+            // pnlCerrar
             // 
-            this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "FechaSalida";
-            this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
-            this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
-            // 
-            // fechaEntradaDataGridViewTextBoxColumn
-            // 
-            this.fechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "FechaEntrada";
-            this.fechaEntradaDataGridViewTextBoxColumn.HeaderText = "Fecha Entrada";
-            this.fechaEntradaDataGridViewTextBoxColumn.Name = "fechaEntradaDataGridViewTextBoxColumn";
-            // 
-            // horaSalidaDataGridViewTextBoxColumn
-            // 
-            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida";
-            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
-            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
-            // 
-            // horaEntradaDataGridViewTextBoxColumn
-            // 
-            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
-            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "Hora Entrada";
-            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
-            // 
-            // lugarSalidaDataGridViewTextBoxColumn
-            // 
-            this.lugarSalidaDataGridViewTextBoxColumn.DataPropertyName = "LugarSalida";
-            this.lugarSalidaDataGridViewTextBoxColumn.HeaderText = "Lugar Salida";
-            this.lugarSalidaDataGridViewTextBoxColumn.Name = "lugarSalidaDataGridViewTextBoxColumn";
-            // 
-            // lugarLlegadaDataGridViewTextBoxColumn
-            // 
-            this.lugarLlegadaDataGridViewTextBoxColumn.DataPropertyName = "LugarLlegada";
-            this.lugarLlegadaDataGridViewTextBoxColumn.HeaderText = "Lugar Llegada";
-            this.lugarLlegadaDataGridViewTextBoxColumn.Name = "lugarLlegadaDataGridViewTextBoxColumn";
-            // 
-            // nivelGasolinaDataGridViewTextBoxColumn
-            // 
-            this.nivelGasolinaDataGridViewTextBoxColumn.DataPropertyName = "NivelGasolina";
-            this.nivelGasolinaDataGridViewTextBoxColumn.HeaderText = "Nivel Gasolina";
-            this.nivelGasolinaDataGridViewTextBoxColumn.Name = "nivelGasolinaDataGridViewTextBoxColumn";
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1029, 5);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 97;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
             // frmBitacoraTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 788);
+            this.ClientSize = new System.Drawing.Size(1059, 778);
+            this.Controls.Add(this.pnlCerrar);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
             this.Controls.Add(this.pnlBgSide);
             this.Controls.Add(this.pnlCampoLugarLle);
             this.Controls.Add(this.pnlFechaEnt);
@@ -2038,5 +2113,11 @@ namespace sistema_reparto
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarSalidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarLlegadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nivelGasolinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

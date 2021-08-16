@@ -69,6 +69,14 @@ namespace sistema_reparto
             pnlBotonGuardarU.Visible = false;
             pnlModificarU.Visible = false;
             /*Fin, ocultar contenidos del form ubicacion*/
+
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
         }
 
         private void btnCliente_MouseHover(object sender, EventArgs e)
@@ -1340,6 +1348,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalUbicacion;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

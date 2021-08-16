@@ -92,6 +92,15 @@ namespace sistema_reparto
             this.pnlBotonBuscarPil = new System.Windows.Forms.Panel();
             this.txtBuscarPil = new System.Windows.Forms.TextBox();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
+            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dpiPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sueldoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pilotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCampoIDPiloto = new System.Windows.Forms.Panel();
             this.txtIdPiloto = new System.Windows.Forms.TextBox();
@@ -155,15 +164,12 @@ namespace sistema_reparto
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.frmPilotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dpiPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldoPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.btnPiloto.SuspendLayout();
@@ -738,7 +744,7 @@ namespace sistema_reparto
             this.lblRegistrarPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrarPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblRegistrarPiloto.Location = new System.Drawing.Point(212, 130);
+            this.lblRegistrarPiloto.Location = new System.Drawing.Point(269, 141);
             this.lblRegistrarPiloto.Name = "lblRegistrarPiloto";
             this.lblRegistrarPiloto.Size = new System.Drawing.Size(100, 16);
             this.lblRegistrarPiloto.TabIndex = 20;
@@ -765,7 +771,7 @@ namespace sistema_reparto
             // pnlBordeDarBaja
             // 
             this.pnlBordeDarBaja.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeDarBaja.BackgroundImage")));
-            this.pnlBordeDarBaja.Location = new System.Drawing.Point(839, 148);
+            this.pnlBordeDarBaja.Location = new System.Drawing.Point(896, 159);
             this.pnlBordeDarBaja.Name = "pnlBordeDarBaja";
             this.pnlBordeDarBaja.Size = new System.Drawing.Size(70, 3);
             this.pnlBordeDarBaja.TabIndex = 25;
@@ -789,7 +795,7 @@ namespace sistema_reparto
             this.lblDarBaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblDarBaja.Location = new System.Drawing.Point(836, 131);
+            this.lblDarBaja.Location = new System.Drawing.Point(893, 142);
             this.lblDarBaja.Name = "lblDarBaja";
             this.lblDarBaja.Size = new System.Drawing.Size(80, 16);
             this.lblDarBaja.TabIndex = 22;
@@ -799,7 +805,7 @@ namespace sistema_reparto
             // pnlBordeRegistrar
             // 
             this.pnlBordeRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeRegistrar.BackgroundImage")));
-            this.pnlBordeRegistrar.Location = new System.Drawing.Point(214, 149);
+            this.pnlBordeRegistrar.Location = new System.Drawing.Point(271, 160);
             this.pnlBordeRegistrar.Name = "pnlBordeRegistrar";
             this.pnlBordeRegistrar.Size = new System.Drawing.Size(100, 3);
             this.pnlBordeRegistrar.TabIndex = 23;
@@ -807,7 +813,7 @@ namespace sistema_reparto
             // pnlBordeModificar
             // 
             this.pnlBordeModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBordeModificar.BackgroundImage")));
-            this.pnlBordeModificar.Location = new System.Drawing.Point(525, 148);
+            this.pnlBordeModificar.Location = new System.Drawing.Point(582, 159);
             this.pnlBordeModificar.Name = "pnlBordeModificar";
             this.pnlBordeModificar.Size = new System.Drawing.Size(100, 3);
             this.pnlBordeModificar.TabIndex = 24;
@@ -818,7 +824,7 @@ namespace sistema_reparto
             this.lblModificarPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblModificarPiloto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarPiloto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lblModificarPiloto.Location = new System.Drawing.Point(521, 131);
+            this.lblModificarPiloto.Location = new System.Drawing.Point(578, 142);
             this.lblModificarPiloto.Name = "lblModificarPiloto";
             this.lblModificarPiloto.Size = new System.Drawing.Size(100, 16);
             this.lblModificarPiloto.TabIndex = 21;
@@ -830,7 +836,7 @@ namespace sistema_reparto
             this.pnlLLenarCamposPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLLenarCamposPil.BackgroundImage")));
             this.pnlLLenarCamposPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLLenarCamposPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLLenarCamposPil.Location = new System.Drawing.Point(748, 430);
+            this.pnlLLenarCamposPil.Location = new System.Drawing.Point(804, 535);
             this.pnlLLenarCamposPil.Name = "pnlLLenarCamposPil";
             this.pnlLLenarCamposPil.Size = new System.Drawing.Size(119, 22);
             this.pnlLLenarCamposPil.TabIndex = 52;
@@ -841,7 +847,7 @@ namespace sistema_reparto
             this.pnlLlenarCamposPilDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLlenarCamposPilDB.BackgroundImage")));
             this.pnlLlenarCamposPilDB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLlenarCamposPilDB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLlenarCamposPilDB.Location = new System.Drawing.Point(746, 431);
+            this.pnlLlenarCamposPilDB.Location = new System.Drawing.Point(802, 536);
             this.pnlLlenarCamposPilDB.Name = "pnlLlenarCamposPilDB";
             this.pnlLlenarCamposPilDB.Size = new System.Drawing.Size(119, 22);
             this.pnlLlenarCamposPilDB.TabIndex = 51;
@@ -852,7 +858,7 @@ namespace sistema_reparto
             this.pnlModificarPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlModificarPil.BackgroundImage")));
             this.pnlModificarPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlModificarPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlModificarPil.Location = new System.Drawing.Point(510, 350);
+            this.pnlModificarPil.Location = new System.Drawing.Point(566, 455);
             this.pnlModificarPil.Name = "pnlModificarPil";
             this.pnlModificarPil.Size = new System.Drawing.Size(37, 42);
             this.pnlModificarPil.TabIndex = 50;
@@ -863,7 +869,7 @@ namespace sistema_reparto
             this.pnlBotonGuardarPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonGuardarPil.BackgroundImage")));
             this.pnlBotonGuardarPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonGuardarPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonGuardarPil.Location = new System.Drawing.Point(510, 346);
+            this.pnlBotonGuardarPil.Location = new System.Drawing.Point(566, 451);
             this.pnlBotonGuardarPil.Name = "pnlBotonGuardarPil";
             this.pnlBotonGuardarPil.Size = new System.Drawing.Size(37, 42);
             this.pnlBotonGuardarPil.TabIndex = 49;
@@ -874,7 +880,7 @@ namespace sistema_reparto
             this.pnlActivarPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActivarPil.BackgroundImage")));
             this.pnlActivarPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlActivarPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlActivarPil.Location = new System.Drawing.Point(487, 398);
+            this.pnlActivarPil.Location = new System.Drawing.Point(543, 503);
             this.pnlActivarPil.Name = "pnlActivarPil";
             this.pnlActivarPil.Size = new System.Drawing.Size(78, 25);
             this.pnlActivarPil.TabIndex = 48;
@@ -886,7 +892,7 @@ namespace sistema_reparto
             this.pnlDarBajaPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDarBajaPil.BackgroundImage")));
             this.pnlDarBajaPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlDarBajaPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlDarBajaPil.Location = new System.Drawing.Point(491, 399);
+            this.pnlDarBajaPil.Location = new System.Drawing.Point(547, 504);
             this.pnlDarBajaPil.Name = "pnlDarBajaPil";
             this.pnlDarBajaPil.Size = new System.Drawing.Size(78, 25);
             this.pnlDarBajaPil.TabIndex = 47;
@@ -897,7 +903,7 @@ namespace sistema_reparto
             this.pnlBotonBuscarPil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarPil.BackgroundImage")));
             this.pnlBotonBuscarPil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarPil.Location = new System.Drawing.Point(913, 227);
+            this.pnlBotonBuscarPil.Location = new System.Drawing.Point(969, 332);
             this.pnlBotonBuscarPil.Name = "pnlBotonBuscarPil";
             this.pnlBotonBuscarPil.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarPil.TabIndex = 46;
@@ -906,7 +912,7 @@ namespace sistema_reparto
             // txtBuscarPil
             // 
             this.txtBuscarPil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarPil.Location = new System.Drawing.Point(671, 227);
+            this.txtBuscarPil.Location = new System.Drawing.Point(727, 332);
             this.txtBuscarPil.Multiline = true;
             this.txtBuscarPil.Name = "txtBuscarPil";
             this.txtBuscarPil.Size = new System.Drawing.Size(221, 20);
@@ -930,7 +936,7 @@ namespace sistema_reparto
             this.sueldoPilotoDataGridViewTextBoxColumn,
             this.estatusPilotoDataGridViewTextBoxColumn});
             this.dgvPiloto.DataSource = this.pilotoBindingSource;
-            this.dgvPiloto.Location = new System.Drawing.Point(635, 258);
+            this.dgvPiloto.Location = new System.Drawing.Point(691, 363);
             this.dgvPiloto.Name = "dgvPiloto";
             this.dgvPiloto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -947,6 +953,60 @@ namespace sistema_reparto
             this.dgvPiloto.Size = new System.Drawing.Size(307, 150);
             this.dgvPiloto.TabIndex = 44;
             // 
+            // idPilotoDataGridViewTextBoxColumn
+            // 
+            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
+            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
+            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            // 
+            // dpiPilotoDataGridViewTextBoxColumn
+            // 
+            this.dpiPilotoDataGridViewTextBoxColumn.DataPropertyName = "DpiPiloto";
+            this.dpiPilotoDataGridViewTextBoxColumn.HeaderText = "Dpi Piloto";
+            this.dpiPilotoDataGridViewTextBoxColumn.Name = "dpiPilotoDataGridViewTextBoxColumn";
+            // 
+            // idUserDataGridViewTextBoxColumn
+            // 
+            this.idUserDataGridViewTextBoxColumn.DataPropertyName = "IdUser";
+            this.idUserDataGridViewTextBoxColumn.HeaderText = "Id User";
+            this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
+            // 
+            // nombrePilotoDataGridViewTextBoxColumn
+            // 
+            this.nombrePilotoDataGridViewTextBoxColumn.DataPropertyName = "NombrePiloto";
+            this.nombrePilotoDataGridViewTextBoxColumn.HeaderText = "Nombre Piloto";
+            this.nombrePilotoDataGridViewTextBoxColumn.Name = "nombrePilotoDataGridViewTextBoxColumn";
+            // 
+            // apellidoPilotoDataGridViewTextBoxColumn
+            // 
+            this.apellidoPilotoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoPiloto";
+            this.apellidoPilotoDataGridViewTextBoxColumn.HeaderText = "Apellido Piloto";
+            this.apellidoPilotoDataGridViewTextBoxColumn.Name = "apellidoPilotoDataGridViewTextBoxColumn";
+            // 
+            // telefonoPilotoDataGridViewTextBoxColumn
+            // 
+            this.telefonoPilotoDataGridViewTextBoxColumn.DataPropertyName = "TelefonoPiloto";
+            this.telefonoPilotoDataGridViewTextBoxColumn.HeaderText = "Telefono Piloto";
+            this.telefonoPilotoDataGridViewTextBoxColumn.Name = "telefonoPilotoDataGridViewTextBoxColumn";
+            // 
+            // direccionPilotoDataGridViewTextBoxColumn
+            // 
+            this.direccionPilotoDataGridViewTextBoxColumn.DataPropertyName = "DireccionPiloto";
+            this.direccionPilotoDataGridViewTextBoxColumn.HeaderText = "Direccion Piloto";
+            this.direccionPilotoDataGridViewTextBoxColumn.Name = "direccionPilotoDataGridViewTextBoxColumn";
+            // 
+            // sueldoPilotoDataGridViewTextBoxColumn
+            // 
+            this.sueldoPilotoDataGridViewTextBoxColumn.DataPropertyName = "SueldoPiloto";
+            this.sueldoPilotoDataGridViewTextBoxColumn.HeaderText = "Sueldo Piloto";
+            this.sueldoPilotoDataGridViewTextBoxColumn.Name = "sueldoPilotoDataGridViewTextBoxColumn";
+            // 
+            // estatusPilotoDataGridViewTextBoxColumn
+            // 
+            this.estatusPilotoDataGridViewTextBoxColumn.DataPropertyName = "EstatusPiloto";
+            this.estatusPilotoDataGridViewTextBoxColumn.HeaderText = "Estatus Piloto";
+            this.estatusPilotoDataGridViewTextBoxColumn.Name = "estatusPilotoDataGridViewTextBoxColumn";
+            // 
             // pilotoBindingSource
             // 
             this.pilotoBindingSource.DataSource = typeof(sistema_reparto.Clases.Piloto);
@@ -955,7 +1015,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIDPiloto.Controls.Add(this.txtIdPiloto);
             this.pnlCampoIDPiloto.Controls.Add(this.lblIdPiloto);
-            this.pnlCampoIDPiloto.Location = new System.Drawing.Point(211, 177);
+            this.pnlCampoIDPiloto.Location = new System.Drawing.Point(267, 282);
             this.pnlCampoIDPiloto.Name = "pnlCampoIDPiloto";
             this.pnlCampoIDPiloto.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoIDPiloto.TabIndex = 41;
@@ -984,7 +1044,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoDpiPil.Controls.Add(this.txtDpiPil);
             this.pnlCampoDpiPil.Controls.Add(this.lblDpiPil);
-            this.pnlCampoDpiPil.Location = new System.Drawing.Point(211, 231);
+            this.pnlCampoDpiPil.Location = new System.Drawing.Point(267, 336);
             this.pnlCampoDpiPil.Name = "pnlCampoDpiPil";
             this.pnlCampoDpiPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoDpiPil.TabIndex = 42;
@@ -1013,7 +1073,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoNombrePil.Controls.Add(this.txtNombrePil);
             this.pnlCampoNombrePil.Controls.Add(this.lblNombrePil);
-            this.pnlCampoNombrePil.Location = new System.Drawing.Point(211, 344);
+            this.pnlCampoNombrePil.Location = new System.Drawing.Point(267, 449);
             this.pnlCampoNombrePil.Name = "pnlCampoNombrePil";
             this.pnlCampoNombrePil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoNombrePil.TabIndex = 54;
@@ -1042,7 +1102,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoApellidoPil.Controls.Add(this.txtApellidoPil);
             this.pnlCampoApellidoPil.Controls.Add(this.lblApellidoPil);
-            this.pnlCampoApellidoPil.Location = new System.Drawing.Point(211, 399);
+            this.pnlCampoApellidoPil.Location = new System.Drawing.Point(267, 504);
             this.pnlCampoApellidoPil.Name = "pnlCampoApellidoPil";
             this.pnlCampoApellidoPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoApellidoPil.TabIndex = 55;
@@ -1071,7 +1131,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoTelefonoPil.Controls.Add(this.txtTelefonoPil);
             this.pnlCampoTelefonoPil.Controls.Add(this.lblTelefonoPil);
-            this.pnlCampoTelefonoPil.Location = new System.Drawing.Point(440, 177);
+            this.pnlCampoTelefonoPil.Location = new System.Drawing.Point(496, 282);
             this.pnlCampoTelefonoPil.Name = "pnlCampoTelefonoPil";
             this.pnlCampoTelefonoPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoTelefonoPil.TabIndex = 56;
@@ -1100,7 +1160,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoDireccionPil.Controls.Add(this.txtDireccionPil);
             this.pnlCampoDireccionPil.Controls.Add(this.lblDireccionPil);
-            this.pnlCampoDireccionPil.Location = new System.Drawing.Point(439, 231);
+            this.pnlCampoDireccionPil.Location = new System.Drawing.Point(495, 336);
             this.pnlCampoDireccionPil.Name = "pnlCampoDireccionPil";
             this.pnlCampoDireccionPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoDireccionPil.TabIndex = 57;
@@ -1129,7 +1189,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoSueldoPil.Controls.Add(this.txtSueldoPil);
             this.pnlCampoSueldoPil.Controls.Add(this.lblSueldoPil);
-            this.pnlCampoSueldoPil.Location = new System.Drawing.Point(440, 285);
+            this.pnlCampoSueldoPil.Location = new System.Drawing.Point(496, 390);
             this.pnlCampoSueldoPil.Name = "pnlCampoSueldoPil";
             this.pnlCampoSueldoPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoSueldoPil.TabIndex = 58;
@@ -1159,7 +1219,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoEstatusPil.Controls.Add(this.txtEstatusPil);
             this.pnlCampoEstatusPil.Controls.Add(this.lblEstatusPil);
-            this.pnlCampoEstatusPil.Location = new System.Drawing.Point(439, 339);
+            this.pnlCampoEstatusPil.Location = new System.Drawing.Point(495, 444);
             this.pnlCampoEstatusPil.Name = "pnlCampoEstatusPil";
             this.pnlCampoEstatusPil.Size = new System.Drawing.Size(186, 48);
             this.pnlCampoEstatusPil.TabIndex = 59;
@@ -1188,7 +1248,7 @@ namespace sistema_reparto
             // 
             this.pnlCampoIDUser.Controls.Add(this.cbxIdUser);
             this.pnlCampoIDUser.Controls.Add(this.lblIdUser);
-            this.pnlCampoIDUser.Location = new System.Drawing.Point(211, 286);
+            this.pnlCampoIDUser.Location = new System.Drawing.Point(267, 391);
             this.pnlCampoIDUser.Name = "pnlCampoIDUser";
             this.pnlCampoIDUser.Size = new System.Drawing.Size(186, 52);
             this.pnlCampoIDUser.TabIndex = 13;
@@ -1238,7 +1298,7 @@ namespace sistema_reparto
             this.panel2.Controls.Add(this.btnTipoTransporte);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(179, 776);
+            this.panel2.Size = new System.Drawing.Size(179, 788);
             this.panel2.TabIndex = 91;
             // 
             // btnCalificacionP
@@ -1673,59 +1733,68 @@ namespace sistema_reparto
             // 
             this.frmPilotoBindingSource.DataSource = typeof(sistema_reparto.frmPiloto);
             // 
-            // idPilotoDataGridViewTextBoxColumn
+            // txtIdUsu
             // 
-            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
-            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
-            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(918, 38);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 97;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dpiPilotoDataGridViewTextBoxColumn
+            // lblCodigoUsu
             // 
-            this.dpiPilotoDataGridViewTextBoxColumn.DataPropertyName = "DpiPiloto";
-            this.dpiPilotoDataGridViewTextBoxColumn.HeaderText = "Dpi Piloto";
-            this.dpiPilotoDataGridViewTextBoxColumn.Name = "dpiPilotoDataGridViewTextBoxColumn";
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(893, 38);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 96;
+            this.lblCodigoUsu.Text = "ID:";
             // 
-            // idUserDataGridViewTextBoxColumn
+            // txtNombreUsu
             // 
-            this.idUserDataGridViewTextBoxColumn.DataPropertyName = "IdUser";
-            this.idUserDataGridViewTextBoxColumn.HeaderText = "Id User";
-            this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(800, 38);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 95;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // nombrePilotoDataGridViewTextBoxColumn
+            // pnlImagenU
             // 
-            this.nombrePilotoDataGridViewTextBoxColumn.DataPropertyName = "NombrePiloto";
-            this.nombrePilotoDataGridViewTextBoxColumn.HeaderText = "Nombre Piloto";
-            this.nombrePilotoDataGridViewTextBoxColumn.Name = "nombrePilotoDataGridViewTextBoxColumn";
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(661, 33);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 94;
             // 
-            // apellidoPilotoDataGridViewTextBoxColumn
+            // lblUsuarioLog
             // 
-            this.apellidoPilotoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoPiloto";
-            this.apellidoPilotoDataGridViewTextBoxColumn.HeaderText = "Apellido Piloto";
-            this.apellidoPilotoDataGridViewTextBoxColumn.Name = "apellidoPilotoDataGridViewTextBoxColumn";
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(685, 37);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 93;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
             // 
-            // telefonoPilotoDataGridViewTextBoxColumn
+            // pnlCerrar
             // 
-            this.telefonoPilotoDataGridViewTextBoxColumn.DataPropertyName = "TelefonoPiloto";
-            this.telefonoPilotoDataGridViewTextBoxColumn.HeaderText = "Telefono Piloto";
-            this.telefonoPilotoDataGridViewTextBoxColumn.Name = "telefonoPilotoDataGridViewTextBoxColumn";
-            // 
-            // direccionPilotoDataGridViewTextBoxColumn
-            // 
-            this.direccionPilotoDataGridViewTextBoxColumn.DataPropertyName = "DireccionPiloto";
-            this.direccionPilotoDataGridViewTextBoxColumn.HeaderText = "Direccion Piloto";
-            this.direccionPilotoDataGridViewTextBoxColumn.Name = "direccionPilotoDataGridViewTextBoxColumn";
-            // 
-            // sueldoPilotoDataGridViewTextBoxColumn
-            // 
-            this.sueldoPilotoDataGridViewTextBoxColumn.DataPropertyName = "SueldoPiloto";
-            this.sueldoPilotoDataGridViewTextBoxColumn.HeaderText = "Sueldo Piloto";
-            this.sueldoPilotoDataGridViewTextBoxColumn.Name = "sueldoPilotoDataGridViewTextBoxColumn";
-            // 
-            // estatusPilotoDataGridViewTextBoxColumn
-            // 
-            this.estatusPilotoDataGridViewTextBoxColumn.DataPropertyName = "EstatusPiloto";
-            this.estatusPilotoDataGridViewTextBoxColumn.HeaderText = "Estatus Piloto";
-            this.estatusPilotoDataGridViewTextBoxColumn.Name = "estatusPilotoDataGridViewTextBoxColumn";
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1024, 11);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 92;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
             // frmPiloto
             // 
@@ -1733,6 +1802,12 @@ namespace sistema_reparto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1059, 788);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
+            this.Controls.Add(this.pnlCerrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlModificarPil);
             this.Controls.Add(this.pnlCampoIDUser);
@@ -1982,5 +2057,11 @@ namespace sistema_reparto
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionPilotoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoPilotoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusPilotoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlCerrar;
     }
 }

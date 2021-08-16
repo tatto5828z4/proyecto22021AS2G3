@@ -85,6 +85,13 @@ namespace sistema_reparto
             pnlBotonGuardarC.Visible = false;
             /*Fin habilitando componentes*/
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void frmCalificacionPiloto_Load(object sender, EventArgs e)
@@ -1345,6 +1352,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalCalificacion;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

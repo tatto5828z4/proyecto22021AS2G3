@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using sistema_reparto.Clases;
 
 namespace sistema_reparto
 {
@@ -85,6 +85,13 @@ namespace sistema_reparto
             /*Final obteniedo variables a usar con mi ABC cliente */
 
             pnlMantenimientoC.Visible = false;
+
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
 
 
         }
@@ -1576,6 +1583,11 @@ namespace sistema_reparto
         private void picIconoBitaTrans_MouseLeave(object sender, EventArgs e)
         {
             btnBitaTrans.BackColor = colorNormalCliente;
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
     

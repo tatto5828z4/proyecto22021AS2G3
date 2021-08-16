@@ -74,6 +74,13 @@ namespace sistema_reparto
 
             /*Habilitando contenido*/
 
+            String idUsuario = Login.idUsuario;
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void frmTipoMovimiento_Load(object sender, EventArgs e)
@@ -1108,6 +1115,11 @@ namespace sistema_reparto
         private void pnlSidebar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
         }
     }
     
