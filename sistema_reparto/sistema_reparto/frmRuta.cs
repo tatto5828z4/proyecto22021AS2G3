@@ -402,23 +402,26 @@ namespace sistema_reparto
         private void pnlBotonGuardarR_MouseClick(object sender, MouseEventArgs e)
         {
             /* Inicio de ejecucion de funcion insertar un Ruta */
+            //String estatusRuta = "A";
+            //Ruta ruta = funObtenerTxt(estatusRuta);
+            //ruta.funInsertar();
+            /* Final de ejecucion de funcion insertar un Ruta */
 
-            if (txtIdRuta.Text=="" || txtEstatusR.Text == "")
-            {
-                MessageBox.Show("No se pueden ingresar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                
-                String EstatusRuta = "A";
-                Ruta ruta = funObtenerTxt(EstatusRuta);
-                ruta.funInsertar();
-                /* Final de ejecucion de funcion insertar un Ruta */
-
-                funCargarTabla(null);
-                funVaciarCampos();
-            }
+            //funCargarTabla(null);
+            //funVaciarCampos();
             
+      
+
+            String EstatusRuta = "A";
+            Ruta ruta = funObtenerTxt(EstatusRuta);
+            ruta.funInsertar();
+            /* Final de ejecucion de funcion insertar un Ruta */
+
+            funCargarTabla(null);
+            funVaciarCampos();
+
+
+
         }
 
         private void pnlBotonBuscarR_MouseClick(object sender, MouseEventArgs e)

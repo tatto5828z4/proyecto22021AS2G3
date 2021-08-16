@@ -35,14 +35,7 @@ namespace sistema_reparto.Clases
 
         public void funInsertar()
         {
-            if (idRuta == "" && inicioRuta == "" && finalRuta == "")
-            {
-
-                MessageBox.Show("No se pueden dejar campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
+           
 
 
 
@@ -67,8 +60,10 @@ namespace sistema_reparto.Clases
                 {
                     conexionBD.Close();
                 }
-            }
+            
         }
+
+
 
         public List<Object> consulta(String dato)
         {
