@@ -232,7 +232,7 @@ namespace sistema_reparto
             this.btnBT.Controls.Add(this.picIconoBT);
             this.btnBT.Controls.Add(this.label20);
             this.btnBT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBT.Location = new System.Drawing.Point(-10, 719);
+            this.btnBT.Location = new System.Drawing.Point(-10, 705);
             this.btnBT.Name = "btnBT";
             this.btnBT.Size = new System.Drawing.Size(189, 34);
             this.btnBT.TabIndex = 29;
@@ -285,7 +285,7 @@ namespace sistema_reparto
             this.btnCalificacionP.Controls.Add(this.label7);
             this.btnCalificacionP.Controls.Add(this.lblCalificacion);
             this.btnCalificacionP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalificacionP.Location = new System.Drawing.Point(-4, 653);
+            this.btnCalificacionP.Location = new System.Drawing.Point(-4, 639);
             this.btnCalificacionP.Name = "btnCalificacionP";
             this.btnCalificacionP.Size = new System.Drawing.Size(180, 34);
             this.btnCalificacionP.TabIndex = 38;
@@ -421,7 +421,7 @@ namespace sistema_reparto
             this.pnlMovBodega.Controls.Add(this.label17);
             this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
             this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlMovBodega.Location = new System.Drawing.Point(-3, 620);
+            this.pnlMovBodega.Location = new System.Drawing.Point(-3, 606);
             this.pnlMovBodega.Name = "pnlMovBodega";
             this.pnlMovBodega.Size = new System.Drawing.Size(180, 34);
             this.pnlMovBodega.TabIndex = 84;
@@ -475,7 +475,7 @@ namespace sistema_reparto
             this.btnUbicacion.Controls.Add(this.picIconoUbicacion);
             this.btnUbicacion.Controls.Add(this.label5);
             this.btnUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUbicacion.Location = new System.Drawing.Point(-2, 281);
+            this.btnUbicacion.Location = new System.Drawing.Point(-2, 276);
             this.btnUbicacion.Name = "btnUbicacion";
             this.btnUbicacion.Size = new System.Drawing.Size(180, 34);
             this.btnUbicacion.TabIndex = 5;
@@ -526,7 +526,7 @@ namespace sistema_reparto
             this.btnDepartamento.Controls.Add(this.picDepartamento);
             this.btnDepartamento.Controls.Add(this.label4);
             this.btnDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDepartamento.Location = new System.Drawing.Point(-2, 246);
+            this.btnDepartamento.Location = new System.Drawing.Point(-2, 243);
             this.btnDepartamento.Name = "btnDepartamento";
             this.btnDepartamento.Size = new System.Drawing.Size(180, 34);
             this.btnDepartamento.TabIndex = 3;
@@ -578,7 +578,7 @@ namespace sistema_reparto
             this.pnlTrans.Controls.Add(this.label14);
             this.pnlTrans.Controls.Add(this.label25);
             this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlTrans.Location = new System.Drawing.Point(-5, 585);
+            this.pnlTrans.Location = new System.Drawing.Point(-5, 573);
             this.pnlTrans.Name = "pnlTrans";
             this.pnlTrans.Size = new System.Drawing.Size(184, 34);
             this.pnlTrans.TabIndex = 59;
@@ -624,7 +624,7 @@ namespace sistema_reparto
             this.btnPil.Controls.Add(this.picIconoPil);
             this.btnPil.Controls.Add(this.label22);
             this.btnPil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPil.Location = new System.Drawing.Point(-13, 686);
+            this.btnPil.Location = new System.Drawing.Point(-13, 672);
             this.btnPil.Name = "btnPil";
             this.btnPil.Size = new System.Drawing.Size(189, 34);
             this.btnPil.TabIndex = 28;
@@ -675,7 +675,7 @@ namespace sistema_reparto
             this.btnPuesto.Controls.Add(this.label2);
             this.btnPuesto.Controls.Add(this.lblPuesto);
             this.btnPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPuesto.Location = new System.Drawing.Point(-3, 212);
+            this.btnPuesto.Location = new System.Drawing.Point(-3, 210);
             this.btnPuesto.Name = "btnPuesto";
             this.btnPuesto.Size = new System.Drawing.Size(180, 34);
             this.btnPuesto.TabIndex = 2;
@@ -737,7 +737,7 @@ namespace sistema_reparto
             this.pnlEnvio.Controls.Add(this.label15);
             this.pnlEnvio.Controls.Add(this.lblEnvio);
             this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEnvio.Location = new System.Drawing.Point(-1, 551);
+            this.pnlEnvio.Location = new System.Drawing.Point(-1, 540);
             this.pnlEnvio.Name = "pnlEnvio";
             this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
             this.pnlEnvio.TabIndex = 38;
@@ -841,7 +841,7 @@ namespace sistema_reparto
             this.btnRuta.Controls.Add(this.label8);
             this.btnRuta.Controls.Add(this.lblRuta);
             this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRuta.Location = new System.Drawing.Point(0, 315);
+            this.btnRuta.Location = new System.Drawing.Point(0, 309);
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(186, 34);
             this.btnRuta.TabIndex = 30;
@@ -892,7 +892,7 @@ namespace sistema_reparto
             this.btnBodega.Controls.Add(this.label16);
             this.btnBodega.Controls.Add(this.lblBodega);
             this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(-2, 517);
+            this.btnBodega.Location = new System.Drawing.Point(-2, 507);
             this.btnBodega.Name = "btnBodega";
             this.btnBodega.Size = new System.Drawing.Size(181, 34);
             this.btnBodega.TabIndex = 37;
@@ -943,7 +943,7 @@ namespace sistema_reparto
             this.btnTipoTransporte.Controls.Add(this.picIconoTipoTransporte);
             this.btnTipoTransporte.Controls.Add(this.label6);
             this.btnTipoTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTipoTransporte.Location = new System.Drawing.Point(-3, 383);
+            this.btnTipoTransporte.Location = new System.Drawing.Point(-3, 375);
             this.btnTipoTransporte.Name = "btnTipoTransporte";
             this.btnTipoTransporte.Size = new System.Drawing.Size(180, 34);
             this.btnTipoTransporte.TabIndex = 34;
@@ -994,7 +994,7 @@ namespace sistema_reparto
             this.btnUsuarios.Controls.Add(this.picIconoUsuarios);
             this.btnUsuarios.Controls.Add(this.label9);
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.Location = new System.Drawing.Point(-1, 416);
+            this.btnUsuarios.Location = new System.Drawing.Point(-1, 408);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 28;
@@ -1045,7 +1045,7 @@ namespace sistema_reparto
             this.pnlEmpleado.Controls.Add(this.label10);
             this.pnlEmpleado.Controls.Add(this.label12);
             this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-3, 484);
+            this.pnlEmpleado.Location = new System.Drawing.Point(-3, 474);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(182, 34);
             this.pnlEmpleado.TabIndex = 36;
@@ -1090,7 +1090,7 @@ namespace sistema_reparto
             this.pnlSubUbicacion.Controls.Add(this.label3);
             this.pnlSubUbicacion.Controls.Add(this.lblSubUbicacion);
             this.pnlSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSubUbicacion.Location = new System.Drawing.Point(-2, 349);
+            this.pnlSubUbicacion.Location = new System.Drawing.Point(-2, 342);
             this.pnlSubUbicacion.Name = "pnlSubUbicacion";
             this.pnlSubUbicacion.Size = new System.Drawing.Size(186, 34);
             this.pnlSubUbicacion.TabIndex = 28;
@@ -1142,7 +1142,7 @@ namespace sistema_reparto
             this.btnPaqueteEncabezado.Controls.Add(this.picIconoPaqueteE);
             this.btnPaqueteEncabezado.Controls.Add(this.label13);
             this.btnPaqueteEncabezado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-11, 450);
+            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-11, 441);
             this.btnPaqueteEncabezado.Name = "btnPaqueteEncabezado";
             this.btnPaqueteEncabezado.Size = new System.Drawing.Size(189, 34);
             this.btnPaqueteEncabezado.TabIndex = 35;
