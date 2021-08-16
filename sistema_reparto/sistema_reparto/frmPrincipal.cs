@@ -1589,6 +1589,33 @@ namespace sistema_reparto
         {
             Application.Exit();
         }
+
+        private void btnInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void lblInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
+
+        private void picIconoInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+
+            obj.Visible = true;
+
+            Visible = false;
+        }
     }
     
     
